@@ -953,3 +953,6 @@ PermissionError: [WinError 32] The process cannot access the file because it is 
 2025-06-04 15:57:44,958 [INFO] Successfully extracted data for 16 stocks
 2025-06-04 15:57:45,072 [INFO] Saved 16 stock records to database
 2025-06-04 15:59:12,702 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\settings.py changed, reloading.
+2025-06-04 16:00:37,575 [INFO] Starting stock scraper at 2025-06-04 16:00:37.575879
+2025-06-04 16:00:41,872 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 16:00:42,060 [INFO] Saved 16 stock records to database
