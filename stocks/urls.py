@@ -12,4 +12,6 @@ urlpatterns = [
     path('by-datetime/', views.prices_by_datetime, name='prices-by-datetime'),
     path('company/<str:symbol>/', views.company_detail, name='company-detail'),  # Changed from 'companies/' to 'company/'
     path('historical/<str:symbol>/', views.historical_prices, name='historical-prices'),
+    path('subscribe/', views.subscribe, name='subscribe'),
+    path('unsubscribe/<str:token>/', views.unsubscribe, name='unsubscribe'),
 ]

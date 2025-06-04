@@ -1,0 +1,27 @@
+MSE Daily Market Report - {{ date }}
+=================================
+
+MARKET SUMMARY
+-------------
+Total Traded Value: MK {{ summary.total_value|floatformat:2 }}
+Total Shares Traded: {{ summary.total_volume|intcomma }}
+Gainers: {{ summary.gainers }}
+Losers: {{ summary.losers }}
+Unchanged: {{ summary.unchanged }}
+
+TOP MOVERS
+---------
+{% for stock in top_movers %}
+{{ stock.symbol }}: MK {{ stock.price|floatformat:2 }} ({{ stock.change|floatformat:2 }}, {{ stock.percent_change|floatformat:2 }}%)
+{% endfor %}
+
+ALL STOCKS
+---------
+{% for stock in stocks %}
+{{ stock.symbol }}: MK {{ stock.price|floatformat:2 }} ({{ stock.change|floatformat:2 }})
+{% endfor %}
+
+Visit https://mse-watch.onrender.com for more detailed market information.
+
+© {{ current_year }} MSE Watch. All data is provided for informational purposes only.
+To unsubscribe from these reports, visit: {{ unsubscribe_url }}

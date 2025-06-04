@@ -1,4 +1,5 @@
 from django.db import models
+import uuid
 
 class Company(models.Model):
     """
@@ -83,3 +84,19 @@ class HistoricalPrice(models.Model):
     
     def __str__(self):
         return f"{self.symbol} - {self.date} - {self.price}"
+
+class Subscriber(models.Model):
+    """Email subscriber for daily reports"""
+    email = models.EmailField(unique=True)
+    name = models.CharField(max_length=100, blank=True)
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    unsubscribe_token = models.CharField(max_length=100, unique=True, blank=True)
+    
+    def __str__(self):
+        return self.email
+    
+    def save(self, *args, **kwargs):
+        if not self.unsubscribe_token:
+            self.unsubscribe_token = str(uuid.uuid4())
+        super().save(*args, **kwargs)

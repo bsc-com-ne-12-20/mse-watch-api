@@ -2,8 +2,9 @@ from rest_framework import viewsets, filters, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.db.models import Max
-from .models import StockPrice, Company, HistoricalPrice
-from .serializers import StockPriceSerializer, CompanySerializer
+from django.shortcuts import get_object_or_404
+from .models import StockPrice, Company, HistoricalPrice, Subscriber
+from .serializers import StockPriceSerializer, CompanySerializer, SubscriberSerializer
 from datetime import datetime, timedelta
 import logging
 
@@ -325,3 +326,32 @@ def get_cached_historical_data(symbol, time_range):
         'data_points': len(stock_prices),
         'source': 'cache'
     })
+
+@api_view(['POST'])
+def subscribe(request):
+    """Subscribe to daily market reports"""
+    serializer = SubscriberSerializer(data=request.data)
+    if serializer.is_valid():
+        # Check if email already exists but is inactive
+        email = serializer.validated_data['email']
+        existing = Subscriber.objects.filter(email=email).first()
+        
+        if existing:
+            if not existing.is_active:
+                existing.is_active = True
+                existing.save()
+                return Response({'message': 'Subscription reactivated successfully!'})
+            return Response({'message': 'You are already subscribed!'})
+        
+        # Create new subscription
+        serializer.save()
+        return Response({'message': 'Subscribed successfully to daily market reports!'})
+    return Response(serializer.errors, status=400)
+
+@api_view(['GET'])
+def unsubscribe(request, token):
+    """Unsubscribe from daily market reports"""
+    subscriber = get_object_or_404(Subscriber, unsubscribe_token=token)
+    subscriber.is_active = False
+    subscriber.save()
+    return Response({'message': 'Unsubscribed successfully from daily market reports!'})

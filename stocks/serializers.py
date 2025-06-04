@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import StockPrice, Company  # Import Company model
+from .models import StockPrice, Company, Subscriber  # Import Company and Subscriber models
 
 class StockPriceSerializer(serializers.ModelSerializer):
     percent_change = serializers.SerializerMethodField()
@@ -28,3 +28,14 @@ class CompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = Company
         fields = '__all__'
+
+class SubscriberSerializer(serializers.ModelSerializer):
+    """Serializer for email subscribers"""
+    class Meta:
+        model = Subscriber
+        fields = ['id', 'email', 'name', 'is_active', 'created_at']
+        read_only_fields = ['id', 'is_active', 'created_at']
+        extra_kwargs = {
+            'email': {'required': True},
+            'name': {'required': False}
+        }

@@ -2,18 +2,25 @@ import threading
 import time
 import logging
 import schedule
+import subprocess
+import sys
+import os
+import django
 from django.core import management
 from django.conf import settings
-import os
 from datetime import datetime
 
-# Configure console logger
+# Set up logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] %(message)s',
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler(os.path.join(settings.BASE_DIR, 'scheduler.log'))
+    ]
+)
+
 logger = logging.getLogger(__name__)
-console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.INFO)
-console_formatter = logging.Formatter('%(asctime)s [SCHEDULER] %(message)s')
-console_handler.setFormatter(console_formatter)
-logger.addHandler(console_handler)
 
 def run_scraper(force=False):
     """Run the stock scraper management command
@@ -122,6 +129,52 @@ def schedule_scraper():
         getattr(schedule.every(), day).at("17:00").do(run_scraper, force=True)
     print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] SCHEDULER: Added end-of-day schedule (17:00)")
 
+def send_daily_report():
+    """Execute the send_daily_report management command"""
+    # Get the current weekday (0 is Monday, 6 is Sunday)
+    weekday = datetime.now().weekday()
+    
+    # Only run on weekdays (Monday to Friday: 0-4)
+    if weekday <= 4:
+        logger.info("Starting daily market report email task")
+        try:
+            # Get the path to the current Python executable
+            python_exec = sys.executable
+            
+            # Get the path to the project's manage.py
+            manage_py = os.path.join(settings.BASE_DIR, 'manage.py')
+            
+            # Execute the command as a subprocess
+            result = subprocess.run(
+                [python_exec, manage_py, 'send_daily_report'],
+                capture_output=True,
+                text=True,
+                check=True
+            )
+            
+            logger.info(f"Daily report sent successfully: {result.stdout}")
+            return True
+        except subprocess.CalledProcessError as e:
+            logger.error(f"Error sending daily report: {e.stderr}")
+            return False
+    else:
+        logger.info("Skipping daily report on weekend")
+        return False
+
+def run_scheduler():
+    """Run the scheduler"""
+    logger.info("Starting email report scheduler")
+    
+    # Schedule the daily report at 6:00 PM (18:00)
+    schedule.every().day.at("18:00").do(send_daily_report)
+    
+    logger.info("Email reports scheduled for 6:00 PM on weekdays")
+    
+    # Run the scheduler loop
+    while True:
+        schedule.run_pending()
+        time.sleep(60)  # Check every minute
+
 def start_scheduler():
     """Start the scheduler in a background thread"""
     print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] SCHEDULER: Starting MSE stock price scheduler service")
@@ -156,3 +209,11 @@ def start_scheduler():
     thread.start()
     print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] SCHEDULER: Started successfully, running in background")
     logger.info("Scheduler started successfully")
+
+if __name__ == "__main__":
+    # Set up Django environment
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
+    django.setup()
+    
+    # Run the scheduler
+    run_scheduler()

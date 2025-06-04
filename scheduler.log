@@ -1,0 +1,17 @@
+2025-06-04 17:49:53,131 [INFO] Starting scheduler service
+2025-06-04 17:49:53,143 [INFO] Scheduler started successfully
+2025-06-04 17:49:53,143 [INFO] Scheduler initialized in Django startup
+2025-06-04 17:49:57,800 [INFO] Starting scheduler service
+2025-06-04 17:49:57,810 [INFO] Scheduler started successfully
+2025-06-04 17:49:57,812 [INFO] Scheduler initialized in Django startup
+2025-06-04 17:53:45,985 [INFO] Starting scheduler service
+2025-06-04 17:53:45,995 [INFO] Scheduler started successfully
+2025-06-04 17:53:45,997 [INFO] Scheduler initialized in Django startup
+2025-06-04 17:53:50,840 [INFO] Starting scheduler service
+2025-06-04 17:53:50,840 [INFO] Scheduler started successfully
+2025-06-04 17:53:50,840 [INFO] Scheduler initialized in Django startup
+2025-06-04 17:53:59,605 [INFO] Starting scheduler service
+2025-06-04 17:53:59,612 [INFO] Scheduler started successfully
+2025-06-04 17:53:59,612 [INFO] Scheduler initialized in Django startup
+2025-06-04 17:54:00,339 [INFO] Starting email report scheduler
+2025-06-04 17:54:00,339 [INFO] Email reports scheduled for 6:00 PM on weekdays

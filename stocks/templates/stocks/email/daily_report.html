@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MSE Daily Market Report - {{ date }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            background-color: #0055a4;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .summary {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 5px solid #0055a4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .positive {
+            color: green;
+        }
+        .negative {
+            color: red;
+        }
+        .neutral {
+            color: gray;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.8em;
+            text-align: center;
+            color: #777;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>MSE Daily Market Report</h1>
+        <p>{{ date }}</p>
+    </div>
+    
+    <div class="summary">
+        <h2>Market Summary</h2>
+        <p><strong>Total Traded Value:</strong> MK {{ summary.total_value|floatformat:2 }}</p>
+        <p><strong>Total Shares Traded:</strong> {{ summary.total_volume|intcomma }}</p>
+        <p><strong>Gainers:</strong> {{ summary.gainers }}</p>
+        <p><strong>Losers:</strong> {{ summary.losers }}</p>
+        <p><strong>Unchanged:</strong> {{ summary.unchanged }}</p>
+    </div>
+    
+    <h2>Top Movers</h2>
+    <table>
+        <tr>
+            <th>Symbol</th>
+            <th>Price (MK)</th>
+            <th>Change</th>
+            <th>% Change</th>
+        </tr>
+        {% for stock in top_movers %}
+        <tr>
+            <td>{{ stock.symbol }}</td>
+            <td>{{ stock.price|floatformat:2 }}</td>
+            <td class="{% if stock.change > 0 %}positive{% elif stock.change < 0 %}negative{% else %}neutral{% endif %}">
+                {{ stock.change|floatformat:2 }}
+            </td>
+            <td class="{% if stock.percent_change > 0 %}positive{% elif stock.percent_change < 0 %}negative{% else %}neutral{% endif %}">
+                {{ stock.percent_change|floatformat:2 }}%
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <h2>All Stocks</h2>
+    <table>
+        <tr>
+            <th>Symbol</th>
+            <th>Price (MK)</th>
+            <th>Change</th>
+            <th>Volume</th>
+        </tr>
+        {% for stock in stocks %}
+        <tr>
+            <td>{{ stock.symbol }}</td>
+            <td>{{ stock.price|floatformat:2 }}</td>
+            <td class="{% if stock.change > 0 %}positive{% elif stock.change < 0 %}negative{% else %}neutral{% endif %}">
+                {{ stock.change|floatformat:2 }}
+            </td>
+            <td>{{ stock.volume|intcomma }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <div class="footer">
+        <p>© {{ current_year }} MSE Watch. All data is provided for informational purposes only.</p>
+        <p>To unsubscribe from these reports, <a href="{{ unsubscribe_url }}">click here</a>.</p>
+    </div>
+</body>
+</html>
