@@ -2,8 +2,8 @@ from rest_framework import viewsets, filters, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.db.models import Max
-from .models import StockPrice
-from .serializers import StockPriceSerializer
+from .models import StockPrice, Company
+from .serializers import StockPriceSerializer, CompanySerializer
 from datetime import datetime
 
 class StockPriceViewSet(viewsets.ReadOnlyModelViewSet):
@@ -49,10 +49,13 @@ def prices_by_datetime(request):
     - date: Date in YYYY-MM-DD format
     - time: Time in HH:MM:SS format (optional)
     - symbol: Stock symbol (optional)
+    - latest_only: If 'true', return only the latest price for each symbol (default: true)
     """
     date_str = request.query_params.get('date')
     time_str = request.query_params.get('time')
     symbol = request.query_params.get('symbol')
+    # By default, return only the latest price for each symbol
+    latest_only = request.query_params.get('latest_only', 'true').lower() == 'true'
     
     if not date_str:
         return Response(
@@ -71,47 +74,61 @@ def prices_by_datetime(request):
         if symbol:
             queryset = queryset.filter(symbol=symbol)
         
+        # Get distinct symbols for processing
+        symbols = queryset.values_list('symbol', flat=True).distinct()
+        
+        # Initialize empty result list
+        result = []
+        
         # If time is provided, find the closest time for each symbol
         if time_str:
             try:
                 query_time = datetime.strptime(time_str, "%H:%M:%S").time()
                 
-                # Get distinct symbols
-                symbols = queryset.values_list('symbol', flat=True).distinct()
-                
-                result = []
+                # Process each symbol individually
                 for sym in symbols:
-                    # For each symbol, get the entry with time closest to the requested time
+                    # For each symbol, get prices ordered by time
                     symbol_prices = queryset.filter(symbol=sym).order_by('time')
                     
-                    # Find closest time (earlier or later)
-                    closest_price = None
-                    
-                    # Try to find price before the requested time
+                    # Try to find price before or at the requested time
                     before_prices = symbol_prices.filter(time__lte=query_time).order_by('-time')
                     if before_prices.exists():
-                        closest_price = before_prices.first()
+                        result.append(before_prices.first())
                     else:
                         # If no earlier price, get the earliest available
-                        closest_price = symbol_prices.first()
-                    
-                    if closest_price:
-                        result.append(closest_price)
+                        earliest = symbol_prices.first()
+                        if earliest:
+                            result.append(earliest)
                 
-                queryset = result
             except ValueError:
                 return Response(
                     {"error": "Invalid time format. Use HH:MM:SS"}, 
                     status=status.HTTP_400_BAD_REQUEST
                 )
-        
-        # Sort by symbol for consistent results
-        if isinstance(queryset, list):
-            queryset.sort(key=lambda x: x.symbol)
+        # If no time specified or if latest_only is true, get the latest price for each symbol
+        elif latest_only or not time_str:
+            # Process each symbol individually
+            for sym in symbols:
+                # For each symbol, get the latest price by time
+                latest_price = queryset.filter(symbol=sym).order_by('-time').first()
+                if latest_price:
+                    result.append(latest_price)
+        # If latest_only is false and no time specified, return all records (filtered by symbol if provided)
         else:
-            queryset = queryset.order_by('symbol')
+            # Convert queryset to list for consistency
+            result = list(queryset)
         
-        serializer = StockPriceSerializer(queryset, many=True)
+        # Ensure we have no duplicates by converting to a dict with symbol as key
+        # This is a safeguard against any logic issues that might produce duplicates
+        unique_results = {}
+        for item in result:
+            if item.symbol not in unique_results or unique_results[item.symbol].time < item.time:
+                unique_results[item.symbol] = item
+        
+        # Convert back to a list and sort by symbol
+        final_result = sorted(unique_results.values(), key=lambda x: x.symbol)
+        
+        serializer = StockPriceSerializer(final_result, many=True)
         return Response(serializer.data)
     
     except ValueError:
@@ -124,3 +141,46 @@ def prices_by_datetime(request):
             {"error": str(e)}, 
             status=status.HTTP_500_INTERNAL_SERVER_ERROR
         )
+
+class CompanyViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows company information to be viewed.
+    """
+    queryset = Company.objects.all()
+    serializer_class = CompanySerializer
+    filter_backends = [filters.SearchFilter, filters.OrderingFilter]
+    search_fields = ['symbol', 'name', 'sector', 'industry']
+    ordering_fields = ['symbol', 'name', 'sector', 'listed_date']
+
+@api_view(['GET'])
+def company_detail(request, symbol):
+    """
+    Get detailed information about a specific company including latest stock data
+    """
+    try:
+        company = Company.objects.get(symbol=symbol.upper())
+    except Company.DoesNotExist:
+        return Response(
+            {"error": f"Company with symbol '{symbol}' not found"}, 
+            status=status.HTTP_404_NOT_FOUND
+        )
+    
+    # Get the latest stock price
+    latest_price = StockPrice.objects.filter(symbol=symbol.upper()).order_by('-date', '-time').first()
+    
+    # Serialize the company data
+    company_data = CompanySerializer(company).data
+    
+    # Add market data if available
+    if latest_price:
+        market_data = {
+            'current_price': latest_price.price,
+            'price_change': latest_price.change,
+            'percent_change': (latest_price.change / (latest_price.price - latest_price.change) * 100) if latest_price.price != latest_price.change else 0,
+            'market_status': latest_price.market_status,
+            'last_updated': f"{latest_price.date} {latest_price.time}",
+            'market_cap': latest_price.price * company.shares_in_issue if company.shares_in_issue else None
+        }
+        company_data['market_data'] = market_data
+    
+    return Response(company_data)
