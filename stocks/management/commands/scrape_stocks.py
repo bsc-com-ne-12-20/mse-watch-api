@@ -18,24 +18,55 @@ logger = logging.getLogger(__name__)
 
 class Command(BaseCommand):
     help = 'Scrape stock data from MSE website and save to database'
+    
+    def add_arguments(self, parser):
+        parser.add_argument(
+            '--force-scrape',
+            action='store_true',
+            help='Force scrape even if market is closed (17:00 or later)',
+        )
 
     def handle(self, *args, **kwargs):
         start_time = datetime.now()
-        print(f"\n{'='*80}\n[{start_time.strftime('%Y-%m-%d %H:%M:%S')}] SCRAPER: Starting MSE stock data scraper\n{'='*80}")
+        force_scrape = kwargs.get('force_scrape', False)
+        
+        # Check current market session
+        current_time = datetime.now()
+        current_hour = current_time.hour
+        current_minute = current_time.minute
+        current_time_value = current_hour * 60 + current_minute
+        
+        # Determine market session based on time
+        market_session = "Outside Market Hours"
+        if 9*60 <= current_time_value < 9*60+30:  # 9:00 - 9:30
+            market_session = "Pre-Open"
+        elif 9*60+30 <= current_time_value < 14*60+30:  # 9:30 - 14:30
+            market_session = "Open"
+        elif 14*60+30 <= current_time_value < 15*60:  # 14:30 - 15:00
+            market_session = "Close"
+        elif 15*60 <= current_time_value <= 17*60:  # 15:00 - 17:00
+            market_session = "Post Close"
+          # Check if outside market hours (before 9:00 or after 17:00)
+        if (current_time_value < 9*60 or current_time_value > 17*60) and not force_scrape:
+            self.stdout.write(self.style.WARNING(f'Market is outside operating hours (current time: {datetime.now().strftime("%H:%M")}, session: {market_session}). Use --force-scrape to override.'))
+            return
+            
+        print(f"\n{'='*80}\n[{start_time.strftime('%Y-%m-%d %H:%M:%S')}] SCRAPER: Starting MSE stock data scraper" + 
+              (" (FORCED)" if force_scrape else "") + f" - Market Session: {market_session}\n{'='*80}")
         
         try:
             # Get the full path to the scraper script
             base_dir = Path(__file__).resolve().parent.parent.parent.parent
             scraper_path = os.path.join(base_dir, 'mse_scrapper_html.py')
             
-            logger.info(f"Starting stock scraper at {datetime.now()}")
+            logger.info(f"Starting stock scraper at {datetime.now()}" + (" (forced)" if force_scrape else ""))
             
             # Import and run the scraper function
             sys.path.append(str(base_dir))
             from mse_scrapper_html import extract_mse_data_html, save_data, save_to_database
             
             print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] SCRAPER: Extracting MSE stock data...")
-            df = extract_mse_data_html()
+            df = extract_mse_data_html(force_scrape=force_scrape)
             if df is not None:
                 print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] SCRAPER: Successfully extracted data for {len(df)} stocks")
                 logger.info(f"Successfully extracted data for {len(df)} stocks")

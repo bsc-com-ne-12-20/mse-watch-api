@@ -6,10 +6,29 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 import traceback
 
-def extract_mse_data_html():
-    """Extract stock data from the Malawi Stock Exchange website using HTML download."""
+def extract_mse_data_html(force_scrape=False):
+    """Extract stock data from the Malawi Stock Exchange website using HTML download.
+    
+    Args:
+        force_scrape (bool): If True, scrape regardless of market status or time
+    """
     url = "https://mse.co.mw/"
     html_file = "temp_mse.html"
+    
+    # Check if we should scrape based on current time
+    current_time = datetime.now()
+    current_hour = current_time.hour
+    current_minute = current_time.minute
+    current_time_value = current_hour * 60 + current_minute  # Time in minutes since midnight
+    
+    # MSE market schedule (in minutes since midnight)
+    market_start = 9 * 60  # 09:00 (Pre-Open)
+    market_end = 17 * 60   # 17:00 (End of Post Close)
+    
+    # Skip scraping if outside market hours (before 09:00 or after 17:00) unless explicitly forced
+    if (current_time_value < market_start or current_time_value > market_end) and not force_scrape:
+        print(f"Market is outside operating hours (current time: {current_time.strftime('%H:%M')}). Skipping scrape.")
+        return None
     
     try:
         print(f"Downloading HTML from {url}...")

@@ -164,3 +164,102 @@ RuntimeError: populate() isn't reentrant
 2025-06-03 18:32:10,896 [INFO] Starting stock scraper at 2025-06-03 18:32:10.896875
 2025-06-03 18:32:12,454 [INFO] Successfully extracted data for 16 stocks
 2025-06-03 18:32:12,670 [INFO] Saved 16 stock records to database
+2025-06-03 18:38:56,825 [INFO] Starting stock scraper at 2025-06-03 18:38:56.825242
+2025-06-03 18:38:59,829 [INFO] Successfully extracted data for 16 stocks
+2025-06-03 18:39:00,067 [INFO] Saved 16 stock records to database
+2025-06-03 18:41:00,069 [INFO] Running scheduled stock scraper
+2025-06-03 18:41:00,076 [INFO] Starting stock scraper at 2025-06-03 18:41:00.076727
+2025-06-03 18:41:01,510 [INFO] Successfully extracted data for 16 stocks
+2025-06-03 18:41:01,656 [INFO] Saved 16 stock records to database
+2025-06-03 18:43:01,665 [INFO] Running scheduled stock scraper
+2025-06-03 18:43:01,666 [INFO] Starting stock scraper at 2025-06-03 18:43:01.666905
+2025-06-03 18:43:03,049 [INFO] Successfully extracted data for 16 stocks
+2025-06-03 18:43:03,195 [INFO] Saved 16 stock records to database
+2025-06-03 18:45:03,197 [INFO] Running scheduled stock scraper
+2025-06-03 18:45:03,197 [INFO] Starting stock scraper at 2025-06-03 18:45:03.197100
+2025-06-03 18:45:04,574 [INFO] Successfully extracted data for 16 stocks
+2025-06-03 18:45:04,716 [INFO] Saved 16 stock records to database
+2025-06-03 18:47:04,719 [INFO] Running scheduled stock scraper
+2025-06-03 18:47:04,725 [INFO] Starting stock scraper at 2025-06-03 18:47:04.725654
+2025-06-03 18:47:06,395 [INFO] Successfully extracted data for 16 stocks
+2025-06-03 18:47:06,529 [INFO] Saved 16 stock records to database
+2025-06-03 18:49:06,532 [INFO] Running scheduled stock scraper
+2025-06-03 18:49:06,537 [INFO] Starting stock scraper at 2025-06-03 18:49:06.537150
+2025-06-03 18:49:08,472 [INFO] Successfully extracted data for 16 stocks
+2025-06-03 18:49:08,586 [INFO] Saved 16 stock records to database
+2025-06-03 18:51:08,595 [INFO] Running scheduled stock scraper
+2025-06-03 18:51:08,599 [INFO] Starting stock scraper at 2025-06-03 18:51:08.599011
+2025-06-03 18:51:10,643 [INFO] Successfully extracted data for 16 stocks
+2025-06-03 18:51:10,766 [INFO] Saved 16 stock records to database
+2025-06-04 09:00:26,726 [INFO] Starting stock scraper at 2025-06-04 09:00:26.726359
+2025-06-04 09:00:38,109 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 09:00:38,278 [INFO] Saved 16 stock records to database
+2025-06-04 09:01:38,282 [INFO] Running scheduled stock scraper
+2025-06-04 09:01:38,288 [INFO] Starting stock scraper at 2025-06-04 09:01:38.288295
+2025-06-04 09:01:39,939 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 09:01:40,147 [INFO] Saved 16 stock records to database
+2025-06-04 09:03:40,149 [INFO] Running scheduled stock scraper
+2025-06-04 09:03:40,151 [INFO] Starting stock scraper at 2025-06-04 09:03:40.151933
+2025-06-04 09:03:41,667 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 09:03:41,787 [INFO] Saved 16 stock records to database
+2025-06-04 09:04:01,748 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\mse_scrapper_html.py changed, reloading.
+2025-06-04 09:05:54,548 [INFO] Starting stock scraper at 2025-06-04 09:05:54.548014
+2025-06-04 09:05:57,560 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 09:05:57,722 [INFO] Saved 16 stock records to database
+2025-06-04 09:06:13,787 [INFO] Starting stock scraper at 2025-06-04 09:06:13.787361 (forced)
+2025-06-04 09:06:16,408 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 09:06:16,573 [INFO] Saved 16 stock records to database
+2025-06-04 09:08:18,771 [INFO] Starting stock scraper at 2025-06-04 09:08:18.771592 (forced)
+2025-06-04 09:08:21,322 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 09:08:21,659 [INFO] Saved 16 stock records to database
+2025-06-04 09:08:43,662 [INFO] Running scheduled stock scraper
+2025-06-04 09:08:46,203 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\management\commands\scrape_stocks.py changed, reloading.
+2025-06-04 09:11:53,703 [INFO] Starting stock scraper at 2025-06-04 09:11:53.703244
+2025-06-04 09:11:57,763 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 09:11:58,014 [INFO] Saved 16 stock records to database
+2025-06-04 09:13:58,020 [INFO] Running scheduled stock scraper
+2025-06-04 09:13:58,026 [INFO] Starting stock scraper at 2025-06-04 09:13:58.026009
+2025-06-04 09:13:59,507 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 09:13:59,700 [INFO] Saved 16 stock records to database
+2025-06-04 09:15:59,704 [INFO] Running scheduled stock scraper
+2025-06-04 09:15:59,709 [INFO] Starting stock scraper at 2025-06-04 09:15:59.709140
+2025-06-04 09:16:01,199 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 09:16:01,429 [INFO] Saved 16 stock records to database
+2025-06-04 09:16:01,431 [INFO] Running scheduled stock scraper
+2025-06-04 09:16:01,437 [INFO] Starting stock scraper at 2025-06-04 09:16:01.436220
+2025-06-04 09:16:02,883 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 09:16:03,109 [INFO] Saved 16 stock records to database
+2025-06-04 09:17:13,246 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\mse_scrapper_html.py changed, reloading.
+2025-06-04 09:19:55,763 [INFO] Starting stock scraper at 2025-06-04 09:19:55.763057
+2025-06-04 09:19:58,931 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 09:19:59,296 [INFO] Saved 16 stock records to database
+2025-06-04 09:19:59,298 [INFO] Scheduler started successfully
+2025-06-04 09:19:59,299 [INFO] Scheduler initialized in Django startup
+2025-06-04 09:19:59,324 [INFO] Watching for file changes with StatReloader
+2025-06-04 09:20:46,153 [INFO] Starting stock scraper at 2025-06-04 09:20:46.153629
+2025-06-04 09:20:50,409 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 09:20:50,606 [INFO] Saved 16 stock records to database
+2025-06-04 09:20:59,298 [INFO] Running scheduled stock scraper
+2025-06-04 09:20:59,305 [INFO] Starting stock scraper at 2025-06-04 09:20:59.304367
+2025-06-04 09:21:00,919 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 09:21:01,157 [INFO] Saved 16 stock records to database
+2025-06-04 09:23:50,609 [INFO] Running scheduled stock scraper
+2025-06-04 09:23:50,615 [INFO] Starting stock scraper at 2025-06-04 09:23:50.615939
+2025-06-04 09:23:52,243 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 09:23:52,480 [INFO] Saved 16 stock records to database
+2025-06-04 09:25:01,163 [INFO] Running scheduled stock scraper
+2025-06-04 09:25:01,170 [INFO] Starting stock scraper at 2025-06-04 09:25:01.170441
+2025-06-04 09:25:04,939 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 09:25:05,162 [INFO] Saved 16 stock records to database
+2025-06-04 09:25:05,163 [INFO] Running scheduled stock scraper
+2025-06-04 09:25:05,168 [INFO] Starting stock scraper at 2025-06-04 09:25:05.168354
+2025-06-04 09:25:06,611 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 09:25:06,839 [INFO] Saved 16 stock records to database
+2025-06-04 09:25:35,894 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\scheduler.py changed, reloading.
+2025-06-04 09:25:35,930 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\scheduler.py changed, reloading.
+2025-06-04 09:25:37,029 [INFO] Starting stock scraper at 2025-06-04 09:25:37.029329
+2025-06-04 09:25:39,684 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 09:25:39,834 [INFO] Saved 16 stock records to database
+2025-06-04 09:25:39,834 [INFO] Scheduler started successfully
+2025-06-04 09:25:39,834 [INFO] Scheduler initialized in Django startup
+2025-06-04 09:25:39,858 [INFO] Watching for file changes with StatReloader
