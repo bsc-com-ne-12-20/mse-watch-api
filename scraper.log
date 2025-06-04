@@ -741,3 +741,33 @@ PermissionError: [WinError 32] The process cannot access the file because it is 
 2025-06-04 11:51:45,198 [WARNING] Not Found: /api/companies/airtel/
 2025-06-04 11:51:53,072 [WARNING] Not Found: /api/companies/NBM/
 2025-06-04 11:53:55,567 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\urls.py changed, reloading.
+2025-06-04 11:58:56,578 [INFO] Starting stock scraper at 2025-06-04 11:58:56.578088
+2025-06-04 11:58:56,721 [INFO] Starting stock scraper at 2025-06-04 11:58:56.721491
+2025-06-04 11:59:03,233 [ERROR] Error running stock scraper: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+Traceback (most recent call last):
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\management\commands\scrape_stocks.py", line 69, in handle
+    df = extract_mse_data_html(force_scrape=force_scrape)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\mse_scrapper_html.py", line 179, in extract_mse_data_html
+    os.remove(html_file)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+2025-06-04 11:59:03,431 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 11:59:03,643 [INFO] Saved 16 stock records to database
+2025-06-04 12:00:03,262 [INFO] Running scheduled stock scraper
+2025-06-04 12:00:03,265 [INFO] Starting stock scraper at 2025-06-04 12:00:03.265074
+2025-06-04 12:00:03,646 [INFO] Running scheduled stock scraper
+2025-06-04 12:00:03,646 [INFO] Starting stock scraper at 2025-06-04 12:00:03.646871
+2025-06-04 12:00:04,839 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 12:00:05,074 [INFO] Saved 16 stock records to database
+2025-06-04 12:00:05,297 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 12:00:05,554 [INFO] Saved 16 stock records to database
+2025-06-04 12:04:05,094 [INFO] Running scheduled stock scraper
+2025-06-04 12:04:05,101 [INFO] Starting stock scraper at 2025-06-04 12:04:05.101289
+2025-06-04 12:04:05,561 [INFO] Running scheduled stock scraper
+2025-06-04 12:04:05,561 [INFO] Starting stock scraper at 2025-06-04 12:04:05.561329
+2025-06-04 12:04:06,476 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 12:04:06,641 [INFO] Saved 16 stock records to database
+2025-06-04 12:04:06,895 [INFO] Successfully extracted data for 16 stocks
+2025-06-04 12:04:06,939 [INFO] Saved 16 stock records to database
+2025-06-04 12:07:41,557 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\urls.py changed, reloading.
+2025-06-04 12:07:41,580 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\urls.py changed, reloading.
