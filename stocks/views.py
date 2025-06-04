@@ -2,9 +2,14 @@ from rest_framework import viewsets, filters, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.db.models import Max
-from .models import StockPrice, Company
+from .models import StockPrice, Company, HistoricalPrice
 from .serializers import StockPriceSerializer, CompanySerializer
-from datetime import datetime
+from datetime import datetime, timedelta
+import logging
+
+from .services.historical_service import MSEHistoricalService
+
+logger = logging.getLogger(__name__)
 
 class StockPriceViewSet(viewsets.ReadOnlyModelViewSet):
     """
@@ -184,3 +189,139 @@ def company_detail(request, symbol):
         company_data['market_data'] = market_data
     
     return Response(company_data)
+
+@api_view(['GET'])
+def historical_prices(request, symbol):
+    """
+    Get historical price data for a stock
+    
+    Query parameters:
+    - range: Time range (1month, 3months, 6months, 1year, ytd, 2years, 3years, 5years)
+    - cache: Whether to use cached data (true/false, default: true)
+    - refresh: Force refresh data from source (true/false, default: false)
+    """
+    # Process query parameters
+    time_range = request.query_params.get('range', '1month')
+    use_cache = request.query_params.get('cache', 'true').lower() == 'true'
+    refresh = request.query_params.get('refresh', 'false').lower() == 'true'
+    
+    # Standardize symbol
+    symbol = symbol.upper()
+    
+    # Normalize time range
+    valid_ranges = ['1month', '3months', '6months', '1year', 'ytd', '2years', '3years', '5years']
+    if time_range not in valid_ranges:
+        time_range = '1month'
+    
+    # Check if we should use cached data
+    if use_cache and not refresh:
+        # Calculate the date threshold based on time range for cache freshness
+        cache_threshold = datetime.now()
+        if time_range == '1month':
+            cache_threshold -= timedelta(hours=6)  # Refresh every 6 hours for 1 month data
+        elif time_range in ['3months', '6months']:
+            cache_threshold -= timedelta(days=1)  # Refresh daily for 3/6 month data
+        else:
+            cache_threshold -= timedelta(days=7)  # Refresh weekly for longer timeframes
+        
+        # Check for cached data
+        recent_data = (
+            HistoricalPrice.objects
+            .filter(symbol=symbol)
+            .filter(last_updated__gt=cache_threshold)
+            .exists()
+        )
+        
+        if recent_data:
+            return get_cached_historical_data(symbol, time_range)
+    
+    # If no cache or cache expired or refresh requested, fetch fresh data
+    service = MSEHistoricalService()
+    historical_data = service.get_historical_data(symbol, time_range)
+    
+    if not historical_data:
+        return Response({
+            "error": f"Could not retrieve historical data for {symbol}"
+        }, status=status.HTTP_404_NOT_FOUND)
+    
+    # Save data to database for future caching
+    service.save_to_database(symbol, historical_data)
+    
+    # Return the data
+    return Response(historical_data)
+
+def get_cached_historical_data(symbol, time_range):
+    """Get historical data from database cache"""
+    # Map time ranges to date ranges
+    today = datetime.now().date()
+    
+    if time_range == '1month':
+        start_date = today - timedelta(days=31)
+    elif time_range == '3months':
+        start_date = today - timedelta(days=92)
+    elif time_range == '6months':
+        start_date = today - timedelta(days=183)
+    elif time_range == '1year':
+        start_date = today - timedelta(days=366)
+    elif time_range == 'ytd':
+        start_date = datetime(today.year, 1, 1).date()
+    elif time_range == '2years':
+        start_date = today - timedelta(days=731)
+    elif time_range == '3years':
+        start_date = today - timedelta(days=1096)
+    elif time_range == '5years':
+        start_date = today - timedelta(days=1827)
+    else:
+        start_date = today - timedelta(days=31)
+    
+    # Get historical prices from database
+    prices = (
+        HistoricalPrice.objects
+        .filter(symbol=symbol, date__gte=start_date)
+        .order_by('date')
+    )
+    
+    if not prices.exists():
+        return Response({
+            "error": f"No historical data found for {symbol} in {time_range} range"
+        }, status=status.HTTP_404_NOT_FOUND)
+    
+    # Get company info if available
+    if prices.first().company:
+        company = prices.first().company
+        company_info = {
+            'symbol': company.symbol,
+            'name': company.name,
+            'current_price': prices.last().price if prices.exists() else None,
+            'listing_date': company.listed_date.isoformat() if company.listed_date else None,
+            'listing_price': float(company.listing_price) if company.listing_price else None,
+            'market_cap': None,  # Calculate if needed
+            'shares_in_issue': company.shares_in_issue
+        }
+    else:
+        company_info = {
+            'symbol': symbol,
+            'current_price': prices.last().price if prices.exists() else None,
+        }
+    
+    # Format the response
+    stock_prices = []
+    for price in prices:
+        stock_prices.append({
+            'date': price.date.isoformat(),
+            'open': float(price.open_price) if price.open_price else None,
+            'high': float(price.high) if price.high else None,
+            'low': float(price.low) if price.low else None,
+            'close': float(price.close_price) if price.close_price else None,
+            'volume': price.volume,
+            'turnover': float(price.turnover) if price.turnover else None  # Make sure turnover is included
+        })
+    
+    return Response({
+        'company': company_info,
+        'time_range': time_range,
+        'stock_prices': stock_prices,
+        'retrieved_at': datetime.now().isoformat(),
+        'data_points': len(stock_prices),
+        'source': 'cache'
+    })

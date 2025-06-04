@@ -11,4 +11,5 @@ urlpatterns = [
     path('latest/', views.latest_prices, name='latest-prices'),
     path('by-datetime/', views.prices_by_datetime, name='prices-by-datetime'),
     path('company/<str:symbol>/', views.company_detail, name='company-detail'),  # Changed from 'companies/' to 'company/'
+    path('historical/<str:symbol>/', views.historical_prices, name='historical-prices'),
 ]
