@@ -209,10 +209,13 @@ def historical_prices(request, symbol):
     # Standardize symbol
     symbol = symbol.upper()
     
+    logger.info(f"Fetching historical prices for {symbol} with range {time_range}, cache={use_cache}, refresh={refresh}")
+    
     # Normalize time range
     valid_ranges = ['1month', '3months', '6months', '1year', 'ytd', '2years', '3years', '5years']
     if time_range not in valid_ranges:
         time_range = '1month'
+        logger.warning(f"Invalid time range {time_range}. Using default '1month'.")
     
     # Check if we should use cached data
     if use_cache and not refresh:
@@ -234,6 +237,7 @@ def historical_prices(request, symbol):
         )
         
         if recent_data:
+            logger.info(f"Using cached data for {symbol} in {time_range} range.")
             return get_cached_historical_data(symbol, time_range)
     
     # If no cache or cache expired or refresh requested, fetch fresh data
@@ -241,12 +245,14 @@ def historical_prices(request, symbol):
     historical_data = service.get_historical_data(symbol, time_range)
     
     if not historical_data:
+        logger.warning(f"Could not retrieve historical data for {symbol} from service.")
         return Response({
             "error": f"Could not retrieve historical data for {symbol}"
         }, status=status.HTTP_404_NOT_FOUND)
     
     # Save data to database for future caching
-    service.save_to_database(symbol, historical_data)
+    saved_count = service.save_to_database(symbol, historical_data)
+    logger.info(f"Saved {saved_count} data points to database for {symbol}.")
     
     # Return the data
     return Response(historical_data)
@@ -283,6 +289,7 @@ def get_cached_historical_data(symbol, time_range):
     )
     
     if not prices.exists():
+        logger.warning(f"No historical data found in cache for {symbol} in {time_range} range.")
         return Response({
             "error": f"No historical data found for {symbol} in {time_range} range"
         }, status=status.HTTP_404_NOT_FOUND)

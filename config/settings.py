@@ -170,3 +170,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_USER', '')  # Set as environment variable
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD', '')  # Set as environment variable
 DEFAULT_FROM_EMAIL = 'MSE Market Watch <your-email@example.com>'
+
+CSRF_TRUSTED_ORIGINS = ['https://mse-watch.onrender.com']
