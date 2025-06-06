@@ -15,3 +15,7 @@
 2025-06-04 17:53:59,612 [INFO] Scheduler initialized in Django startup
 2025-06-04 17:54:00,339 [INFO] Starting email report scheduler
 2025-06-04 17:54:00,339 [INFO] Email reports scheduled for 6:00 PM on weekdays
+2025-06-06 11:32:05,274 [INFO] Starting scheduler service
+2025-06-06 11:32:05,290 [INFO] Scheduler started successfully
+2025-06-06 11:32:05,291 [INFO] Scheduler initialized in Django startup
+2025-06-06 11:32:05,343 [INFO] Watching for file changes with StatReloader
