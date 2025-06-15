@@ -212,3 +212,11 @@
 2025-06-15 13:22:52,842 [INFO] Fetching historical prices for TNM with range 1month, cache=True, refresh=False
 2025-06-15 13:22:52,848 [INFO] Using older cached data for TNM in 1month range.
 2025-06-15 13:23:33,507 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 13:28:33,513 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 13:28:54,435 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\views.py changed, reloading.
+2025-06-15 13:28:55,644 [INFO] Starting scheduler service
+2025-06-15 13:28:55,650 [INFO] Scheduler started successfully
+2025-06-15 13:28:55,650 [INFO] Scheduler initialized in Django startup
+2025-06-15 13:28:55,694 [INFO] Watching for file changes with StatReloader
+2025-06-15 13:29:08,743 [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-06-15 13:33:55,653 [INFO] Market is closed on Sunday. Skipping scheduled scrape.

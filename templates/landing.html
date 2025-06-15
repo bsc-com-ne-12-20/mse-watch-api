@@ -75,8 +75,7 @@
             letter-spacing: 0.05em;
             font-size: 0.875rem;
         }
-        
-        /* Ensure no default margins affect navbar positioning */
+          /* Ensure no default margins affect navbar positioning */
         body {
             margin: 0;
             padding: 0;
@@ -86,6 +85,148 @@
         nav {
             top: 0 !important;
         }
+          /* Enhanced responsive styles */
+        @media (max-width: 768px) {
+            .hero-gradient {
+                padding: 3rem 0;
+            }
+            
+            .api-demo {
+                font-size: 0.75rem;
+                padding: 1rem;
+            }
+            
+            .api-demo pre {
+                overflow-x: auto;
+                white-space: pre-wrap;
+            }
+            
+            /* Better mobile text sizing */
+            .mobile-text-responsive {
+                font-size: 1.25rem !important;
+                line-height: 1.4 !important;
+            }
+            
+            /* Mobile card spacing */
+            .mobile-card {
+                margin-bottom: 1.5rem;
+            }
+            
+            /* Mobile button adjustments */
+            .mobile-btn {
+                width: 100%;
+                margin-bottom: 0.75rem;
+            }
+            
+            /* Mobile stats grid */
+            .mobile-stats {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+            
+            /* Section padding adjustments */
+            section {
+                padding: 3rem 0 !important;
+            }
+            
+            /* Mobile features grid */
+            .mobile-features {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            /* Mobile API endpoints */
+            .mobile-api-grid {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            
+            /* Mobile pricing */
+            .mobile-pricing-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            /* Mobile contact section */
+            .mobile-contact-grid {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            
+            /* Mobile footer */
+            .mobile-footer-grid {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 2rem !important;
+            }
+            
+            /* Mobile newsletter */
+            .mobile-newsletter-form {
+                flex-direction: column !important;
+                gap: 0.75rem !important;
+            }
+            
+            .mobile-newsletter-input {
+                border-radius: 0.5rem !important;
+            }
+            
+            .mobile-newsletter-btn {
+                border-radius: 0.5rem !important;
+            }
+            
+            /* Mobile market status */
+            .mobile-market-status {
+                flex-direction: column !important;
+                gap: 0.75rem !important;
+                text-align: center !important;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .hero-gradient {
+                padding: 2rem 0;
+            }
+            
+            /* Smaller mobile adjustments */
+            .mobile-hero-title {
+                font-size: 2.5rem !important;
+                line-height: 1.2 !important;
+            }
+            
+            .mobile-hero-subtitle {
+                font-size: 1rem !important;
+                line-height: 1.5 !important;
+            }
+            
+            /* Mobile pricing cards */
+            .mobile-pricing {
+                transform: none !important;
+                margin-bottom: 2rem;
+            }
+            
+            /* Even smaller mobile sections */
+            section {
+                padding: 2rem 0 !important;
+            }
+            
+            /* Single column footer on small mobile */
+            .mobile-footer-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            /* Smaller mobile text */
+            h2 {
+                font-size: 2rem !important;
+            }
+            
+            h3 {
+                font-size: 1.25rem !important;
+            }
+            
+            /* Mobile navbar adjustments */
+            .mobile-nav-title {
+                font-size: 1.5rem !important;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50">    <!-- Navigation -->
@@ -94,7 +235,7 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <h1 class="text-2xl font-bold text-blue-900">MSE Watch</h1>
+                        <h1 class="mobile-nav-title text-xl sm:text-2xl font-bold text-blue-900">MSE Watch</h1>
                     </div>
                 </div>
                 <div class="hidden md:block">
@@ -107,7 +248,7 @@
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-900">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-900 p-2">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -115,44 +256,41 @@
         </div>
         
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#features" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">Features</a>
-                <a href="#api" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">API</a>
-                <a href="#pricing" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">Pricing</a>
-                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
-                <a href="/swagger/" class="block px-3 py-2 bg-blue-900 text-white rounded-lg ml-3 mr-3 text-center">Documentation</a>
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg border-t border-gray-200">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="#features" class="block px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300">Features</a>
+                <a href="#api" class="block px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300">API</a>
+                <a href="#pricing" class="block px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300">Pricing</a>
+                <a href="#contact" class="block px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300">Contact</a>
+                <a href="/swagger/" class="block px-3 py-3 mx-3 mt-2 bg-blue-900 text-white rounded-lg text-center font-medium hover:bg-blue-800 transition duration-300">Documentation</a>
             </div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-gradient text-white py-20 mt-16">
+    </nav><!-- Hero Section -->
+    <section class="hero-gradient text-white py-12 sm:py-16 md:py-20 mt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <div class="numnet-badge inline-block mb-6">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <div class="numnet-badge inline-block mb-4 md:mb-6">
                         <i class="fas fa-code mr-2"></i>Developed by NumNet
                     </div>
-                    <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    <h1 class="mobile-hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
                         Real-time <span class="text-yellow-300">Malawi Stock Exchange</span> Data API
                     </h1>
-                    <p class="text-xl mb-8 text-blue-100 leading-relaxed">
+                    <p class="mobile-hero-subtitle mobile-text-responsive text-lg sm:text-xl mb-6 md:mb-8 text-blue-100 leading-relaxed">
                         Access comprehensive MSE market data through our powerful REST API. Get real-time stock prices, 
                         historical data, and company information with enterprise-grade reliability.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="/swagger/" class="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition duration-300 text-center">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="/swagger/" class="mobile-btn bg-yellow-400 text-gray-900 px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold text-base md:text-lg hover:bg-yellow-300 transition duration-300 text-center">
                             <i class="fas fa-rocket mr-2"></i>Get Started Free
                         </a>
-                        <a href="#api" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-900 transition duration-300 text-center">
+                        <a href="#api" class="mobile-btn border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold text-base md:text-lg hover:bg-white hover:text-blue-900 transition duration-300 text-center">
                             <i class="fas fa-book mr-2"></i>View Documentation
                         </a>
                     </div>
-                    
-                    <!-- Live Market Status -->
+                      <!-- Live Market Status -->
                     <div class="mt-8 bg-white bg-opacity-10 rounded-lg p-4">
-                        <div class="flex items-center justify-between">
+                        <div class="mobile-market-status flex items-center justify-between">
                             <div class="flex items-center">
                                 <div class="pulse-animation w-3 h-3 bg-green-400 rounded-full mr-3"></div>
                                 <span class="text-sm font-medium">Market Status: <span id="market-status">Loading...</span></span>
