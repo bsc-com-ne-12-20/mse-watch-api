@@ -224,8 +224,7 @@ def historical_prices(request, symbol):
     if time_range not in valid_ranges:
         time_range = '1month'
         logger.warning(f"Invalid time range {time_range}. Using default '1month'.")
-    
-    # Check if we should use cached data
+      # Check if we should use cached data
     if use_cache and not refresh:
         # Calculate the date threshold based on time range for cache freshness
         cache_threshold = datetime.now()
@@ -246,6 +245,12 @@ def historical_prices(request, symbol):
         
         if recent_data:
             logger.info(f"Using cached data for {symbol} in {time_range} range.")
+            return get_cached_historical_data(symbol, time_range)
+        
+        # If no recent cached data but cache is requested, check for any cached data
+        any_cached_data = HistoricalPrice.objects.filter(symbol=symbol).exists()
+        if any_cached_data:
+            logger.info(f"Using older cached data for {symbol} in {time_range} range.")
             return get_cached_historical_data(symbol, time_range)
     
     # If no cache or cache expired or refresh requested, fetch fresh data

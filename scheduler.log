@@ -148,3 +148,67 @@
 2025-06-15 12:47:35,313 [INFO] Scheduler started successfully
 2025-06-15 12:47:35,313 [INFO] Scheduler initialized in Django startup
 2025-06-15 12:47:35,362 [INFO] Watching for file changes with StatReloader
+2025-06-15 12:52:35,322 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 12:57:36,703 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 13:02:36,708 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 13:05:15,363 [INFO] Fetching historical prices for TNM with range 1month, cache=True, refresh=False
+2025-06-15 13:05:19,581 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-15 13:05:21,190 [ERROR] Request error for TNM in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/TNM?stock_history=1month
+2025-06-15 13:05:21,190 [WARNING] Could not retrieve historical data for TNM from service.
+2025-06-15 13:05:21,190 [WARNING] Not Found: /api/historical/TNM/
+2025-06-15 13:05:37,393 [INFO] Fetching historical prices for TNM with range 1month, cache=True, refresh=False
+2025-06-15 13:05:37,393 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-15 13:05:38,672 [ERROR] Request error for TNM in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/TNM?stock_history=1month
+2025-06-15 13:05:38,672 [WARNING] Could not retrieve historical data for TNM from service.
+2025-06-15 13:05:38,672 [WARNING] Not Found: /api/historical/TNM/
+2025-06-15 13:05:50,967 [INFO] Fetching historical prices for TNM with range 1month, cache=True, refresh=False
+2025-06-15 13:05:50,967 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-15 13:05:52,226 [ERROR] Request error for TNM in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/TNM?stock_history=1month
+2025-06-15 13:05:52,226 [WARNING] Could not retrieve historical data for TNM from service.
+2025-06-15 13:05:52,226 [WARNING] Not Found: /api/historical/TNM/
+2025-06-15 13:06:31,217 [INFO] Starting scheduler service
+2025-06-15 13:06:31,238 [INFO] Scheduler started successfully
+2025-06-15 13:06:31,238 [INFO] Scheduler initialized in Django startup
+2025-06-15 13:07:06,988 [INFO] Starting scheduler service
+2025-06-15 13:07:07,003 [INFO] Scheduler started successfully
+2025-06-15 13:07:07,003 [INFO] Scheduler initialized in Django startup
+2025-06-15 13:07:36,713 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 13:07:42,184 [INFO] Fetching historical prices for TNM with range 1month, cache=True, refresh=False
+2025-06-15 13:07:42,200 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-15 13:07:43,584 [ERROR] Request error for TNM in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/TNM?stock_history=1month
+2025-06-15 13:07:43,584 [WARNING] Could not retrieve historical data for TNM from service.
+2025-06-15 13:07:43,584 [WARNING] Not Found: /api/historical/TNM/
+2025-06-15 13:07:52,044 [INFO] Starting scheduler service
+2025-06-15 13:07:52,058 [INFO] Scheduler started successfully
+2025-06-15 13:07:52,060 [INFO] Scheduler initialized in Django startup
+2025-06-15 13:08:00,308 [INFO] Fetching historical prices for AIRTEL with range 1month, cache=True, refresh=False
+2025-06-15 13:08:00,308 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-15 13:08:01,536 [ERROR] Request error for AIRTEL in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/AIRTEL?stock_history=1month
+2025-06-15 13:08:01,536 [WARNING] Could not retrieve historical data for AIRTEL from service.
+2025-06-15 13:08:01,536 [WARNING] Not Found: /api/historical/AIRTEL/
+2025-06-15 13:08:31,498 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\views.py changed, reloading.
+2025-06-15 13:08:33,451 [INFO] Starting scheduler service
+2025-06-15 13:08:33,493 [INFO] Scheduler started successfully
+2025-06-15 13:08:33,494 [INFO] Scheduler initialized in Django startup
+2025-06-15 13:08:33,563 [INFO] Watching for file changes with StatReloader
+2025-06-15 13:13:11,754 [INFO] Fetching historical prices for AIRTEL with range 1month, cache=True, refresh=False
+2025-06-15 13:13:11,760 [INFO] Using older cached data for AIRTEL in 1month range.
+2025-06-15 13:13:28,610 [INFO] Fetching historical prices for AIRTEL with range 1month, cache=True, refresh=False
+2025-06-15 13:13:28,618 [INFO] Using older cached data for AIRTEL in 1month range.
+2025-06-15 13:13:33,497 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 13:13:37,328 [INFO] Fetching historical prices for TNM with range 1month, cache=True, refresh=False
+2025-06-15 13:13:37,336 [INFO] Using older cached data for TNM in 1month range.
+2025-06-15 13:13:46,062 [INFO] Fetching historical prices for TNM with range 3months, cache=True, refresh=False
+2025-06-15 13:13:46,068 [INFO] Using older cached data for TNM in 3months range.
+2025-06-15 13:18:14,752 [INFO] Fetching historical prices for NICO with range 1month, cache=True, refresh=False
+2025-06-15 13:18:14,752 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-15 13:18:16,240 [ERROR] Request error for NICO in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/NICO?stock_history=1month
+2025-06-15 13:18:16,240 [WARNING] Could not retrieve historical data for NICO from service.
+2025-06-15 13:18:16,244 [WARNING] Not Found: /api/historical/NICO/
+2025-06-15 13:18:24,791 [INFO] Starting scheduler service
+2025-06-15 13:18:24,791 [INFO] Scheduler started successfully
+2025-06-15 13:18:24,807 [INFO] Scheduler initialized in Django startup
+2025-06-15 13:18:33,502 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 13:22:52,842 [INFO] Fetching historical prices for TNM with range 1month, cache=True, refresh=False
+2025-06-15 13:22:52,848 [INFO] Using older cached data for TNM in 1month range.
+2025-06-15 13:23:33,507 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
