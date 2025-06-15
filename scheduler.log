@@ -225,3 +225,24 @@
 2025-06-15 13:41:50,567 [INFO] Scheduler started successfully
 2025-06-15 13:41:50,568 [INFO] Scheduler initialized in Django startup
 2025-06-15 13:41:50,615 [INFO] Watching for file changes with StatReloader
+2025-06-15 13:43:55,664 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 13:48:55,669 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 13:53:55,675 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 13:57:33,176 [INFO] Starting scheduler service
+2025-06-15 13:57:33,192 [INFO] Scheduler started successfully
+2025-06-15 13:57:33,192 [INFO] Scheduler initialized in Django startup
+2025-06-15 13:58:06,949 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\urls.py changed, reloading.
+2025-06-15 13:58:14,455 [INFO] Starting scheduler service
+2025-06-15 13:58:14,473 [INFO] Scheduler started successfully
+2025-06-15 13:58:14,474 [INFO] Scheduler initialized in Django startup
+2025-06-15 13:58:14,514 [INFO] Watching for file changes with StatReloader
+2025-06-15 13:59:01,442 [INFO] Starting scheduler service
+2025-06-15 13:59:01,453 [INFO] Scheduler started successfully
+2025-06-15 13:59:01,453 [INFO] Scheduler initialized in Django startup
+2025-06-15 13:59:01,512 [INFO] Watching for file changes with StatReloader
+2025-06-15 13:59:31,310 [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-06-15 14:00:03,447 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\urls.py changed, reloading.
+2025-06-15 14:00:04,616 [INFO] Starting scheduler service
+2025-06-15 14:00:04,632 [INFO] Scheduler started successfully
+2025-06-15 14:00:04,632 [INFO] Scheduler initialized in Django startup
+2025-06-15 14:00:04,683 [INFO] Watching for file changes with StatReloader
