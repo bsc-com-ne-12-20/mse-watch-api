@@ -6,7 +6,7 @@ class StockPriceSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = StockPrice
-        fields = ['id', 'symbol', 'price', 'change', 'percent_change', 'direction', 'date', 
+        fields = ['symbol', 'price', 'change', 'percent_change', 'direction', 'date', 
                   'time', 'market_status', 'market_update_time']
     
     def get_percent_change(self, obj):

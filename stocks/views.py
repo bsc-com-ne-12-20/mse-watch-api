@@ -25,15 +25,19 @@ class StockPriceViewSet(viewsets.ReadOnlyModelViewSet):
 @api_view(['GET'])
 def latest_prices(request):
     """
-    Get the latest price for each stock symbol
+    Get the latest price for each stock symbol (limited to 16 symbols)
     """
     # Get the latest date
     latest_date = StockPrice.objects.aggregate(Max('date'))['date__max']
     
+    if not latest_date:
+        return Response([])
+    
+    # Get unique symbols from the latest date, limited to 16
+    symbols = list(StockPrice.objects.filter(date=latest_date).values_list('symbol', flat=True).distinct()[:16])
+    
     # For each symbol, get the latest record on that date
     latest_prices = []
-    symbols = StockPrice.objects.filter(date=latest_date).values_list('symbol', flat=True).distinct()
-    
     for symbol in symbols:
         latest = StockPrice.objects.filter(
             symbol=symbol, 
@@ -42,6 +46,10 @@ def latest_prices(request):
         
         if latest:
             latest_prices.append(latest)
+    
+    # Sort by symbol for consistent ordering and ensure we don't exceed 16
+    latest_prices.sort(key=lambda x: x.symbol)
+    latest_prices = latest_prices[:16]  # Extra safety to ensure max 16 records
     
     serializer = StockPriceSerializer(latest_prices, many=True)
     return Response(serializer.data)

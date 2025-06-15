@@ -101,3 +101,40 @@
 2025-06-15 11:26:27,751 [INFO] Scheduler started successfully
 2025-06-15 11:26:27,752 [INFO] Scheduler initialized in Django startup
 2025-06-15 11:26:27,793 [INFO] Watching for file changes with StatReloader
+2025-06-15 11:31:27,755 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 11:36:27,761 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 11:41:27,765 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 11:46:27,772 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 11:51:27,779 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 11:56:27,784 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 12:01:27,789 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 12:06:27,796 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 12:11:27,801 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 12:16:28,135 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 12:21:28,143 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 12:26:28,148 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 12:31:28,154 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 12:36:28,160 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 12:39:41,454 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\views.py changed, reloading.
+2025-06-15 12:39:44,097 [INFO] Starting scheduler service
+2025-06-15 12:39:44,108 [INFO] Scheduler started successfully
+2025-06-15 12:39:44,108 [INFO] Scheduler initialized in Django startup
+2025-06-15 12:39:44,161 [INFO] Watching for file changes with StatReloader
+2025-06-15 12:40:01,493 [INFO] Starting scheduler service
+2025-06-15 12:40:01,515 [INFO] Scheduler started successfully
+2025-06-15 12:40:01,515 [INFO] Scheduler initialized in Django startup
+2025-06-15 12:40:17,000 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\views.py changed, reloading.
+2025-06-15 12:40:17,957 [INFO] Starting scheduler service
+2025-06-15 12:40:17,964 [INFO] Scheduler started successfully
+2025-06-15 12:40:17,964 [INFO] Scheduler initialized in Django startup
+2025-06-15 12:40:17,997 [INFO] Watching for file changes with StatReloader
+2025-06-15 12:42:32,345 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\serializers.py changed, reloading.
+2025-06-15 12:42:33,375 [INFO] Starting scheduler service
+2025-06-15 12:42:33,381 [INFO] Scheduler started successfully
+2025-06-15 12:42:33,381 [INFO] Scheduler initialized in Django startup
+2025-06-15 12:42:33,410 [INFO] Watching for file changes with StatReloader
+2025-06-15 12:44:02,445 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\serializers.py changed, reloading.
+2025-06-15 12:44:03,668 [INFO] Starting scheduler service
+2025-06-15 12:44:03,690 [INFO] Scheduler started successfully
+2025-06-15 12:44:03,695 [INFO] Scheduler initialized in Django startup
+2025-06-15 12:44:03,772 [INFO] Watching for file changes with StatReloader
