@@ -9,6 +9,7 @@ router.register(r'companies', views.CompanyViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('latest/', views.latest_prices, name='latest-prices'),
+    path('market-status/', views.market_status, name='market-status'),
     path('by-datetime/', views.prices_by_datetime, name='prices-by-datetime'),
     path('company/<str:symbol>/', views.company_detail, name='company-detail'),  # Changed from 'companies/' to 'company/'
     path('historical/<str:symbol>/', views.historical_prices, name='historical-prices'),

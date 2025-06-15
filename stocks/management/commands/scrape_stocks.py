@@ -30,6 +30,14 @@ class Command(BaseCommand):
         start_time = datetime.now()
         force_scrape = kwargs.get('force_scrape', False)
         
+        # Check if it's weekend (Saturday = 5, Sunday = 6)
+        current_weekday = datetime.now().weekday()
+        if current_weekday in [5, 6] and not force_scrape:  # Saturday or Sunday
+            weekday_name = "Saturday" if current_weekday == 5 else "Sunday"
+            self.stdout.write(self.style.WARNING(f'Market is closed on {weekday_name}. Stock exchanges do not operate on weekends. Use --force-scrape to override.'))
+            logger.info(f"Skipping scrape - Market closed on {weekday_name}")
+            return
+        
         # Check current market session
         current_time = datetime.now()
         current_hour = current_time.hour

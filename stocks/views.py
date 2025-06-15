@@ -362,3 +362,56 @@ def unsubscribe(request, token):
     subscriber.is_active = False
     subscriber.save()
     return Response({'message': 'Unsubscribed successfully from daily market reports!'})
+
+@api_view(['GET'])
+def market_status(request):
+    """
+    Get current market status based on time and latest data
+    """
+    # Get current time
+    current_time = datetime.now()
+    current_weekday = current_time.weekday()
+    current_hour = current_time.hour
+    current_minute = current_time.minute
+    current_time_value = current_hour * 60 + current_minute
+    
+    # Check if it's weekend
+    if current_weekday in [5, 6]:  # Saturday or Sunday
+        status = "Closed (Weekend)"
+        session = "Weekend"
+    else:
+        # MSE market schedule (in minutes since midnight)
+        if 9*60 <= current_time_value < 9*60+30:  # 9:00 - 9:30
+            status = "Open"
+            session = "Pre-Open"
+        elif 9*60+30 <= current_time_value < 14*60+30:  # 9:30 - 14:30
+            status = "Open"
+            session = "Trading"
+        elif 14*60+30 <= current_time_value < 15*60:  # 14:30 - 15:00
+            status = "Open"
+            session = "Close"
+        elif 15*60 <= current_time_value <= 17*60:  # 15:00 - 17:00
+            status = "Open"
+            session = "Post-Close"
+        else:
+            status = "Closed"
+            session = "After Hours"
+    
+    # Get the latest market data to see last update
+    latest_price = StockPrice.objects.order_by('-date', '-time').first()
+    last_update = None
+    market_data_status = "Unknown"
+    
+    if latest_price:
+        last_update = f"{latest_price.date} {latest_price.time}"
+        market_data_status = latest_price.market_status
+    
+    return Response({
+        'status': status,
+        'session': session,
+        'current_time': current_time.strftime('%Y-%m-%d %H:%M:%S'),
+        'last_data_update': last_update,
+        'market_data_status': market_data_status,
+        'is_weekend': current_weekday in [5, 6],
+        'trading_day': current_weekday < 5
+    })

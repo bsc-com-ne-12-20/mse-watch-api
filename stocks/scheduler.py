@@ -29,6 +29,14 @@ def run_scraper(force=False):
         force (bool): Whether to force scrape even if market is closed
     """
     try:
+        # Check if it's weekend (Saturday = 5, Sunday = 6)
+        current_weekday = datetime.now().weekday()
+        if current_weekday in [5, 6] and not force:  # Saturday or Sunday
+            weekday_name = "Saturday" if current_weekday == 5 else "Sunday"
+            print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] SCHEDULER: Market is closed on {weekday_name}. Stock exchanges do not operate on weekends.")
+            logger.info(f"Market is closed on {weekday_name}. Skipping scheduled scrape.")
+            return
+        
         # Check if it's outside market hours
         current_time = datetime.now()
         current_hour = current_time.hour

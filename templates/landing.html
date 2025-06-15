@@ -1,0 +1,788 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSE Watch - Malawi Stock Exchange API</title>
+    <meta name="description" content="Real-time Malawi Stock Exchange data API. Access stock prices, historical data, and company information through our comprehensive REST API.">
+    
+    <!-- Tailwind CSS CDN for quick styling -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #0055a4;
+            --secondary-color: #ff6b35;
+            --accent-color: #00a86b;
+            --dark-color: #1a202c;
+            --light-gray: #f7fafc;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #003d75 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .api-demo {
+            background: #2d3748;
+            border-radius: 8px;
+            color: #e2e8f0;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        }
+        
+        .json-key { color: #68d391; }
+        .json-string { color: #f6ad55; }
+        .json-number { color: #63b3ed; }
+          .numnet-badge {
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.875rem;
+        }
+        
+        /* Ensure no default margins affect navbar positioning */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Additional navbar positioning fix */
+        nav {
+            top: 0 !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed top-0 left-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-blue-900">MSE Watch</h1>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-8">
+                        <a href="#features" class="text-gray-700 hover:text-blue-900 transition duration-300">Features</a>
+                        <a href="#api" class="text-gray-700 hover:text-blue-900 transition duration-300">API</a>
+                        <a href="#pricing" class="text-gray-700 hover:text-blue-900 transition duration-300">Pricing</a>
+                        <a href="#contact" class="text-gray-700 hover:text-blue-900 transition duration-300">Contact</a>
+                        <a href="/swagger/" class="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition duration-300">Documentation</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-900">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#features" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">Features</a>
+                <a href="#api" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">API</a>
+                <a href="#pricing" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">Pricing</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+                <a href="/swagger/" class="block px-3 py-2 bg-blue-900 text-white rounded-lg ml-3 mr-3 text-center">Documentation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="numnet-badge inline-block mb-6">
+                        <i class="fas fa-code mr-2"></i>Developed by NumNet
+                    </div>
+                    <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Real-time <span class="text-yellow-300">Malawi Stock Exchange</span> Data API
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100 leading-relaxed">
+                        Access comprehensive MSE market data through our powerful REST API. Get real-time stock prices, 
+                        historical data, and company information with enterprise-grade reliability.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="/swagger/" class="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition duration-300 text-center">
+                            <i class="fas fa-rocket mr-2"></i>Get Started Free
+                        </a>
+                        <a href="#api" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-900 transition duration-300 text-center">
+                            <i class="fas fa-book mr-2"></i>View Documentation
+                        </a>
+                    </div>
+                    
+                    <!-- Live Market Status -->
+                    <div class="mt-8 bg-white bg-opacity-10 rounded-lg p-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="pulse-animation w-3 h-3 bg-green-400 rounded-full mr-3"></div>
+                                <span class="text-sm font-medium">Market Status: <span id="market-status">Loading...</span></span>
+                            </div>
+                            <div class="text-sm">
+                                Last Update: <span id="last-update" class="font-mono">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:pl-8">
+                    <!-- API Demo -->
+                    <div class="api-demo p-6 rounded-lg shadow-2xl">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-green-400 font-semibold">Live API Response</span>
+                            <div class="flex space-x-2">
+                                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            </div>
+                        </div>
+                        <pre class="text-sm overflow-x-auto"><code>GET /api/latest/
+
+{
+  <span class="json-key">"symbol"</span>: <span class="json-string">"TNM"</span>,
+  <span class="json-key">"price"</span>: <span class="json-number">156.00</span>,
+  <span class="json-key">"change"</span>: <span class="json-number">2.50</span>,
+  <span class="json-key">"percent_change"</span>: <span class="json-number">1.63</span>,
+  <span class="json-key">"direction"</span>: <span class="json-string">"up"</span>,
+  <span class="json-key">"market_status"</span>: <span class="json-string">"open"</span>,
+  <span class="json-key">"timestamp"</span>: <span class="json-string">"2025-06-15T14:30:00Z"</span>
+}</code></pre>
+                    </div>
+                    
+                    <!-- Quick Stats -->
+                    <div class="grid grid-cols-3 gap-4 mt-6">
+                        <div class="bg-white bg-opacity-10 rounded-lg p-4 text-center">
+                            <div class="text-2xl font-bold text-yellow-300" id="total-companies">25+</div>
+                            <div class="text-sm text-blue-100">Listed Companies</div>
+                        </div>
+                        <div class="bg-white bg-opacity-10 rounded-lg p-4 text-center">
+                            <div class="text-2xl font-bold text-yellow-300">99.9%</div>
+                            <div class="text-sm text-blue-100">Uptime</div>
+                        </div>
+                        <div class="bg-white bg-opacity-10 rounded-lg p-4 text-center">
+                            <div class="text-2xl font-bold text-yellow-300">24/7</div>
+                            <div class="text-sm text-blue-100">Monitoring</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Powerful Features for Developers</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to build financial applications with Malawi Stock Exchange data</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Real-time Data</h3>
+                    <p class="text-gray-600 leading-relaxed">Get live stock prices and market updates during trading hours with minimal latency and maximum accuracy.</p>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-history text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Historical Data</h3>
+                    <p class="text-gray-600 leading-relaxed">Access comprehensive historical price data with OHLC information for technical analysis and backtesting.</p>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-building text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Company Information</h3>
+                    <p class="text-gray-600 leading-relaxed">Detailed company profiles including financial information, management details, and contact information.</p>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-2xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">RESTful API</h3>
+                    <p class="text-gray-600 leading-relaxed">Clean, well-documented REST API with intuitive endpoints and comprehensive error handling.</p>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bell text-2xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Email Reports</h3>
+                    <p class="text-gray-600 leading-relaxed">Subscribe to daily market reports with summaries, top movers, and market statistics delivered to your inbox.</p>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-2xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Reliable & Secure</h3>
+                    <p class="text-gray-600 leading-relaxed">Enterprise-grade reliability with 99.9% uptime, secure HTTPS endpoints, and robust error handling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Endpoints Section -->
+    <section id="api" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">API Endpoints</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive endpoints for all your market data needs</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">GET</span>
+                            <code class="text-gray-600">/api/latest/</code>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Latest Prices</h3>
+                        <p class="text-gray-600">Get the most recent price for each stock symbol</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">GET</span>
+                            <code class="text-gray-600">/api/historical/{symbol}/</code>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Historical Data</h3>
+                        <p class="text-gray-600">Access historical OHLC data for any stock symbol</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">GET</span>
+                            <code class="text-gray-600">/api/companies/</code>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Company Information</h3>
+                        <p class="text-gray-600">Detailed information about listed companies</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">POST</span>
+                            <code class="text-gray-600">/api/subscribe/</code>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Email Subscription</h3>
+                        <p class="text-gray-600">Subscribe to daily market reports</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Interactive API Explorer</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Try an endpoint:</label>
+                                <select id="endpoint-select" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="/api/latest/">Latest Prices</option>
+                                    <option value="/api/companies/">All Companies</option>
+                                    <option value="/api/historical/TNM/">TNM Historical Data</option>
+                                </select>
+                            </div>
+                            <button id="try-api" class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-300">
+                                <i class="fas fa-play mr-2"></i>Try API Call
+                            </button>
+                            <div id="api-result" class="bg-gray-100 rounded-lg p-4 min-h-32 hidden">
+                                <pre class="text-sm text-gray-800 overflow-x-auto"></pre>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 pt-6 border-t border-gray-200">
+                            <a href="/swagger/" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                View Full Documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Start free and scale as you grow</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Free Tier -->
+                <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-8">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Free</h3>
+                        <div class="text-4xl font-bold text-gray-900 mb-2">$0</div>
+                        <p class="text-gray-600 mb-6">Perfect for getting started</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>1,000 API calls/month</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Real-time data</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Basic documentation</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Community support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-200 text-gray-800 py-3 px-4 rounded-lg hover:bg-gray-300 transition duration-300">
+                        Get Started Free
+                    </button>
+                </div>
+                
+                <!-- Pro Tier -->
+                <div class="bg-blue-600 rounded-xl shadow-lg border-2 border-blue-600 p-8 transform scale-105">
+                    <div class="text-center">
+                        <div class="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-medium mb-4 inline-block">
+                            Most Popular
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Professional</h3>
+                        <div class="text-4xl font-bold text-white mb-2">$29</div>
+                        <p class="text-blue-100 mb-6">per month</p>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-white">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-3"></i>
+                            <span>50,000 API calls/month</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-3"></i>
+                            <span>Historical data access</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-3"></i>
+                            <span>Email reports</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-3"></i>
+                            <span>Priority support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-3"></i>
+                            <span>Advanced documentation</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-yellow-400 text-gray-900 py-3 px-4 rounded-lg hover:bg-yellow-300 transition duration-300 font-semibold">
+                        Start 14-Day Trial
+                    </button>
+                </div>
+                
+                <!-- Enterprise Tier -->
+                <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-8">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
+                        <div class="text-4xl font-bold text-gray-900 mb-2">Custom</div>
+                        <p class="text-gray-600 mb-6">For large organizations</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Unlimited API calls</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Custom integrations</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>SLA guarantee</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Dedicated support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>On-premise deployment</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-900 text-white py-3 px-4 rounded-lg hover:bg-gray-800 transition duration-300">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="py-16 bg-blue-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Stay Updated with Daily Market Reports</h2>
+            <p class="text-xl text-blue-100 mb-8">Get comprehensive daily summaries of MSE market activity delivered to your inbox</p>
+            
+            <form id="newsletter-form" class="max-w-md mx-auto flex">
+                <input 
+                    type="email" 
+                    id="email-input"
+                    placeholder="Enter your email address" 
+                    required
+                    class="flex-1 px-4 py-3 rounded-l-lg border border-gray-300 focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400"
+                >
+                <button 
+                    type="submit"
+                    class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-r-lg hover:bg-yellow-300 transition duration-300 font-semibold"
+                >
+                    Subscribe
+                </button>
+            </form>
+            
+            <p class="text-sm text-blue-200 mt-4">
+                Free daily reports with market summaries, top movers, and trading statistics
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Have questions? Need custom solutions? We're here to help.</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Email Support</h3>
+                                <p class="text-gray-600">support@msewatch.com</p>
+                                <p class="text-sm text-gray-500">We typically respond within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-code text-green-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Developed by NumNet</h3>
+                                <p class="text-gray-600">Professional software development and consulting</p>
+                                <p class="text-sm text-gray-500">Innovative solutions for modern businesses</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-chart-bar text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Market Data</h3>
+                                <p class="text-gray-600">Sourced directly from Malawi Stock Exchange</p>
+                                <p class="text-sm text-gray-500">Real-time and historical market information</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <select id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <option>General Inquiry</option>
+                                <option>API Support</option>
+                                <option>Enterprise Solutions</option>
+                                <option>Partnership</option>
+                                <option>Technical Issue</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-300 font-semibold">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">MSE Watch</h3>
+                    <p class="text-gray-300 mb-4">Comprehensive Malawi Stock Exchange API for developers and financial applications.</p>
+                    <div class="numnet-badge">
+                        <i class="fas fa-code mr-2"></i>Powered by NumNet
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">API</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="/swagger/" class="hover:text-white transition duration-300">Documentation</a></li>
+                        <li><a href="/api/latest/" class="hover:text-white transition duration-300">Latest Prices</a></li>
+                        <li><a href="/api/companies/" class="hover:text-white transition duration-300">Companies</a></li>
+                        <li><a href="/redoc/" class="hover:text-white transition duration-300">API Reference</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white transition duration-300">Getting Started</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Code Examples</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Rate Limits</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Status Page</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white transition duration-300">Support</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">GitHub</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Twitter</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    © 2025 MSE Watch by NumNet. All rights reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // API Demo functionality
+        document.getElementById('try-api').addEventListener('click', async function() {
+            const endpoint = document.getElementById('endpoint-select').value;
+            const resultDiv = document.getElementById('api-result');
+            const button = this;
+            
+            button.disabled = true;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Loading...';
+            
+            try {
+                const response = await fetch(endpoint);
+                const data = await response.json();
+                
+                resultDiv.querySelector('pre').textContent = JSON.stringify(data, null, 2);
+                resultDiv.classList.remove('hidden');
+            } catch (error) {
+                resultDiv.querySelector('pre').textContent = 'Error: ' + error.message;
+                resultDiv.classList.remove('hidden');
+            } finally {
+                button.disabled = false;
+                button.innerHTML = '<i class="fas fa-play mr-2"></i>Try API Call';
+            }
+        });
+
+        // Newsletter subscription
+        document.getElementById('newsletter-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email-input').value;
+            const button = this.querySelector('button');
+            
+            button.disabled = true;
+            button.textContent = 'Subscribing...';
+            
+            try {
+                const response = await fetch('/api/subscribe/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': getCookie('csrftoken')
+                    },
+                    body: JSON.stringify({ email: email })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    alert('Successfully subscribed to daily market reports!');
+                    document.getElementById('email-input').value = '';
+                } else {
+                    alert('Error: ' + (data.message || 'Subscription failed'));
+                }
+            } catch (error) {
+                alert('Error: ' + error.message);
+            } finally {
+                button.disabled = false;
+                button.textContent = 'Subscribe';
+            }
+        });
+
+        // Contact form
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We\'ll get back to you soon.');
+            this.reset();
+        });        // Update last update time and market status
+        function updateMarketStatus() {
+            // Fetch market status from API
+            fetch('/api/market-status/')
+                .then(response => response.json())
+                .then(data => {
+                    const statusElement = document.getElementById('market-status');
+                    const lastUpdateElement = document.getElementById('last-update');
+                    const pulseElement = document.querySelector('.pulse-animation');
+                    
+                    // Update market status text
+                    statusElement.textContent = data.status;
+                    
+                    // Update last update time
+                    if (data.last_data_update) {
+                        lastUpdateElement.textContent = new Date(data.last_data_update).toLocaleString();
+                    } else {
+                        lastUpdateElement.textContent = 'No data available';
+                    }
+                    
+                    // Update pulse color based on status
+                    if (data.status.includes('Open')) {
+                        pulseElement.className = 'pulse-animation w-3 h-3 bg-green-400 rounded-full mr-3';
+                    } else if (data.status.includes('Closed')) {
+                        pulseElement.className = 'pulse-animation w-3 h-3 bg-red-400 rounded-full mr-3';
+                    } else {
+                        pulseElement.className = 'pulse-animation w-3 h-3 bg-yellow-400 rounded-full mr-3';
+                    }
+                })
+                .catch(error => {
+                    console.log('Error fetching market status:', error);
+                    // Fallback to time-based update
+                    const now = new Date();
+                    document.getElementById('last-update').textContent = now.toLocaleTimeString();
+                });
+        }
+
+        function updateLastUpdateTime() {
+            const now = new Date();
+            document.getElementById('last-update').textContent = now.toLocaleTimeString();
+        }
+
+        // Get CSRF token
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }        // Initialize
+        updateMarketStatus();
+        setInterval(updateMarketStatus, 60000); // Update every minute
+
+        // Load company count
+        fetch('/api/companies/')
+            .then(response => response.json())
+            .then(data => {
+                if (data.results) {
+                    document.getElementById('total-companies').textContent = data.results.length + '+';
+                }
+            })
+            .catch(error => console.log('Error loading company count:', error));
+    </script>
+</body>
+</html>

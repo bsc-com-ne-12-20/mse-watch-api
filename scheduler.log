@@ -19,3 +19,85 @@
 2025-06-06 11:32:05,290 [INFO] Scheduler started successfully
 2025-06-06 11:32:05,291 [INFO] Scheduler initialized in Django startup
 2025-06-06 11:32:05,343 [INFO] Watching for file changes with StatReloader
+2025-06-15 11:03:59,127 [INFO] Starting scheduler service
+2025-06-15 11:03:59,141 [INFO] Scheduler started successfully
+2025-06-15 11:03:59,141 [INFO] Scheduler initialized in Django startup
+2025-06-15 11:03:59,191 [INFO] Watching for file changes with StatReloader
+2025-06-15 11:04:12,147 [WARNING] Not Found: /favicon.ico
+2025-06-15 11:06:51,137 [INFO] Starting scheduler service
+2025-06-15 11:06:51,147 [INFO] Scheduler started successfully
+2025-06-15 11:06:51,147 [INFO] Scheduler initialized in Django startup
+2025-06-15 11:06:51,197 [INFO] Watching for file changes with StatReloader
+2025-06-15 11:08:59,145 [INFO] Running scheduled stock scraper
+2025-06-15 11:08:59,165 [INFO] Starting stock scraper at 2025-06-15 11:08:59.165227
+2025-06-15 11:09:08,397 [INFO] Successfully extracted data for 16 stocks
+2025-06-15 11:09:08,637 [INFO] Saved 16 stock records to database
+2025-06-15 11:11:51,151 [INFO] Running scheduled stock scraper
+2025-06-15 11:11:51,168 [INFO] Starting stock scraper at 2025-06-15 11:11:51.168017
+2025-06-15 11:11:54,115 [INFO] Successfully extracted data for 16 stocks
+2025-06-15 11:11:54,353 [INFO] Saved 16 stock records to database
+2025-06-15 11:14:08,642 [INFO] Running scheduled stock scraper
+2025-06-15 11:14:08,646 [INFO] Starting stock scraper at 2025-06-15 11:14:08.646325
+2025-06-15 11:14:10,019 [INFO] Successfully extracted data for 16 stocks
+2025-06-15 11:14:10,150 [INFO] Saved 16 stock records to database
+2025-06-15 11:14:11,424 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\management\commands\scrape_stocks.py changed, reloading.
+2025-06-15 11:14:11,466 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\management\commands\scrape_stocks.py changed, reloading.
+2025-06-15 11:14:12,946 [INFO] Starting scheduler service
+2025-06-15 11:14:12,952 [INFO] Starting scheduler service
+2025-06-15 11:14:12,956 [INFO] Scheduler started successfully
+2025-06-15 11:14:12,957 [INFO] Scheduler initialized in Django startup
+2025-06-15 11:14:12,959 [INFO] Scheduler started successfully
+2025-06-15 11:14:12,961 [INFO] Scheduler initialized in Django startup
+2025-06-15 11:14:13,006 [INFO] Watching for file changes with StatReloader
+2025-06-15 11:14:13,006 [INFO] Watching for file changes with StatReloader
+2025-06-15 11:14:40,633 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\scheduler.py changed, reloading.
+2025-06-15 11:14:40,635 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\scheduler.py changed, reloading.
+2025-06-15 11:14:41,606 [INFO] Starting scheduler service
+2025-06-15 11:14:41,606 [INFO] Starting scheduler service
+2025-06-15 11:14:41,619 [INFO] Scheduler started successfully
+2025-06-15 11:14:41,619 [INFO] Scheduler started successfully
+2025-06-15 11:14:41,620 [INFO] Scheduler initialized in Django startup
+2025-06-15 11:14:41,620 [INFO] Scheduler initialized in Django startup
+2025-06-15 11:14:41,725 [INFO] Watching for file changes with StatReloader
+2025-06-15 11:14:41,725 [INFO] Watching for file changes with StatReloader
+2025-06-15 11:15:43,707 [INFO] Starting scheduler service
+2025-06-15 11:15:43,716 [INFO] Scheduler started successfully
+2025-06-15 11:15:43,716 [INFO] Scheduler initialized in Django startup
+2025-06-15 11:16:05,885 [INFO] Starting scheduler service
+2025-06-15 11:16:05,903 [INFO] Scheduler started successfully
+2025-06-15 11:16:05,903 [INFO] Scheduler initialized in Django startup
+2025-06-15 11:16:32,756 [INFO] Starting scheduler service
+2025-06-15 11:16:32,764 [INFO] Scheduler started successfully
+2025-06-15 11:16:32,764 [INFO] Scheduler initialized in Django startup
+2025-06-15 11:16:33,661 [INFO] Skipping scrape - Market closed on Sunday
+2025-06-15 11:16:42,365 [INFO] Starting scheduler service
+2025-06-15 11:16:42,375 [INFO] Scheduler started successfully
+2025-06-15 11:16:42,377 [INFO] Scheduler initialized in Django startup
+2025-06-15 11:16:43,255 [INFO] Skipping scrape - Market closed on Sunday
+2025-06-15 11:16:52,981 [INFO] Starting scheduler service
+2025-06-15 11:16:52,985 [INFO] Scheduler started successfully
+2025-06-15 11:16:52,985 [INFO] Scheduler initialized in Django startup
+2025-06-15 11:16:53,765 [INFO] Starting stock scraper at 2025-06-15 11:16:53.765917 (forced)
+2025-06-15 11:16:55,927 [INFO] Successfully extracted data for 16 stocks
+2025-06-15 11:16:56,085 [INFO] Saved 16 stock records to database
+2025-06-15 11:18:38,732 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\scheduler.py changed, reloading.
+2025-06-15 11:18:39,857 [INFO] Starting scheduler service
+2025-06-15 11:18:39,863 [INFO] Scheduler started successfully
+2025-06-15 11:18:39,865 [INFO] Scheduler initialized in Django startup
+2025-06-15 11:18:39,915 [INFO] Watching for file changes with StatReloader
+2025-06-15 11:23:39,866 [INFO] Market is closed on Sunday. Skipping scheduled scrape.
+2025-06-15 11:24:29,892 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\views.py changed, reloading.
+2025-06-15 11:24:31,598 [INFO] Starting scheduler service
+2025-06-15 11:24:31,609 [INFO] Scheduler started successfully
+2025-06-15 11:24:31,609 [INFO] Scheduler initialized in Django startup
+2025-06-15 11:24:31,664 [INFO] Watching for file changes with StatReloader
+2025-06-15 11:25:04,584 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\urls.py changed, reloading.
+2025-06-15 11:25:05,824 [INFO] Starting scheduler service
+2025-06-15 11:25:05,833 [INFO] Scheduler started successfully
+2025-06-15 11:25:05,833 [INFO] Scheduler initialized in Django startup
+2025-06-15 11:25:05,865 [INFO] Watching for file changes with StatReloader
+2025-06-15 11:26:26,694 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\views.py changed, reloading.
+2025-06-15 11:26:27,733 [INFO] Starting scheduler service
+2025-06-15 11:26:27,751 [INFO] Scheduler started successfully
+2025-06-15 11:26:27,752 [INFO] Scheduler initialized in Django startup
+2025-06-15 11:26:27,793 [INFO] Watching for file changes with StatReloader
