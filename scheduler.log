@@ -138,3 +138,13 @@
 2025-06-15 12:44:03,690 [INFO] Scheduler started successfully
 2025-06-15 12:44:03,695 [INFO] Scheduler initialized in Django startup
 2025-06-15 12:44:03,772 [INFO] Watching for file changes with StatReloader
+2025-06-15 12:46:43,828 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\settings.py changed, reloading.
+2025-06-15 12:46:45,121 [INFO] Starting scheduler service
+2025-06-15 12:46:45,121 [INFO] Scheduler started successfully
+2025-06-15 12:46:45,121 [INFO] Scheduler initialized in Django startup
+2025-06-15 12:46:45,160 [INFO] Watching for file changes with StatReloader
+2025-06-15 12:47:34,180 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\settings.py changed, reloading.
+2025-06-15 12:47:35,305 [INFO] Starting scheduler service
+2025-06-15 12:47:35,313 [INFO] Scheduler started successfully
+2025-06-15 12:47:35,313 [INFO] Scheduler initialized in Django startup
+2025-06-15 12:47:35,362 [INFO] Watching for file changes with StatReloader

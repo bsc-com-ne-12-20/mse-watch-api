@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-*60n-o^+e#)n31qv=xwtw3s$g535q^77gx!$rz^fjd$rj*r$-9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'mse-watch.onrender.com']
+ALLOWED_HOSTS = ['mse-watch.ddns.net','localhost', '127.0.0.1', 'mse-watch.onrender.com','35.193.241.192']
 
 CORS_ALLOW_ALL_ORIGINS = True 
 
@@ -34,6 +34,8 @@ CORS_ALLOWED_ORIGINS = [
     "https://mse-watch.onrender.com",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "http://35.193.241.192",
+    "http://mse-watch.ddns.net",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -176,4 +178,4 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_USER', '')  # Set as environment variabl
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD', '')  # Set as environment variable
 DEFAULT_FROM_EMAIL = 'MSE Market Watch <your-email@example.com>'
 
-CSRF_TRUSTED_ORIGINS = ['https://mse-watch.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://mse-watch.onrender.com','http://35.193.241.192','http://mse-watch.ddns.net']
