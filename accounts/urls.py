@@ -36,8 +36,8 @@ urlpatterns = [
     # API key management
     path('api-keys/create/', views.create_api_key, name='create_api_key'),
     path('api-keys/<int:key_id>/delete/', views.delete_api_key, name='delete_api_key'),
-    
-    # Subscription management
+      # Subscription management
     path('pricing/', views.pricing_view, name='pricing'),
     path('subscribe/<str:plan>/', views.subscribe_view, name='subscribe'),
+    path('downgrade/<str:plan>/', views.downgrade_view, name='downgrade'),
 ]

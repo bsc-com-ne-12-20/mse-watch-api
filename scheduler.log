@@ -836,3 +836,97 @@ PermissionError: [WinError 32] The process cannot access the file because it is 
 2025-06-16 12:22:59,426 [INFO] Watching for file changes with StatReloader
 2025-06-16 12:23:12,099 [WARNING] Unauthorized: /api/market-status/
 2025-06-16 12:23:12,102 [WARNING] Unauthorized: /api/companies/
+2025-06-16 12:26:54,644 [WARNING] Not Found: /downgrade/free/
+2025-06-16 12:27:59,065 [INFO] Running scheduled stock scraper
+2025-06-16 12:27:59,079 [INFO] Starting stock scraper at 2025-06-16 12:27:59.079684
+2025-06-16 12:28:00,591 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\urls.py changed, reloading.
+2025-06-16 12:28:02,440 [INFO] Starting scheduler service
+2025-06-16 12:28:02,447 [INFO] Scheduler started successfully
+2025-06-16 12:28:02,448 [INFO] Scheduler initialized in Django startup
+2025-06-16 12:28:02,539 [INFO] Watching for file changes with StatReloader
+2025-06-16 12:28:20,668 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\views.py changed, reloading.
+2025-06-16 12:28:21,570 [INFO] Starting scheduler service
+2025-06-16 12:28:21,627 [INFO] Scheduler started successfully
+2025-06-16 12:28:21,627 [INFO] Scheduler initialized in Django startup
+2025-06-16 12:28:21,671 [INFO] Watching for file changes with StatReloader
+2025-06-16 12:30:21,631 [INFO] Running scheduled stock scraper
+2025-06-16 12:30:21,634 [INFO] Starting stock scraper at 2025-06-16 12:30:21.634632
+2025-06-16 12:30:26,302 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 12:30:26,430 [INFO] Saved 16 stock records to database
+2025-06-16 12:33:26,443 [INFO] Running scheduled stock scraper
+2025-06-16 12:33:26,443 [INFO] Starting stock scraper at 2025-06-16 12:33:26.443017
+2025-06-16 12:33:27,889 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 12:33:28,025 [INFO] Saved 16 stock records to database
+2025-06-16 12:38:28,034 [INFO] Running scheduled stock scraper
+2025-06-16 12:38:28,034 [INFO] Starting stock scraper at 2025-06-16 12:38:28.034975
+2025-06-16 12:38:29,453 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 12:38:29,596 [INFO] Saved 16 stock records to database
+2025-06-16 12:43:29,600 [INFO] Running scheduled stock scraper
+2025-06-16 12:43:29,605 [INFO] Starting stock scraper at 2025-06-16 12:43:29.605898
+2025-06-16 12:43:31,188 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 12:43:31,326 [INFO] Saved 16 stock records to database
+2025-06-16 12:45:31,333 [INFO] Running scheduled stock scraper
+2025-06-16 12:45:31,340 [INFO] Starting stock scraper at 2025-06-16 12:45:31.340602
+2025-06-16 12:45:32,830 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 12:45:33,720 [INFO] Saved 16 stock records to database
+2025-06-16 12:48:33,724 [INFO] Running scheduled stock scraper
+2025-06-16 12:48:33,724 [INFO] Starting stock scraper at 2025-06-16 12:48:33.724615
+2025-06-16 12:48:35,146 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 12:48:35,266 [INFO] Saved 16 stock records to database
+2025-06-16 12:50:27,332 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\views.py changed, reloading.
+2025-06-16 12:50:28,585 [INFO] Starting scheduler service
+2025-06-16 12:50:28,592 [INFO] Scheduler started successfully
+2025-06-16 12:50:28,592 [INFO] Scheduler initialized in Django startup
+2025-06-16 12:50:28,651 [INFO] Watching for file changes with StatReloader
+2025-06-16 12:55:25,381 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\views.py changed, reloading.
+2025-06-16 12:55:26,425 [INFO] Starting scheduler service
+2025-06-16 12:55:26,435 [INFO] Scheduler started successfully
+2025-06-16 12:55:26,436 [INFO] Scheduler initialized in Django startup
+2025-06-16 12:55:26,472 [INFO] Watching for file changes with StatReloader
+2025-06-16 12:58:32,260 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\views.py changed, reloading.
+2025-06-16 12:58:33,159 [INFO] Starting scheduler service
+2025-06-16 12:58:33,169 [INFO] Scheduler started successfully
+2025-06-16 12:58:33,169 [INFO] Scheduler initialized in Django startup
+2025-06-16 12:58:33,211 [INFO] Watching for file changes with StatReloader
+2025-06-16 13:00:18,507 [INFO] Starting scheduler service
+2025-06-16 13:00:18,515 [INFO] Scheduler started successfully
+2025-06-16 13:00:18,516 [INFO] Scheduler initialized in Django startup
+2025-06-16 13:00:33,173 [INFO] Running scheduled stock scraper
+2025-06-16 13:00:33,176 [INFO] Starting stock scraper at 2025-06-16 13:00:33.176975
+2025-06-16 13:00:35,636 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 13:00:35,758 [INFO] Saved 16 stock records to database
+2025-06-16 13:01:56,666 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\views.py changed, reloading.
+2025-06-16 13:01:57,688 [INFO] Starting scheduler service
+2025-06-16 13:01:57,695 [INFO] Scheduler started successfully
+2025-06-16 13:01:57,696 [INFO] Scheduler initialized in Django startup
+2025-06-16 13:01:57,730 [INFO] Watching for file changes with StatReloader
+2025-06-16 13:02:15,757 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 13:02:15,759 [WARNING] Unauthorized: /api/companies/
+2025-06-16 13:03:15,766 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 13:04:15,758 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 13:05:15,759 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 13:06:15,763 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 13:06:57,700 [INFO] Running scheduled stock scraper
+2025-06-16 13:06:57,700 [INFO] Starting stock scraper at 2025-06-16 13:06:57.700488
+2025-06-16 13:07:00,400 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 13:07:00,622 [INFO] Saved 16 stock records to database
+2025-06-16 13:07:15,763 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 13:08:15,754 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 13:09:15,766 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 13:10:15,753 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 13:12:00,640 [INFO] Running scheduled stock scraper
+2025-06-16 13:12:00,642 [INFO] Starting stock scraper at 2025-06-16 13:12:00.642789
+2025-06-16 13:12:02,332 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 13:12:02,543 [INFO] Saved 16 stock records to database
+2025-06-16 13:15:02,547 [INFO] Running scheduled stock scraper
+2025-06-16 13:15:02,547 [INFO] Starting stock scraper at 2025-06-16 13:15:02.547960
+2025-06-16 13:15:03,928 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 13:15:04,166 [INFO] Saved 16 stock records to database
+2025-06-16 13:17:04,182 [INFO] Running scheduled stock scraper
+2025-06-16 13:17:04,182 [INFO] Starting stock scraper at 2025-06-16 13:17:04.182366
+2025-06-16 13:17:05,755 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 13:17:05,993 [INFO] Saved 16 stock records to database
+2025-06-16 13:22:06,003 [INFO] Running scheduled stock scraper
+2025-06-16 13:22:06,003 [INFO] Starting stock scraper at 2025-06-16 13:22:06.003467
+2025-06-16 13:22:07,479 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 13:22:07,749 [INFO] Saved 16 stock records to database

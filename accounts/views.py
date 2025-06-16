@@ -152,7 +152,7 @@ def create_api_key(request):
 
 
 @login_required
-@require_http_methods(["DELETE"])
+@require_http_methods(["DELETE", "POST"])
 def delete_api_key(request, key_id):
     """Delete an API key"""
     try:
@@ -160,7 +160,7 @@ def delete_api_key(request, key_id):
         api_key.is_active = False
         api_key.save()
         
-        return JsonResponse({'success': True})
+        return JsonResponse({'success': True, 'message': 'API key deleted successfully'})
         
     except APIKey.DoesNotExist:
         return JsonResponse({'error': 'API key not found'}, status=404)
@@ -190,6 +190,41 @@ def subscribe_view(request, plan):
     
     messages.success(request, f'Successfully upgraded to {plan.title()} plan!')
     return redirect('/dashboard/')
+
+
+@login_required
+def downgrade_view(request, plan):
+    """Handle subscription downgrades"""
+    valid_plans = ['free']
+    
+    if plan not in valid_plans:
+        messages.error(request, 'Invalid downgrade plan.')
+        return redirect('/pricing/')
+    
+    current_subscription = request.user.subscription
+    
+    # Check if user is already on the requested plan
+    if current_subscription.plan == plan:
+        messages.info(request, f'You are already on the {plan.title()} plan.')
+        return redirect('/dashboard/')
+    
+    # Only allow POST requests with confirmation
+    if request.method == 'POST' and request.POST.get('confirm') == 'yes':
+        # Perform the downgrade
+        old_plan = current_subscription.plan.title()
+        current_subscription.plan = plan
+        current_subscription.save()
+        
+        messages.success(request, f'Successfully downgraded from {old_plan} to {plan.title()} plan. Your API limit is now {current_subscription.monthly_limit:,} calls per month.')
+        return redirect('/dashboard/')
+    else:
+        # For GET requests or POST without confirmation, redirect to pricing with warning
+        if request.method == 'GET':
+            current_plan = current_subscription.plan.title()
+            messages.warning(request, f'To downgrade from {current_plan} to {plan.title()}, please use the downgrade button on the pricing page.')
+        else:
+            messages.error(request, 'Downgrade confirmation is required.')
+        return redirect('/pricing/')
 
 
 @login_required
