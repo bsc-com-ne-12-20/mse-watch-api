@@ -16,18 +16,22 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- Custom CSS -->
-    <style>
+    <!-- Custom CSS -->    <style>
         :root {
-            --primary-color: #0055a4;
-            --secondary-color: #ff6b35;
-            --accent-color: #00a86b;
-            --dark-color: #1a202c;
-            --light-gray: #f7fafc;
+            --primary-color: #1a365d;
+            --secondary-color: #2c5282;
+            --accent-color: #d69e2e;
+            --dark-color: #0a0e13;
+            --light-gray: #f8fafc;
+            --navy-blue: #1e3a8a;
+            --charcoal: #374151;
+            --gold: #fbbf24;
+            --platinum: #e5e7eb;
+            --slate: #64748b;
         }
         
         .hero-gradient {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #003d75 100%);
+            background: linear-gradient(135deg, var(--dark-color) 0%, var(--primary-color) 50%, var(--charcoal) 100%);
         }
         
         .card-hover {
@@ -47,26 +51,27 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0.5; }
         }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+          .gradient-text {
+            background: linear-gradient(135deg, var(--gold), var(--accent-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         
         .api-demo {
-            background: #2d3748;
+            background: var(--charcoal);
             border-radius: 8px;
             color: #e2e8f0;
             font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            border: 1px solid var(--slate);
         }
         
-        .json-key { color: #68d391; }
+        .json-key { color: var(--gold); }
         .json-string { color: #f6ad55; }
         .json-number { color: #63b3ed; }
-          .numnet-badge {
-            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+        
+        .numnet-badge {
+            background: linear-gradient(45deg, var(--navy-blue) 0%, var(--primary-color) 100%);
             color: white;
             padding: 0.5rem 1rem;
             border-radius: 50px;
@@ -74,6 +79,7 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             font-size: 0.875rem;
+            box-shadow: 0 4px 14px 0 rgba(26, 54, 93, 0.39);
         }
           /* Ensure no default margins affect navbar positioning */
         body {
@@ -230,25 +236,30 @@
     </style>
 </head>
 <body class="bg-gray-50">    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed top-0 left-0 w-full z-50">
+    <nav class="bg-white shadow-lg fixed top-0 left-0 w-full z-50 border-b-2 border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
+            <div class="flex justify-between items-center h-16">                <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <h1 class="mobile-nav-title text-xl sm:text-2xl font-bold text-blue-900">MSE Watch</h1>
+                        <div class="flex items-center">
+                            <div class="relative w-8 h-8 mr-3">
+                                <i class="fas fa-chart-line text-yellow-600 text-lg absolute top-0 left-0"></i>
+                                <i class="fas fa-clock text-gray-700 text-sm absolute bottom-0 right-0"></i>
+                            </div>
+                            <h1 class="mobile-nav-title text-xl sm:text-2xl font-bold text-gray-900">MSE Watch</h1>
+                        </div>
                     </div>
                 </div>
                 <div class="hidden md:block">
                     <div class="flex items-center space-x-8">
-                        <a href="#features" class="text-gray-700 hover:text-blue-900 transition duration-300">Features</a>
-                        <a href="#api" class="text-gray-700 hover:text-blue-900 transition duration-300">API</a>
-                        <a href="#pricing" class="text-gray-700 hover:text-blue-900 transition duration-300">Pricing</a>
-                        <a href="#contact" class="text-gray-700 hover:text-blue-900 transition duration-300">Contact</a>
-                        <a href="/swagger/" class="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition duration-300">Documentation</a>
+                        <a href="#features" class="text-gray-700 hover:text-gray-900 transition duration-300 font-medium">Features</a>
+                        <a href="#api" class="text-gray-700 hover:text-gray-900 transition duration-300 font-medium">API</a>
+                        <a href="#pricing" class="text-gray-700 hover:text-gray-900 transition duration-300 font-medium">Pricing</a>
+                        <a href="#contact" class="text-gray-700 hover:text-gray-900 transition duration-300 font-medium">Contact</a>
+                        <a href="/swagger/" class="bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition duration-300 font-semibold shadow-lg">Documentation</a>
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-900 p-2">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-gray-900 p-2">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -258,45 +269,45 @@
         <!-- Mobile menu -->
         <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg border-t border-gray-200">
             <div class="px-4 pt-2 pb-3 space-y-1">
-                <a href="#features" class="block px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300">Features</a>
-                <a href="#api" class="block px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300">API</a>
-                <a href="#pricing" class="block px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300">Pricing</a>
-                <a href="#contact" class="block px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300">Contact</a>
-                <a href="/swagger/" class="block px-3 py-3 mx-3 mt-2 bg-blue-900 text-white rounded-lg text-center font-medium hover:bg-blue-800 transition duration-300">Documentation</a>
+                <a href="#features" class="block px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300 font-medium">Features</a>
+                <a href="#api" class="block px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300 font-medium">API</a>
+                <a href="#pricing" class="block px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300 font-medium">Pricing</a>
+                <a href="#contact" class="block px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300 font-medium">Contact</a>
+                <a href="/swagger/" class="block px-3 py-3 mx-3 mt-2 bg-gray-900 text-white rounded-lg text-center font-semibold hover:bg-gray-800 transition duration-300 shadow-lg">Documentation</a>
             </div>
         </div>
     </nav><!-- Hero Section -->
     <section class="hero-gradient text-white py-12 sm:py-16 md:py-20 mt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                <div class="text-center lg:text-left">
-                    <div class="numnet-badge inline-block mb-4 md:mb-6">
+                <div class="text-center lg:text-left">                    <div class="numnet-badge inline-block mb-4 md:mb-6">
                         <i class="fas fa-code mr-2"></i>Developed by NumNet
                     </div>
-                    <h1 class="mobile-hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
-                        Real-time <span class="text-yellow-300">Malawi Stock Exchange</span> Data API
-                    </h1>
-                    <p class="mobile-hero-subtitle mobile-text-responsive text-lg sm:text-xl mb-6 md:mb-8 text-blue-100 leading-relaxed">
-                        Access comprehensive MSE market data through our powerful REST API. Get real-time stock prices, 
-                        historical data, and company information with enterprise-grade reliability.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="/swagger/" class="mobile-btn bg-yellow-400 text-gray-900 px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold text-base md:text-lg hover:bg-yellow-300 transition duration-300 text-center">
-                            <i class="fas fa-rocket mr-2"></i>Get Started Free
-                        </a>
-                        <a href="#api" class="mobile-btn border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold text-base md:text-lg hover:bg-white hover:text-blue-900 transition duration-300 text-center">
-                            <i class="fas fa-book mr-2"></i>View Documentation
-                        </a>
+                    <div class="flex items-center justify-center lg:justify-start mb-4">
+                        <img src="https://flagcdn.com/w40/mw.png" alt="Malawi Flag" class="w-8 h-6 mr-3 rounded-sm shadow-sm">
+                        <span class="text-yellow-600 font-semibold text-lg">Malawi Stock Exchange API</span>
                     </div>
-                      <!-- Live Market Status -->
-                    <div class="mt-8 bg-white bg-opacity-10 rounded-lg p-4">
+                    <h1 class="mobile-hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
+                        Developer-First <span class="gradient-text">Market Data API</span>
+                    </h1>
+                    <p class="mobile-hero-subtitle mobile-text-responsive text-lg sm:text-xl mb-6 md:mb-8 text-gray-300 leading-relaxed">
+                        Build powerful financial applications with our comprehensive Malawi Stock Exchange API. 
+                        Real-time data, historical analytics, and developer-friendly documentation for modern fintech solutions.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">                        <a href="/swagger/" class="mobile-btn bg-gradient-to-r from-yellow-600 to-yellow-700 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold text-base md:text-lg hover:from-yellow-700 hover:to-yellow-800 transition duration-300 text-center shadow-xl">
+                            <i class="fas fa-code mr-2"></i>Explore API
+                        </a>
+                        <a href="#api" class="mobile-btn border-2 border-gray-300 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold text-base md:text-lg hover:bg-white hover:text-gray-900 transition duration-300 text-center">
+                            <i class="fas fa-book-open mr-2"></i>Documentation
+                        </a>
+                    </div>                    <!-- Live Market Status -->
+                    <div class="mt-8 bg-white bg-opacity-10 rounded-lg p-4 border border-gray-500 backdrop-blur-sm">
                         <div class="mobile-market-status flex items-center justify-between">
-                            <div class="flex items-center">
-                                <div class="pulse-animation w-3 h-3 bg-green-400 rounded-full mr-3"></div>
-                                <span class="text-sm font-medium">Market Status: <span id="market-status">Loading...</span></span>
+                            <div class="flex items-center">                                <div class="pulse-animation w-3 h-3 bg-yellow-600 rounded-full mr-3"></div>
+                                <span class="text-sm font-semibold text-gray-200">Market Status: <span id="market-status" class="text-yellow-600">Loading...</span></span>
                             </div>
-                            <div class="text-sm">
-                                Last Update: <span id="last-update" class="font-mono">Loading...</span>
+                            <div class="text-sm text-gray-300">
+                                Last Update: <span id="last-update" class="font-mono text-yellow-600">Loading...</span>
                             </div>
                         </div>
                     </div>
@@ -309,7 +320,7 @@
                             <span class="text-green-400 font-semibold">Live API Response</span>
                             <div class="flex space-x-2">
                                 <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-                                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-yellow-600 rounded-full"></div>
                                 <div class="w-3 h-3 bg-green-500 rounded-full"></div>
                             </div>
                         </div>
@@ -324,20 +335,19 @@
   <span class="json-key">"market_status"</span>: <span class="json-string">"open"</span>,
   <span class="json-key">"timestamp"</span>: <span class="json-string">"2025-06-15T14:30:00Z"</span>
 }</code></pre>
-                    </div>
-                      <!-- Quick Stats -->
+                    </div>                    <!-- Quick Stats -->
                     <div class="mobile-stats grid grid-cols-3 gap-4 mt-6">
-                        <div class="bg-white bg-opacity-10 rounded-lg p-3 sm:p-4 text-center">
-                            <div class="text-lg sm:text-2xl font-bold text-yellow-300" id="total-companies">25+</div>
-                            <div class="text-xs sm:text-sm text-blue-100">Listed Companies</div>
+                        <div class="bg-white bg-opacity-10 rounded-lg p-3 sm:p-4 text-center border border-gray-500 backdrop-blur-sm">
+                            <div class="text-lg sm:text-2xl font-bold text-yellow-600" id="total-companies">25+</div>
+                            <div class="text-xs sm:text-sm text-gray-300">Listed Companies</div>
                         </div>
-                        <div class="bg-white bg-opacity-10 rounded-lg p-3 sm:p-4 text-center">
-                            <div class="text-lg sm:text-2xl font-bold text-yellow-300">99.9%</div>
-                            <div class="text-xs sm:text-sm text-blue-100">Uptime</div>
+                        <div class="bg-white bg-opacity-10 rounded-lg p-3 sm:p-4 text-center border border-gray-500 backdrop-blur-sm">
+                            <div class="text-lg sm:text-2xl font-bold text-yellow-600">99.9%</div>
+                            <div class="text-xs sm:text-sm text-gray-300">Uptime SLA</div>
                         </div>
-                        <div class="bg-white bg-opacity-10 rounded-lg p-3 sm:p-4 text-center">
-                            <div class="text-lg sm:text-2xl font-bold text-yellow-300">24/7</div>
-                            <div class="text-xs sm:text-sm text-blue-100">Monitoring</div>
+                        <div class="bg-white bg-opacity-10 rounded-lg p-3 sm:p-4 text-center border border-gray-500 backdrop-blur-sm">
+                            <div class="text-lg sm:text-2xl font-bold text-yellow-600">24/7</div>
+                            <div class="text-xs sm:text-sm text-gray-300">Monitoring</div>
                         </div>
                     </div>
                 </div>
@@ -345,59 +355,57 @@
         </div>
     </section>    <!-- Features Section -->
     <section id="features" class="py-12 sm:py-16 md:py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Powerful Features for Developers</h2>
-                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to build financial applications with Malawi Stock Exchange data</p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Built for Developers</h2>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Modern API design with comprehensive documentation, SDKs, and developer tools for building financial applications</p>
             </div>
             
-            <div class="mobile-features grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                <div class="mobile-card card-hover bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-100">
-                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 md:mb-6">
-                        <i class="fas fa-chart-line text-xl sm:text-2xl text-blue-600"></i>
+            <div class="mobile-features grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">                <div class="mobile-card card-hover bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200 hover:border-gray-300">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gray-900 rounded-full flex items-center justify-center mb-4 md:mb-6">
+                        <i class="fas fa-bolt text-xl sm:text-2xl text-yellow-600"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 md:mb-4">Real-time Data</h3>
-                    <p class="text-gray-600 leading-relaxed">Get live stock prices and market updates during trading hours with minimal latency and maximum accuracy.</p>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 md:mb-4">Real-time Data</h3>
+                    <p class="text-gray-600 leading-relaxed">WebSocket and REST endpoints for live market data. Sub-second latency with reliable connection management and automatic reconnection.</p>
                 </div>
                 
-                <div class="mobile-card card-hover bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-100">
-                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 md:mb-6">
-                        <i class="fas fa-history text-xl sm:text-2xl text-green-600"></i>
+                <div class="mobile-card card-hover bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200 hover:border-gray-300">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gray-900 rounded-full flex items-center justify-center mb-4 md:mb-6">
+                        <i class="fas fa-database text-xl sm:text-2xl text-yellow-600"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 md:mb-4">Historical Data</h3>
-                    <p class="text-gray-600 leading-relaxed">Access comprehensive historical price data with OHLC information for technical analysis and backtesting.</p>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 md:mb-4">Historical Data</h3>
+                    <p class="text-gray-600 leading-relaxed">Complete OHLC data with flexible date ranges, pagination, and CSV export. Perfect for backtesting and quantitative analysis.</p>
                 </div>
                 
-                <div class="mobile-card card-hover bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-100">
-                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4 md:mb-6">
-                        <i class="fas fa-building text-xl sm:text-2xl text-purple-600"></i>
+                <div class="mobile-card card-hover bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200 hover:border-gray-300">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gray-900 rounded-full flex items-center justify-center mb-4 md:mb-6">
+                        <i class="fas fa-book text-xl sm:text-2xl text-yellow-600"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 md:mb-4">Company Information</h3>
-                    <p class="text-gray-600 leading-relaxed">Detailed company profiles including financial information, management details, and contact information.</p>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 md:mb-4">Developer Docs</h3>
+                    <p class="text-gray-600 leading-relaxed">Interactive Swagger documentation with code examples in multiple languages. Postman collections and SDKs available.</p>
                 </div>
                 
-                <div class="mobile-card card-hover bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-100">
-                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-red-100 rounded-full flex items-center justify-center mb-4 md:mb-6">
-                        <i class="fas fa-code text-xl sm:text-2xl text-red-600"></i>
+                <div class="mobile-card card-hover bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200 hover:border-gray-300">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gray-900 rounded-full flex items-center justify-center mb-4 md:mb-6">
+                        <i class="fas fa-key text-xl sm:text-2xl text-yellow-600"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 md:mb-4">RESTful API</h3>
-                    <p class="text-gray-600 leading-relaxed">Clean, well-documented REST API with intuitive endpoints and comprehensive error handling.</p>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 md:mb-4">API Authentication</h3>
+                    <p class="text-gray-600 leading-relaxed">Secure API key authentication with rate limiting and usage analytics. Easy integration with CORS support for web apps.</p>
                 </div>
                 
-                <div class="mobile-card card-hover bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-100">
-                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4 md:mb-6">
-                        <i class="fas fa-bell text-xl sm:text-2xl text-yellow-600"></i>
+                <div class="mobile-card card-hover bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200 hover:border-gray-300">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gray-900 rounded-full flex items-center justify-center mb-4 md:mb-6">
+                        <i class="fas fa-chart-line text-xl sm:text-2xl text-yellow-600"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 md:mb-4">Email Reports</h3>
-                    <p class="text-gray-600 leading-relaxed">Subscribe to daily market reports with summaries, top movers, and market statistics delivered to your inbox.</p>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 md:mb-4">Market Analytics</h3>
+                    <p class="text-gray-600 leading-relaxed">Pre-calculated indicators, market summaries, and trend data. Build dashboards and trading tools with ready-to-use metrics.</p>
                 </div>
                 
-                <div class="mobile-card card-hover bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-100">
-                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4 md:mb-6">
-                        <i class="fas fa-shield-alt text-xl sm:text-2xl text-indigo-600"></i>
+                <div class="mobile-card card-hover bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200 hover:border-gray-300">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gray-900 rounded-full flex items-center justify-center mb-4 md:mb-6">
+                        <i class="fas fa-headset text-xl sm:text-2xl text-yellow-600"></i>
                     </div>
-                    <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 md:mb-4">Reliable & Secure</h3>
-                    <p class="text-gray-600 leading-relaxed">Enterprise-grade reliability with 99.9% uptime, secure HTTPS endpoints, and robust error handling.</p>
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 md:mb-4">Developer Support</h3>
+                    <p class="text-gray-600 leading-relaxed">Dedicated technical support for developers. Community forum, GitHub issues, and priority support for paid plans.</p>
                 </div>
             </div>
         </div>
@@ -438,9 +446,8 @@
                         <p class="text-gray-600 text-sm md:text-base">Detailed information about listed companies</p>
                     </div>
                     
-                    <div class="bg-white rounded-lg shadow-lg p-4 md:p-6">
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3 md:mb-4 gap-2">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium w-fit">POST</span>
+                    <div class="bg-white rounded-lg shadow-lg p-4 md:p-6">                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3 md:mb-4 gap-2">
+                            <span class="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm font-medium w-fit">POST</span>
                             <code class="text-gray-600 text-sm break-all">/api/subscribe/</code>
                         </div>
                         <h3 class="text-lg font-semibold text-gray-900 mb-2">Email Subscription</h3>
@@ -453,14 +460,13 @@
                         <h3 class="text-lg font-semibold text-gray-900 mb-4">Interactive API Explorer</h3>
                         <div class="space-y-4">
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Try an endpoint:</label>
-                                <select id="endpoint-select" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Try an endpoint:</label>                                <select id="endpoint-select" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500 text-sm">
                                     <option value="/api/latest/">Latest Prices</option>
                                     <option value="/api/companies/">All Companies</option>
                                     <option value="/api/historical/TNM/">TNM Historical Data</option>
                                 </select>
                             </div>
-                            <button id="try-api" class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-300 text-sm md:text-base">
+                            <button id="try-api" class="w-full bg-gray-900 text-white py-3 px-4 rounded-lg hover:bg-gray-800 transition duration-300 text-sm md:text-base">
                                 <i class="fas fa-play mr-2"></i>Try API Call
                             </button>
                             <div id="api-result" class="bg-gray-100 rounded-lg p-3 md:p-4 min-h-32 hidden">
@@ -468,8 +474,7 @@
                             </div>
                         </div>
                         
-                        <div class="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-gray-200">
-                            <a href="/swagger/" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm md:text-base">
+                        <div class="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-gray-200">                            <a href="/swagger/" class="inline-flex items-center text-gray-700 hover:text-gray-900 font-medium text-sm md:text-base">
                                 <i class="fas fa-external-link-alt mr-2"></i>
                                 View Full Documentation
                             </a>
@@ -480,120 +485,109 @@
         </div>
     </section>    <!-- Pricing Section -->
     <section id="pricing" class="py-12 sm:py-16 md:py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
-                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Start free and scale as you grow</p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Developer-Friendly Pricing</h2>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Start building with our free tier, scale as you grow. No hidden fees, transparent rate limits.</p>
             </div>
             
-            <div class="mobile-pricing-grid grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                <!-- Free Tier -->
+            <div class="mobile-pricing-grid grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">                <!-- Free Tier -->
                 <div class="mobile-pricing bg-white rounded-xl shadow-lg border border-gray-200 p-6 md:p-8">
                     <div class="text-center">
                         <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">Free</h3>
                         <div class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">$0</div>
                         <p class="text-gray-600 mb-6">Perfect for getting started</p>
-                    </div>
-                    <ul class="space-y-3 md:space-y-4 mb-6 md:mb-8">
+                    </div><ul class="space-y-3 md:space-y-4 mb-6 md:mb-8">
                         <li class="flex items-center text-sm md:text-base">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <i class="fas fa-check text-gray-600 mr-3"></i>
                             <span>1,000 API calls/month</span>
                         </li>
                         <li class="flex items-center text-sm md:text-base">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            <span>Real-time data</span>
+                            <i class="fas fa-check text-gray-600 mr-3"></i>
+                            <span>Real-time market data</span>
                         </li>
                         <li class="flex items-center text-sm md:text-base">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            <span>Basic documentation</span>
+                            <i class="fas fa-check text-gray-600 mr-3"></i>
+                            <span>API documentation</span>
                         </li>
                         <li class="flex items-center text-sm md:text-base">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <i class="fas fa-check text-gray-600 mr-3"></i>
                             <span>Community support</span>
                         </li>
-                    </ul>
-                    <button class="w-full bg-gray-200 text-gray-800 py-3 px-4 rounded-lg hover:bg-gray-300 transition duration-300 text-sm md:text-base">
-                        Get Started Free
+                    </ul>                    <button class="w-full bg-gray-200 text-gray-800 py-3 px-4 rounded-lg hover:bg-gray-300 transition duration-300 text-sm md:text-base font-semibold">
+                        Start Building Free
                     </button>
                 </div>
-                
-                <!-- Pro Tier -->
-                <div class="mobile-pricing bg-blue-600 rounded-xl shadow-lg border-2 border-blue-600 p-6 md:p-8 md:transform md:scale-105">
+                  <!-- Professional Tier -->
+                <div class="mobile-pricing bg-gray-900 rounded-xl shadow-lg border-2 border-yellow-600 p-6 md:p-8 md:transform md:scale-105">
                     <div class="text-center">
-                        <div class="bg-yellow-400 text-gray-900 px-3 md:px-4 py-1 rounded-full text-xs md:text-sm font-medium mb-4 inline-block">
+                        <div class="bg-yellow-600 text-white px-3 md:px-4 py-1 rounded-full text-xs md:text-sm font-bold mb-4 inline-block">
                             Most Popular
-                        </div>
-                        <h3 class="text-xl md:text-2xl font-bold text-white mb-4">Professional</h3>
-                        <div class="text-3xl md:text-4xl font-bold text-white mb-2">$29</div>
-                        <p class="text-blue-100 mb-6">per month</p>
+                        </div>                        <h3 class="text-xl md:text-2xl font-bold text-white mb-4">Developer</h3>
+                        <div class="text-3xl md:text-4xl font-bold text-white mb-2">$49</div>
+                        <p class="text-gray-300 mb-6">per month</p>
                     </div>
                     <ul class="space-y-3 md:space-y-4 mb-6 md:mb-8 text-white">
                         <li class="flex items-center text-sm md:text-base">
-                            <i class="fas fa-check text-yellow-400 mr-3"></i>
-                            <span>50,000 API calls/month</span>
+                            <i class="fas fa-check text-yellow-600 mr-3"></i>                            <span>50,000 API calls/month</span>
                         </li>
                         <li class="flex items-center text-sm md:text-base">
-                            <i class="fas fa-check text-yellow-400 mr-3"></i>
+                            <i class="fas fa-check text-yellow-600 mr-3"></i>
                             <span>Historical data access</span>
                         </li>
                         <li class="flex items-center text-sm md:text-base">
-                            <i class="fas fa-check text-yellow-400 mr-3"></i>
-                            <span>Email reports</span>
+                            <i class="fas fa-check text-yellow-600 mr-3"></i>
+                            <span>WebSocket connections</span>
                         </li>
                         <li class="flex items-center text-sm md:text-base">
-                            <i class="fas fa-check text-yellow-400 mr-3"></i>
-                            <span>Priority support</span>
+                            <i class="fas fa-check text-yellow-600 mr-3"></i>
+                            <span>Email support</span>
                         </li>
                         <li class="flex items-center text-sm md:text-base">
-                            <i class="fas fa-check text-yellow-400 mr-3"></i>
-                            <span>Advanced documentation</span>
+                            <i class="fas fa-check text-yellow-600 mr-3"></i>
+                            <span>99.9% SLA</span>
                         </li>
-                    </ul>
-                    <button class="w-full bg-yellow-400 text-gray-900 py-3 px-4 rounded-lg hover:bg-yellow-300 transition duration-300 font-semibold text-sm md:text-base">
-                        Start 14-Day Trial
+                    </ul>                    <button class="w-full bg-yellow-600 text-white py-3 px-4 rounded-lg hover:bg-yellow-700 transition duration-300 font-bold text-sm md:text-base">
+                        Start Developer Plan
                     </button>
                 </div>
                 
                 <!-- Enterprise Tier -->
                 <div class="mobile-pricing bg-white rounded-xl shadow-lg border border-gray-200 p-6 md:p-8">
-                    <div class="text-center">
-                        <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
-                        <div class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Custom</div>
-                        <p class="text-gray-600 mb-6">For large organizations</p>
-                    </div>
-                    <ul class="space-y-3 md:space-y-4 mb-6 md:mb-8">
+                    <div class="text-center">                        <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">Business</h3>
+                        <div class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">$199</div>
+                        <p class="text-gray-600 mb-6">For production applications</p>
+                    </div>                    <ul class="space-y-3 md:space-y-4 mb-6 md:mb-8">
                         <li class="flex items-center text-sm md:text-base">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            <span>Unlimited API calls</span>
+                            <i class="fas fa-check text-gray-600 mr-3"></i>                            <span>500,000 API calls/month</span>
                         </li>
                         <li class="flex items-center text-sm md:text-base">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <i class="fas fa-check text-gray-600 mr-3"></i>
+                            <span>Multiple API keys</span>
+                        </li>
+                        <li class="flex items-center text-sm md:text-base">
+                            <i class="fas fa-check text-gray-600 mr-3"></i>
+                            <span>Priority support</span>
+                        </li>
+                        <li class="flex items-center text-sm md:text-base">
+                            <i class="fas fa-check text-gray-600 mr-3"></i>
                             <span>Custom integrations</span>
                         </li>
                         <li class="flex items-center text-sm md:text-base">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            <span>SLA guarantee</span>
-                        </li>
-                        <li class="flex items-center text-sm md:text-base">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            <span>Dedicated support</span>
-                        </li>
-                        <li class="flex items-center text-sm md:text-base">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            <span>On-premise deployment</span>
+                            <i class="fas fa-check text-gray-600 mr-3"></i>
+                            <span>99.99% SLA</span>
                         </li>
                     </ul>
-                    <button class="w-full bg-gray-900 text-white py-3 px-4 rounded-lg hover:bg-gray-800 transition duration-300 text-sm md:text-base">
+                    <button class="w-full bg-gray-900 text-white py-3 px-4 rounded-lg hover:bg-gray-800 transition duration-300 text-sm md:text-base font-semibold">
                         Contact Sales
                     </button>
                 </div>
             </div>
         </div>
     </section>    <!-- Newsletter Subscription -->
-    <section class="py-12 sm:py-16 bg-blue-900">
+    <section class="py-12 sm:py-16 bg-gray-800">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Stay Updated with Daily Market Reports</h2>
-            <p class="text-lg sm:text-xl text-blue-100 mb-6 md:mb-8">Get comprehensive daily summaries of MSE market activity delivered to your inbox</p>
+            <p class="text-lg sm:text-xl text-gray-300 mb-6 md:mb-8">Get comprehensive daily summaries of MSE market activity delivered to your inbox</p>
             
             <form id="newsletter-form" class="mobile-newsletter-form max-w-md mx-auto flex flex-col sm:flex-row gap-3 sm:gap-0">
                 <input 
@@ -601,21 +595,21 @@
                     id="email-input"
                     placeholder="Enter your email address" 
                     required
-                    class="mobile-newsletter-input flex-1 px-4 py-3 rounded-lg sm:rounded-l-lg sm:rounded-r-none border border-gray-300 focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400"
+                    class="mobile-newsletter-input flex-1 px-4 py-3 rounded-lg sm:rounded-l-lg sm:rounded-r-none border border-gray-300 focus:ring-2 focus:ring-yellow-600 focus:border-yellow-600"
                 >
                 <button 
                     type="submit"
-                    class="mobile-newsletter-btn bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg sm:rounded-l-none sm:rounded-r-lg hover:bg-yellow-300 transition duration-300 font-semibold"
+                    class="mobile-newsletter-btn bg-yellow-600 text-white px-6 py-3 rounded-lg sm:rounded-l-none sm:rounded-r-lg hover:bg-yellow-700 transition duration-300 font-semibold"
                 >
                     Subscribe
                 </button>
             </form>
             
-            <p class="text-sm text-blue-200 mt-4">
+            <p class="text-sm text-gray-400 mt-4">
                 Free daily reports with market summaries, top movers, and trading statistics
             </p>
         </div>
-    </section>    <!-- Contact Section -->
+    </section><!-- Contact Section -->
     <section id="contact" class="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 md:mb-16">
@@ -625,10 +619,9 @@
             
             <div class="mobile-contact-grid grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
                 <div>
-                    <div class="space-y-6 md:space-y-8">
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-full flex items-center justify-center mr-3 sm:mr-4 mt-1 flex-shrink-0">
-                                <i class="fas fa-envelope text-base sm:text-lg text-blue-600"></i>
+                    <div class="space-y-6 md:space-y-8">                        <div class="flex items-start">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded-full flex items-center justify-center mr-3 sm:mr-4 mt-1 flex-shrink-0">
+                                <i class="fas fa-envelope text-base sm:text-lg text-gray-700"></i>
                             </div>
                             <div class="min-w-0 flex-1">
                                 <h3 class="text-lg font-semibold text-gray-900 mb-2">Email Support</h3>
@@ -663,20 +656,19 @@
                 
                 <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
                     <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
-                    <form id="contact-form" class="space-y-4 md:space-y-6">
-                        <div>
+                    <form id="contact-form" class="space-y-4 md:space-y-6">                        <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm md:text-base">
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500 text-sm md:text-base">
                         </div>
                         
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm md:text-base">
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500 text-sm md:text-base">
                         </div>
                         
                         <div>
                             <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-                            <select id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm md:text-base">
+                            <select id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500 text-sm md:text-base">
                                 <option>General Inquiry</option>
                                 <option>API Support</option>
                                 <option>Enterprise Solutions</option>
@@ -687,10 +679,10 @@
                         
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm md:text-base"></textarea>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500 text-sm md:text-base"></textarea>
                         </div>
                         
-                        <button type="submit" class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-300 font-semibold text-sm md:text-base">
+                        <button type="submit" class="w-full bg-gray-900 text-white py-3 px-4 rounded-lg hover:bg-gray-800 transition duration-300 font-semibold text-sm md:text-base">
                             <i class="fas fa-paper-plane mr-2"></i>Send Message
                         </button>
                     </form>
