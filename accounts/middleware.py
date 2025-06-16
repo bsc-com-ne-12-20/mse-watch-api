@@ -16,9 +16,14 @@ class APIKeyMiddleware(MiddlewareMixin):
         # Only apply to API endpoints
         if not request.path.startswith('/api/'):
             return None
-            
-        # Skip authentication for some endpoints (like market status which might be public)
-        public_endpoints = ['/api/docs/', '/api/schema/']
+              # Skip authentication for some endpoints (like market status which might be public)
+        public_endpoints = [
+            '/api/docs/', 
+            '/api/schema/',
+            '/api/market-status/',
+            '/api/latest/',  # Latest prices might also be public
+            '/api/companies/',  # Company list might also be public
+        ]
         if any(request.path.startswith(endpoint) for endpoint in public_endpoints):
             return None
             

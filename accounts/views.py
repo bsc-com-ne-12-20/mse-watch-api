@@ -122,9 +122,8 @@ def create_api_key(request):
         
         if not name:
             return JsonResponse({'error': 'Key name is required'}, status=400)
-        
-        # Check if user already has maximum number of keys
-        max_keys = 5 if request.user.subscription.plan == 'free' else 20
+          # Check if user already has maximum number of keys
+        max_keys = 1 if request.user.subscription.plan == 'free' else 20
         if request.user.api_keys.filter(is_active=True).count() >= max_keys:
             return JsonResponse({
                 'error': f'Maximum number of API keys ({max_keys}) reached for your plan'

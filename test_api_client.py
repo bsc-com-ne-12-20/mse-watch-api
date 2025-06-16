@@ -91,7 +91,7 @@ def main():
     
     print(f"\n✨ Test completed!")
     print(f"\n💡 Tips:")
-    print(f"   • Free plan: 1,000 requests/month")
+    print(f"   • Free plan: 100 requests/month")
     print(f"   • Monitor usage in your dashboard")
     print(f"   • API key format: mse_[40 characters]")
     print(f"   • Use X-API-Key header for authentication")

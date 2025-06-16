@@ -73,7 +73,7 @@
                 <ul class="space-y-4 mb-8">
                     <li class="flex items-center">
                         <i class="fas fa-check text-gray-600 mr-3"></i>
-                        <span>1,000 API calls/month</span>
+                        <span>100 API calls/month</span>
                     </li>
                     <li class="flex items-center">
                         <i class="fas fa-check text-gray-600 mr-3"></i>
@@ -93,7 +93,7 @@
                         <button class="w-full bg-gray-200 text-gray-500 py-3 px-4 rounded-lg font-semibold cursor-not-allowed">
                             Current Plan
                         </button>                    {% else %}
-                        <form method="post" action="/downgrade/free/" onsubmit="return confirm('Are you sure you want to downgrade to the Free plan? You will lose access to premium features and your API limit will be reduced to 1,000 calls per month.')">
+                        <form method="post" action="/downgrade/free/" onsubmit="return confirm('Are you sure you want to downgrade to the Free plan? You will lose access to premium features and your API limit will be reduced to 100 calls per month.')">>
                             {% csrf_token %}
                             <input type="hidden" name="confirm" value="yes">
                             <button type="submit" class="w-full bg-gray-200 text-gray-800 py-3 px-4 rounded-lg hover:bg-gray-300 transition duration-300 font-semibold">
@@ -222,7 +222,7 @@
                 </div>
                 <div>
                     <h4 class="font-semibold text-gray-900 mb-2">Is there a free trial?</h4>
-                    <p class="text-gray-600">Our Free plan gives you 1,000 API calls per month forever. No credit card required to get started.</p>
+                    <p class="text-gray-600">Our Free plan gives you 100 API calls per month forever. No credit card required to get started.</p>
                 </div>
             </div>
         </div>

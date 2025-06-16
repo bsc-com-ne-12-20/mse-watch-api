@@ -23,50 +23,47 @@
         }
     </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
+<body class="bg-gray-50">    <!-- Navigation -->
     <nav class="bg-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
+            <div class="flex justify-between items-center h-14 sm:h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
                         <div class="flex items-center">
-                            <div class="relative w-8 h-8 mr-3">
-                                <i class="fas fa-chart-line text-yellow-600 text-lg absolute top-0 left-0"></i>
-                                <i class="fas fa-clock text-gray-700 text-sm absolute bottom-0 right-0"></i>
+                            <div class="relative w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3">
+                                <i class="fas fa-chart-line text-yellow-600 text-sm sm:text-lg absolute top-0 left-0"></i>
+                                <i class="fas fa-clock text-gray-700 text-xs sm:text-sm absolute bottom-0 right-0"></i>
                             </div>
-                            <a href="/" class="text-xl sm:text-2xl font-bold text-gray-900">MSE Watch</a>
+                            <a href="/" class="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">MSE Watch</a>
                         </div>
                     </div>
                 </div>
-                <div class="flex items-center space-x-4">
-                    <span class="text-gray-700">Welcome, {{ user.first_name }}</span>
-                    <a href="/logout/" class="text-gray-700 hover:text-gray-900 font-medium">Logout</a>
+                <div class="flex items-center space-x-3 sm:space-x-4">
+                    <span class="text-sm sm:text-base text-gray-700 hidden sm:inline">Welcome, {{ user.first_name }}</span>
+                    <span class="text-sm text-gray-700 sm:hidden">{{ user.first_name }}</span>
+                    <a href="/logout/" class="text-sm sm:text-base text-gray-700 hover:text-gray-900 font-medium">Logout</a>
                 </div>
             </div>
         </div>
-    </nav>
-
-    <!-- Dashboard Content -->
-    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+    </nav><!-- Dashboard Content -->
+    <div class="max-w-7xl mx-auto py-4 sm:py-6 px-4 sm:px-6 lg:px-8">
         <!-- Dashboard Header -->
-        <div class="mb-8">
-            <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
-            <p class="mt-2 text-gray-600">Manage your API keys, monitor usage, and upgrade your plan</p>
+        <div class="mb-6 sm:mb-8">
+            <h1 class="text-2xl sm:text-3xl font-bold text-gray-900">Dashboard</h1>
+            <p class="mt-2 text-sm sm:text-base text-gray-600">Manage your API keys, monitor usage, and upgrade your plan</p>
         </div>
 
         <!-- Quick Stats -->
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-            <div class="bg-white overflow-hidden shadow rounded-lg">
-                <div class="p-5">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-6 sm:mb-8">            <div class="bg-white overflow-hidden shadow rounded-lg">
+                <div class="p-3 sm:p-5">
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
-                            <i class="fas fa-key text-yellow-600 text-2xl"></i>
+                            <i class="fas fa-key text-yellow-600 text-lg sm:text-2xl"></i>
                         </div>
-                        <div class="ml-5 w-0 flex-1">
+                        <div class="ml-3 sm:ml-5 w-0 flex-1">
                             <dl>
-                                <dt class="text-sm font-medium text-gray-500 truncate">API Keys</dt>
-                                <dd class="text-lg font-medium text-gray-900">{{ api_keys_count }}</dd>
+                                <dt class="text-xs sm:text-sm font-medium text-gray-500 truncate">API Keys</dt>
+                                <dd class="text-base sm:text-lg font-medium text-gray-900">{{ api_keys_count }}</dd>
                             </dl>
                         </div>
                     </div>
@@ -74,15 +71,15 @@
             </div>
 
             <div class="bg-white overflow-hidden shadow rounded-lg">
-                <div class="p-5">
+                <div class="p-3 sm:p-5">
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
-                            <i class="fas fa-chart-bar text-blue-600 text-2xl"></i>
+                            <i class="fas fa-chart-bar text-blue-600 text-lg sm:text-2xl"></i>
                         </div>
-                        <div class="ml-5 w-0 flex-1">
+                        <div class="ml-3 sm:ml-5 w-0 flex-1">
                             <dl>
-                                <dt class="text-sm font-medium text-gray-500 truncate">This Month</dt>
-                                <dd class="text-lg font-medium text-gray-900">{{ usage_this_month|default:"0" }} calls</dd>
+                                <dt class="text-xs sm:text-sm font-medium text-gray-500 truncate">This Month</dt>
+                                <dd class="text-base sm:text-lg font-medium text-gray-900">{{ usage_this_month|default:"0" }} calls</dd>
                             </dl>
                         </div>
                     </div>
@@ -90,15 +87,15 @@
             </div>
 
             <div class="bg-white overflow-hidden shadow rounded-lg">
-                <div class="p-5">
+                <div class="p-3 sm:p-5">
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
-                            <i class="fas fa-star text-green-600 text-2xl"></i>
+                            <i class="fas fa-star text-green-600 text-lg sm:text-2xl"></i>
                         </div>
-                        <div class="ml-5 w-0 flex-1">
+                        <div class="ml-3 sm:ml-5 w-0 flex-1">
                             <dl>
-                                <dt class="text-sm font-medium text-gray-500 truncate">Plan</dt>
-                                <dd class="text-lg font-medium text-gray-900">{{ user.subscription.plan|default:"Free" }}</dd>
+                                <dt class="text-xs sm:text-sm font-medium text-gray-500 truncate">Plan</dt>
+                                <dd class="text-base sm:text-lg font-medium text-gray-900">{{ user.subscription.plan|default:"Free" }}</dd>
                             </dl>
                         </div>
                     </div>
@@ -106,75 +103,93 @@
             </div>
 
             <div class="bg-white overflow-hidden shadow rounded-lg">
-                <div class="p-5">
+                <div class="p-3 sm:p-5">
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
-                            <i class="fas fa-clock text-purple-600 text-2xl"></i>
+                            <i class="fas fa-clock text-purple-600 text-lg sm:text-2xl"></i>
                         </div>
-                        <div class="ml-5 w-0 flex-1">
+                        <div class="ml-3 sm:ml-5 w-0 flex-1">
                             <dl>
-                                <dt class="text-sm font-medium text-gray-500 truncate">Limit</dt>
-                                <dd class="text-lg font-medium text-gray-900">{{ user.subscription.monthly_limit|default:"1,000" }}</dd>
+                                <dt class="text-xs sm:text-sm font-medium text-gray-500 truncate">Limit</dt>
+                                <dd class="text-base sm:text-lg font-medium text-gray-900">{{ user.subscription.monthly_limit|default:"100" }}</dd>
                             </dl>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Main Content Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        </div>        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 sm:gap-8">
             <!-- API Keys Section -->
-            <div class="bg-white shadow rounded-lg">                <div class="px-6 py-4 border-b border-gray-200">
-                    <div class="flex items-center justify-between">
+            <div class="bg-white shadow rounded-lg">
+                <div class="px-4 sm:px-6 py-4 border-b border-gray-200">
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-3 sm:space-y-0">
                         <div>
                             <h3 class="text-lg font-medium text-gray-900">API Keys</h3>
                             {% if user.subscription.plan == "free" %}
-                                <p class="text-sm text-gray-600 mt-1">Free plan: Up to 5 API keys, 1,000 requests/month</p>
+                                <p class="text-xs sm:text-sm text-gray-600 mt-1">Free plan: Up to 1 API key, 100 requests/month</p>
                             {% endif %}
                         </div>
-                        <button id="create-key-btn" class="bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700 transition duration-300">
-                            <i class="fas fa-plus mr-2"></i>Create New Key
-                        </button>
+                        {% if user.subscription.plan == "free" and api_keys_count >= 1 %}
+                            <button disabled class="w-full sm:w-auto bg-gray-400 text-white px-3 sm:px-4 py-2 rounded-lg cursor-not-allowed text-sm" title="Free plan limit reached">
+                                <i class="fas fa-lock mr-2"></i>Limit Reached
+                            </button>
+                        {% else %}
+                            <button id="create-key-btn" class="w-full sm:w-auto bg-yellow-600 text-white px-3 sm:px-4 py-2 rounded-lg hover:bg-yellow-700 transition duration-300 text-sm">
+                                <i class="fas fa-plus mr-2"></i>Create New Key
+                            </button>
+                        {% endif %}
                     </div>
                 </div>
-                <div class="px-6 py-4">
+                <div class="px-4 sm:px-6 py-4">                    {% if user.subscription.plan == "free" and api_keys_count > 1 %}
+                        <div class="mb-4 bg-amber-50 border border-amber-200 rounded-lg p-3 sm:p-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-exclamation-triangle text-amber-600 mt-0.5 mr-2 sm:mr-3"></i>
+                                <div class="text-xs sm:text-sm text-amber-800">
+                                    <strong>Plan Limit Exceeded:</strong> You have {{ api_keys_count }} API keys, but the free plan now allows only 1. 
+                                    Your existing keys will continue to work, but you won't be able to create new ones until you 
+                                    <a href="/pricing/" class="underline hover:text-amber-900">upgrade your plan</a> or delete some keys.
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
                     {% if api_keys %}
-                        <div class="space-y-4">
+                        <div class="space-y-3 sm:space-y-4">
                             {% for key in api_keys %}
-                            <div class="border border-gray-200 rounded-lg p-4">
-                                <div class="flex items-center justify-between">
-                                    <div>
-                                        <h4 class="font-medium text-gray-900">{{ key.name }}</h4>
-                                        <p class="text-sm text-gray-500">Created {{ key.created_at|date:"M j, Y" }}</p>
-                                    </div>                                    <div class="flex space-x-2">                                        <button onclick="copyApiKey('{{ key.key_preview }}')" class="text-gray-500 hover:text-gray-700" title="Copy key preview">
+                            <div class="border border-gray-200 rounded-lg p-3 sm:p-4">
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-2 sm:space-y-0">
+                                    <div class="flex-1 min-w-0">
+                                        <h4 class="font-medium text-gray-900 truncate">{{ key.name }}</h4>
+                                        <p class="text-xs sm:text-sm text-gray-500">Created {{ key.created_at|date:"M j, Y" }}</p>
+                                    </div>
+                                    <div class="flex space-x-2 sm:space-x-2 flex-shrink-0">
+                                        <button onclick="copyApiKey('{{ key.key_preview }}')" class="text-gray-500 hover:text-gray-700 p-1" title="Copy key preview">
                                             <i class="fas fa-copy"></i>
                                         </button>
-                                        <button onclick="deleteApiKey({{ key.id }}, '{{ key.name }}')" class="text-red-500 hover:text-red-700" title="Delete API key">
+                                        <button onclick="deleteApiKey({{ key.id }}, '{{ key.name }}')" class="text-red-500 hover:text-red-700 p-1" title="Delete API key">
                                             <i class="fas fa-trash"></i>
                                         </button>
                                     </div>
                                 </div>
                                 <div class="mt-2">
-                                    <div class="flex items-center space-x-2">
-                                        <code class="bg-gray-100 px-2 py-1 rounded text-sm font-mono">{{ key.key_preview }}</code>
+                                    <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-2 space-y-1 sm:space-y-0">
+                                        <code class="bg-gray-100 px-2 py-1 rounded text-xs font-mono break-all">{{ key.key_preview }}</code>
                                         <span class="text-xs text-gray-500">Last used {{ key.last_used|default:"Never" }}</span>
                                     </div>
                                 </div>
                             </div>
                             {% endfor %}
-                        </div>
-                    {% else %}                        <div class="text-center py-8">
-                            <i class="fas fa-key text-gray-300 text-4xl mb-4"></i>
-                            <h4 class="text-lg font-medium text-gray-900 mb-2">No API keys yet</h4>
-                            <p class="text-gray-500 mb-4">Create your first API key to start using the MSE Watch API</p>
-                            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-left max-w-md mx-auto">
-                                <h5 class="font-medium text-blue-900 mb-2">Quick Start:</h5>
-                                <ol class="text-sm text-blue-800 space-y-1">
+                        </div>                    {% else %}
+                        <div class="text-center py-6 sm:py-8">
+                            <i class="fas fa-key text-gray-300 text-3xl sm:text-4xl mb-3 sm:mb-4"></i>
+                            <h4 class="text-base sm:text-lg font-medium text-gray-900 mb-2">No API keys yet</h4>
+                            <p class="text-sm sm:text-base text-gray-500 mb-4">Create your first API key to start using the MSE Watch API</p>
+                            <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 sm:p-4 text-left max-w-md mx-auto">
+                                <h5 class="font-medium text-blue-900 mb-2 text-sm sm:text-base">Quick Start:</h5>
+                                <ol class="text-xs sm:text-sm text-blue-800 space-y-1">
                                     <li>1. Click "Create New Key" above</li>
                                     <li>2. Give your key a descriptive name</li>
                                     <li>3. Copy and store your API key securely</li>
-                                    <li>4. Use header: <code class="bg-blue-100 px-1 rounded">X-API-Key: your_key</code></li>
+                                    <li>4. Use header: <code class="bg-blue-100 px-1 rounded text-xs">X-API-Key: your_key</code></li>
                                 </ol>
                             </div>
                         </div>
@@ -184,50 +199,84 @@
 
             <!-- Usage Statistics -->
             <div class="bg-white shadow rounded-lg">
-                <div class="px-6 py-4 border-b border-gray-200">
+                <div class="px-4 sm:px-6 py-4 border-b border-gray-200">
                     <h3 class="text-lg font-medium text-gray-900">Usage Overview</h3>
                 </div>
-                <div class="px-6 py-4">
-                    <div class="space-y-6">
+                <div class="px-4 sm:px-6 py-4">                    <div class="space-y-4 sm:space-y-6">
                         <!-- Usage Progress Bar -->
                         <div>
                             <div class="flex items-center justify-between mb-2">
-                                <span class="text-sm font-medium text-gray-700">Monthly Usage</span>
-                                <span class="text-sm text-gray-500">{{ usage_this_month|default:"0" }} / {{ user.subscription.monthly_limit|default:"1,000" }}</span>
+                                <span class="text-xs sm:text-sm font-medium text-gray-700">Monthly Usage</span>
+                                <span class="text-xs sm:text-sm text-gray-500">{{ usage_this_month|default:"0" }} / {{ user.subscription.monthly_limit|default:"100" }}</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="bg-yellow-600 h-2 rounded-full" style="width: {{ usage_percentage|default:"0" }}%"></div>
                             </div>
-                        </div>
-
-                        <!-- Recent Activity -->
+                        </div><!-- Recent Activity -->
                         <div>
                             <h4 class="text-sm font-medium text-gray-900 mb-3">Recent Activity</h4>
-                            {% if recent_requests %}
-                                <div class="space-y-2">
-                                    {% for request in recent_requests %}
-                                    <div class="flex items-center justify-between text-sm">
-                                        <span class="text-gray-600">{{ request.endpoint }}</span>
-                                        <span class="text-gray-500">{{ request.timestamp|timesince }} ago</span>
+                            {% if user.subscription.plan == "free" %}
+                                <div class="relative min-h-[120px]">
+                                    <!-- Blurred content for free users -->
+                                    <div class="filter blur-[2px] pointer-events-none select-none">
+                                        <div class="space-y-3">
+                                            <div class="flex items-center justify-between text-sm bg-gray-50 rounded-lg p-2">
+                                                <span class="text-gray-600 font-mono text-xs">/api/companies/</span>
+                                                <span class="text-gray-500">2h ago</span>
+                                            </div>
+                                            <div class="flex items-center justify-between text-sm bg-gray-50 rounded-lg p-2">
+                                                <span class="text-gray-600 font-mono text-xs">/api/historical/</span>
+                                                <span class="text-gray-500">3h ago</span>
+                                            </div>
+                                            <div class="flex items-center justify-between text-sm bg-gray-50 rounded-lg p-2">
+                                                <span class="text-gray-600 font-mono text-xs">/api/market-status/</span>
+                                                <span class="text-gray-500">5h ago</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    {% endfor %}
+                                    <!-- Modern upgrade overlay -->
+                                    <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-white/95 to-gray-50/95 backdrop-blur-sm">
+                                        <div class="text-center p-6 bg-white rounded-2xl border border-gray-200 shadow-lg max-w-[200px] transform hover:scale-105 transition-all duration-300">
+                                            <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
+                                                <i class="fas fa-crown text-white text-lg"></i>
+                                            </div>
+                                            <h5 class="text-sm font-bold text-gray-900 mb-1">Premium Feature</h5>
+                                            <p class="text-xs text-gray-600 mb-4 leading-relaxed">Track API usage patterns and monitor request history</p>
+                                            <a href="/pricing/" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium rounded-lg hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 shadow-md hover:shadow-lg">
+                                                <i class="fas fa-sparkles mr-1.5 text-xs"></i>
+                                                Upgrade Now
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             {% else %}
-                                <p class="text-sm text-gray-500">No recent activity</p>
+                                {% if recent_requests %}
+                                    <div class="space-y-3">
+                                        {% for request in recent_requests %}
+                                        <div class="flex items-center justify-between text-sm bg-gray-50 rounded-lg p-2 hover:bg-gray-100 transition-colors duration-200">
+                                            <span class="text-gray-600 font-mono text-xs">{{ request.endpoint }}</span>
+                                            <span class="text-gray-500">{{ request.timestamp|timesince }} ago</span>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    <div class="text-center py-6">
+                                        <i class="fas fa-history text-gray-300 text-2xl mb-2"></i>
+                                        <p class="text-sm text-gray-500">No recent activity</p>
+                                    </div>
+                                {% endif %}
                             {% endif %}
-                        </div>
-
-                        <!-- Quick Actions -->
+                        </div>                        <!-- Quick Actions -->
                         <div class="pt-4 border-t border-gray-200">
-                            <h4 class="text-sm font-medium text-gray-900 mb-3">Quick Actions</h4>
+                            <h4 class="text-xs sm:text-sm font-medium text-gray-900 mb-3">Quick Actions</h4>
                             <div class="space-y-2">
-                                <a href="/swagger/" class="block w-full text-left px-3 py-2 text-sm text-yellow-600 hover:bg-yellow-50 rounded-lg transition duration-300">
+                                <a href="/swagger/" class="block w-full text-left px-3 py-2 text-xs sm:text-sm text-yellow-600 hover:bg-yellow-50 rounded-lg transition duration-300">
                                     <i class="fas fa-book mr-2"></i>View API Documentation
                                 </a>
-                                <a href="/pricing/" class="block w-full text-left px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition duration-300">
+                                <a href="/pricing/" class="block w-full text-left px-3 py-2 text-xs sm:text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition duration-300">
                                     <i class="fas fa-arrow-up mr-2"></i>Upgrade Plan
                                 </a>
-                                <a href="/support/" class="block w-full text-left px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition duration-300">
+                                <a href="/support/" class="block w-full text-left px-3 py-2 text-xs sm:text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition duration-300">
                                     <i class="fas fa-headset mr-2"></i>Contact Support
                                 </a>
                             </div>
@@ -235,44 +284,42 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Billing Section -->
-        <div class="mt-8 bg-white shadow rounded-lg">
-            <div class="px-6 py-4 border-b border-gray-200">
+        </div>        <!-- Billing Section -->
+        <div class="mt-6 sm:mt-8 bg-white shadow rounded-lg">
+            <div class="px-4 sm:px-6 py-4 border-b border-gray-200">
                 <h3 class="text-lg font-medium text-gray-900">Billing & Subscription</h3>
             </div>
-            <div class="px-6 py-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="px-4 sm:px-6 py-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
                     <div>
-                        <h4 class="font-medium text-gray-900 mb-2">Current Plan</h4>
-                        <div class="bg-gray-50 rounded-lg p-4">
-                            <div class="flex items-center justify-between">
+                        <h4 class="font-medium text-gray-900 mb-2 text-sm sm:text-base">Current Plan</h4>
+                        <div class="bg-gray-50 rounded-lg p-3 sm:p-4">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-2 sm:space-y-0">
                                 <div>
-                                    <p class="font-medium text-gray-900">{{ user.subscription.plan|default:"Free Plan" }}</p>
-                                    <p class="text-sm text-gray-600">{{ user.subscription.monthly_limit|default:"1,000" }} API calls per month</p>
+                                    <p class="font-medium text-gray-900 text-sm sm:text-base">{{ user.subscription.plan|default:"Free Plan" }}</p>
+                                    <p class="text-xs sm:text-sm text-gray-600">{{ user.subscription.monthly_limit|default:"100" }} API calls per month</p>
                                 </div>
-                                <div class="text-right">
-                                    <p class="font-medium text-gray-900">${{ user.subscription.price|default:"0" }}/month</p>
+                                <div class="text-left sm:text-right">
+                                    <p class="font-medium text-gray-900 text-sm sm:text-base">${{ user.subscription.price|default:"0" }}/month</p>
                                     {% if user.subscription.next_billing_date %}
-                                        <p class="text-sm text-gray-600">Next billing: {{ user.subscription.next_billing_date|date:"M j, Y" }}</p>
+                                        <p class="text-xs sm:text-sm text-gray-600">Next billing: {{ user.subscription.next_billing_date|date:"M j, Y" }}</p>
                                     {% endif %}
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h4 class="font-medium text-gray-900 mb-2">Actions</h4>
+                        <h4 class="font-medium text-gray-900 mb-2 text-sm sm:text-base">Actions</h4>
                         <div class="space-y-2">
                             {% if user.subscription.plan != "free" %}
-                                <button class="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition duration-300">
+                                <button class="w-full bg-gray-200 text-gray-800 px-3 sm:px-4 py-2 rounded-lg hover:bg-gray-300 transition duration-300 text-sm">
                                     <i class="fas fa-credit-card mr-2"></i>Update Payment Method
                                 </button>
-                                <button class="w-full bg-red-100 text-red-800 px-4 py-2 rounded-lg hover:bg-red-200 transition duration-300">
+                                <button class="w-full bg-red-100 text-red-800 px-3 sm:px-4 py-2 rounded-lg hover:bg-red-200 transition duration-300 text-sm">
                                     <i class="fas fa-times mr-2"></i>Cancel Subscription
                                 </button>
                             {% else %}
-                                <a href="/pricing/" class="block w-full bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700 transition duration-300 text-center">
+                                <a href="/pricing/" class="block w-full bg-yellow-600 text-white px-3 sm:px-4 py-2 rounded-lg hover:bg-yellow-700 transition duration-300 text-center text-sm">
                                     <i class="fas fa-arrow-up mr-2"></i>Upgrade Plan
                                 </a>
                             {% endif %}
@@ -281,35 +328,34 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Create API Key Modal -->
+    </div>    <!-- Create API Key Modal -->
     <div id="create-key-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden z-50">
         <div class="flex items-center justify-center min-h-screen px-4">
-            <div class="bg-white rounded-lg shadow-xl max-w-md w-full">
-                <div class="px-6 py-4 border-b border-gray-200">
+            <div class="bg-white rounded-lg shadow-xl max-w-md w-full mx-4">
+                <div class="px-4 sm:px-6 py-4 border-b border-gray-200">
                     <h3 class="text-lg font-medium text-gray-900">Create New API Key</h3>
-                </div>                <form id="create-key-form" class="px-6 py-4">
+                </div>
+                <form id="create-key-form" class="px-4 sm:px-6 py-4">
                     {% csrf_token %}
                     <div class="mb-4">
                         <label for="key-name" class="block text-sm font-medium text-gray-700 mb-2">Key Name</label>
                         <input type="text" id="key-name" name="name" required
-                               class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
+                               class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 text-sm"
                                placeholder="e.g., Production API Key">
                         <p class="mt-1 text-xs text-gray-500">Choose a descriptive name for this API key</p>
                     </div>
-                    <div class="flex justify-end space-x-3">
-                        <button type="button" id="cancel-create-key" class="px-4 py-2 text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 transition duration-300">
+                    <div class="flex flex-col sm:flex-row justify-end space-y-2 sm:space-y-0 sm:space-x-3">
+                        <button type="button" id="cancel-create-key" class="w-full sm:w-auto px-4 py-2 text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 transition duration-300 text-sm">
                             Cancel
                         </button>
-                        <button type="submit" class="px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition duration-300">
+                        <button type="submit" class="w-full sm:w-auto px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition duration-300 text-sm">
                             Create Key
                         </button>
                     </div>
                 </form>
             </div>
         </div>
-    </div>    <script>
+    </div><script>
         // Modal functionality
         const createKeyBtn = document.getElementById('create-key-btn');
         const createKeyModal = document.getElementById('create-key-modal');

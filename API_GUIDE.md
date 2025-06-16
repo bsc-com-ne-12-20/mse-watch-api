@@ -5,7 +5,7 @@
 ### 1. Create Your Account
 1. Visit http://127.0.0.1:8001/signup/
 2. Fill in your details and create an account
-3. You'll automatically get a **Free Plan** with 1,000 API calls per month
+3. You'll automatically get a **Free Plan** with 100 API calls per month
 
 ### 2. Generate Your API Key
 1. Log into your dashboard at http://127.0.0.1:8001/dashboard/
@@ -68,8 +68,8 @@ Authorization: Bearer mse_your_40_character_api_key_here
 ## 📈 Usage Limits
 
 ### Free Plan (Current)
-- ✅ **1,000 requests/month**
-- ✅ **Up to 5 API keys**
+- ✅ **100 requests/month**
+- ✅ **Up to 1 API key**
 - ✅ **All endpoints available**
 - ✅ **Community support**
 

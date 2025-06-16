@@ -21,11 +21,10 @@ class Subscription(models.Model):
     PLAN_CHOICES = [
         ('free', 'Free'),
         ('developer', 'Developer'),
-        ('business', 'Business'),
-    ]
+        ('business', 'Business'),    ]
     
     PLAN_LIMITS = {
-        'free': 1000,
+        'free': 100,
         'developer': 50000,
         'business': 500000,
     }
@@ -46,7 +45,7 @@ class Subscription(models.Model):
     
     @property
     def monthly_limit(self):
-        return self.PLAN_LIMITS.get(self.plan, 1000)
+        return self.PLAN_LIMITS.get(self.plan, 100)
     
     @property
     def price(self):
