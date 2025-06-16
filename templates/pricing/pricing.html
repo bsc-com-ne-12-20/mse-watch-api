@@ -1,0 +1,237 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - MSE Watch API</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2c5282;
+            --accent-color: #d69e2e;
+            --dark-color: #0a0e13;
+            --light-gray: #f8fafc;
+            --navy-blue: #1e3a8a;
+            --charcoal: #374151;
+            --gold: #fbbf24;
+            --platinum: #e5e7eb;
+            --slate: #64748b;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center">
+                            <div class="relative w-8 h-8 mr-3">
+                                <i class="fas fa-chart-line text-yellow-600 text-lg absolute top-0 left-0"></i>
+                                <i class="fas fa-clock text-gray-700 text-sm absolute bottom-0 right-0"></i>
+                            </div>
+                            <a href="/" class="text-xl sm:text-2xl font-bold text-gray-900">MSE Watch</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    {% if user.is_authenticated %}
+                        <a href="/dashboard/" class="text-gray-700 hover:text-gray-900 font-medium">Dashboard</a>
+                        <a href="/logout/" class="text-gray-700 hover:text-gray-900 font-medium">Logout</a>
+                    {% else %}
+                        <a href="/login/" class="text-gray-700 hover:text-gray-900 font-medium">Sign In</a>
+                        <a href="/signup/" class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300">Sign Up</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pricing Header -->
+    <div class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Choose Your Plan</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Start building with our free tier, scale as you grow. No hidden fees, transparent rate limits.</p>
+        </div>
+    </div>
+
+    <!-- Pricing Plans -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Free Plan -->
+            <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-8">
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Free</h3>
+                    <div class="text-4xl font-bold text-gray-900 mb-2">$0</div>
+                    <p class="text-gray-600 mb-6">Perfect for getting started</p>
+                </div>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-gray-600 mr-3"></i>
+                        <span>1,000 API calls/month</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-gray-600 mr-3"></i>
+                        <span>Real-time market data</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-gray-600 mr-3"></i>
+                        <span>API documentation</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-gray-600 mr-3"></i>
+                        <span>Community support</span>
+                    </li>
+                </ul>
+                {% if user.is_authenticated %}
+                    {% if user.subscription.plan == "Free" %}
+                        <button class="w-full bg-gray-200 text-gray-500 py-3 px-4 rounded-lg font-semibold cursor-not-allowed">
+                            Current Plan
+                        </button>
+                    {% else %}
+                        <a href="/downgrade/free/" class="block w-full bg-gray-200 text-gray-800 py-3 px-4 rounded-lg hover:bg-gray-300 transition duration-300 font-semibold text-center">
+                            Downgrade to Free
+                        </a>
+                    {% endif %}
+                {% else %}
+                    <a href="/signup/" class="block w-full bg-gray-200 text-gray-800 py-3 px-4 rounded-lg hover:bg-gray-300 transition duration-300 font-semibold text-center">
+                        Start Building Free
+                    </a>
+                {% endif %}
+            </div>
+
+            <!-- Developer Plan -->
+            <div class="bg-gray-900 rounded-xl shadow-lg border-2 border-yellow-400 p-8 transform scale-105">
+                <div class="text-center">
+                    <div class="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-bold mb-4 inline-block">
+                        Most Popular
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Developer</h3>
+                    <div class="text-4xl font-bold text-white mb-2">$49</div>
+                    <p class="text-gray-300 mb-6">per month</p>
+                </div>
+                <ul class="space-y-4 mb-8 text-white">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-yellow-400 mr-3"></i>
+                        <span>50,000 API calls/month</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-yellow-400 mr-3"></i>
+                        <span>Historical data access</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-yellow-400 mr-3"></i>
+                        <span>WebSocket connections</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-yellow-400 mr-3"></i>
+                        <span>Email support</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-yellow-400 mr-3"></i>
+                        <span>99.9% SLA</span>
+                    </li>
+                </ul>
+                {% if user.is_authenticated %}
+                    {% if user.subscription.plan == "Developer" %}
+                        <button class="w-full bg-yellow-400 text-gray-500 py-3 px-4 rounded-lg font-bold cursor-not-allowed">
+                            Current Plan
+                        </button>
+                    {% else %}
+                        <a href="/subscribe/developer/" class="block w-full bg-yellow-400 text-gray-900 py-3 px-4 rounded-lg hover:bg-yellow-300 transition duration-300 font-bold text-center">
+                            Start Developer Plan
+                        </a>
+                    {% endif %}
+                {% else %}
+                    <a href="/signup/?plan=developer" class="block w-full bg-yellow-400 text-gray-900 py-3 px-4 rounded-lg hover:bg-yellow-300 transition duration-300 font-bold text-center">
+                        Start Developer Plan
+                    </a>
+                {% endif %}
+            </div>
+
+            <!-- Business Plan -->
+            <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-8">
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Business</h3>
+                    <div class="text-4xl font-bold text-gray-900 mb-2">$199</div>
+                    <p class="text-gray-600 mb-6">For production applications</p>
+                </div>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-gray-600 mr-3"></i>
+                        <span>500,000 API calls/month</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-gray-600 mr-3"></i>
+                        <span>Multiple API keys</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-gray-600 mr-3"></i>
+                        <span>Priority support</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-gray-600 mr-3"></i>
+                        <span>Custom integrations</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-gray-600 mr-3"></i>
+                        <span>99.99% SLA</span>
+                    </li>
+                </ul>
+                {% if user.is_authenticated %}
+                    {% if user.subscription.plan == "Business" %}
+                        <button class="w-full bg-gray-200 text-gray-500 py-3 px-4 rounded-lg font-semibold cursor-not-allowed">
+                            Current Plan
+                        </button>
+                    {% else %}
+                        <a href="/subscribe/business/" class="block w-full bg-gray-900 text-white py-3 px-4 rounded-lg hover:bg-gray-800 transition duration-300 font-semibold text-center">
+                            Start Business Plan
+                        </a>
+                    {% endif %}
+                {% else %}
+                    <a href="/signup/?plan=business" class="block w-full bg-gray-900 text-white py-3 px-4 rounded-lg hover:bg-gray-800 transition duration-300 font-semibold text-center">
+                        Contact Sales
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-16 bg-white rounded-xl shadow-lg p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Can I change my plan anytime?</h4>
+                    <p class="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and billing is prorated.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-2">What happens if I exceed my limit?</h4>
+                    <p class="text-gray-600">API requests will be rate-limited once you reach your monthly quota. You can upgrade your plan to get more calls immediately.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Do you offer custom enterprise plans?</h4>
+                    <p class="text-gray-600">Yes, we offer custom pricing for high-volume users and enterprise customers. Contact our sales team for details.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Is there a free trial?</h4>
+                    <p class="text-gray-600">Our Free plan gives you 1,000 API calls per month forever. No credit card required to get started.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Sales -->
+        <div class="mt-16 bg-gray-900 rounded-xl shadow-lg p-8 text-center">
+            <h3 class="text-2xl font-bold text-white mb-4">Need a Custom Solution?</h3>
+            <p class="text-gray-300 mb-6">Contact our sales team for enterprise pricing, custom integrations, and dedicated support.</p>
+            <a href="/contact/" class="inline-block bg-yellow-600 text-white px-8 py-3 rounded-lg hover:bg-yellow-700 transition duration-300 font-semibold">
+                Contact Sales Team
+            </a>
+        </div>
+    </div>
+</body>
+</html>

@@ -290,3 +290,549 @@
 2025-06-16 10:15:43,625 [INFO] Starting stock scraper at 2025-06-16 10:15:43.624506
 2025-06-16 10:15:45,045 [INFO] Successfully extracted data for 16 stocks
 2025-06-16 10:15:45,209 [INFO] Saved 16 stock records to database
+2025-06-16 10:25:40,811 [INFO] Starting scheduler service
+2025-06-16 10:25:40,822 [INFO] Scheduler started successfully
+2025-06-16 10:25:40,823 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:25:40,857 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:26:46,912 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\settings.py changed, reloading.
+2025-06-16 10:26:48,069 [INFO] Starting scheduler service
+2025-06-16 10:26:48,077 [INFO] Scheduler started successfully
+2025-06-16 10:26:48,077 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:26:48,145 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:26:51,677 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 10:26:58,981 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\settings.py changed, reloading.
+2025-06-16 10:26:59,961 [INFO] Starting scheduler service
+2025-06-16 10:26:59,969 [INFO] Scheduler started successfully
+2025-06-16 10:26:59,969 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:27:00,014 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:27:13,744 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\urls.py changed, reloading.
+2025-06-16 10:27:14,776 [INFO] Starting scheduler service
+2025-06-16 10:27:14,785 [INFO] Scheduler started successfully
+2025-06-16 10:27:14,786 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:27:14,832 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:27:51,684 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 10:28:18,960 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 10:28:18,961 [WARNING] Unauthorized: /api/companies/
+2025-06-16 10:28:31,455 [WARNING] Unauthorized: /api/latest/
+2025-06-16 10:29:01,575 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 10:29:01,577 [WARNING] Unauthorized: /api/companies/
+2025-06-16 10:29:14,521 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 10:29:14,521 [WARNING] Unauthorized: /api/companies/
+2025-06-16 10:30:14,506 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 10:30:14,788 [INFO] Running scheduled stock scraper
+2025-06-16 10:30:14,796 [INFO] Starting stock scraper at 2025-06-16 10:30:14.796800
+2025-06-16 10:30:22,134 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 10:30:22,361 [INFO] Saved 16 stock records to database
+2025-06-16 10:31:14,667 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 10:31:25,867 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\models.py changed, reloading.
+2025-06-16 10:31:26,984 [INFO] Starting scheduler service
+2025-06-16 10:31:26,996 [INFO] Scheduler started successfully
+2025-06-16 10:31:26,996 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:31:27,037 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:31:47,463 [INFO] Starting scheduler service
+2025-06-16 10:31:47,473 [INFO] Scheduler started successfully
+2025-06-16 10:31:47,473 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:31:50,483 [INFO] Starting scheduler service
+2025-06-16 10:31:50,500 [INFO] Scheduler started successfully
+2025-06-16 10:31:50,500 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:31:59,943 [INFO] Starting scheduler service
+2025-06-16 10:31:59,957 [INFO] Scheduler started successfully
+2025-06-16 10:31:59,958 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:33:18,728 [INFO] Starting scheduler service
+2025-06-16 10:33:18,737 [INFO] Scheduler started successfully
+2025-06-16 10:33:18,737 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:33:28,414 [INFO] Starting scheduler service
+2025-06-16 10:33:28,423 [INFO] Scheduler started successfully
+2025-06-16 10:33:28,423 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:33:36,643 [INFO] Starting scheduler service
+2025-06-16 10:33:36,658 [INFO] Scheduler started successfully
+2025-06-16 10:33:36,658 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:33:46,494 [INFO] Starting scheduler service
+2025-06-16 10:33:46,511 [INFO] Scheduler started successfully
+2025-06-16 10:33:46,511 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:33:55,108 [INFO] Starting scheduler service
+2025-06-16 10:33:55,129 [INFO] Scheduler started successfully
+2025-06-16 10:33:55,130 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:34:56,961 [INFO] Starting scheduler service
+2025-06-16 10:34:56,980 [INFO] Scheduler started successfully
+2025-06-16 10:34:56,980 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:35:10,099 [INFO] Starting scheduler service
+2025-06-16 10:35:10,115 [INFO] Scheduler started successfully
+2025-06-16 10:35:10,115 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:35:16,984 [INFO] Starting scheduler service
+2025-06-16 10:35:17,002 [INFO] Scheduler started successfully
+2025-06-16 10:35:17,002 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:35:26,917 [INFO] Starting scheduler service
+2025-06-16 10:35:26,931 [INFO] Scheduler started successfully
+2025-06-16 10:35:26,932 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:35:34,343 [INFO] Starting scheduler service
+2025-06-16 10:35:34,352 [INFO] Scheduler started successfully
+2025-06-16 10:35:34,352 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:35:41,185 [INFO] Starting scheduler service
+2025-06-16 10:35:41,194 [INFO] Scheduler started successfully
+2025-06-16 10:35:41,194 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:36:39,745 [INFO] Starting scheduler service
+2025-06-16 10:36:39,760 [INFO] Scheduler started successfully
+2025-06-16 10:36:39,760 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:36:51,532 [INFO] Starting scheduler service
+2025-06-16 10:36:51,546 [INFO] Scheduler started successfully
+2025-06-16 10:36:51,547 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:36:51,590 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:37:00,477 [INFO] Starting scheduler service
+2025-06-16 10:37:00,495 [INFO] Scheduler started successfully
+2025-06-16 10:37:00,495 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:37:10,703 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 10:37:40,718 [INFO] Starting scheduler service
+2025-06-16 10:37:40,730 [INFO] Scheduler started successfully
+2025-06-16 10:37:40,730 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:38:08,952 [INFO] Starting scheduler service
+2025-06-16 10:38:08,961 [INFO] Scheduler started successfully
+2025-06-16 10:38:08,962 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:38:08,996 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:38:10,680 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 10:38:11,297 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\urls.py changed, reloading.
+2025-06-16 10:38:11,475 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\urls.py changed, reloading.
+2025-06-16 10:38:12,586 [INFO] Starting scheduler service
+2025-06-16 10:38:12,607 [INFO] Scheduler started successfully
+2025-06-16 10:38:12,610 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:38:12,651 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:38:12,706 [INFO] Starting scheduler service
+2025-06-16 10:38:12,714 [INFO] Scheduler started successfully
+2025-06-16 10:38:12,715 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:38:12,745 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:38:21,379 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 10:38:24,059 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 10:38:24,059 [WARNING] Unauthorized: /api/companies/
+2025-06-16 10:40:15,032 [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-06-16 10:41:50,711 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 10:41:50,712 [WARNING] Unauthorized: /api/companies/
+2025-06-16 10:42:51,663 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 10:43:12,614 [INFO] Running scheduled stock scraper
+2025-06-16 10:43:12,614 [INFO] Starting stock scraper at 2025-06-16 10:43:12.614657
+2025-06-16 10:43:12,717 [INFO] Running scheduled stock scraper
+2025-06-16 10:43:12,717 [INFO] Starting stock scraper at 2025-06-16 10:43:12.717019
+2025-06-16 10:43:14,846 [ERROR] Error running stock scraper: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+Traceback (most recent call last):
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\management\commands\scrape_stocks.py", line 77, in handle
+    df = extract_mse_data_html(force_scrape=force_scrape)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\mse_scrapper_html.py", line 179, in extract_mse_data_html
+    os.remove(html_file)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+2025-06-16 10:43:15,015 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 10:43:15,222 [INFO] Saved 16 stock records to database
+2025-06-16 10:43:51,652 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 10:44:08,503 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 10:44:08,505 [WARNING] Unauthorized: /api/companies/
+2025-06-16 10:44:30,483 [ERROR] Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: accounts_subscription.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\views.py", line 27, in signup_view
+    Subscription.objects.create(user=user, plan='free')
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 892, in save
+    self.save_base(
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 998, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 1161, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 1202, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: accounts_subscription.user_id
+2025-06-16 10:45:14,852 [INFO] Running scheduled stock scraper
+2025-06-16 10:45:14,852 [INFO] Starting stock scraper at 2025-06-16 10:45:14.852257
+2025-06-16 10:45:15,227 [INFO] Running scheduled stock scraper
+2025-06-16 10:45:15,232 [INFO] Starting stock scraper at 2025-06-16 10:45:15.232642
+2025-06-16 10:45:25,145 [ERROR] Failed to extract data
+2025-06-16 10:45:25,256 [ERROR] Failed to extract data
+2025-06-16 10:47:25,552 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\views.py changed, reloading.
+2025-06-16 10:47:25,554 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\views.py changed, reloading.
+2025-06-16 10:47:26,637 [INFO] Starting scheduler service
+2025-06-16 10:47:26,639 [INFO] Starting scheduler service
+2025-06-16 10:47:26,639 [INFO] Scheduler started successfully
+2025-06-16 10:47:26,639 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:47:26,639 [INFO] Scheduler started successfully
+2025-06-16 10:47:26,639 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:47:26,688 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:47:26,694 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:47:44,512 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\views.py changed, reloading.
+2025-06-16 10:47:44,518 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\views.py changed, reloading.
+2025-06-16 10:47:45,457 [INFO] Starting scheduler service
+2025-06-16 10:47:45,457 [INFO] Starting scheduler service
+2025-06-16 10:47:45,465 [INFO] Scheduler started successfully
+2025-06-16 10:47:45,466 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:47:45,466 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:47:45,508 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:48:23,164 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\views.py changed, reloading.
+2025-06-16 10:48:23,167 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\views.py changed, reloading.
+2025-06-16 10:48:24,110 [INFO] Starting scheduler service
+2025-06-16 10:48:24,110 [INFO] Starting scheduler service
+2025-06-16 10:48:24,128 [INFO] Scheduler started successfully
+2025-06-16 10:48:24,128 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:48:24,129 [INFO] Scheduler started successfully
+2025-06-16 10:48:24,129 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:48:24,171 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:48:24,171 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:53:19,847 [INFO] Starting scheduler service
+2025-06-16 10:53:19,863 [INFO] Scheduler started successfully
+2025-06-16 10:53:19,863 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:53:19,914 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:53:24,133 [INFO] Running scheduled stock scraper
+2025-06-16 10:53:24,142 [INFO] Starting stock scraper at 2025-06-16 10:53:24.142580
+2025-06-16 10:53:28,779 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 10:53:28,915 [INFO] Saved 16 stock records to database
+2025-06-16 10:54:17,438 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\models.py changed, reloading.
+2025-06-16 10:54:17,906 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\models.py changed, reloading.
+2025-06-16 10:54:18,564 [INFO] Starting scheduler service
+2025-06-16 10:54:18,575 [INFO] Scheduler started successfully
+2025-06-16 10:54:18,576 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:54:18,619 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:54:18,869 [INFO] Starting scheduler service
+2025-06-16 10:54:18,876 [INFO] Scheduler started successfully
+2025-06-16 10:54:18,876 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:54:18,933 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:54:38,338 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\settings.py changed, reloading.
+2025-06-16 10:54:38,371 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\settings.py changed, reloading.
+2025-06-16 10:54:41,052 [INFO] Starting scheduler service
+2025-06-16 10:54:41,052 [INFO] Starting scheduler service
+2025-06-16 10:54:41,062 [INFO] Scheduler started successfully
+2025-06-16 10:54:41,063 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:54:41,063 [INFO] Scheduler started successfully
+2025-06-16 10:54:41,063 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:54:41,118 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:54:41,118 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:56:30,998 [INFO] Starting scheduler service
+2025-06-16 10:56:31,004 [INFO] Scheduler started successfully
+2025-06-16 10:56:31,008 [INFO] Scheduler initialized in Django startup
+2025-06-16 10:56:31,058 [INFO] Watching for file changes with StatReloader
+2025-06-16 10:59:41,066 [INFO] Running scheduled stock scraper
+2025-06-16 10:59:41,080 [INFO] Starting stock scraper at 2025-06-16 10:59:41.080988
+2025-06-16 10:59:44,604 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 10:59:44,747 [INFO] Saved 16 stock records to database
+2025-06-16 10:59:52,871 [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-06-16 11:00:09,860 [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-06-16 11:00:39,246 [INFO] Starting scheduler service
+2025-06-16 11:00:39,258 [INFO] Scheduler started successfully
+2025-06-16 11:00:39,259 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:00:39,297 [INFO] Watching for file changes with StatReloader
+2025-06-16 11:01:49,856 [WARNING] Method Not Allowed (GET): /logout/
+2025-06-16 11:01:49,859 [WARNING] Method Not Allowed: /logout/
+2025-06-16 11:01:52,179 [WARNING] Method Not Allowed (GET): /logout/
+2025-06-16 11:01:52,179 [WARNING] Method Not Allowed: /logout/
+2025-06-16 11:01:56,603 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 11:01:56,606 [WARNING] Unauthorized: /api/companies/
+2025-06-16 11:02:02,455 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 11:02:02,457 [WARNING] Unauthorized: /api/companies/
+2025-06-16 11:02:21,374 [WARNING] Unauthorized: /api/companies/
+2025-06-16 11:02:28,442 [WARNING] Unauthorized: /api/historical/TNM/
+2025-06-16 11:03:02,456 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 11:03:18,975 [INFO] Starting scheduler service
+2025-06-16 11:03:18,987 [INFO] Scheduler started successfully
+2025-06-16 11:03:18,989 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:05:39,262 [INFO] Running scheduled stock scraper
+2025-06-16 11:05:39,280 [INFO] Starting stock scraper at 2025-06-16 11:05:39.280005
+2025-06-16 11:05:44,218 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 11:05:44,442 [INFO] Saved 16 stock records to database
+2025-06-16 11:08:18,994 [INFO] Running scheduled stock scraper
+2025-06-16 11:08:19,015 [INFO] Starting stock scraper at 2025-06-16 11:08:19.015902
+2025-06-16 11:08:23,797 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 11:08:24,012 [INFO] Saved 16 stock records to database
+2025-06-16 11:10:44,447 [INFO] Running scheduled stock scraper
+2025-06-16 11:10:44,454 [INFO] Starting stock scraper at 2025-06-16 11:10:44.454961
+2025-06-16 11:10:46,268 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 11:10:46,502 [INFO] Saved 16 stock records to database
+2025-06-16 11:15:46,506 [INFO] Running scheduled stock scraper
+2025-06-16 11:15:46,511 [INFO] Starting stock scraper at 2025-06-16 11:15:46.511444
+2025-06-16 11:15:48,403 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 11:15:48,575 [INFO] Saved 16 stock records to database
+2025-06-16 11:15:48,576 [INFO] Running scheduled stock scraper
+2025-06-16 11:15:48,579 [INFO] Starting stock scraper at 2025-06-16 11:15:48.578766
+2025-06-16 11:15:50,042 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 11:15:50,253 [INFO] Saved 16 stock records to database
+2025-06-16 11:17:57,696 [INFO] Starting scheduler service
+2025-06-16 11:17:57,696 [INFO] Scheduler started successfully
+2025-06-16 11:17:57,696 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:19:32,108 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 11:19:32,110 [WARNING] Unauthorized: /api/companies/
+2025-06-16 11:20:50,259 [INFO] Running scheduled stock scraper
+2025-06-16 11:20:50,267 [INFO] Starting stock scraper at 2025-06-16 11:20:50.267896
+2025-06-16 11:20:51,686 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 11:20:53,895 [INFO] Saved 16 stock records to database
+2025-06-16 11:22:48,726 [WARNING] Unauthorized: /api/latest/
+2025-06-16 11:23:18,449 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\middleware.py changed, reloading.
+2025-06-16 11:23:19,460 [INFO] Starting scheduler service
+2025-06-16 11:23:19,467 [INFO] Scheduler started successfully
+2025-06-16 11:23:19,467 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:23:19,500 [INFO] Watching for file changes with StatReloader
+2025-06-16 11:24:06,042 [WARNING] Unauthorized: /api/latest/mse_5PFAyspVWQnz33boHidjCIiU2y6aNoEmzZteXzRV
+2025-06-16 11:26:51,720 [ERROR] Internal Server Error: /api/latest/
+2025-06-16 11:28:19,208 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\middleware.py changed, reloading.
+2025-06-16 11:28:21,834 [INFO] Starting scheduler service
+2025-06-16 11:28:21,841 [INFO] Scheduler started successfully
+2025-06-16 11:28:21,842 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:28:22,034 [INFO] Watching for file changes with StatReloader
+2025-06-16 11:28:54,935 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\middleware.py changed, reloading.
+2025-06-16 11:28:56,021 [INFO] Starting scheduler service
+2025-06-16 11:28:56,029 [INFO] Scheduler started successfully
+2025-06-16 11:28:56,030 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:28:56,082 [INFO] Watching for file changes with StatReloader
+2025-06-16 11:30:49,143 [INFO] Starting scheduler service
+2025-06-16 11:30:49,156 [INFO] Scheduler started successfully
+2025-06-16 11:30:49,156 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:30:49,195 [INFO] Watching for file changes with StatReloader
+2025-06-16 11:30:56,029 [INFO] Running scheduled stock scraper
+2025-06-16 11:30:56,033 [INFO] Starting stock scraper at 2025-06-16 11:30:56.033835
+2025-06-16 11:31:04,525 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 11:31:04,675 [INFO] Saved 16 stock records to database
+2025-06-16 11:31:08,823 [ERROR] Internal Server Error: /api/latest/
+2025-06-16 11:31:28,755 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\settings.py changed, reloading.
+2025-06-16 11:31:28,930 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\settings.py changed, reloading.
+2025-06-16 11:31:29,740 [INFO] Starting scheduler service
+2025-06-16 11:31:29,753 [INFO] Scheduler started successfully
+2025-06-16 11:31:29,753 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:31:29,798 [INFO] Watching for file changes with StatReloader
+2025-06-16 11:31:29,833 [INFO] Starting scheduler service
+2025-06-16 11:31:29,845 [INFO] Scheduler started successfully
+2025-06-16 11:31:29,845 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:31:29,894 [INFO] Watching for file changes with StatReloader
+2025-06-16 11:32:24,145 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\settings.py changed, reloading.
+2025-06-16 11:32:24,447 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\settings.py changed, reloading.
+2025-06-16 11:32:25,197 [INFO] Starting scheduler service
+2025-06-16 11:32:25,202 [INFO] Scheduler started successfully
+2025-06-16 11:32:25,203 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:32:25,239 [INFO] Watching for file changes with StatReloader
+2025-06-16 11:32:25,367 [INFO] Starting scheduler service
+2025-06-16 11:32:25,375 [INFO] Scheduler started successfully
+2025-06-16 11:32:25,375 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:32:25,416 [INFO] Watching for file changes with StatReloader
+2025-06-16 11:34:03,944 [INFO] Starting scheduler service
+2025-06-16 11:34:03,954 [INFO] Scheduler started successfully
+2025-06-16 11:34:03,954 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:34:04,003 [INFO] Watching for file changes with StatReloader
+2025-06-16 11:34:17,707 [ERROR] Internal Server Error: /api/market-status/
+2025-06-16 11:34:18,213 [ERROR] Internal Server Error: /api/companies/
+2025-06-16 11:34:18,730 [ERROR] Internal Server Error: /api/latest/
+2025-06-16 11:34:26,718 [WARNING] Unauthorized: /api/companies/
+2025-06-16 11:34:51,889 [WARNING] Unauthorized: /api/companies/
+2025-06-16 11:35:00,163 [ERROR] Internal Server Error: /api/latest/
+2025-06-16 11:35:06,878 [INFO] Starting scheduler service
+2025-06-16 11:35:06,889 [INFO] Scheduler started successfully
+2025-06-16 11:35:06,889 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:36:00,308 [WARNING] Method Not Allowed (GET): /logout/
+2025-06-16 11:36:00,311 [WARNING] Method Not Allowed: /logout/
+2025-06-16 11:37:00,102 [INFO] Starting scheduler service
+2025-06-16 11:37:00,117 [INFO] Scheduler started successfully
+2025-06-16 11:37:00,118 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:37:25,206 [INFO] Running scheduled stock scraper
+2025-06-16 11:37:25,218 [INFO] Starting stock scraper at 2025-06-16 11:37:25.218643
+2025-06-16 11:37:25,380 [INFO] Running scheduled stock scraper
+2025-06-16 11:37:25,394 [INFO] Starting stock scraper at 2025-06-16 11:37:25.394111
+2025-06-16 11:37:28,245 [ERROR] Error running stock scraper: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+Traceback (most recent call last):
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\management\commands\scrape_stocks.py", line 77, in handle
+    df = extract_mse_data_html(force_scrape=force_scrape)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\mse_scrapper_html.py", line 179, in extract_mse_data_html
+    os.remove(html_file)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+2025-06-16 11:37:28,528 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 11:37:28,708 [INFO] Saved 16 stock records to database
+2025-06-16 11:39:03,957 [INFO] Running scheduled stock scraper
+2025-06-16 11:39:03,979 [INFO] Starting stock scraper at 2025-06-16 11:39:03.979879
+2025-06-16 11:39:11,064 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 11:39:11,283 [INFO] Saved 16 stock records to database
+2025-06-16 11:39:54,399 [WARNING] Method Not Allowed (GET): /logout/
+2025-06-16 11:39:54,402 [WARNING] Method Not Allowed: /logout/
+2025-06-16 11:40:00,167 [WARNING] Method Not Allowed (GET): /logout/
+2025-06-16 11:40:00,168 [WARNING] Method Not Allowed: /logout/
+2025-06-16 11:40:06,812 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 11:40:06,812 [WARNING] Unauthorized: /api/companies/
+2025-06-16 11:40:06,892 [INFO] Running scheduled stock scraper
+2025-06-16 11:40:06,903 [INFO] Starting stock scraper at 2025-06-16 11:40:06.903882
+2025-06-16 11:40:10,573 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 11:40:10,779 [INFO] Saved 16 stock records to database
+2025-06-16 11:40:55,434 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\middleware.py changed, reloading.
+2025-06-16 11:40:55,434 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\middleware.py changed, reloading.
+2025-06-16 11:40:55,899 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\middleware.py changed, reloading.
+2025-06-16 11:40:56,802 [INFO] Starting scheduler service
+2025-06-16 11:40:56,812 [INFO] Scheduler started successfully
+2025-06-16 11:40:56,812 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:40:56,829 [INFO] Starting scheduler service
+2025-06-16 11:40:56,841 [INFO] Scheduler started successfully
+2025-06-16 11:40:56,843 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:40:56,872 [INFO] Watching for file changes with StatReloader
+2025-06-16 11:40:56,899 [INFO] Watching for file changes with StatReloader
+2025-06-16 11:40:57,187 [INFO] Starting scheduler service
+2025-06-16 11:40:57,193 [INFO] Scheduler started successfully
+2025-06-16 11:40:57,193 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:40:57,233 [INFO] Watching for file changes with StatReloader
+2025-06-16 11:42:56,972 [ERROR] Internal Server Error: /api/latest/
+2025-06-16 11:44:34,015 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\middleware.py changed, reloading.
+2025-06-16 11:44:35,138 [INFO] Starting scheduler service
+2025-06-16 11:44:35,146 [INFO] Scheduler started successfully
+2025-06-16 11:44:35,146 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:44:35,185 [INFO] Watching for file changes with StatReloader
+2025-06-16 11:44:47,855 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\middleware.py changed, reloading.
+2025-06-16 11:44:49,091 [INFO] Starting scheduler service
+2025-06-16 11:44:49,100 [INFO] Scheduler started successfully
+2025-06-16 11:44:49,101 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:44:49,159 [INFO] Watching for file changes with StatReloader
+2025-06-16 11:45:31,931 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\middleware.py changed, reloading.
+2025-06-16 11:45:32,939 [INFO] Starting scheduler service
+2025-06-16 11:45:32,946 [INFO] Scheduler started successfully
+2025-06-16 11:45:32,947 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:45:33,000 [INFO] Watching for file changes with StatReloader
+2025-06-16 11:46:43,967 [ERROR] Internal Server Error: /api/latest/
+2025-06-16 11:47:03,209 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\middleware.py changed, reloading.
+2025-06-16 11:47:04,183 [INFO] Starting scheduler service
+2025-06-16 11:47:04,195 [INFO] Scheduler started successfully
+2025-06-16 11:47:04,196 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:47:04,233 [INFO] Watching for file changes with StatReloader
+2025-06-16 11:47:31,303 [WARNING] Unauthorized: /api/latest/
+2025-06-16 11:47:44,350 [WARNING] Unauthorized: /api/latest/
+2025-06-16 11:49:52,214 [WARNING] Method Not Allowed (GET): /logout/
+2025-06-16 11:49:52,214 [WARNING] Method Not Allowed: /logout/
+2025-06-16 11:49:57,994 [WARNING] Method Not Allowed (GET): /logout/
+2025-06-16 11:49:57,995 [WARNING] Method Not Allowed: /logout/
+2025-06-16 11:52:04,199 [INFO] Running scheduled stock scraper
+2025-06-16 11:52:04,210 [INFO] Starting stock scraper at 2025-06-16 11:52:04.210389
+2025-06-16 11:52:07,125 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 11:52:07,282 [INFO] Saved 16 stock records to database
+2025-06-16 11:57:07,286 [INFO] Running scheduled stock scraper
+2025-06-16 11:57:07,287 [INFO] Starting stock scraper at 2025-06-16 11:57:07.287592
+2025-06-16 11:57:08,776 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 11:57:08,990 [INFO] Saved 16 stock records to database
+2025-06-16 11:58:49,887 [INFO] Starting scheduler service
+2025-06-16 11:58:49,896 [INFO] Scheduler started successfully
+2025-06-16 11:58:49,896 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:59:14,204 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\middleware.py changed, reloading.
+2025-06-16 11:59:15,391 [INFO] Starting scheduler service
+2025-06-16 11:59:15,398 [INFO] Scheduler started successfully
+2025-06-16 11:59:15,400 [INFO] Scheduler initialized in Django startup
+2025-06-16 11:59:15,449 [INFO] Watching for file changes with StatReloader
+2025-06-16 12:00:15,399 [INFO] Running scheduled stock scraper
+2025-06-16 12:00:15,401 [INFO] Starting stock scraper at 2025-06-16 12:00:15.401462
+2025-06-16 12:00:17,962 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 12:00:18,128 [INFO] Saved 16 stock records to database
+2025-06-16 12:04:18,137 [INFO] Running scheduled stock scraper
+2025-06-16 12:04:18,142 [INFO] Starting stock scraper at 2025-06-16 12:04:18.142255
+2025-06-16 12:04:19,494 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 12:04:19,645 [INFO] Saved 16 stock records to database
+2025-06-16 12:09:19,656 [INFO] Running scheduled stock scraper
+2025-06-16 12:09:19,656 [INFO] Starting stock scraper at 2025-06-16 12:09:19.656805
+2025-06-16 12:09:20,999 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 12:09:21,114 [INFO] Saved 16 stock records to database
+2025-06-16 12:17:28,098 [INFO] Starting scheduler service
+2025-06-16 12:17:28,105 [INFO] Scheduler started successfully
+2025-06-16 12:17:28,106 [INFO] Scheduler initialized in Django startup
+2025-06-16 12:17:28,160 [INFO] Watching for file changes with StatReloader
+2025-06-16 12:18:28,677 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\middleware.py changed, reloading.
+2025-06-16 12:18:31,181 [INFO] Starting scheduler service
+2025-06-16 12:18:31,191 [INFO] Scheduler started successfully
+2025-06-16 12:18:31,191 [INFO] Scheduler initialized in Django startup
+2025-06-16 12:18:31,234 [INFO] Watching for file changes with StatReloader
+2025-06-16 12:18:39,624 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\middleware.py changed, reloading.
+2025-06-16 12:18:40,473 [INFO] Starting scheduler service
+2025-06-16 12:18:40,482 [INFO] Scheduler started successfully
+2025-06-16 12:18:40,482 [INFO] Scheduler initialized in Django startup
+2025-06-16 12:18:40,529 [INFO] Watching for file changes with StatReloader
+2025-06-16 12:18:52,028 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\middleware.py changed, reloading.
+2025-06-16 12:18:52,877 [INFO] Starting scheduler service
+2025-06-16 12:18:52,896 [INFO] Scheduler started successfully
+2025-06-16 12:18:52,897 [INFO] Scheduler initialized in Django startup
+2025-06-16 12:18:52,928 [INFO] Watching for file changes with StatReloader
+2025-06-16 12:19:15,688 [WARNING] Not Found: /favicon.ico
+2025-06-16 12:19:28,385 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 12:19:28,388 [WARNING] Unauthorized: /api/companies/
+2025-06-16 12:20:00,296 [WARNING] Method Not Allowed (GET): /logout/
+2025-06-16 12:20:00,296 [WARNING] Method Not Allowed: /logout/
+2025-06-16 12:21:12,630 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\middleware.py changed, reloading.
+2025-06-16 12:21:13,589 [INFO] Starting scheduler service
+2025-06-16 12:21:13,606 [INFO] Scheduler started successfully
+2025-06-16 12:21:13,607 [INFO] Scheduler initialized in Django startup
+2025-06-16 12:21:13,707 [INFO] Watching for file changes with StatReloader
+2025-06-16 12:21:24,062 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\middleware.py changed, reloading.
+2025-06-16 12:21:24,865 [INFO] Starting scheduler service
+2025-06-16 12:21:24,882 [INFO] Scheduler started successfully
+2025-06-16 12:21:24,882 [INFO] Scheduler initialized in Django startup
+2025-06-16 12:21:24,918 [INFO] Watching for file changes with StatReloader
+2025-06-16 12:21:31,156 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\urls.py changed, reloading.
+2025-06-16 12:21:31,995 [INFO] Starting scheduler service
+2025-06-16 12:21:32,003 [INFO] Scheduler started successfully
+2025-06-16 12:21:32,003 [INFO] Scheduler initialized in Django startup
+2025-06-16 12:21:32,044 [INFO] Watching for file changes with StatReloader
+2025-06-16 12:21:51,987 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\views.py changed, reloading.
+2025-06-16 12:21:52,904 [INFO] Starting scheduler service
+2025-06-16 12:21:52,913 [INFO] Scheduler started successfully
+2025-06-16 12:21:52,914 [INFO] Scheduler initialized in Django startup
+2025-06-16 12:21:52,945 [INFO] Watching for file changes with StatReloader
+2025-06-16 12:22:29,798 [INFO] Starting scheduler service
+2025-06-16 12:22:29,819 [INFO] Scheduler started successfully
+2025-06-16 12:22:29,819 [INFO] Scheduler initialized in Django startup
+2025-06-16 12:22:41,486 [INFO] Starting scheduler service
+2025-06-16 12:22:41,508 [INFO] Scheduler started successfully
+2025-06-16 12:22:41,508 [INFO] Scheduler initialized in Django startup
+2025-06-16 12:22:41,555 [INFO] Watching for file changes with StatReloader
+2025-06-16 12:22:57,961 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\views.py changed, reloading.
+2025-06-16 12:22:58,241 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\accounts\views.py changed, reloading.
+2025-06-16 12:22:59,052 [INFO] Starting scheduler service
+2025-06-16 12:22:59,062 [INFO] Scheduler started successfully
+2025-06-16 12:22:59,062 [INFO] Scheduler initialized in Django startup
+2025-06-16 12:22:59,114 [INFO] Watching for file changes with StatReloader
+2025-06-16 12:22:59,374 [INFO] Starting scheduler service
+2025-06-16 12:22:59,382 [INFO] Scheduler started successfully
+2025-06-16 12:22:59,383 [INFO] Scheduler initialized in Django startup
+2025-06-16 12:22:59,426 [INFO] Watching for file changes with StatReloader
+2025-06-16 12:23:12,099 [WARNING] Unauthorized: /api/market-status/
+2025-06-16 12:23:12,102 [WARNING] Unauthorized: /api/companies/

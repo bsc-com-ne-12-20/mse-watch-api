@@ -248,14 +248,19 @@
                             <h1 class="mobile-nav-title text-xl sm:text-2xl font-bold text-gray-900">MSE Watch</h1>
                         </div>
                     </div>
-                </div>
-                <div class="hidden md:block">
+                </div>                <div class="hidden md:block">
                     <div class="flex items-center space-x-8">
                         <a href="#features" class="text-gray-700 hover:text-gray-900 transition duration-300 font-medium">Features</a>
                         <a href="#api" class="text-gray-700 hover:text-gray-900 transition duration-300 font-medium">API</a>
                         <a href="#pricing" class="text-gray-700 hover:text-gray-900 transition duration-300 font-medium">Pricing</a>
                         <a href="#contact" class="text-gray-700 hover:text-gray-900 transition duration-300 font-medium">Contact</a>
-                        <a href="/swagger/" class="bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition duration-300 font-semibold shadow-lg">Documentation</a>
+                        {% if user.is_authenticated %}
+                            <a href="/dashboard/" class="text-gray-700 hover:text-gray-900 transition duration-300 font-medium">Dashboard</a>
+                            <a href="/logout/" class="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition duration-300 font-semibold">Logout</a>
+                        {% else %}
+                            <a href="/login/" class="text-gray-700 hover:text-gray-900 transition duration-300 font-medium">Sign In</a>
+                            <a href="/signup/" class="bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition duration-300 font-semibold shadow-lg">Sign Up</a>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="md:hidden">
@@ -265,15 +270,20 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Mobile menu -->
+          <!-- Mobile menu -->
         <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg border-t border-gray-200">
             <div class="px-4 pt-2 pb-3 space-y-1">
                 <a href="#features" class="block px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300 font-medium">Features</a>
                 <a href="#api" class="block px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300 font-medium">API</a>
                 <a href="#pricing" class="block px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300 font-medium">Pricing</a>
                 <a href="#contact" class="block px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300 font-medium">Contact</a>
-                <a href="/swagger/" class="block px-3 py-3 mx-3 mt-2 bg-gray-900 text-white rounded-lg text-center font-semibold hover:bg-gray-800 transition duration-300 shadow-lg">Documentation</a>
+                {% if user.is_authenticated %}
+                    <a href="/dashboard/" class="block px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300 font-medium">Dashboard</a>
+                    <a href="/logout/" class="block px-3 py-3 mx-3 mt-2 bg-gray-200 text-gray-800 rounded-lg text-center font-semibold hover:bg-gray-300 transition duration-300">Logout</a>
+                {% else %}
+                    <a href="/login/" class="block px-3 py-3 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300 font-medium">Sign In</a>
+                    <a href="/signup/" class="block px-3 py-3 mx-3 mt-2 bg-gray-900 text-white rounded-lg text-center font-semibold hover:bg-gray-800 transition duration-300 shadow-lg">Sign Up</a>
+                {% endif %}
             </div>
         </div>
     </nav><!-- Hero Section -->

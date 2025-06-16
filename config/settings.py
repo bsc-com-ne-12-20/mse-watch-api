@@ -57,6 +57,7 @@ CORS_ALLOW_HEADERS = [
     'user-agent',
     'x-csrftoken',
     'x-requested-with',
+    'x-api-key',  # Add API key header
 ]
 
 
@@ -72,7 +73,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework', 
     'drf_yasg',
-    'stocks',  
+    'stocks',
+    'accounts',  # New authentication app
 ]
 
 MIDDLEWARE = [
@@ -82,6 +84,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'accounts.middleware.APIKeyMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -179,3 +182,11 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD', '')  # Set as environment
 DEFAULT_FROM_EMAIL = 'MSE Market Watch <your-email@example.com>'
 
 CSRF_TRUSTED_ORIGINS = ['https://mse-watch.onrender.com','http://35.193.241.192','http://mse-watch.ddns.net']
+
+# Custom user model
+AUTH_USER_MODEL = 'accounts.User'
+
+# Authentication settings
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/dashboard/'
+LOGOUT_REDIRECT_URL = '/'

@@ -22,6 +22,11 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='landing.html'), name='landing'),
     path('admin/', admin.site.urls),
     path('api/', include('stocks.urls')),
+    
+    # Authentication URLs - remove namespace conflict
+    path('', include('accounts.urls')),
+    
+    # API Documentation
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]

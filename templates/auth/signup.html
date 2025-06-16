@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - MSE Watch API</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2c5282;
+            --accent-color: #d69e2e;
+            --dark-color: #0a0e13;
+            --light-gray: #f8fafc;
+            --navy-blue: #1e3a8a;
+            --charcoal: #374151;
+            --gold: #fbbf24;
+            --platinum: #e5e7eb;
+            --slate: #64748b;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center">
+                            <div class="relative w-8 h-8 mr-3">
+                                <i class="fas fa-chart-line text-yellow-600 text-lg absolute top-0 left-0"></i>
+                                <i class="fas fa-clock text-gray-700 text-sm absolute bottom-0 right-0"></i>
+                            </div>
+                            <a href="/" class="text-xl sm:text-2xl font-bold text-gray-900">MSE Watch</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/login/" class="text-gray-700 hover:text-gray-900 font-medium">Sign In</a>
+                    <a href="/pricing/" class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300">Pricing</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Signup Form -->
+    <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full space-y-8">
+            <div>
+                <div class="mx-auto h-12 w-12 flex items-center justify-center rounded-full bg-gray-900">
+                    <i class="fas fa-user-plus text-yellow-600 text-xl"></i>
+                </div>
+                <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+                    Create your account
+                </h2>
+                <p class="mt-2 text-center text-sm text-gray-600">
+                    Start building with MSE data API
+                </p>
+            </div>
+              <form class="mt-8 space-y-6" method="POST">
+                {% csrf_token %}
+                
+                <!-- Form errors -->
+                {% if form.non_field_errors %}
+                    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+                        {% for error in form.non_field_errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                
+                <div class="space-y-4">                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="first_name" class="block text-sm font-medium text-gray-700">First name</label>
+                            <input id="first_name" name="first_name" type="text" required 
+                                   value="{{ form.first_name.value|default:'' }}"
+                                   class="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 focus:z-10 sm:text-sm"
+                                   placeholder="First name">
+                        </div>
+                        <div>
+                            <label for="last_name" class="block text-sm font-medium text-gray-700">Last name</label>
+                            <input id="last_name" name="last_name" type="text" required 
+                                   value="{{ form.last_name.value|default:'' }}"
+                                   class="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 focus:z-10 sm:text-sm"
+                                   placeholder="Last name">
+                        </div>
+                    </div>                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+                        <input id="email" name="email" type="email" required 
+                               value="{{ form.email.value|default:'' }}"
+                               class="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 focus:z-10 sm:text-sm"
+                               placeholder="Enter your email">
+                        {% if form.email.errors %}
+                            {% for error in form.email.errors %}
+                                <p class="mt-1 text-xs text-red-600">{{ error }}</p>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    
+                    <div>
+                        <label for="company" class="block text-sm font-medium text-gray-700">Company (Optional)</label>
+                        <input id="company" name="company" type="text" 
+                               value="{{ form.company.value|default:'' }}"
+                               class="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 focus:z-10 sm:text-sm"
+                               placeholder="Your company name">
+                    </div><div>
+                        <label for="password1" class="block text-sm font-medium text-gray-700">Password</label>
+                        <input id="password1" name="password1" type="password" required 
+                               class="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 focus:z-10 sm:text-sm"
+                               placeholder="Create a password">
+                        {% if form.password1.errors %}
+                            {% for error in form.password1.errors %}
+                                <p class="mt-1 text-xs text-red-600">{{ error }}</p>
+                            {% endfor %}
+                        {% else %}
+                            <p class="mt-1 text-xs text-gray-500">Must be at least 8 characters long</p>
+                        {% endif %}
+                    </div>
+                    
+                    <div>
+                        <label for="password2" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                        <input id="password2" name="password2" type="password" required 
+                               class="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 focus:z-10 sm:text-sm"
+                               placeholder="Confirm your password">
+                        {% if form.password2.errors %}
+                            {% for error in form.password2.errors %}
+                                <p class="mt-1 text-xs text-red-600">{{ error }}</p>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <input id="agree-terms" name="agree-terms" type="checkbox" required
+                           class="h-4 w-4 text-yellow-600 focus:ring-yellow-500 border-gray-300 rounded">
+                    <label for="agree-terms" class="ml-2 block text-sm text-gray-900">
+                        I agree to the <a href="/terms/" class="text-yellow-600 hover:text-yellow-500">Terms of Service</a> 
+                        and <a href="/privacy/" class="text-yellow-600 hover:text-yellow-500">Privacy Policy</a>
+                    </label>
+                </div>
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+                <div>
+                    <button type="submit" 
+                            class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-gray-900 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                        <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                            <i class="fas fa-user-plus text-yellow-600"></i>
+                        </span>
+                        Create Account
+                    </button>
+                </div>
+
+                <div class="text-center">
+                    <span class="text-sm text-gray-600">
+                        Already have an account? 
+                        <a href="/login/" class="font-medium text-yellow-600 hover:text-yellow-500">
+                            Sign in
+                        </a>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
