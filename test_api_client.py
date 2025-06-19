@@ -20,7 +20,7 @@ import time
 class MSEWatchAPIClient:
     """Simple client for MSE Watch API"""
     
-    def __init__(self, api_key, base_url="http://127.0.0.1:8001"):
+    def __init__(self, api_key, base_url="http://127.0.0.1:8000"):
         self.api_key = api_key
         self.base_url = base_url
         self.headers = {

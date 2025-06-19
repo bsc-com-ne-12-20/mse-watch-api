@@ -15,14 +15,12 @@ class APIKeyMiddleware(MiddlewareMixin):
     def process_request(self, request):
         # Only apply to API endpoints
         if not request.path.startswith('/api/'):
-            return None
-              # Skip authentication for some endpoints (like market status which might be public)
+            return None        # Skip authentication for some endpoints (like market status which might be public)
         public_endpoints = [
             '/api/docs/', 
             '/api/schema/',
-            '/api/market-status/',
-            '/api/latest/',  # Latest prices might also be public
-            '/api/companies/',  # Company list might also be public
+            '/api/stock-icons/',  # Public endpoint to list all available icons
+            '/api/stock-icon/',  # Public endpoint for stock symbol icons
         ]
         if any(request.path.startswith(endpoint) for endpoint in public_endpoints):
             return None
@@ -76,13 +74,12 @@ class APIKeyMiddleware(MiddlewareMixin):
                     'error': 'Quota exceeded',
                     'message': f'Monthly limit of {subscription.monthly_limit} requests exceeded'
                 }, status=429)
-                
-            # Track usage
+                  # Track usage
             APIUsage.objects.create(
                 api_key=api_key_obj,
                 endpoint=request.path,
                 method=request.method,
-                ip_address=self.get_client_ip(request)
+                response_status=200  # We'll assume success at this point
             )
             
             # Update quota usage

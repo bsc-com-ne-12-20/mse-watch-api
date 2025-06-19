@@ -1202,3 +1202,1855 @@ PermissionError: [WinError 32] The process cannot access the file because it is 
 2025-06-16 15:07:04,527 [INFO] Scheduler started successfully
 2025-06-16 15:07:04,533 [INFO] Scheduler initialized in Django startup
 2025-06-16 15:07:04,615 [INFO] Watching for file changes with StatReloader
+2025-06-16 15:12:04,176 [INFO] Running scheduled stock scraper
+2025-06-16 15:12:04,181 [INFO] Starting stock scraper at 2025-06-16 15:12:04.181566
+2025-06-16 15:12:04,535 [INFO] Running scheduled stock scraper
+2025-06-16 15:12:04,535 [INFO] Starting stock scraper at 2025-06-16 15:12:04.535944
+2025-06-16 15:12:06,811 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 15:12:06,981 [INFO] Saved 16 stock records to database
+2025-06-16 15:12:07,003 [INFO] Saved 9 stock records to database
+2025-06-16 15:17:06,985 [INFO] Running scheduled stock scraper
+2025-06-16 15:17:06,987 [INFO] Starting stock scraper at 2025-06-16 15:17:06.987551
+2025-06-16 15:17:07,015 [INFO] Running scheduled stock scraper
+2025-06-16 15:17:07,021 [INFO] Starting stock scraper at 2025-06-16 15:17:07.021617
+2025-06-16 15:17:08,391 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 15:17:08,582 [INFO] Saved 16 stock records to database
+2025-06-16 15:17:08,608 [INFO] Saved 9 stock records to database
+2025-06-16 15:22:08,586 [INFO] Running scheduled stock scraper
+2025-06-16 15:22:08,586 [INFO] Starting stock scraper at 2025-06-16 15:22:08.586787
+2025-06-16 15:22:08,615 [INFO] Running scheduled stock scraper
+2025-06-16 15:22:08,620 [INFO] Starting stock scraper at 2025-06-16 15:22:08.620842
+2025-06-16 15:22:09,744 [ERROR] Error running stock scraper: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+Traceback (most recent call last):
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\management\commands\scrape_stocks.py", line 77, in handle
+    df = extract_mse_data_html(force_scrape=force_scrape)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\mse_scrapper_html.py", line 179, in extract_mse_data_html
+    os.remove(html_file)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+2025-06-16 15:22:09,902 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 15:22:10,035 [INFO] Saved 16 stock records to database
+2025-06-16 15:27:09,763 [INFO] Running scheduled stock scraper
+2025-06-16 15:27:09,763 [INFO] Starting stock scraper at 2025-06-16 15:27:09.763804
+2025-06-16 15:27:10,038 [INFO] Running scheduled stock scraper
+2025-06-16 15:27:10,043 [INFO] Starting stock scraper at 2025-06-16 15:27:10.043941
+2025-06-16 15:27:11,203 [ERROR] Failed to extract data
+2025-06-16 15:27:11,203 [ERROR] Failed to extract data
+2025-06-16 15:30:11,218 [INFO] Running scheduled stock scraper
+2025-06-16 15:30:11,218 [INFO] Running scheduled stock scraper
+2025-06-16 15:30:11,222 [INFO] Starting stock scraper at 2025-06-16 15:30:11.222125
+2025-06-16 15:30:12,676 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 15:30:12,676 [ERROR] Error running stock scraper: [WinError 5] Access is denied: 'temp_mse.html'
+Traceback (most recent call last):
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\management\commands\scrape_stocks.py", line 77, in handle
+    df = extract_mse_data_html(force_scrape=force_scrape)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\mse_scrapper_html.py", line 179, in extract_mse_data_html
+    os.remove(html_file)
+PermissionError: [WinError 5] Access is denied: 'temp_mse.html'
+2025-06-16 15:30:12,930 [INFO] Saved 16 stock records to database
+2025-06-16 15:32:12,686 [INFO] Running scheduled stock scraper
+2025-06-16 15:32:12,692 [INFO] Starting stock scraper at 2025-06-16 15:32:12.691625
+2025-06-16 15:32:12,938 [INFO] Running scheduled stock scraper
+2025-06-16 15:32:12,946 [INFO] Starting stock scraper at 2025-06-16 15:32:12.946189
+2025-06-16 15:32:14,203 [ERROR] Error running stock scraper: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+Traceback (most recent call last):
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\management\commands\scrape_stocks.py", line 77, in handle
+    df = extract_mse_data_html(force_scrape=force_scrape)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\mse_scrapper_html.py", line 179, in extract_mse_data_html
+    os.remove(html_file)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+2025-06-16 15:32:14,378 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 15:32:14,568 [INFO] Saved 16 stock records to database
+2025-06-16 15:37:14,210 [INFO] Running scheduled stock scraper
+2025-06-16 15:37:14,213 [INFO] Starting stock scraper at 2025-06-16 15:37:14.213937
+2025-06-16 15:37:14,578 [INFO] Running scheduled stock scraper
+2025-06-16 15:37:14,579 [INFO] Starting stock scraper at 2025-06-16 15:37:14.579404
+2025-06-16 15:37:15,786 [ERROR] Error running stock scraper: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+Traceback (most recent call last):
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\management\commands\scrape_stocks.py", line 77, in handle
+    df = extract_mse_data_html(force_scrape=force_scrape)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\mse_scrapper_html.py", line 179, in extract_mse_data_html
+    os.remove(html_file)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+2025-06-16 15:37:16,131 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 15:37:16,361 [INFO] Saved 16 stock records to database
+2025-06-16 15:42:15,794 [INFO] Running scheduled stock scraper
+2025-06-16 15:42:15,798 [INFO] Starting stock scraper at 2025-06-16 15:42:15.798442
+2025-06-16 15:42:16,377 [INFO] Running scheduled stock scraper
+2025-06-16 15:42:16,397 [INFO] Starting stock scraper at 2025-06-16 15:42:16.397982
+2025-06-16 15:42:17,637 [ERROR] Error running stock scraper: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+Traceback (most recent call last):
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\management\commands\scrape_stocks.py", line 77, in handle
+    df = extract_mse_data_html(force_scrape=force_scrape)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\mse_scrapper_html.py", line 179, in extract_mse_data_html
+    os.remove(html_file)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+2025-06-16 15:42:17,978 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 15:42:18,158 [INFO] Saved 16 stock records to database
+2025-06-16 15:47:17,643 [INFO] Running scheduled stock scraper
+2025-06-16 15:47:17,643 [INFO] Starting stock scraper at 2025-06-16 15:47:17.643670
+2025-06-16 15:47:18,164 [INFO] Running scheduled stock scraper
+2025-06-16 15:47:18,166 [INFO] Starting stock scraper at 2025-06-16 15:47:18.166335
+2025-06-16 15:47:19,028 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 15:47:19,243 [INFO] Saved 16 stock records to database
+2025-06-16 15:47:19,544 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 15:47:19,575 [INFO] Saved 16 stock records to database
+2025-06-16 15:52:19,255 [INFO] Running scheduled stock scraper
+2025-06-16 15:52:19,278 [INFO] Starting stock scraper at 2025-06-16 15:52:19.278532
+2025-06-16 15:52:19,593 [INFO] Running scheduled stock scraper
+2025-06-16 15:52:19,593 [INFO] Starting stock scraper at 2025-06-16 15:52:19.593457
+2025-06-16 15:52:21,202 [ERROR] Error running stock scraper: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+Traceback (most recent call last):
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\management\commands\scrape_stocks.py", line 77, in handle
+    df = extract_mse_data_html(force_scrape=force_scrape)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\mse_scrapper_html.py", line 179, in extract_mse_data_html
+    os.remove(html_file)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+2025-06-16 15:52:21,527 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 15:52:21,745 [INFO] Saved 16 stock records to database
+2025-06-16 15:57:21,221 [INFO] Running scheduled stock scraper
+2025-06-16 15:57:21,227 [INFO] Starting stock scraper at 2025-06-16 15:57:21.227386
+2025-06-16 15:57:21,750 [INFO] Running scheduled stock scraper
+2025-06-16 15:57:21,861 [INFO] Starting stock scraper at 2025-06-16 15:57:21.861148
+2025-06-16 15:57:22,559 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 15:57:22,729 [INFO] Saved 16 stock records to database
+2025-06-16 15:57:23,193 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 15:57:23,400 [INFO] Saved 16 stock records to database
+2025-06-16 16:00:22,834 [INFO] Running scheduled stock scraper
+2025-06-16 16:00:22,882 [INFO] Starting stock scraper at 2025-06-16 16:00:22.882653
+2025-06-16 16:00:23,404 [INFO] Running scheduled stock scraper
+2025-06-16 16:00:23,495 [INFO] Starting stock scraper at 2025-06-16 16:00:23.495566
+2025-06-16 16:00:24,583 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 16:00:24,958 [INFO] Saved 16 stock records to database
+2025-06-16 16:00:25,089 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 16:00:25,351 [INFO] Saved 16 stock records to database
+2025-06-16 16:02:24,988 [INFO] Running scheduled stock scraper
+2025-06-16 16:02:24,988 [INFO] Starting stock scraper at 2025-06-16 16:02:24.988041
+2025-06-16 16:02:25,377 [INFO] Running scheduled stock scraper
+2025-06-16 16:02:25,377 [INFO] Starting stock scraper at 2025-06-16 16:02:25.377976
+2025-06-16 16:02:26,648 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 16:02:27,005 [INFO] Saved 16 stock records to database
+2025-06-16 16:02:27,107 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 16:02:27,581 [INFO] Saved 16 stock records to database
+2025-06-16 16:07:27,104 [INFO] Running scheduled stock scraper
+2025-06-16 16:07:27,120 [INFO] Starting stock scraper at 2025-06-16 16:07:27.120541
+2025-06-16 16:07:27,586 [INFO] Running scheduled stock scraper
+2025-06-16 16:07:27,587 [INFO] Starting stock scraper at 2025-06-16 16:07:27.587725
+2025-06-16 16:07:28,933 [ERROR] Error running stock scraper: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+Traceback (most recent call last):
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\management\commands\scrape_stocks.py", line 77, in handle
+    df = extract_mse_data_html(force_scrape=force_scrape)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\mse_scrapper_html.py", line 179, in extract_mse_data_html
+    os.remove(html_file)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+2025-06-16 16:07:29,219 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 16:07:29,401 [INFO] Saved 16 stock records to database
+2025-06-16 16:12:28,981 [INFO] Running scheduled stock scraper
+2025-06-16 16:12:28,983 [INFO] Starting stock scraper at 2025-06-16 16:12:28.983535
+2025-06-16 16:12:29,409 [INFO] Running scheduled stock scraper
+2025-06-16 16:12:29,510 [INFO] Starting stock scraper at 2025-06-16 16:12:29.510626
+2025-06-16 16:12:30,578 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 16:12:30,815 [INFO] Saved 16 stock records to database
+2025-06-16 16:12:30,924 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 16:12:31,037 [INFO] Saved 16 stock records to database
+2025-06-16 16:17:30,825 [INFO] Running scheduled stock scraper
+2025-06-16 16:17:30,830 [INFO] Starting stock scraper at 2025-06-16 16:17:30.830949
+2025-06-16 16:17:31,053 [INFO] Running scheduled stock scraper
+2025-06-16 16:17:31,108 [INFO] Starting stock scraper at 2025-06-16 16:17:31.107901
+2025-06-16 16:17:35,024 [ERROR] Error running stock scraper: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+Traceback (most recent call last):
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\management\commands\scrape_stocks.py", line 77, in handle
+    df = extract_mse_data_html(force_scrape=force_scrape)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\mse_scrapper_html.py", line 179, in extract_mse_data_html
+    os.remove(html_file)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+2025-06-16 16:17:35,335 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 16:17:35,788 [INFO] Saved 16 stock records to database
+2025-06-16 16:22:35,225 [INFO] Running scheduled stock scraper
+2025-06-16 16:22:35,283 [INFO] Starting stock scraper at 2025-06-16 16:22:35.283227
+2025-06-16 16:22:35,801 [INFO] Running scheduled stock scraper
+2025-06-16 16:22:35,837 [INFO] Starting stock scraper at 2025-06-16 16:22:35.837426
+2025-06-16 16:22:38,097 [ERROR] Error running stock scraper: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+Traceback (most recent call last):
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\stocks\management\commands\scrape_stocks.py", line 77, in handle
+    df = extract_mse_data_html(force_scrape=force_scrape)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\mse_scrapper_html.py", line 179, in extract_mse_data_html
+    os.remove(html_file)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+2025-06-16 16:22:40,932 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 16:22:41,145 [INFO] Saved 16 stock records to database
+2025-06-16 16:27:38,119 [INFO] Running scheduled stock scraper
+2025-06-16 16:27:38,216 [INFO] Starting stock scraper at 2025-06-16 16:27:38.216420
+2025-06-16 16:27:41,008 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 16:27:41,150 [INFO] Running scheduled stock scraper
+2025-06-16 16:27:41,156 [INFO] Starting stock scraper at 2025-06-16 16:27:41.156681
+2025-06-16 16:27:41,771 [INFO] Saved 16 stock records to database
+2025-06-16 16:27:42,556 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 16:27:42,770 [INFO] Saved 16 stock records to database
+2025-06-16 16:30:41,775 [INFO] Running scheduled stock scraper
+2025-06-16 16:30:41,920 [INFO] Starting stock scraper at 2025-06-16 16:30:41.920457
+2025-06-16 16:30:42,774 [INFO] Running scheduled stock scraper
+2025-06-16 16:30:42,778 [INFO] Starting stock scraper at 2025-06-16 16:30:42.778537
+2025-06-16 16:30:43,699 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 16:30:44,277 [INFO] Successfully extracted data for 16 stocks
+2025-06-16 16:30:44,284 [INFO] Saved 16 stock records to database
+2025-06-16 16:30:44,482 [INFO] Saved 16 stock records to database
+2025-06-16 20:37:12,125 [INFO] Market is outside operating hours (20:37). Skipping scheduled scrape.
+2025-06-16 20:37:12,125 [INFO] Running scheduled stock scraper
+2025-06-16 20:37:12,258 [INFO] Market is outside operating hours (20:37). Skipping scheduled scrape.
+2025-06-16 20:37:12,258 [INFO] Running scheduled stock scraper
+2025-06-16 20:37:12,264 [INFO] Starting stock scraper at 2025-06-16 20:37:12.262937 (forced)
+2025-06-16 20:37:12,451 [INFO] Starting stock scraper at 2025-06-16 20:37:12.451189 (forced)
+2025-06-16 20:37:29,620 [ERROR] Failed to extract data
+2025-06-16 20:37:33,737 [ERROR] Failed to extract data
+2025-06-16 20:42:29,633 [INFO] Market is outside operating hours (20:42). Skipping scheduled scrape.
+2025-06-16 20:42:33,742 [INFO] Market is outside operating hours (20:42). Skipping scheduled scrape.
+2025-06-16 20:47:29,644 [INFO] Market is outside operating hours (20:47). Skipping scheduled scrape.
+2025-06-16 20:47:33,750 [INFO] Market is outside operating hours (20:47). Skipping scheduled scrape.
+2025-06-16 20:52:29,651 [INFO] Market is outside operating hours (20:52). Skipping scheduled scrape.
+2025-06-16 20:52:33,759 [INFO] Market is outside operating hours (20:52). Skipping scheduled scrape.
+2025-06-16 20:57:29,659 [INFO] Market is outside operating hours (20:57). Skipping scheduled scrape.
+2025-06-16 20:57:33,764 [INFO] Market is outside operating hours (20:57). Skipping scheduled scrape.
+2025-06-16 21:02:29,664 [INFO] Market is outside operating hours (21:02). Skipping scheduled scrape.
+2025-06-16 21:02:33,772 [INFO] Market is outside operating hours (21:02). Skipping scheduled scrape.
+2025-06-17 10:31:21,739 [INFO] Starting scheduler service
+2025-06-17 10:31:21,749 [INFO] Scheduler started successfully
+2025-06-17 10:31:21,750 [INFO] Scheduler initialized in Django startup
+2025-06-17 10:31:21,791 [INFO] Watching for file changes with StatReloader
+2025-06-17 10:31:59,665 [WARNING] Not Found: /favicon.ico
+2025-06-17 10:34:11,695 [WARNING] Not Found: /stocks/prices/
+2025-06-17 10:34:14,945 [WARNING] Not Found: /stocks/prices
+2025-06-17 10:34:45,758 [WARNING] Unauthorized: /api/stocks/prices/
+2025-06-17 10:36:21,751 [INFO] Running scheduled stock scraper
+2025-06-17 10:36:21,766 [INFO] Starting stock scraper at 2025-06-17 10:36:21.766304
+2025-06-17 10:36:28,846 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 10:36:28,982 [INFO] Saved 16 stock records to database
+2025-06-17 10:41:28,987 [INFO] Running scheduled stock scraper
+2025-06-17 10:41:28,994 [INFO] Starting stock scraper at 2025-06-17 10:41:28.994336
+2025-06-17 10:41:30,502 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 10:41:30,632 [INFO] Saved 16 stock records to database
+2025-06-17 10:44:50,831 [ERROR] Internal Server Error: /api/stocks/companies/
+2025-06-17 10:45:04,781 [ERROR] Internal Server Error: /api/stocks/companies
+2025-06-17 10:45:30,636 [INFO] Running scheduled stock scraper
+2025-06-17 10:45:30,642 [INFO] Starting stock scraper at 2025-06-17 10:45:30.642152
+2025-06-17 10:45:32,044 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 10:45:32,173 [INFO] Saved 16 stock records to database
+2025-06-17 10:46:32,176 [INFO] Running scheduled stock scraper
+2025-06-17 10:46:32,182 [INFO] Starting stock scraper at 2025-06-17 10:46:32.182301
+2025-06-17 10:46:33,475 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 10:46:33,601 [INFO] Saved 16 stock records to database
+2025-06-17 10:51:33,607 [INFO] Running scheduled stock scraper
+2025-06-17 10:51:33,614 [INFO] Starting stock scraper at 2025-06-17 10:51:33.614791
+2025-06-17 10:51:35,602 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 10:51:35,746 [INFO] Saved 16 stock records to database
+2025-06-17 10:56:35,752 [INFO] Running scheduled stock scraper
+2025-06-17 10:56:35,757 [INFO] Starting stock scraper at 2025-06-17 10:56:35.757607
+2025-06-17 10:56:37,552 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 10:56:37,788 [INFO] Saved 16 stock records to database
+2025-06-17 11:00:37,794 [INFO] Running scheduled stock scraper
+2025-06-17 11:00:37,800 [INFO] Starting stock scraper at 2025-06-17 11:00:37.800339
+2025-06-17 11:00:39,325 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 11:00:39,590 [INFO] Saved 16 stock records to database
+2025-06-17 11:01:39,593 [INFO] Running scheduled stock scraper
+2025-06-17 11:01:39,598 [INFO] Starting stock scraper at 2025-06-17 11:01:39.598155
+2025-06-17 11:01:40,951 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 11:01:41,172 [INFO] Saved 16 stock records to database
+2025-06-17 11:06:41,179 [INFO] Running scheduled stock scraper
+2025-06-17 11:06:41,185 [INFO] Starting stock scraper at 2025-06-17 11:06:41.185155
+2025-06-17 11:06:42,992 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 11:06:43,203 [INFO] Saved 16 stock records to database
+2025-06-17 11:11:43,210 [INFO] Running scheduled stock scraper
+2025-06-17 11:11:43,216 [INFO] Starting stock scraper at 2025-06-17 11:11:43.216106
+2025-06-17 11:11:44,776 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 11:11:45,005 [INFO] Saved 16 stock records to database
+2025-06-17 12:21:40,767 [INFO] Starting scheduler service
+2025-06-17 12:21:40,767 [INFO] Scheduler started successfully
+2025-06-17 12:21:40,775 [INFO] Scheduler initialized in Django startup
+2025-06-17 12:21:40,810 [INFO] Watching for file changes with StatReloader
+2025-06-17 12:26:40,778 [INFO] Running scheduled stock scraper
+2025-06-17 12:26:40,812 [INFO] Starting stock scraper at 2025-06-17 12:26:40.812607
+2025-06-17 12:26:45,428 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 12:26:45,658 [INFO] Saved 16 stock records to database
+2025-06-17 12:26:47,566 [WARNING] Not Found: /favicon.ico
+2025-06-17 12:29:13,916 [WARNING] Unauthorized: /api/historical/AIRTEL/
+2025-06-17 12:29:19,625 [WARNING] Unauthorized: /api/historical/AIRTEL/
+2025-06-17 12:29:40,633 [WARNING] Unauthorized: /api/prices/
+2025-06-17 12:30:45,670 [INFO] Running scheduled stock scraper
+2025-06-17 12:30:45,675 [INFO] Starting stock scraper at 2025-06-17 12:30:45.675410
+2025-06-17 12:30:47,215 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 12:30:47,515 [INFO] Saved 16 stock records to database
+2025-06-17 12:31:47,525 [INFO] Running scheduled stock scraper
+2025-06-17 12:31:47,532 [INFO] Starting stock scraper at 2025-06-17 12:31:47.531450
+2025-06-17 12:31:49,106 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 12:31:49,340 [INFO] Saved 16 stock records to database
+2025-06-17 12:31:52,676 [WARNING] Unauthorized: /api/historical/NBM/
+2025-06-17 12:36:09,604 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\accounts\middleware.py changed, reloading.
+2025-06-17 12:36:11,036 [INFO] Starting scheduler service
+2025-06-17 12:36:11,043 [INFO] Scheduler started successfully
+2025-06-17 12:36:11,043 [INFO] Scheduler initialized in Django startup
+2025-06-17 12:36:11,093 [INFO] Watching for file changes with StatReloader
+2025-06-17 12:36:30,420 [WARNING] Unauthorized: /api/companies/
+2025-06-17 12:36:41,064 [INFO] Starting scheduler service
+2025-06-17 12:36:41,070 [INFO] Scheduler started successfully
+2025-06-17 12:36:41,070 [INFO] Scheduler initialized in Django startup
+2025-06-17 12:36:51,001 [INFO] Starting scheduler service
+2025-06-17 12:36:51,010 [INFO] Scheduler started successfully
+2025-06-17 12:36:51,010 [INFO] Scheduler initialized in Django startup
+2025-06-17 12:37:10,765 [ERROR] Internal Server Error: /api/companies/
+2025-06-17 12:37:21,921 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\accounts\middleware.py changed, reloading.
+2025-06-17 12:37:22,786 [INFO] Starting scheduler service
+2025-06-17 12:37:22,803 [INFO] Scheduler started successfully
+2025-06-17 12:37:22,804 [INFO] Scheduler initialized in Django startup
+2025-06-17 12:37:22,843 [INFO] Watching for file changes with StatReloader
+2025-06-17 12:37:44,638 [WARNING] Unauthorized: /api/companies/
+2025-06-17 12:38:19,051 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\accounts\middleware.py changed, reloading.
+2025-06-17 12:38:19,946 [INFO] Starting scheduler service
+2025-06-17 12:38:19,953 [INFO] Scheduler started successfully
+2025-06-17 12:38:19,953 [INFO] Scheduler initialized in Django startup
+2025-06-17 12:38:19,982 [INFO] Watching for file changes with StatReloader
+2025-06-17 12:43:19,956 [INFO] Running scheduled stock scraper
+2025-06-17 12:43:19,968 [INFO] Starting stock scraper at 2025-06-17 12:43:19.968627
+2025-06-17 12:43:23,035 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 12:43:23,165 [INFO] Saved 16 stock records to database
+2025-06-17 12:45:23,170 [INFO] Running scheduled stock scraper
+2025-06-17 12:45:23,170 [INFO] Starting stock scraper at 2025-06-17 12:45:23.170434
+2025-06-17 12:45:24,506 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 12:45:24,646 [INFO] Saved 16 stock records to database
+2025-06-17 12:48:24,663 [INFO] Running scheduled stock scraper
+2025-06-17 12:48:24,663 [INFO] Starting stock scraper at 2025-06-17 12:48:24.663466
+2025-06-17 12:48:25,951 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 12:48:26,066 [INFO] Saved 16 stock records to database
+2025-06-17 12:53:26,079 [INFO] Running scheduled stock scraper
+2025-06-17 12:53:26,079 [INFO] Starting stock scraper at 2025-06-17 12:53:26.079788
+2025-06-17 12:53:27,490 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 12:53:27,707 [INFO] Saved 16 stock records to database
+2025-06-17 12:58:27,717 [INFO] Running scheduled stock scraper
+2025-06-17 12:58:27,717 [INFO] Starting stock scraper at 2025-06-17 12:58:27.717474
+2025-06-17 12:58:29,125 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 12:58:29,362 [INFO] Saved 16 stock records to database
+2025-06-17 13:00:29,378 [INFO] Running scheduled stock scraper
+2025-06-17 13:00:29,382 [INFO] Starting stock scraper at 2025-06-17 13:00:29.382560
+2025-06-17 13:00:30,678 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 13:00:30,802 [INFO] Saved 16 stock records to database
+2025-06-17 13:02:37,488 [WARNING] Unauthorized: /api/historical/TNM/
+2025-06-17 13:02:51,519 [WARNING] Unauthorized: /api/historical/TNM/
+2025-06-17 13:03:30,811 [INFO] Running scheduled stock scraper
+2025-06-17 13:03:30,814 [INFO] Starting stock scraper at 2025-06-17 13:03:30.814045
+2025-06-17 13:03:32,190 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 13:03:32,346 [INFO] Saved 16 stock records to database
+2025-06-17 13:03:44,822 [WARNING] Unauthorized: /api/historical/TNM/
+2025-06-17 13:03:56,493 [WARNING] Unauthorized: /api/historical/TNM/
+2025-06-17 13:05:29,611 [WARNING] Unauthorized: /api/historical/TNM/
+2025-06-17 13:05:42,708 [WARNING] Unauthorized: /api/historical/TNM/
+2025-06-17 13:08:09,695 [INFO] Fetching historical prices for TNM with range 1month, cache=True, refresh=False
+2025-06-17 13:08:09,735 [INFO] Using older cached data for TNM in 1month range.
+2025-06-17 13:08:32,351 [INFO] Running scheduled stock scraper
+2025-06-17 13:08:32,360 [INFO] Starting stock scraper at 2025-06-17 13:08:32.351497
+2025-06-17 13:08:33,973 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 13:08:34,103 [INFO] Saved 16 stock records to database
+2025-06-17 13:13:34,108 [INFO] Running scheduled stock scraper
+2025-06-17 13:13:34,112 [INFO] Starting stock scraper at 2025-06-17 13:13:34.112265
+2025-06-17 13:13:35,782 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 13:13:35,984 [INFO] Saved 16 stock records to database
+2025-06-17 13:14:19,043 [INFO] Fetching historical prices for STANDARD with range 1day, cache=True, refresh=False
+2025-06-17 13:14:19,047 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 13:14:19,085 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 13:14:20,701 [ERROR] Request error for STANDARD in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/STANDARD?stock_history=1month
+2025-06-17 13:14:20,701 [WARNING] Could not retrieve historical data for STANDARD from service.
+2025-06-17 13:14:20,701 [WARNING] Not Found: /api/historical/STANDARD/
+2025-06-17 13:14:20,785 [INFO] Fetching historical prices for STANDARD with range 1day, cache=True, refresh=False
+2025-06-17 13:14:20,787 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 13:14:20,790 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 13:14:22,051 [ERROR] Request error for STANDARD in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/STANDARD?stock_history=1month
+2025-06-17 13:14:22,057 [WARNING] Could not retrieve historical data for STANDARD from service.
+2025-06-17 13:14:22,057 [WARNING] Not Found: /api/historical/STANDARD/
+2025-06-17 13:15:37,952 [INFO] Running scheduled stock scraper
+2025-06-17 13:15:37,953 [INFO] Starting stock scraper at 2025-06-17 13:15:37.953951
+2025-06-17 13:15:39,453 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 13:15:39,690 [INFO] Saved 16 stock records to database
+2025-06-17 13:15:40,230 [INFO] Fetching historical prices for STANDARD with range 1week, cache=True, refresh=False
+2025-06-17 13:15:40,230 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 13:15:40,236 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 13:15:41,501 [ERROR] Request error for STANDARD in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/STANDARD?stock_history=1month
+2025-06-17 13:15:41,501 [WARNING] Could not retrieve historical data for STANDARD from service.
+2025-06-17 13:15:41,514 [WARNING] Not Found: /api/historical/STANDARD/
+2025-06-17 13:15:43,115 [INFO] Fetching historical prices for STANDARD with range 1month, cache=True, refresh=False
+2025-06-17 13:15:43,115 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 13:15:44,729 [ERROR] Request error for STANDARD in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/STANDARD?stock_history=1month
+2025-06-17 13:15:44,729 [WARNING] Could not retrieve historical data for STANDARD from service.
+2025-06-17 13:15:44,729 [WARNING] Not Found: /api/historical/STANDARD/
+2025-06-17 13:15:46,312 [INFO] Fetching historical prices for STANDARD with range 1year, cache=True, refresh=False
+2025-06-17 13:15:46,328 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 13:15:47,461 [INFO] Fetching historical prices for STANDARD with range 1day, cache=True, refresh=False
+2025-06-17 13:15:47,461 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 13:15:47,468 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 13:15:47,842 [ERROR] Request error for STANDARD in 1year range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/STANDARD?stock_history=1year
+2025-06-17 13:15:47,842 [WARNING] Could not retrieve historical data for STANDARD from service.
+2025-06-17 13:15:47,854 [WARNING] Not Found: /api/historical/STANDARD/
+2025-06-17 13:15:48,758 [ERROR] Request error for STANDARD in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/STANDARD?stock_history=1month
+2025-06-17 13:15:48,758 [WARNING] Could not retrieve historical data for STANDARD from service.
+2025-06-17 13:15:48,758 [WARNING] Not Found: /api/historical/STANDARD/
+2025-06-17 13:16:25,965 [INFO] Fetching historical prices for TNM with range 1day, cache=True, refresh=False
+2025-06-17 13:16:25,966 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 13:16:25,971 [INFO] Using older cached data for TNM in 1month range.
+2025-06-17 13:16:46,658 [INFO] Fetching historical prices for TNM with range 1week, cache=True, refresh=False
+2025-06-17 13:16:46,658 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 13:16:46,658 [INFO] Using older cached data for TNM in 1month range.
+2025-06-17 13:16:51,102 [INFO] Fetching historical prices for TNM with range 1month, cache=True, refresh=False
+2025-06-17 13:16:51,102 [INFO] Using older cached data for TNM in 1month range.
+2025-06-17 13:16:54,061 [INFO] Fetching historical prices for TNM with range 1year, cache=True, refresh=False
+2025-06-17 13:16:54,063 [INFO] Using older cached data for TNM in 1year range.
+2025-06-17 13:17:23,417 [INFO] Fetching historical prices for TNM with range 1month, cache=True, refresh=False
+2025-06-17 13:17:23,417 [INFO] Using older cached data for TNM in 1month range.
+2025-06-17 13:17:30,809 [INFO] Fetching historical prices for TNM with range 1week, cache=True, refresh=False
+2025-06-17 13:17:30,809 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 13:17:30,813 [INFO] Using older cached data for TNM in 1month range.
+2025-06-17 13:17:33,108 [INFO] Fetching historical prices for TNM with range 1day, cache=True, refresh=False
+2025-06-17 13:17:33,108 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 13:17:33,108 [INFO] Using older cached data for TNM in 1month range.
+2025-06-17 13:17:39,696 [INFO] Fetching historical prices for STANDARD with range 1day, cache=True, refresh=False
+2025-06-17 13:17:39,697 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 13:17:39,700 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 13:17:41,095 [ERROR] Request error for STANDARD in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/STANDARD?stock_history=1month
+2025-06-17 13:17:41,098 [WARNING] Could not retrieve historical data for STANDARD from service.
+2025-06-17 13:17:41,100 [WARNING] Not Found: /api/historical/STANDARD/
+2025-06-17 13:18:04,308 [INFO] Fetching historical prices for FDHB with range 1day, cache=True, refresh=False
+2025-06-17 13:18:04,308 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 13:18:04,308 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 13:18:05,608 [ERROR] Request error for FDHB in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/FDHB?stock_history=1month
+2025-06-17 13:18:05,608 [WARNING] Could not retrieve historical data for FDHB from service.
+2025-06-17 13:18:05,608 [WARNING] Not Found: /api/historical/FDHB/
+2025-06-17 13:18:39,695 [INFO] Running scheduled stock scraper
+2025-06-17 13:18:39,695 [INFO] Starting stock scraper at 2025-06-17 13:18:39.695250
+2025-06-17 13:18:41,511 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 13:18:41,639 [INFO] Saved 16 stock records to database
+2025-06-17 13:20:39,242 [INFO] Fetching historical prices for FDHB with range 1week, cache=True, refresh=False
+2025-06-17 13:20:39,242 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 13:20:39,242 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 13:20:40,655 [ERROR] Request error for FDHB in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/FDHB?stock_history=1month
+2025-06-17 13:20:40,655 [WARNING] Could not retrieve historical data for FDHB from service.
+2025-06-17 13:20:40,655 [WARNING] Not Found: /api/historical/FDHB/
+2025-06-17 13:23:00,228 [INFO] Fetching historical prices for FMBCH with range 1day, cache=True, refresh=False
+2025-06-17 13:23:00,228 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 13:23:00,232 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 13:23:01,699 [ERROR] Request error for FMBCH in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/FMBCH?stock_history=1month
+2025-06-17 13:23:01,699 [WARNING] Could not retrieve historical data for FMBCH from service.
+2025-06-17 13:23:01,699 [WARNING] Not Found: /api/historical/FMBCH/
+2025-06-17 13:23:41,658 [INFO] Running scheduled stock scraper
+2025-06-17 13:23:41,658 [INFO] Starting stock scraper at 2025-06-17 13:23:41.658411
+2025-06-17 13:23:43,177 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 13:23:43,414 [INFO] Saved 16 stock records to database
+2025-06-17 13:23:52,947 [INFO] Fetching historical prices for FDHB with range 1day, cache=True, refresh=False
+2025-06-17 13:23:52,947 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 13:23:52,949 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 13:23:56,099 [ERROR] Request error for FDHB in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/FDHB?stock_history=1month
+2025-06-17 13:23:56,099 [WARNING] Could not retrieve historical data for FDHB from service.
+2025-06-17 13:23:56,099 [WARNING] Not Found: /api/historical/FDHB/
+2025-06-17 13:24:14,863 [INFO] Fetching historical prices for FDHB with range 1day, cache=True, refresh=False
+2025-06-17 13:24:14,864 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 13:24:14,864 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 13:24:16,227 [ERROR] Request error for FDHB in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/FDHB?stock_history=1month
+2025-06-17 13:24:16,227 [WARNING] Could not retrieve historical data for FDHB from service.
+2025-06-17 13:24:16,227 [WARNING] Not Found: /api/historical/FDHB/
+2025-06-17 13:24:17,747 [INFO] Fetching historical prices for FDHB with range 1week, cache=True, refresh=False
+2025-06-17 13:24:17,747 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 13:24:17,747 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 13:24:19,025 [ERROR] Request error for FDHB in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/FDHB?stock_history=1month
+2025-06-17 13:24:19,025 [WARNING] Could not retrieve historical data for FDHB from service.
+2025-06-17 13:24:19,025 [WARNING] Not Found: /api/historical/FDHB/
+2025-06-17 13:24:20,192 [INFO] Fetching historical prices for FDHB with range 1month, cache=True, refresh=False
+2025-06-17 13:24:20,192 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 13:24:20,991 [INFO] Fetching historical prices for FDHB with range 1year, cache=True, refresh=False
+2025-06-17 13:24:20,995 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 13:24:21,589 [ERROR] Request error for FDHB in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/FDHB?stock_history=1month
+2025-06-17 13:24:21,589 [WARNING] Could not retrieve historical data for FDHB from service.
+2025-06-17 13:24:21,589 [WARNING] Not Found: /api/historical/FDHB/
+2025-06-17 13:24:22,345 [ERROR] Request error for FDHB in 1year range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/FDHB?stock_history=1year
+2025-06-17 13:24:22,345 [WARNING] Could not retrieve historical data for FDHB from service.
+2025-06-17 13:24:22,345 [WARNING] Not Found: /api/historical/FDHB/
+2025-06-17 13:25:03,114 [INFO] Fetching historical prices for NBM with range 1month, cache=True, refresh=False
+2025-06-17 13:25:03,114 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 13:25:04,464 [ERROR] Request error for NBM in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/NBM?stock_history=1month
+2025-06-17 13:25:04,465 [WARNING] Could not retrieve historical data for NBM from service.
+2025-06-17 13:25:04,468 [WARNING] Not Found: /api/historical/NBM/
+2025-06-17 13:28:43,420 [INFO] Running scheduled stock scraper
+2025-06-17 13:28:43,420 [INFO] Starting stock scraper at 2025-06-17 13:28:43.420264
+2025-06-17 13:28:44,887 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 13:28:45,140 [INFO] Saved 16 stock records to database
+2025-06-17 13:30:45,145 [INFO] Running scheduled stock scraper
+2025-06-17 13:30:45,145 [INFO] Starting stock scraper at 2025-06-17 13:30:45.145062
+2025-06-17 13:30:46,485 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 13:30:46,626 [INFO] Saved 16 stock records to database
+2025-06-17 13:33:46,630 [INFO] Running scheduled stock scraper
+2025-06-17 13:33:46,632 [INFO] Starting stock scraper at 2025-06-17 13:33:46.632230
+2025-06-17 13:33:48,103 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 13:33:48,258 [INFO] Saved 16 stock records to database
+2025-06-17 13:35:20,479 [INFO] Fetching historical prices for FDHB with range 1day, cache=True, refresh=False
+2025-06-17 13:35:20,479 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 13:35:20,511 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 13:35:22,010 [ERROR] Request error for FDHB in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/FDHB?stock_history=1month
+2025-06-17 13:35:22,010 [WARNING] Could not retrieve historical data for FDHB from service.
+2025-06-17 13:35:22,011 [WARNING] Not Found: /api/historical/FDHB/
+2025-06-17 13:38:48,263 [INFO] Running scheduled stock scraper
+2025-06-17 13:38:48,263 [INFO] Starting stock scraper at 2025-06-17 13:38:48.263786
+2025-06-17 13:38:49,710 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 13:38:49,840 [INFO] Saved 16 stock records to database
+2025-06-17 13:43:49,858 [INFO] Running scheduled stock scraper
+2025-06-17 13:43:49,866 [INFO] Starting stock scraper at 2025-06-17 13:43:49.865149
+2025-06-17 13:43:51,547 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 13:43:51,683 [INFO] Saved 16 stock records to database
+2025-06-17 13:45:51,704 [INFO] Running scheduled stock scraper
+2025-06-17 13:45:51,708 [INFO] Starting stock scraper at 2025-06-17 13:45:51.708007
+2025-06-17 13:45:53,432 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 13:45:53,604 [INFO] Saved 16 stock records to database
+2025-06-17 13:48:53,618 [INFO] Running scheduled stock scraper
+2025-06-17 13:48:53,621 [INFO] Starting stock scraper at 2025-06-17 13:48:53.621309
+2025-06-17 13:48:55,403 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 13:48:56,361 [INFO] Saved 16 stock records to database
+2025-06-17 13:49:09,687 [INFO] Fetching historical prices for PCL with range 1day, cache=True, refresh=False
+2025-06-17 13:49:09,687 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 13:49:09,687 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 13:49:11,104 [ERROR] Request error for PCL in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/PCL?stock_history=1month
+2025-06-17 13:49:11,104 [WARNING] Could not retrieve historical data for PCL from service.
+2025-06-17 13:49:11,104 [WARNING] Not Found: /api/historical/PCL/
+2025-06-17 13:53:57,005 [INFO] Running scheduled stock scraper
+2025-06-17 13:53:57,013 [INFO] Starting stock scraper at 2025-06-17 13:53:57.013049
+2025-06-17 13:53:58,530 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 13:53:58,757 [INFO] Saved 16 stock records to database
+2025-06-17 13:58:58,764 [INFO] Running scheduled stock scraper
+2025-06-17 13:58:58,766 [INFO] Starting stock scraper at 2025-06-17 13:58:58.766799
+2025-06-17 13:59:03,169 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 13:59:05,668 [INFO] Saved 16 stock records to database
+2025-06-17 14:00:05,673 [INFO] Running scheduled stock scraper
+2025-06-17 14:00:05,673 [INFO] Starting stock scraper at 2025-06-17 14:00:05.673134
+2025-06-17 14:00:07,084 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 14:00:07,318 [INFO] Saved 16 stock records to database
+2025-06-17 14:04:07,322 [INFO] Running scheduled stock scraper
+2025-06-17 14:04:07,324 [INFO] Starting stock scraper at 2025-06-17 14:04:07.324158
+2025-06-17 14:04:08,902 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 14:04:09,147 [INFO] Saved 16 stock records to database
+2025-06-17 14:09:09,155 [INFO] Running scheduled stock scraper
+2025-06-17 14:09:09,157 [INFO] Starting stock scraper at 2025-06-17 14:09:09.157118
+2025-06-17 14:09:10,800 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 14:09:11,073 [INFO] Saved 16 stock records to database
+2025-06-17 16:34:48,774 [INFO] Running scheduled stock scraper
+2025-06-17 16:34:48,777 [INFO] Starting stock scraper at 2025-06-17 16:34:48.777818
+2025-06-17 16:35:16,673 [ERROR] Failed to extract data
+2025-06-17 16:35:16,673 [INFO] Running scheduled stock scraper
+2025-06-17 16:35:16,686 [INFO] Starting stock scraper at 2025-06-17 16:35:16.686146
+2025-06-17 16:35:19,317 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 16:35:19,483 [INFO] Saved 16 stock records to database
+2025-06-17 16:35:19,483 [INFO] Running scheduled stock scraper
+2025-06-17 16:35:19,488 [INFO] Starting stock scraper at 2025-06-17 16:35:19.488274 (forced)
+2025-06-17 16:35:21,160 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 16:35:21,621 [INFO] Saved 16 stock records to database
+2025-06-17 16:35:21,621 [INFO] Running scheduled stock scraper
+2025-06-17 16:35:21,621 [INFO] Starting stock scraper at 2025-06-17 16:35:21.621869
+2025-06-17 16:35:23,342 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 16:35:23,500 [INFO] Saved 16 stock records to database
+2025-06-17 16:35:23,500 [INFO] Running scheduled stock scraper
+2025-06-17 16:35:23,500 [INFO] Starting stock scraper at 2025-06-17 16:35:23.500883
+2025-06-17 16:35:26,906 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 16:35:27,047 [INFO] Saved 16 stock records to database
+2025-06-17 16:35:27,047 [INFO] Running scheduled stock scraper
+2025-06-17 16:35:27,047 [INFO] Starting stock scraper at 2025-06-17 16:35:27.047466
+2025-06-17 16:35:43,668 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 16:35:44,627 [INFO] Saved 16 stock records to database
+2025-06-17 16:35:44,627 [INFO] Running scheduled stock scraper
+2025-06-17 16:35:44,639 [INFO] Starting stock scraper at 2025-06-17 16:35:44.639885
+2025-06-17 16:35:48,300 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 16:35:49,639 [INFO] Saved 16 stock records to database
+2025-06-17 16:35:49,639 [INFO] Running scheduled stock scraper
+2025-06-17 16:35:49,639 [INFO] Starting stock scraper at 2025-06-17 16:35:49.639759
+2025-06-17 16:35:54,902 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 16:35:58,175 [INFO] Saved 15 stock records to database
+2025-06-17 16:35:58,175 [INFO] Running scheduled stock scraper
+2025-06-17 16:35:58,175 [INFO] Starting stock scraper at 2025-06-17 16:35:58.175129 (forced)
+2025-06-17 16:35:59,712 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 16:35:59,924 [INFO] Saved 16 stock records to database
+2025-06-17 16:35:59,924 [INFO] Running scheduled stock scraper
+2025-06-17 16:35:59,939 [INFO] Starting stock scraper at 2025-06-17 16:35:59.939962
+2025-06-17 16:36:01,209 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 16:36:01,382 [INFO] Saved 16 stock records to database
+2025-06-17 16:36:01,382 [INFO] Running scheduled stock scraper
+2025-06-17 16:36:01,382 [INFO] Starting stock scraper at 2025-06-17 16:36:01.382913
+2025-06-17 16:36:02,829 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 16:36:02,990 [INFO] Saved 16 stock records to database
+2025-06-17 16:36:02,990 [INFO] Running scheduled stock scraper
+2025-06-17 16:36:02,990 [INFO] Starting stock scraper at 2025-06-17 16:36:02.990887
+2025-06-17 16:36:04,461 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 16:36:04,604 [INFO] Saved 16 stock records to database
+2025-06-17 16:41:04,625 [INFO] Running scheduled stock scraper
+2025-06-17 16:41:04,638 [INFO] Starting stock scraper at 2025-06-17 16:41:04.638308
+2025-06-17 16:41:06,295 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 16:41:06,524 [INFO] Saved 16 stock records to database
+2025-06-17 16:46:06,536 [INFO] Running scheduled stock scraper
+2025-06-17 16:46:06,542 [INFO] Starting stock scraper at 2025-06-17 16:46:06.542217
+2025-06-17 16:46:08,079 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 16:46:08,284 [INFO] Saved 16 stock records to database
+2025-06-17 16:51:08,289 [INFO] Running scheduled stock scraper
+2025-06-17 16:51:08,289 [INFO] Starting stock scraper at 2025-06-17 16:51:08.289608
+2025-06-17 16:51:10,005 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 16:51:10,214 [INFO] Saved 16 stock records to database
+2025-06-17 16:56:10,219 [INFO] Running scheduled stock scraper
+2025-06-17 16:56:10,226 [INFO] Starting stock scraper at 2025-06-17 16:56:10.226324
+2025-06-17 16:56:11,948 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 16:56:12,203 [INFO] Saved 16 stock records to database
+2025-06-17 17:00:12,208 [INFO] Running scheduled stock scraper
+2025-06-17 17:00:12,213 [INFO] Starting stock scraper at 2025-06-17 17:00:12.213838 (forced)
+2025-06-17 17:00:13,722 [INFO] Successfully extracted data for 16 stocks
+2025-06-17 17:00:13,852 [INFO] Saved 16 stock records to database
+2025-06-17 17:01:13,855 [INFO] Market is outside operating hours (17:01). Skipping scheduled scrape.
+2025-06-17 17:06:13,860 [INFO] Market is outside operating hours (17:06). Skipping scheduled scrape.
+2025-06-17 17:11:13,869 [INFO] Market is outside operating hours (17:11). Skipping scheduled scrape.
+2025-06-17 17:16:13,875 [INFO] Market is outside operating hours (17:16). Skipping scheduled scrape.
+2025-06-17 17:21:13,881 [INFO] Market is outside operating hours (17:21). Skipping scheduled scrape.
+2025-06-17 17:22:21,568 [INFO] Fetching historical prices for AIRTEL with range 1day, cache=True, refresh=False
+2025-06-17 17:22:21,568 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 17:22:22,569 [INFO] Using older cached data for AIRTEL in 1month range.
+2025-06-17 17:26:13,888 [INFO] Market is outside operating hours (17:26). Skipping scheduled scrape.
+2025-06-17 17:31:13,893 [INFO] Market is outside operating hours (17:31). Skipping scheduled scrape.
+2025-06-17 17:36:13,898 [INFO] Market is outside operating hours (17:36). Skipping scheduled scrape.
+2025-06-17 17:41:13,904 [INFO] Market is outside operating hours (17:41). Skipping scheduled scrape.
+2025-06-17 17:46:13,908 [INFO] Market is outside operating hours (17:46). Skipping scheduled scrape.
+2025-06-17 17:51:13,914 [INFO] Market is outside operating hours (17:51). Skipping scheduled scrape.
+2025-06-17 17:56:13,919 [INFO] Market is outside operating hours (17:56). Skipping scheduled scrape.
+2025-06-17 18:01:13,927 [INFO] Market is outside operating hours (18:01). Skipping scheduled scrape.
+2025-06-17 18:06:13,932 [INFO] Market is outside operating hours (18:06). Skipping scheduled scrape.
+2025-06-17 18:11:13,939 [INFO] Market is outside operating hours (18:11). Skipping scheduled scrape.
+2025-06-17 18:16:13,946 [INFO] Market is outside operating hours (18:16). Skipping scheduled scrape.
+2025-06-17 18:21:13,952 [INFO] Market is outside operating hours (18:21). Skipping scheduled scrape.
+2025-06-17 18:26:13,958 [INFO] Market is outside operating hours (18:26). Skipping scheduled scrape.
+2025-06-17 18:31:13,963 [INFO] Market is outside operating hours (18:31). Skipping scheduled scrape.
+2025-06-17 18:36:13,970 [INFO] Market is outside operating hours (18:36). Skipping scheduled scrape.
+2025-06-17 18:41:13,977 [INFO] Market is outside operating hours (18:41). Skipping scheduled scrape.
+2025-06-17 18:46:13,982 [INFO] Market is outside operating hours (18:46). Skipping scheduled scrape.
+2025-06-17 18:51:14,119 [INFO] Market is outside operating hours (18:51). Skipping scheduled scrape.
+2025-06-17 18:56:14,131 [INFO] Market is outside operating hours (18:56). Skipping scheduled scrape.
+2025-06-17 19:01:14,138 [INFO] Market is outside operating hours (19:01). Skipping scheduled scrape.
+2025-06-17 19:06:14,143 [INFO] Market is outside operating hours (19:06). Skipping scheduled scrape.
+2025-06-17 19:11:14,148 [INFO] Market is outside operating hours (19:11). Skipping scheduled scrape.
+2025-06-17 19:16:14,154 [INFO] Market is outside operating hours (19:16). Skipping scheduled scrape.
+2025-06-17 19:21:14,160 [INFO] Market is outside operating hours (19:21). Skipping scheduled scrape.
+2025-06-17 19:26:14,168 [INFO] Market is outside operating hours (19:26). Skipping scheduled scrape.
+2025-06-17 19:31:14,173 [INFO] Market is outside operating hours (19:31). Skipping scheduled scrape.
+2025-06-17 19:36:14,179 [INFO] Market is outside operating hours (19:36). Skipping scheduled scrape.
+2025-06-17 19:41:14,184 [INFO] Market is outside operating hours (19:41). Skipping scheduled scrape.
+2025-06-17 19:46:14,191 [INFO] Market is outside operating hours (19:46). Skipping scheduled scrape.
+2025-06-17 21:45:41,813 [INFO] Market is outside operating hours (21:45). Skipping scheduled scrape.
+2025-06-17 21:50:42,754 [INFO] Market is outside operating hours (21:50). Skipping scheduled scrape.
+2025-06-17 21:54:06,868 [INFO] Fetching historical prices for SUNBIRD with range 1day, cache=True, refresh=False
+2025-06-17 21:54:06,868 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 21:54:08,463 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 21:54:11,729 [ERROR] Request error for SUNBIRD in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/SUNBIRD?stock_history=1month
+2025-06-17 21:54:11,741 [WARNING] Could not retrieve historical data for SUNBIRD from service.
+2025-06-17 21:54:11,756 [WARNING] Not Found: /api/historical/SUNBIRD/
+2025-06-17 21:54:15,408 [INFO] Fetching historical prices for SUNBIRD with range 1day, cache=True, refresh=False
+2025-06-17 21:54:15,409 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 21:54:15,415 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 21:54:17,078 [ERROR] Request error for SUNBIRD in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/SUNBIRD?stock_history=1month
+2025-06-17 21:54:17,078 [WARNING] Could not retrieve historical data for SUNBIRD from service.
+2025-06-17 21:54:17,078 [WARNING] Not Found: /api/historical/SUNBIRD/
+2025-06-17 21:55:42,759 [INFO] Market is outside operating hours (21:55). Skipping scheduled scrape.
+2025-06-17 22:00:42,766 [INFO] Market is outside operating hours (22:00). Skipping scheduled scrape.
+2025-06-17 22:03:14,284 [INFO] Fetching historical prices for NITL with range 1day, cache=True, refresh=False
+2025-06-17 22:03:14,287 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 22:03:14,294 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 22:03:19,078 [ERROR] Request error for NITL in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/NITL?stock_history=1month
+2025-06-17 22:03:19,080 [WARNING] Could not retrieve historical data for NITL from service.
+2025-06-17 22:03:19,082 [WARNING] Not Found: /api/historical/NITL/
+2025-06-17 22:04:19,610 [INFO] Fetching historical prices for NITL with range 1day, cache=True, refresh=False
+2025-06-17 22:04:19,610 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 22:04:19,617 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 22:04:21,844 [ERROR] Request error for NITL in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/NITL?stock_history=1month
+2025-06-17 22:04:21,848 [WARNING] Could not retrieve historical data for NITL from service.
+2025-06-17 22:04:21,848 [WARNING] Not Found: /api/historical/NITL/
+2025-06-17 22:05:42,774 [INFO] Market is outside operating hours (22:05). Skipping scheduled scrape.
+2025-06-17 22:06:46,272 [INFO] Fetching historical prices for SUNBIRD with range 1day, cache=True, refresh=False
+2025-06-17 22:06:46,272 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-17 22:06:46,277 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-17 22:06:47,869 [ERROR] Request error for SUNBIRD in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/SUNBIRD?stock_history=1month
+2025-06-17 22:06:47,869 [WARNING] Could not retrieve historical data for SUNBIRD from service.
+2025-06-17 22:06:47,869 [WARNING] Not Found: /api/historical/SUNBIRD/
+2025-06-17 22:10:42,783 [INFO] Market is outside operating hours (22:10). Skipping scheduled scrape.
+2025-06-17 22:15:42,788 [INFO] Market is outside operating hours (22:15). Skipping scheduled scrape.
+2025-06-17 22:17:18,937 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\views.py changed, reloading.
+2025-06-17 22:19:02,524 [INFO] Starting scheduler service
+2025-06-17 22:19:02,534 [INFO] Scheduler started successfully
+2025-06-17 22:19:02,534 [INFO] Scheduler initialized in Django startup
+2025-06-17 22:19:02,655 [INFO] Watching for file changes with StatReloader
+2025-06-17 22:22:48,996 [WARNING] Not Found: /favicon.ico
+2025-06-17 22:23:04,698 [WARNING] Unauthorized: /api/stock-icon
+2025-06-17 22:23:10,007 [WARNING] Unauthorized: /api/stock-icons
+2025-06-17 22:23:42,875 [WARNING] Not Found: /api/stock-icon/NBM/
+2025-06-17 22:24:02,540 [INFO] Market is outside operating hours (22:24). Skipping scheduled scrape.
+2025-06-17 22:29:02,836 [INFO] Market is outside operating hours (22:29). Skipping scheduled scrape.
+2025-06-17 22:34:02,851 [INFO] Market is outside operating hours (22:34). Skipping scheduled scrape.
+2025-06-17 22:37:01,248 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-17 22:37:01,223 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-17 22:37:01,274 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-17 22:37:01,292 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-17 22:37:01,309 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-17 22:37:01,320 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-17 22:37:01,328 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-17 22:37:01,335 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-17 22:37:01,338 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-17 22:37:01,341 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-17 22:37:01,350 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-17 22:37:01,350 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:37:01,426 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-17 22:37:01,435 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-17 22:37:01,437 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-17 22:37:01,441 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-17 22:37:01,441 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-17 22:37:01,443 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-17 22:37:01,468 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-17 22:37:01,508 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-17 22:37:01,569 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-17 22:37:01,644 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-17 22:37:01,648 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-17 22:37:01,648 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:37:01,844 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-17 22:37:01,847 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-17 22:37:01,849 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-17 22:37:01,849 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-17 22:37:01,849 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-17 22:37:01,849 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-17 22:37:01,862 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-17 22:37:01,865 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-17 22:37:01,869 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:37:01,875 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-17 22:37:01,879 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-17 22:37:01,883 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-17 22:39:02,861 [INFO] Market is outside operating hours (22:39). Skipping scheduled scrape.
+2025-06-17 22:40:24,959 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-17 22:40:25,060 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-17 22:40:25,063 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-17 22:40:25,066 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-17 22:40:25,068 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-17 22:40:25,069 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-17 22:40:25,071 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-17 22:40:25,075 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-17 22:40:32,082 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:40:32,095 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-17 22:40:32,102 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-17 22:40:32,106 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-17 22:40:37,841 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-17 22:40:37,843 [WARNING] Not Acceptable: /api/stock-icon/BHL/
+2025-06-17 22:40:37,846 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-17 22:40:37,849 [WARNING] Not Acceptable: /api/stock-icon/FMBCH/
+2025-06-17 22:40:37,856 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-17 22:40:37,906 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-17 22:40:37,928 [WARNING] Not Acceptable: /api/stock-icon/MPICO/
+2025-06-17 22:40:37,935 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-17 22:40:37,961 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-17 22:40:37,977 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-17 22:40:38,359 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-17 22:40:38,370 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-17 22:40:38,371 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-17 22:40:38,371 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-17 22:40:38,371 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-17 22:40:38,371 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-17 22:40:38,371 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-17 22:40:38,388 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-17 22:40:38,392 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:40:38,392 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-17 22:40:38,405 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-17 22:40:38,406 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-17 22:40:38,409 [WARNING] Not Acceptable: /api/stock-icon/FMBCH/
+2025-06-17 22:40:38,411 [WARNING] Not Acceptable: /api/stock-icon/BHL/
+2025-06-17 22:40:38,412 [WARNING] Not Acceptable: /api/stock-icon/MPICO/
+2025-06-17 22:40:40,021 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-17 22:40:40,023 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-17 22:40:40,023 [WARNING] Not Acceptable: /api/stock-icon/OMU/
+2025-06-17 22:40:40,050 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-17 22:40:40,050 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-17 22:40:40,057 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:40:40,645 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-17 22:40:40,667 [WARNING] Not Acceptable: /api/stock-icon/OMU/
+2025-06-17 22:40:40,668 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-17 22:40:40,668 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-17 22:40:40,694 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-17 22:40:40,694 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:41:05,392 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-17 22:41:05,394 [WARNING] Not Acceptable: /api/stock-icon/BHL/
+2025-06-17 22:41:05,396 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-17 22:41:05,399 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-17 22:41:05,399 [WARNING] Not Acceptable: /api/stock-icon/FMBCH/
+2025-06-17 22:41:05,399 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-17 22:41:05,410 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-17 22:41:05,412 [WARNING] Not Acceptable: /api/stock-icon/MPICO/
+2025-06-17 22:41:05,416 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-17 22:41:05,418 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-17 22:41:05,791 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-17 22:41:05,823 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-17 22:41:05,824 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-17 22:41:05,827 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-17 22:41:05,849 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-17 22:41:05,851 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-17 22:41:05,853 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-17 22:41:05,857 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:41:05,859 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-17 22:41:05,859 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-17 22:41:05,869 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-17 22:41:05,877 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-17 22:41:06,082 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-17 22:41:06,086 [WARNING] Not Acceptable: /api/stock-icon/BHL/
+2025-06-17 22:41:06,088 [WARNING] Not Acceptable: /api/stock-icon/FMBCH/
+2025-06-17 22:41:06,090 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-17 22:41:06,090 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-17 22:41:06,090 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-17 22:41:06,100 [WARNING] Not Acceptable: /api/stock-icon/MPICO/
+2025-06-17 22:41:06,103 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-17 22:41:06,106 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-17 22:41:06,114 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-17 22:41:07,444 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-17 22:41:07,446 [WARNING] Not Acceptable: /api/stock-icon/OMU/
+2025-06-17 22:41:07,446 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-17 22:41:07,450 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-17 22:41:07,450 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-17 22:41:07,454 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:41:08,639 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-17 22:41:08,644 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-17 22:41:08,644 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-17 22:41:08,648 [WARNING] Not Acceptable: /api/stock-icon/OMU/
+2025-06-17 22:41:08,648 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:41:08,650 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-17 22:44:02,866 [INFO] Market is outside operating hours (22:44). Skipping scheduled scrape.
+2025-06-17 22:44:30,396 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-17 22:44:30,400 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-17 22:44:30,486 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-17 22:44:30,503 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-17 22:44:30,524 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-17 22:44:30,532 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-17 22:44:30,562 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-17 22:44:30,659 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-17 22:44:30,666 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-17 22:44:30,668 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:44:30,671 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-17 22:44:30,671 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-17 22:44:30,711 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-17 22:44:30,765 [WARNING] Not Acceptable: /api/stock-icon/FMBCH/
+2025-06-17 22:44:30,770 [WARNING] Not Acceptable: /api/stock-icon/BHL/
+2025-06-17 22:44:30,774 [WARNING] Not Acceptable: /api/stock-icon/MPICO/
+2025-06-17 22:44:30,813 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-17 22:44:30,957 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-17 22:44:30,961 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-17 22:44:30,965 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-17 22:44:30,967 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-17 22:44:30,974 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-17 22:44:30,981 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-17 22:44:31,000 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-17 22:44:31,007 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:44:31,021 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-17 22:44:31,030 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-17 22:44:32,864 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-17 22:44:32,864 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-17 22:44:32,879 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-17 22:44:32,879 [WARNING] Not Acceptable: /api/stock-icon/OMU/
+2025-06-17 22:44:32,885 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:44:32,888 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-17 22:44:39,065 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:44:39,069 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-17 22:44:39,411 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-17 22:44:39,415 [WARNING] Not Acceptable: /api/stock-icon/FMBCH/
+2025-06-17 22:44:39,415 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-17 22:44:39,421 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-17 22:44:39,421 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:44:39,430 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-17 22:44:39,438 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-17 22:44:39,449 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-17 22:44:45,950 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-17 22:44:45,953 [WARNING] Not Acceptable: /api/stock-icon/BHL/
+2025-06-17 22:44:45,957 [WARNING] Not Acceptable: /api/stock-icon/FMBCH/
+2025-06-17 22:44:45,959 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-17 22:44:45,963 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-17 22:44:45,967 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-17 22:44:45,976 [WARNING] Not Acceptable: /api/stock-icon/MPICO/
+2025-06-17 22:44:45,981 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-17 22:44:45,984 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-17 22:44:45,989 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-17 22:44:45,993 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-17 22:44:45,998 [WARNING] Not Acceptable: /api/stock-icon/OMU/
+2025-06-17 22:44:46,003 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-17 22:44:46,003 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-17 22:44:46,012 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-17 22:44:46,019 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:44:47,251 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-17 22:44:47,251 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-17 22:44:47,257 [WARNING] Not Acceptable: /api/stock-icon/FMBCH/
+2025-06-17 22:44:47,261 [WARNING] Not Acceptable: /api/stock-icon/BHL/
+2025-06-17 22:44:47,261 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-17 22:44:47,273 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-17 22:44:47,283 [WARNING] Not Acceptable: /api/stock-icon/MPICO/
+2025-06-17 22:44:47,298 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-17 22:44:47,298 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-17 22:44:47,311 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-17 22:44:47,332 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-17 22:44:47,339 [WARNING] Not Acceptable: /api/stock-icon/OMU/
+2025-06-17 22:44:47,344 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-17 22:44:47,344 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-17 22:44:47,357 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-17 22:44:47,357 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:44:48,302 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-17 22:44:48,308 [WARNING] Not Acceptable: /api/stock-icon/BHL/
+2025-06-17 22:44:48,311 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-17 22:44:48,314 [WARNING] Not Acceptable: /api/stock-icon/FMBCH/
+2025-06-17 22:44:48,314 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-17 22:44:48,321 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-17 22:44:48,326 [WARNING] Not Acceptable: /api/stock-icon/MPICO/
+2025-06-17 22:44:48,330 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-17 22:44:48,332 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-17 22:44:48,340 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-17 22:44:48,348 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-17 22:44:48,353 [WARNING] Not Acceptable: /api/stock-icon/OMU/
+2025-06-17 22:44:48,354 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-17 22:44:48,363 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-17 22:44:48,374 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-17 22:44:48,446 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:44:51,856 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-17 22:44:51,860 [WARNING] Not Acceptable: /api/stock-icon/BHL/
+2025-06-17 22:44:51,864 [WARNING] Not Acceptable: /api/stock-icon/FMBCH/
+2025-06-17 22:44:51,867 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-17 22:44:51,871 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-17 22:44:51,877 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-17 22:44:51,887 [WARNING] Not Acceptable: /api/stock-icon/MPICO/
+2025-06-17 22:44:51,889 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-17 22:44:51,911 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-17 22:44:51,926 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-17 22:44:51,942 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-17 22:44:51,965 [WARNING] Not Acceptable: /api/stock-icon/OMU/
+2025-06-17 22:44:51,976 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-17 22:44:51,981 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-17 22:44:51,988 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-17 22:44:52,034 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-17 22:44:56,640 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-17 22:44:56,650 [WARNING] Not Acceptable: /api/stock-icon/BHL/
+2025-06-17 22:44:56,675 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-17 22:44:56,681 [WARNING] Not Acceptable: /api/stock-icon/FMBCH/
+2025-06-17 22:44:56,684 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-17 22:44:56,684 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-17 22:44:56,687 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-17 22:44:56,687 [WARNING] Not Acceptable: /api/stock-icon/MPICO/
+2025-06-17 22:44:56,709 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-17 22:44:56,713 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-17 22:44:56,717 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-17 22:44:56,717 [WARNING] Not Acceptable: /api/stock-icon/OMU/
+2025-06-17 22:44:56,726 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-17 22:44:56,736 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-17 22:44:56,740 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-17 22:44:56,744 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-18 09:43:44,974 [INFO] Starting scheduler service
+2025-06-18 09:43:44,990 [INFO] Scheduler started successfully
+2025-06-18 09:43:44,990 [INFO] Scheduler initialized in Django startup
+2025-06-18 09:43:45,021 [INFO] Watching for file changes with StatReloader
+2025-06-18 09:45:02,485 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-18 09:45:02,485 [WARNING] Not Acceptable: /api/stock-icon/FMBCH/
+2025-06-18 09:45:02,492 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-18 09:45:02,492 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-18 09:45:02,495 [WARNING] Not Acceptable: /api/stock-icon/BHL/
+2025-06-18 09:45:02,495 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-18 09:45:02,499 [WARNING] Not Acceptable: /api/stock-icon/MPICO/
+2025-06-18 09:45:02,499 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-18 09:45:02,511 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-18 09:45:02,511 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-18 09:45:04,539 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-18 09:45:04,545 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-18 09:45:04,545 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-18 09:45:04,545 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-18 09:45:04,545 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-18 09:45:04,545 [WARNING] Not Acceptable: /api/stock-icon/OMU/
+2025-06-18 09:45:44,992 [INFO] Running scheduled stock scraper
+2025-06-18 09:45:45,001 [INFO] Starting stock scraper at 2025-06-18 09:45:45.001270
+2025-06-18 09:45:48,312 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-18 09:45:48,316 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-18 09:45:48,510 [WARNING] Not Acceptable: /api/stock-icon/FMBCH/
+2025-06-18 09:45:48,517 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-18 09:45:48,521 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-18 09:45:48,523 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-18 09:45:48,523 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-18 09:45:48,523 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-18 09:45:48,523 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-18 09:45:48,538 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-18 09:45:49,572 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-18 09:45:49,574 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-18 09:45:51,698 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 09:45:51,952 [INFO] Saved 16 stock records to database
+2025-06-18 09:46:14,108 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-18 09:46:14,111 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-18 09:46:14,111 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-18 09:46:14,115 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-18 09:46:14,118 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-18 09:46:14,120 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-18 09:46:14,126 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-18 09:46:14,133 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-18 09:46:14,142 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-18 09:46:14,144 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-18 09:46:14,153 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-18 09:46:14,168 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-18 09:46:14,253 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-18 09:46:14,256 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-18 09:46:14,275 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-18 09:46:14,277 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-18 09:46:14,280 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-18 09:46:14,280 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-18 09:46:14,291 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-18 09:46:14,291 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-18 09:46:14,301 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-18 09:46:14,306 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-18 09:46:14,308 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-18 09:46:14,308 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-18 09:46:18,925 [INFO] Fetching historical prices for ILLOVO with range 1day, cache=True, refresh=False
+2025-06-18 09:46:18,926 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 09:46:18,981 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-18 09:46:20,324 [ERROR] Request error for ILLOVO in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/ILLOVO?stock_history=1month
+2025-06-18 09:46:20,324 [WARNING] Could not retrieve historical data for ILLOVO from service.
+2025-06-18 09:46:20,324 [WARNING] Not Found: /api/historical/ILLOVO/
+2025-06-18 09:46:23,597 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-18 09:46:23,599 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-18 09:46:23,600 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-18 09:46:23,603 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-18 09:46:23,605 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-18 09:46:23,605 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-18 09:46:23,616 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-18 09:46:23,624 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-18 09:46:23,624 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-18 09:46:23,631 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-18 09:46:23,634 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-18 09:46:23,643 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-18 09:46:23,704 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-18 09:46:23,705 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-18 09:46:23,706 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-18 09:46:23,708 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-18 09:46:23,708 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-18 09:46:23,708 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-18 09:46:23,708 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-18 09:46:23,722 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-18 09:46:23,727 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-18 09:46:23,733 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-18 09:46:23,738 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-18 09:46:23,746 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-18 09:46:32,332 [WARNING] Not Acceptable: /api/stock-icon/BHL/
+2025-06-18 09:46:32,333 [WARNING] Not Acceptable: /api/stock-icon/OMU/
+2025-06-18 09:46:32,333 [WARNING] Not Acceptable: /api/stock-icon/FMBCH/
+2025-06-18 09:46:32,333 [WARNING] Not Acceptable: /api/stock-icon/MPICO/
+2025-06-18 09:46:34,419 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-18 09:46:34,436 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-18 09:46:34,437 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-18 09:46:34,440 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-18 09:46:34,441 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-18 09:46:34,444 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-18 09:46:34,449 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-18 09:46:34,451 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-18 09:46:34,457 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-18 09:46:34,459 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-18 09:46:34,466 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-18 09:46:34,470 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-18 09:46:37,478 [INFO] Fetching historical prices for NICO with range 1day, cache=True, refresh=False
+2025-06-18 09:46:37,478 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 09:46:37,481 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-18 09:46:38,795 [ERROR] Request error for NICO in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/NICO?stock_history=1month
+2025-06-18 09:46:38,795 [WARNING] Could not retrieve historical data for NICO from service.
+2025-06-18 09:46:38,795 [WARNING] Not Found: /api/historical/NICO/
+2025-06-18 09:46:41,361 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-18 09:46:41,363 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-18 09:46:41,363 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-18 09:46:41,373 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-18 09:46:41,379 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-18 09:46:41,381 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-18 09:46:41,397 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-18 09:46:41,399 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-18 09:46:41,399 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-18 09:46:41,408 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-18 09:46:41,409 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-18 09:46:41,416 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-18 09:46:41,471 [WARNING] Not Acceptable: /api/stock-icon/NBM/
+2025-06-18 09:46:41,471 [WARNING] Not Acceptable: /api/stock-icon/STANDARD/
+2025-06-18 09:46:41,471 [WARNING] Not Acceptable: /api/stock-icon/FDHB/
+2025-06-18 09:46:41,471 [WARNING] Not Acceptable: /api/stock-icon/NBS/
+2025-06-18 09:46:41,471 [WARNING] Not Acceptable: /api/stock-icon/AIRTEL/
+2025-06-18 09:46:41,486 [WARNING] Not Acceptable: /api/stock-icon/ILLOVO/
+2025-06-18 09:46:41,488 [WARNING] Not Acceptable: /api/stock-icon/NICO/
+2025-06-18 09:46:41,488 [WARNING] Not Acceptable: /api/stock-icon/PCL/
+2025-06-18 09:46:41,496 [WARNING] Not Acceptable: /api/stock-icon/TNM/
+2025-06-18 09:46:41,501 [WARNING] Not Acceptable: /api/stock-icon/ICON/
+2025-06-18 09:46:41,510 [WARNING] Not Acceptable: /api/stock-icon/NITL/
+2025-06-18 09:46:41,510 [WARNING] Not Acceptable: /api/stock-icon/SUNBIRD/
+2025-06-18 09:48:17,601 [WARNING] Not Found: /api/stock-icon/FMBCH/
+2025-06-18 09:48:45,214 [WARNING] Not Found: /api/stock-icon/FMBCH/
+2025-06-18 09:48:51,959 [INFO] Running scheduled stock scraper
+2025-06-18 09:48:51,965 [INFO] Starting stock scraper at 2025-06-18 09:48:51.965152
+2025-06-18 09:48:53,496 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 09:48:53,689 [INFO] Saved 16 stock records to database
+2025-06-18 09:49:01,855 [WARNING] Not Found: /api/stock-icon/FMBCH/
+2025-06-18 09:49:45,501 [WARNING] Not Found: /api/stock-icon/FMBCH/
+2025-06-18 09:49:45,756 [WARNING] Not Found: /api/stock-icon/FMBCH/
+2025-06-18 09:49:46,106 [WARNING] Not Found: /api/stock-icon/FMBCH.jpg/
+2025-06-18 09:49:46,355 [WARNING] Not Found: /api/stock-icon/FMBCH.png/
+2025-06-18 09:50:11,216 [WARNING] Not Found: /api/stock-icon/FMBCH/
+2025-06-18 09:50:11,454 [WARNING] Not Found: /api/stock-icon/FMBCH/
+2025-06-18 09:50:11,470 [WARNING] Not Found: /api/stock-icon/FMBCH.jpg/
+2025-06-18 09:50:11,502 [WARNING] Not Found: /api/stock-icon/FMBCH.png/
+2025-06-18 09:50:19,008 [WARNING] Method Not Allowed: /api/stock-icon/TNM/
+2025-06-18 09:50:53,266 [WARNING] Not Found: /api/stock-icon/FMBCH/
+2025-06-18 09:50:53,285 [WARNING] Not Found: /api/stock-icon/FMBCH/
+2025-06-18 09:50:53,292 [WARNING] Not Found: /api/stock-icon/FMBCH.jpg/
+2025-06-18 09:50:53,299 [WARNING] Not Found: /api/stock-icon/FMBCH.png/
+2025-06-18 09:50:54,676 [WARNING] Not Found: /api/stock-icon/FMBCH/
+2025-06-18 09:50:54,695 [WARNING] Not Found: /api/stock-icon/FMBCH/
+2025-06-18 09:50:54,724 [WARNING] Not Found: /api/stock-icon/FMBCH.jpg/
+2025-06-18 09:50:54,747 [WARNING] Not Found: /api/stock-icon/FMBCH.png/
+2025-06-18 09:51:28,461 [WARNING] Not Found: /api/stock-icon/FMBCH/
+2025-06-18 09:51:29,306 [WARNING] Not Found: /api/stock-icon/FMBCH/
+2025-06-18 09:52:35,437 [WARNING] Not Found: /api/stock-icon/FMBCH/
+2025-06-18 09:53:24,824 [WARNING] Not Found: /api/stock-icon/FMBCH/
+2025-06-18 09:53:53,702 [INFO] Running scheduled stock scraper
+2025-06-18 09:53:53,702 [INFO] Starting stock scraper at 2025-06-18 09:53:53.702161
+2025-06-18 09:53:55,455 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 09:53:55,693 [INFO] Saved 16 stock records to database
+2025-06-18 09:54:03,991 [INFO] Fetching historical prices for OMU with range 1day, cache=True, refresh=False
+2025-06-18 09:54:03,991 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 09:54:03,996 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-18 09:54:05,435 [ERROR] Request error for OMU in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/OMU?stock_history=1month
+2025-06-18 09:54:05,435 [WARNING] Could not retrieve historical data for OMU from service.
+2025-06-18 09:54:05,435 [WARNING] Not Found: /api/historical/OMU/
+2025-06-18 09:54:07,683 [INFO] Fetching historical prices for OMU with range 1year, cache=True, refresh=False
+2025-06-18 09:54:07,683 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-18 09:54:08,965 [ERROR] Request error for OMU in 1year range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/OMU?stock_history=1year
+2025-06-18 09:54:08,965 [WARNING] Could not retrieve historical data for OMU from service.
+2025-06-18 09:54:08,968 [WARNING] Not Found: /api/historical/OMU/
+2025-06-18 09:54:37,475 [INFO] Fetching historical prices for TNM with range 1day, cache=True, refresh=False
+2025-06-18 09:54:37,475 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 09:54:37,485 [INFO] Using older cached data for TNM in 1month range.
+2025-06-18 09:54:43,798 [INFO] Fetching historical prices for TNM with range 1week, cache=True, refresh=False
+2025-06-18 09:54:43,798 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 09:54:43,804 [INFO] Using older cached data for TNM in 1month range.
+2025-06-18 09:54:47,447 [INFO] Fetching historical prices for TNM with range 1month, cache=True, refresh=False
+2025-06-18 09:54:47,451 [INFO] Using older cached data for TNM in 1month range.
+2025-06-18 09:54:50,674 [INFO] Fetching historical prices for TNM with range 1year, cache=True, refresh=False
+2025-06-18 09:54:50,674 [INFO] Using older cached data for TNM in 1year range.
+2025-06-18 09:55:01,480 [INFO] Fetching historical prices for TNM with range 1month, cache=True, refresh=False
+2025-06-18 09:55:01,480 [INFO] Using older cached data for TNM in 1month range.
+2025-06-18 09:55:04,492 [INFO] Fetching historical prices for TNM with range 1week, cache=True, refresh=False
+2025-06-18 09:55:04,492 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 09:55:04,492 [INFO] Using older cached data for TNM in 1month range.
+2025-06-18 09:55:07,656 [INFO] Fetching historical prices for TNM with range 1day, cache=True, refresh=False
+2025-06-18 09:55:07,656 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 09:55:07,656 [INFO] Using older cached data for TNM in 1month range.
+2025-06-18 09:56:46,309 [INFO] Fetching historical prices for ILLOVO with range 1day, cache=True, refresh=False
+2025-06-18 09:56:46,309 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 09:56:46,314 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-18 09:56:47,678 [ERROR] Request error for ILLOVO in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/ILLOVO?stock_history=1month
+2025-06-18 09:56:47,679 [WARNING] Could not retrieve historical data for ILLOVO from service.
+2025-06-18 09:56:47,680 [WARNING] Not Found: /api/historical/ILLOVO/
+2025-06-18 09:56:50,840 [INFO] Fetching historical prices for ILLOVO with range 1week, cache=True, refresh=False
+2025-06-18 09:56:50,840 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 09:56:50,858 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-18 09:56:52,171 [ERROR] Request error for ILLOVO in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/ILLOVO?stock_history=1month
+2025-06-18 09:56:52,171 [WARNING] Could not retrieve historical data for ILLOVO from service.
+2025-06-18 09:56:52,171 [WARNING] Not Found: /api/historical/ILLOVO/
+2025-06-18 09:58:55,712 [INFO] Running scheduled stock scraper
+2025-06-18 09:58:55,712 [INFO] Starting stock scraper at 2025-06-18 09:58:55.712777
+2025-06-18 09:58:57,240 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 09:58:58,150 [INFO] Saved 16 stock records to database
+2025-06-18 10:00:58,162 [INFO] Running scheduled stock scraper
+2025-06-18 10:00:58,167 [INFO] Starting stock scraper at 2025-06-18 10:00:58.167187
+2025-06-18 10:00:59,806 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 10:00:59,979 [INFO] Saved 16 stock records to database
+2025-06-18 10:03:59,994 [INFO] Running scheduled stock scraper
+2025-06-18 10:03:59,997 [INFO] Starting stock scraper at 2025-06-18 10:03:59.997544
+2025-06-18 10:04:01,392 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 10:04:01,571 [INFO] Saved 16 stock records to database
+2025-06-18 10:05:26,846 [INFO] Fetching historical prices for OMU with range 1day, cache=True, refresh=False
+2025-06-18 10:05:26,846 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 10:05:26,853 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-18 10:05:28,563 [ERROR] Request error for OMU in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/OMU?stock_history=1month
+2025-06-18 10:05:28,563 [WARNING] Could not retrieve historical data for OMU from service.
+2025-06-18 10:05:28,563 [WARNING] Not Found: /api/historical/OMU/
+2025-06-18 10:09:01,576 [INFO] Running scheduled stock scraper
+2025-06-18 10:09:01,582 [INFO] Starting stock scraper at 2025-06-18 10:09:01.582889
+2025-06-18 10:09:04,466 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 10:09:04,685 [INFO] Saved 16 stock records to database
+2025-06-18 10:13:32,256 [INFO] Fetching historical prices for ILLOVO with range 1day, cache=True, refresh=False
+2025-06-18 10:13:32,257 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 10:13:32,261 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-18 10:13:33,595 [ERROR] Request error for ILLOVO in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/ILLOVO?stock_history=1month
+2025-06-18 10:13:33,595 [WARNING] Could not retrieve historical data for ILLOVO from service.
+2025-06-18 10:13:33,595 [WARNING] Not Found: /api/historical/ILLOVO/
+2025-06-18 10:14:04,690 [INFO] Running scheduled stock scraper
+2025-06-18 10:14:04,693 [INFO] Starting stock scraper at 2025-06-18 10:14:04.693426
+2025-06-18 10:14:06,156 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 10:14:06,353 [INFO] Saved 16 stock records to database
+2025-06-18 10:14:59,614 [INFO] Fetching historical prices for TNM with range 1day, cache=True, refresh=False
+2025-06-18 10:14:59,614 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 10:14:59,616 [INFO] Using older cached data for TNM in 1month range.
+2025-06-18 10:15:06,360 [INFO] Running scheduled stock scraper
+2025-06-18 10:15:06,364 [INFO] Starting stock scraper at 2025-06-18 10:15:06.364301
+2025-06-18 10:15:07,831 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 10:15:08,044 [INFO] Saved 16 stock records to database
+2025-06-18 10:17:19,448 [INFO] Fetching historical prices for TNM with range 1day, cache=True, refresh=False
+2025-06-18 10:17:19,449 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 10:17:19,450 [INFO] Using older cached data for TNM in 1month range.
+2025-06-18 10:17:37,248 [INFO] Fetching historical prices for NBM with range 1day, cache=True, refresh=False
+2025-06-18 10:17:37,248 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 10:17:37,248 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-18 10:17:38,465 [ERROR] Request error for NBM in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/NBM?stock_history=1month
+2025-06-18 10:17:38,465 [WARNING] Could not retrieve historical data for NBM from service.
+2025-06-18 10:17:38,465 [WARNING] Not Found: /api/historical/NBM/
+2025-06-18 10:18:11,716 [INFO] Fetching historical prices for NBM with range 1day, cache=True, refresh=False
+2025-06-18 10:18:11,716 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 10:18:11,716 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-18 10:18:12,049 [INFO] Fetching historical prices for ILLOVO with range 1day, cache=True, refresh=False
+2025-06-18 10:18:12,050 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 10:18:12,057 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-18 10:18:13,120 [ERROR] Request error for NBM in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/NBM?stock_history=1month
+2025-06-18 10:18:13,120 [WARNING] Could not retrieve historical data for NBM from service.
+2025-06-18 10:18:13,121 [WARNING] Not Found: /api/historical/NBM/
+2025-06-18 10:18:13,436 [ERROR] Request error for ILLOVO in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/ILLOVO?stock_history=1month
+2025-06-18 10:18:13,436 [WARNING] Could not retrieve historical data for ILLOVO from service.
+2025-06-18 10:18:13,437 [WARNING] Not Found: /api/historical/ILLOVO/
+2025-06-18 10:19:08,049 [INFO] Running scheduled stock scraper
+2025-06-18 10:19:08,049 [INFO] Starting stock scraper at 2025-06-18 10:19:08.049201
+2025-06-18 10:19:09,513 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 10:19:09,743 [INFO] Saved 16 stock records to database
+2025-06-18 10:24:09,748 [INFO] Running scheduled stock scraper
+2025-06-18 10:24:09,752 [INFO] Starting stock scraper at 2025-06-18 10:24:09.752039
+2025-06-18 10:24:11,448 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 10:24:11,672 [INFO] Saved 16 stock records to database
+2025-06-18 10:26:13,877 [INFO] Fetching historical prices for ILLOVO with range 1day, cache=True, refresh=False
+2025-06-18 10:26:13,877 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 10:26:13,882 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-18 10:26:15,322 [ERROR] Request error for ILLOVO in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/ILLOVO?stock_history=1month
+2025-06-18 10:26:15,324 [WARNING] Could not retrieve historical data for ILLOVO from service.
+2025-06-18 10:26:15,324 [WARNING] Not Found: /api/historical/ILLOVO/
+2025-06-18 10:29:11,683 [INFO] Running scheduled stock scraper
+2025-06-18 10:29:11,683 [INFO] Starting stock scraper at 2025-06-18 10:29:11.683965
+2025-06-18 10:29:13,512 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 10:29:13,748 [INFO] Saved 16 stock records to database
+2025-06-18 10:30:13,755 [INFO] Running scheduled stock scraper
+2025-06-18 10:30:13,760 [INFO] Starting stock scraper at 2025-06-18 10:30:13.760018
+2025-06-18 10:30:15,586 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 10:30:16,968 [INFO] Saved 16 stock records to database
+2025-06-18 10:34:16,981 [INFO] Running scheduled stock scraper
+2025-06-18 10:34:16,985 [INFO] Starting stock scraper at 2025-06-18 10:34:16.985043
+2025-06-18 10:34:19,564 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 10:34:19,745 [INFO] Saved 16 stock records to database
+2025-06-18 10:34:43,651 [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-06-18 10:34:46,735 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 10:34:46,737 [WARNING] Unauthorized: /api/companies/
+2025-06-18 10:34:47,494 [WARNING] Not Found: /favicon.ico
+2025-06-18 10:34:54,156 [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-06-18 10:35:10,339 [ERROR] Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\OneDrive\Desktop\mse_api\accounts\views.py", line 62, in login_view
+    user = User.objects.get(email=email)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 652, in get
+    raise self.model.MultipleObjectsReturned(
+accounts.models.User.MultipleObjectsReturned: get() returned more than one User -- it returned 2!
+2025-06-18 10:35:10,494 [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-06-18 10:35:23,224 [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-06-18 10:35:25,997 [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-06-18 10:35:26,313 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 10:35:26,314 [WARNING] Unauthorized: /api/companies/
+2025-06-18 10:35:30,787 [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-06-18 10:35:33,982 [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-06-18 10:35:34,287 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 10:35:34,288 [WARNING] Unauthorized: /api/companies/
+2025-06-18 10:35:41,929 [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-06-18 10:35:54,615 [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-06-18 10:36:05,427 [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-06-18 10:36:16,335 [WARNING] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-06-18 10:39:19,753 [INFO] Running scheduled stock scraper
+2025-06-18 10:39:19,758 [INFO] Starting stock scraper at 2025-06-18 10:39:19.758919
+2025-06-18 10:39:21,430 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 10:39:21,667 [INFO] Saved 16 stock records to database
+2025-06-18 10:44:21,674 [INFO] Running scheduled stock scraper
+2025-06-18 10:44:21,681 [INFO] Starting stock scraper at 2025-06-18 10:44:21.674300
+2025-06-18 10:44:23,107 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 10:44:23,327 [INFO] Saved 16 stock records to database
+2025-06-18 10:45:23,338 [INFO] Running scheduled stock scraper
+2025-06-18 10:45:23,338 [INFO] Starting stock scraper at 2025-06-18 10:45:23.338513
+2025-06-18 10:45:24,694 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 10:45:24,932 [INFO] Saved 16 stock records to database
+2025-06-18 10:49:24,949 [INFO] Running scheduled stock scraper
+2025-06-18 10:49:24,949 [INFO] Starting stock scraper at 2025-06-18 10:49:24.949493
+2025-06-18 10:49:26,463 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 10:49:26,701 [INFO] Saved 16 stock records to database
+2025-06-18 10:54:26,723 [INFO] Running scheduled stock scraper
+2025-06-18 10:54:26,730 [INFO] Starting stock scraper at 2025-06-18 10:54:26.723645
+2025-06-18 10:54:28,102 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 10:54:28,326 [INFO] Saved 16 stock records to database
+2025-06-18 10:57:41,668 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 10:57:41,669 [WARNING] Unauthorized: /api/companies/
+2025-06-18 10:59:28,332 [INFO] Running scheduled stock scraper
+2025-06-18 10:59:28,335 [INFO] Starting stock scraper at 2025-06-18 10:59:28.335452
+2025-06-18 10:59:29,692 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 10:59:29,921 [INFO] Saved 16 stock records to database
+2025-06-18 10:59:52,707 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 10:59:52,708 [WARNING] Unauthorized: /api/companies/
+2025-06-18 11:00:29,925 [INFO] Running scheduled stock scraper
+2025-06-18 11:00:29,931 [INFO] Starting stock scraper at 2025-06-18 11:00:29.931388
+2025-06-18 11:00:31,241 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 11:00:31,395 [INFO] Saved 16 stock records to database
+2025-06-18 11:00:38,174 [WARNING] Unauthorized: /api/historical/TNM/
+2025-06-18 11:00:50,876 [WARNING] Unauthorized: /api/latest/
+2025-06-18 11:00:52,677 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:01:53,667 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:02:53,654 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:03:53,662 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:04:08,385 [INFO] Fetching historical prices for STANDARD with range 1day, cache=True, refresh=False
+2025-06-18 11:04:08,386 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 11:04:08,405 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-18 11:04:10,341 [ERROR] Request error for STANDARD in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/STANDARD?stock_history=1month
+2025-06-18 11:04:10,341 [WARNING] Could not retrieve historical data for STANDARD from service.
+2025-06-18 11:04:10,341 [WARNING] Not Found: /api/historical/STANDARD/
+2025-06-18 11:04:31,399 [INFO] Running scheduled stock scraper
+2025-06-18 11:04:31,399 [INFO] Starting stock scraper at 2025-06-18 11:04:31.399252
+2025-06-18 11:04:32,919 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 11:04:33,153 [INFO] Saved 16 stock records to database
+2025-06-18 11:04:38,957 [INFO] Fetching historical prices for NICO with range 1day, cache=True, refresh=False
+2025-06-18 11:04:38,957 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 11:04:38,960 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-18 11:04:40,751 [ERROR] Request error for NICO in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/NICO?stock_history=1month
+2025-06-18 11:04:40,751 [WARNING] Could not retrieve historical data for NICO from service.
+2025-06-18 11:04:40,751 [WARNING] Not Found: /api/historical/NICO/
+2025-06-18 11:04:53,660 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:05:53,661 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:07:03,681 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:08:03,662 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:09:03,677 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:09:33,173 [INFO] Running scheduled stock scraper
+2025-06-18 11:09:33,173 [INFO] Starting stock scraper at 2025-06-18 11:09:33.173642
+2025-06-18 11:09:34,518 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 11:09:34,756 [INFO] Saved 16 stock records to database
+2025-06-18 11:10:03,673 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:11:03,669 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:12:03,676 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:13:03,683 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:14:03,676 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:14:34,774 [INFO] Running scheduled stock scraper
+2025-06-18 11:14:34,774 [INFO] Starting stock scraper at 2025-06-18 11:14:34.774203
+2025-06-18 11:14:36,175 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 11:14:36,332 [INFO] Saved 16 stock records to database
+2025-06-18 11:15:03,676 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:15:36,338 [INFO] Running scheduled stock scraper
+2025-06-18 11:15:36,342 [INFO] Starting stock scraper at 2025-06-18 11:15:36.342787
+2025-06-18 11:15:37,768 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 11:15:37,984 [INFO] Saved 16 stock records to database
+2025-06-18 11:16:03,682 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:17:03,670 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:17:42,710 [INFO] Fetching historical prices for NBM with range 1day, cache=True, refresh=False
+2025-06-18 11:17:42,711 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 11:17:42,716 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-18 11:17:44,159 [ERROR] Request error for NBM in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/NBM?stock_history=1month
+2025-06-18 11:17:44,160 [WARNING] Could not retrieve historical data for NBM from service.
+2025-06-18 11:17:44,160 [WARNING] Not Found: /api/historical/NBM/
+2025-06-18 11:17:48,376 [INFO] Fetching historical prices for NBM with range 1day, cache=True, refresh=False
+2025-06-18 11:17:48,376 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 11:17:48,376 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-18 11:17:50,038 [ERROR] Request error for NBM in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/NBM?stock_history=1month
+2025-06-18 11:17:50,038 [WARNING] Could not retrieve historical data for NBM from service.
+2025-06-18 11:17:50,038 [WARNING] Not Found: /api/historical/NBM/
+2025-06-18 11:18:03,664 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:19:03,679 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:19:37,995 [INFO] Running scheduled stock scraper
+2025-06-18 11:19:38,001 [INFO] Starting stock scraper at 2025-06-18 11:19:38.000549
+2025-06-18 11:19:39,546 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 11:19:39,806 [INFO] Saved 16 stock records to database
+2025-06-18 11:20:03,676 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:21:03,665 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:22:03,677 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:23:03,663 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:24:03,668 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:24:39,832 [INFO] Running scheduled stock scraper
+2025-06-18 11:24:39,858 [INFO] Starting stock scraper at 2025-06-18 11:24:39.858177
+2025-06-18 11:24:41,187 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 11:24:41,426 [INFO] Saved 16 stock records to database
+2025-06-18 11:25:03,664 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:26:03,679 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:27:03,669 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:28:03,703 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:28:53,656 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:29:41,441 [INFO] Running scheduled stock scraper
+2025-06-18 11:29:41,441 [INFO] Starting stock scraper at 2025-06-18 11:29:41.441951
+2025-06-18 11:29:43,017 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 11:29:43,191 [INFO] Saved 16 stock records to database
+2025-06-18 11:30:03,679 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:30:43,194 [INFO] Running scheduled stock scraper
+2025-06-18 11:30:43,197 [INFO] Starting stock scraper at 2025-06-18 11:30:43.197713
+2025-06-18 11:30:44,459 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 11:30:44,660 [INFO] Saved 16 stock records to database
+2025-06-18 11:31:03,688 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:32:03,668 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:33:03,673 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:34:03,678 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:34:44,669 [INFO] Running scheduled stock scraper
+2025-06-18 11:34:44,669 [INFO] Starting stock scraper at 2025-06-18 11:34:44.669510
+2025-06-18 11:34:46,254 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 11:34:46,502 [INFO] Saved 16 stock records to database
+2025-06-18 11:35:03,763 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:36:03,997 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:37:03,678 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:38:03,671 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:39:03,678 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:39:46,507 [INFO] Running scheduled stock scraper
+2025-06-18 11:39:46,510 [INFO] Starting stock scraper at 2025-06-18 11:39:46.510516
+2025-06-18 11:39:48,548 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 11:39:48,737 [INFO] Saved 16 stock records to database
+2025-06-18 11:40:03,995 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:41:03,671 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:42:03,675 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:43:03,676 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:44:03,677 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:44:48,742 [INFO] Running scheduled stock scraper
+2025-06-18 11:44:48,742 [INFO] Starting stock scraper at 2025-06-18 11:44:48.742992
+2025-06-18 11:44:50,335 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 11:44:50,519 [INFO] Saved 16 stock records to database
+2025-06-18 11:45:03,680 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:45:50,525 [INFO] Running scheduled stock scraper
+2025-06-18 11:45:50,525 [INFO] Starting stock scraper at 2025-06-18 11:45:50.525034
+2025-06-18 11:45:52,002 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 11:45:52,369 [INFO] Saved 16 stock records to database
+2025-06-18 11:46:03,670 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:47:03,673 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:48:03,674 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:49:03,675 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:49:52,378 [INFO] Running scheduled stock scraper
+2025-06-18 11:49:52,384 [INFO] Starting stock scraper at 2025-06-18 11:49:52.384558
+2025-06-18 11:49:53,844 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 11:49:54,067 [INFO] Saved 16 stock records to database
+2025-06-18 11:50:03,678 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:51:03,674 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:52:03,673 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:53:03,675 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:54:03,676 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:54:54,085 [INFO] Running scheduled stock scraper
+2025-06-18 11:54:54,090 [INFO] Starting stock scraper at 2025-06-18 11:54:54.090939
+2025-06-18 11:54:55,449 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 11:54:55,679 [INFO] Saved 16 stock records to database
+2025-06-18 11:55:03,663 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:56:03,665 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:57:03,669 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:58:03,679 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:59:03,678 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 11:59:55,687 [INFO] Running scheduled stock scraper
+2025-06-18 11:59:55,693 [INFO] Starting stock scraper at 2025-06-18 11:59:55.693723
+2025-06-18 11:59:57,047 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 11:59:57,273 [INFO] Saved 16 stock records to database
+2025-06-18 12:00:03,658 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 12:00:57,281 [INFO] Running scheduled stock scraper
+2025-06-18 12:00:57,281 [INFO] Starting stock scraper at 2025-06-18 12:00:57.281937
+2025-06-18 12:00:58,637 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 12:00:58,799 [INFO] Saved 16 stock records to database
+2025-06-18 12:01:03,678 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 12:02:03,672 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 12:03:03,671 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 12:04:03,658 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 12:04:58,808 [INFO] Running scheduled stock scraper
+2025-06-18 12:04:58,811 [INFO] Starting stock scraper at 2025-06-18 12:04:58.811768
+2025-06-18 12:05:00,288 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 12:05:00,507 [INFO] Saved 16 stock records to database
+2025-06-18 12:05:03,674 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 12:06:03,672 [WARNING] Unauthorized: /api/market-status/
+2025-06-18 12:10:00,521 [INFO] Running scheduled stock scraper
+2025-06-18 12:10:00,521 [INFO] Starting stock scraper at 2025-06-18 12:10:00.521597
+2025-06-18 12:10:02,166 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 12:10:02,378 [INFO] Saved 16 stock records to database
+2025-06-18 12:15:02,386 [INFO] Running scheduled stock scraper
+2025-06-18 12:15:02,386 [INFO] Starting stock scraper at 2025-06-18 12:15:02.386733
+2025-06-18 12:15:03,824 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 12:15:04,058 [INFO] Saved 16 stock records to database
+2025-06-18 12:15:04,058 [INFO] Running scheduled stock scraper
+2025-06-18 12:15:04,058 [INFO] Starting stock scraper at 2025-06-18 12:15:04.058245
+2025-06-18 12:15:05,517 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 12:15:05,742 [INFO] Saved 16 stock records to database
+2025-06-18 12:20:05,749 [INFO] Running scheduled stock scraper
+2025-06-18 12:20:05,749 [INFO] Starting stock scraper at 2025-06-18 12:20:05.749170
+2025-06-18 12:20:07,294 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 12:20:07,483 [INFO] Saved 16 stock records to database
+2025-06-18 12:25:07,501 [INFO] Running scheduled stock scraper
+2025-06-18 12:25:07,505 [INFO] Starting stock scraper at 2025-06-18 12:25:07.505079
+2025-06-18 12:25:09,132 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 12:25:09,387 [INFO] Saved 16 stock records to database
+2025-06-18 12:30:09,393 [INFO] Running scheduled stock scraper
+2025-06-18 12:30:09,397 [INFO] Starting stock scraper at 2025-06-18 12:30:09.397745
+2025-06-18 12:30:10,793 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 12:30:11,018 [INFO] Saved 16 stock records to database
+2025-06-18 12:30:11,018 [INFO] Running scheduled stock scraper
+2025-06-18 12:30:11,027 [INFO] Starting stock scraper at 2025-06-18 12:30:11.027041
+2025-06-18 12:30:12,481 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 12:30:12,649 [INFO] Saved 16 stock records to database
+2025-06-18 12:35:12,655 [INFO] Running scheduled stock scraper
+2025-06-18 12:35:12,659 [INFO] Starting stock scraper at 2025-06-18 12:35:12.659393
+2025-06-18 12:35:14,200 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 12:35:14,382 [INFO] Saved 16 stock records to database
+2025-06-18 12:40:14,396 [INFO] Running scheduled stock scraper
+2025-06-18 12:40:14,401 [INFO] Starting stock scraper at 2025-06-18 12:40:14.401254
+2025-06-18 12:40:16,272 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 12:40:16,494 [INFO] Saved 16 stock records to database
+2025-06-18 12:45:16,500 [INFO] Running scheduled stock scraper
+2025-06-18 12:45:16,500 [INFO] Starting stock scraper at 2025-06-18 12:45:16.500999
+2025-06-18 12:45:17,932 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 12:45:18,186 [INFO] Saved 16 stock records to database
+2025-06-18 12:45:18,186 [INFO] Running scheduled stock scraper
+2025-06-18 12:45:18,186 [INFO] Starting stock scraper at 2025-06-18 12:45:18.186732
+2025-06-18 12:45:19,700 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 12:45:19,924 [INFO] Saved 16 stock records to database
+2025-06-18 12:50:19,935 [INFO] Running scheduled stock scraper
+2025-06-18 12:50:19,937 [INFO] Starting stock scraper at 2025-06-18 12:50:19.937634
+2025-06-18 12:50:21,350 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 12:50:21,593 [INFO] Saved 16 stock records to database
+2025-06-18 12:55:21,601 [INFO] Running scheduled stock scraper
+2025-06-18 12:55:21,601 [INFO] Starting stock scraper at 2025-06-18 12:55:21.601841
+2025-06-18 12:55:22,935 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 12:55:23,188 [INFO] Saved 16 stock records to database
+2025-06-18 13:00:23,199 [INFO] Running scheduled stock scraper
+2025-06-18 13:00:23,199 [INFO] Starting stock scraper at 2025-06-18 13:00:23.199743
+2025-06-18 13:00:24,661 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 13:00:24,889 [INFO] Saved 16 stock records to database
+2025-06-18 13:00:24,898 [INFO] Running scheduled stock scraper
+2025-06-18 13:00:24,898 [INFO] Starting stock scraper at 2025-06-18 13:00:24.898742
+2025-06-18 13:00:26,204 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 13:00:26,442 [INFO] Saved 16 stock records to database
+2025-06-18 14:26:17,981 [INFO] Running scheduled stock scraper
+2025-06-18 14:26:17,988 [INFO] Starting stock scraper at 2025-06-18 14:26:17.988362
+2025-06-18 14:26:19,694 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 14:26:19,839 [INFO] Saved 16 stock records to database
+2025-06-18 14:26:19,839 [INFO] Running scheduled stock scraper
+2025-06-18 14:26:19,839 [INFO] Starting stock scraper at 2025-06-18 14:26:19.839646
+2025-06-18 14:26:21,445 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 14:26:21,587 [INFO] Saved 16 stock records to database
+2025-06-18 14:26:21,587 [INFO] Running scheduled stock scraper
+2025-06-18 14:26:21,587 [INFO] Starting stock scraper at 2025-06-18 14:26:21.587811
+2025-06-18 14:26:24,412 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 14:26:24,563 [INFO] Saved 16 stock records to database
+2025-06-18 14:26:24,563 [INFO] Running scheduled stock scraper
+2025-06-18 14:26:24,563 [INFO] Starting stock scraper at 2025-06-18 14:26:24.563172
+2025-06-18 14:26:27,402 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 14:26:27,571 [INFO] Saved 16 stock records to database
+2025-06-18 14:26:27,571 [INFO] Running scheduled stock scraper
+2025-06-18 14:26:27,578 [INFO] Starting stock scraper at 2025-06-18 14:26:27.578604
+2025-06-18 14:26:29,093 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 14:26:29,246 [INFO] Saved 16 stock records to database
+2025-06-18 14:26:29,248 [INFO] Running scheduled stock scraper
+2025-06-18 14:26:29,251 [INFO] Starting stock scraper at 2025-06-18 14:26:29.251149
+2025-06-18 14:26:30,722 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 14:26:30,864 [INFO] Saved 16 stock records to database
+2025-06-18 14:30:30,873 [INFO] Running scheduled stock scraper
+2025-06-18 14:30:30,880 [INFO] Starting stock scraper at 2025-06-18 14:30:30.880631 (forced)
+2025-06-18 14:30:33,080 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 14:30:33,761 [INFO] Saved 16 stock records to database
+2025-06-18 14:31:33,767 [INFO] Running scheduled stock scraper
+2025-06-18 14:31:33,806 [INFO] Starting stock scraper at 2025-06-18 14:31:33.806726
+2025-06-18 14:31:35,537 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 14:31:35,753 [INFO] Saved 16 stock records to database
+2025-06-18 14:35:35,758 [INFO] Running scheduled stock scraper
+2025-06-18 14:35:35,766 [INFO] Starting stock scraper at 2025-06-18 14:35:35.766400
+2025-06-18 14:35:37,773 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 14:35:38,069 [INFO] Saved 16 stock records to database
+2025-06-18 14:36:38,073 [INFO] Running scheduled stock scraper
+2025-06-18 14:36:38,080 [INFO] Starting stock scraper at 2025-06-18 14:36:38.080351
+2025-06-18 14:36:40,465 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 14:36:40,779 [INFO] Saved 16 stock records to database
+2025-06-18 14:40:40,784 [INFO] Running scheduled stock scraper
+2025-06-18 14:40:40,792 [INFO] Starting stock scraper at 2025-06-18 14:40:40.792020
+2025-06-18 14:40:42,713 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 14:40:43,155 [INFO] Saved 16 stock records to database
+2025-06-18 14:41:43,165 [INFO] Running scheduled stock scraper
+2025-06-18 14:41:43,173 [INFO] Starting stock scraper at 2025-06-18 14:41:43.173019
+2025-06-18 14:41:44,988 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 14:41:45,227 [INFO] Saved 16 stock records to database
+2025-06-18 14:45:45,235 [INFO] Running scheduled stock scraper
+2025-06-18 14:45:45,240 [INFO] Starting stock scraper at 2025-06-18 14:45:45.240625
+2025-06-18 14:45:46,942 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 14:45:47,254 [INFO] Saved 16 stock records to database
+2025-06-18 14:46:47,257 [INFO] Running scheduled stock scraper
+2025-06-18 14:46:47,265 [INFO] Starting stock scraper at 2025-06-18 14:46:47.265259
+2025-06-18 14:46:49,020 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 14:46:49,318 [INFO] Saved 16 stock records to database
+2025-06-18 14:50:49,327 [INFO] Running scheduled stock scraper
+2025-06-18 14:50:49,335 [INFO] Starting stock scraper at 2025-06-18 14:50:49.335401
+2025-06-18 14:50:51,077 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 14:50:51,338 [INFO] Saved 16 stock records to database
+2025-06-18 14:51:15,434 [INFO] Fetching historical prices for AIRTEL with range 1day, cache=True, refresh=False
+2025-06-18 14:51:15,434 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-18 14:51:15,439 [INFO] Using older cached data for AIRTEL in 1month range.
+2025-06-18 14:51:51,341 [INFO] Running scheduled stock scraper
+2025-06-18 14:51:51,347 [INFO] Starting stock scraper at 2025-06-18 14:51:51.347513
+2025-06-18 14:51:53,044 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 14:51:53,337 [INFO] Saved 16 stock records to database
+2025-06-18 14:55:53,343 [INFO] Running scheduled stock scraper
+2025-06-18 14:55:53,343 [INFO] Starting stock scraper at 2025-06-18 14:55:53.343282
+2025-06-18 14:55:55,320 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 14:55:55,620 [INFO] Saved 16 stock records to database
+2025-06-18 14:56:55,623 [INFO] Running scheduled stock scraper
+2025-06-18 14:56:55,625 [INFO] Starting stock scraper at 2025-06-18 14:56:55.625970
+2025-06-18 14:57:06,749 [ERROR] Failed to extract data
+2025-06-18 15:00:06,759 [INFO] Running scheduled stock scraper
+2025-06-18 15:00:06,767 [INFO] Starting stock scraper at 2025-06-18 15:00:06.767010 (forced)
+2025-06-18 15:00:16,795 [ERROR] Failed to extract data
+2025-06-18 15:02:16,800 [INFO] Running scheduled stock scraper
+2025-06-18 15:02:16,809 [INFO] Starting stock scraper at 2025-06-18 15:02:16.809387
+2025-06-18 15:02:26,839 [ERROR] Failed to extract data
+2025-06-18 15:07:26,847 [INFO] Running scheduled stock scraper
+2025-06-18 15:07:26,857 [INFO] Starting stock scraper at 2025-06-18 15:07:26.857690
+2025-06-18 15:07:29,213 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 15:07:29,494 [INFO] Saved 16 stock records to database
+2025-06-18 15:12:29,501 [INFO] Running scheduled stock scraper
+2025-06-18 15:12:29,503 [INFO] Starting stock scraper at 2025-06-18 15:12:29.503921
+2025-06-18 15:12:31,659 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 15:12:31,974 [INFO] Saved 16 stock records to database
+2025-06-18 15:18:24,857 [INFO] Running scheduled stock scraper
+2025-06-18 15:18:24,859 [INFO] Starting stock scraper at 2025-06-18 15:18:24.859847
+2025-06-18 15:18:28,120 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 15:18:28,408 [INFO] Saved 16 stock records to database
+2025-06-18 15:23:28,414 [INFO] Running scheduled stock scraper
+2025-06-18 15:23:28,416 [INFO] Starting stock scraper at 2025-06-18 15:23:28.416331
+2025-06-18 15:23:30,308 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 15:23:32,252 [INFO] Saved 16 stock records to database
+2025-06-18 18:26:58,928 [INFO] Market is outside operating hours (18:26). Skipping scheduled scrape.
+2025-06-18 18:26:58,929 [INFO] Market is outside operating hours (18:26). Skipping scheduled scrape.
+2025-06-18 18:26:58,929 [INFO] Market is outside operating hours (18:26). Skipping scheduled scrape.
+2025-06-18 18:26:58,929 [INFO] Market is outside operating hours (18:26). Skipping scheduled scrape.
+2025-06-18 18:26:58,932 [INFO] Running scheduled stock scraper
+2025-06-18 18:26:58,932 [INFO] Starting stock scraper at 2025-06-18 18:26:58.932572 (forced)
+2025-06-18 18:27:01,861 [INFO] Successfully extracted data for 16 stocks
+2025-06-18 18:27:06,222 [INFO] Saved 16 stock records to database
+2025-06-18 19:36:06,936 [INFO] Market is outside operating hours (19:36). Skipping scheduled scrape.
+2025-06-18 19:41:06,943 [INFO] Market is outside operating hours (19:41). Skipping scheduled scrape.
+2025-06-18 19:46:06,948 [INFO] Market is outside operating hours (19:46). Skipping scheduled scrape.
+2025-06-18 19:51:06,955 [INFO] Market is outside operating hours (19:51). Skipping scheduled scrape.
+2025-06-18 19:56:07,071 [INFO] Market is outside operating hours (19:56). Skipping scheduled scrape.
+2025-06-18 20:01:07,333 [INFO] Market is outside operating hours (20:01). Skipping scheduled scrape.
+2025-06-18 20:06:07,345 [INFO] Market is outside operating hours (20:06). Skipping scheduled scrape.
+2025-06-18 20:11:07,440 [INFO] Market is outside operating hours (20:11). Skipping scheduled scrape.
+2025-06-18 20:16:07,535 [INFO] Market is outside operating hours (20:16). Skipping scheduled scrape.
+2025-06-18 20:21:07,555 [INFO] Market is outside operating hours (20:21). Skipping scheduled scrape.
+2025-06-19 01:24:32,721 [INFO] Market is outside operating hours (01:24). Skipping scheduled scrape.
+2025-06-19 08:09:42,756 [INFO] Market is outside operating hours (08:09). Skipping scheduled scrape.
+2025-06-19 10:27:19,326 [INFO] Starting scheduler service
+2025-06-19 10:27:19,339 [INFO] Scheduler started successfully
+2025-06-19 10:27:19,339 [INFO] Scheduler initialized in Django startup
+2025-06-19 10:27:19,377 [INFO] Watching for file changes with StatReloader
+2025-06-19 10:30:19,343 [INFO] Running scheduled stock scraper
+2025-06-19 10:30:19,357 [INFO] Starting stock scraper at 2025-06-19 10:30:19.357787
+2025-06-19 10:30:28,718 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 10:30:28,876 [INFO] Saved 16 stock records to database
+2025-06-19 10:32:28,878 [INFO] Running scheduled stock scraper
+2025-06-19 10:32:28,880 [INFO] Starting stock scraper at 2025-06-19 10:32:28.880117
+2025-06-19 10:32:30,332 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 10:32:30,576 [INFO] Saved 16 stock records to database
+2025-06-19 10:37:30,589 [INFO] Running scheduled stock scraper
+2025-06-19 10:37:30,594 [INFO] Starting stock scraper at 2025-06-19 10:37:30.594492
+2025-06-19 10:37:32,257 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 10:37:32,445 [INFO] Saved 16 stock records to database
+2025-06-19 10:42:32,452 [INFO] Running scheduled stock scraper
+2025-06-19 10:42:32,456 [INFO] Starting stock scraper at 2025-06-19 10:42:32.456634
+2025-06-19 10:42:33,999 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 10:42:34,186 [INFO] Saved 16 stock records to database
+2025-06-19 10:45:34,190 [INFO] Running scheduled stock scraper
+2025-06-19 10:45:34,190 [INFO] Starting stock scraper at 2025-06-19 10:45:34.190147
+2025-06-19 10:45:35,885 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 10:45:36,129 [INFO] Saved 16 stock records to database
+2025-06-19 10:47:36,134 [INFO] Running scheduled stock scraper
+2025-06-19 10:47:36,139 [INFO] Starting stock scraper at 2025-06-19 10:47:36.139896
+2025-06-19 10:47:37,566 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 10:47:37,741 [INFO] Saved 16 stock records to database
+2025-06-19 10:52:37,747 [INFO] Running scheduled stock scraper
+2025-06-19 10:52:37,753 [INFO] Starting stock scraper at 2025-06-19 10:52:37.753056
+2025-06-19 10:52:39,423 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 10:52:39,673 [INFO] Saved 16 stock records to database
+2025-06-19 10:57:39,692 [INFO] Running scheduled stock scraper
+2025-06-19 10:57:39,699 [INFO] Starting stock scraper at 2025-06-19 10:57:39.699185
+2025-06-19 10:57:41,296 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 10:57:41,536 [INFO] Saved 16 stock records to database
+2025-06-19 11:00:41,623 [INFO] Running scheduled stock scraper
+2025-06-19 11:00:41,631 [INFO] Starting stock scraper at 2025-06-19 11:00:41.631709
+2025-06-19 11:00:42,990 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 11:00:43,190 [INFO] Saved 16 stock records to database
+2025-06-19 11:02:43,194 [INFO] Running scheduled stock scraper
+2025-06-19 11:02:43,200 [INFO] Starting stock scraper at 2025-06-19 11:02:43.200406
+2025-06-19 11:02:44,805 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 11:02:45,040 [INFO] Saved 16 stock records to database
+2025-06-19 11:07:45,046 [INFO] Running scheduled stock scraper
+2025-06-19 11:07:45,050 [INFO] Starting stock scraper at 2025-06-19 11:07:45.050587
+2025-06-19 11:07:46,471 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 11:07:46,699 [INFO] Saved 16 stock records to database
+2025-06-19 11:12:46,705 [INFO] Running scheduled stock scraper
+2025-06-19 11:12:46,711 [INFO] Starting stock scraper at 2025-06-19 11:12:46.711896
+2025-06-19 11:12:48,110 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 11:12:50,303 [INFO] Saved 16 stock records to database
+2025-06-19 11:15:50,322 [INFO] Running scheduled stock scraper
+2025-06-19 11:15:50,330 [INFO] Starting stock scraper at 2025-06-19 11:15:50.330078
+2025-06-19 11:15:52,470 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 11:15:53,674 [INFO] Saved 16 stock records to database
+2025-06-19 11:17:53,693 [INFO] Running scheduled stock scraper
+2025-06-19 11:17:53,693 [INFO] Starting stock scraper at 2025-06-19 11:17:53.693745
+2025-06-19 11:17:55,200 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 11:17:55,545 [INFO] Saved 16 stock records to database
+2025-06-19 11:22:55,554 [INFO] Running scheduled stock scraper
+2025-06-19 11:22:55,559 [INFO] Starting stock scraper at 2025-06-19 11:22:55.559994
+2025-06-19 11:22:58,465 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 11:22:58,780 [INFO] Saved 16 stock records to database
+2025-06-19 11:27:58,790 [INFO] Running scheduled stock scraper
+2025-06-19 11:27:58,920 [INFO] Starting stock scraper at 2025-06-19 11:27:58.920553
+2025-06-19 11:28:00,431 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 11:28:00,680 [INFO] Saved 16 stock records to database
+2025-06-19 11:30:00,683 [INFO] Running scheduled stock scraper
+2025-06-19 11:30:00,782 [INFO] Starting stock scraper at 2025-06-19 11:30:00.782031
+2025-06-19 11:30:02,929 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 11:30:03,082 [INFO] Saved 16 stock records to database
+2025-06-19 11:33:03,091 [INFO] Running scheduled stock scraper
+2025-06-19 11:33:03,097 [INFO] Starting stock scraper at 2025-06-19 11:33:03.097237
+2025-06-19 11:33:04,874 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 11:33:05,121 [INFO] Saved 16 stock records to database
+2025-06-19 11:38:05,133 [INFO] Running scheduled stock scraper
+2025-06-19 11:38:05,133 [INFO] Starting stock scraper at 2025-06-19 11:38:05.133632
+2025-06-19 11:38:07,156 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 11:38:07,395 [INFO] Saved 16 stock records to database
+2025-06-19 11:43:07,399 [INFO] Running scheduled stock scraper
+2025-06-19 11:43:07,401 [INFO] Starting stock scraper at 2025-06-19 11:43:07.401580
+2025-06-19 11:43:08,993 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 11:43:09,280 [INFO] Saved 16 stock records to database
+2025-06-19 11:45:09,291 [INFO] Running scheduled stock scraper
+2025-06-19 11:45:09,291 [INFO] Starting stock scraper at 2025-06-19 11:45:09.291754
+2025-06-19 11:45:10,881 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 11:45:11,121 [INFO] Saved 16 stock records to database
+2025-06-19 11:48:11,127 [INFO] Running scheduled stock scraper
+2025-06-19 11:48:11,130 [INFO] Starting stock scraper at 2025-06-19 11:48:11.130735
+2025-06-19 11:48:12,741 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 11:48:12,986 [INFO] Saved 16 stock records to database
+2025-06-19 11:53:12,993 [INFO] Running scheduled stock scraper
+2025-06-19 11:53:12,993 [INFO] Starting stock scraper at 2025-06-19 11:53:12.993643
+2025-06-19 11:53:14,444 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 11:53:14,706 [INFO] Saved 16 stock records to database
+2025-06-19 11:58:14,710 [INFO] Running scheduled stock scraper
+2025-06-19 11:58:14,714 [INFO] Starting stock scraper at 2025-06-19 11:58:14.714215
+2025-06-19 11:58:16,360 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 11:58:16,632 [INFO] Saved 16 stock records to database
+2025-06-19 12:00:16,639 [INFO] Running scheduled stock scraper
+2025-06-19 12:00:16,643 [INFO] Starting stock scraper at 2025-06-19 12:00:16.643898
+2025-06-19 12:00:18,161 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 12:00:18,430 [INFO] Saved 16 stock records to database
+2025-06-19 12:03:18,444 [INFO] Running scheduled stock scraper
+2025-06-19 12:03:18,449 [INFO] Starting stock scraper at 2025-06-19 12:03:18.449876
+2025-06-19 12:03:19,912 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 12:03:20,161 [INFO] Saved 16 stock records to database
+2025-06-19 12:08:20,175 [INFO] Running scheduled stock scraper
+2025-06-19 12:08:20,178 [INFO] Starting stock scraper at 2025-06-19 12:08:20.178451
+2025-06-19 12:08:21,731 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 12:08:22,000 [INFO] Saved 16 stock records to database
+2025-06-19 12:13:22,007 [INFO] Running scheduled stock scraper
+2025-06-19 12:13:22,010 [INFO] Starting stock scraper at 2025-06-19 12:13:22.010067
+2025-06-19 12:13:23,383 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 12:13:23,655 [INFO] Saved 16 stock records to database
+2025-06-19 12:15:23,670 [INFO] Running scheduled stock scraper
+2025-06-19 12:15:23,670 [INFO] Starting stock scraper at 2025-06-19 12:15:23.670988
+2025-06-19 12:15:25,141 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 12:15:25,409 [INFO] Saved 16 stock records to database
+2025-06-19 12:18:25,420 [INFO] Running scheduled stock scraper
+2025-06-19 12:18:25,420 [INFO] Starting stock scraper at 2025-06-19 12:18:25.420340
+2025-06-19 12:18:26,771 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 12:18:27,042 [INFO] Saved 16 stock records to database
+2025-06-19 12:23:27,056 [INFO] Running scheduled stock scraper
+2025-06-19 12:23:27,060 [INFO] Starting stock scraper at 2025-06-19 12:23:27.060034
+2025-06-19 12:23:28,379 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 12:23:28,639 [INFO] Saved 16 stock records to database
+2025-06-19 12:28:28,648 [INFO] Running scheduled stock scraper
+2025-06-19 12:28:28,648 [INFO] Starting stock scraper at 2025-06-19 12:28:28.648292
+2025-06-19 12:28:30,134 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 12:28:30,404 [INFO] Saved 16 stock records to database
+2025-06-19 12:30:30,407 [INFO] Running scheduled stock scraper
+2025-06-19 12:30:30,407 [INFO] Starting stock scraper at 2025-06-19 12:30:30.407081
+2025-06-19 12:30:32,336 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 12:30:32,607 [INFO] Saved 16 stock records to database
+2025-06-19 12:33:32,623 [INFO] Running scheduled stock scraper
+2025-06-19 12:33:32,626 [INFO] Starting stock scraper at 2025-06-19 12:33:32.626657
+2025-06-19 12:33:34,071 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 12:33:34,342 [INFO] Saved 16 stock records to database
+2025-06-19 12:38:34,617 [INFO] Running scheduled stock scraper
+2025-06-19 12:38:34,631 [INFO] Starting stock scraper at 2025-06-19 12:38:34.631367
+2025-06-19 12:38:36,385 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 12:38:36,657 [INFO] Saved 16 stock records to database
+2025-06-19 12:43:36,663 [INFO] Running scheduled stock scraper
+2025-06-19 12:43:36,669 [INFO] Starting stock scraper at 2025-06-19 12:43:36.669771
+2025-06-19 12:43:38,159 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 12:43:38,412 [INFO] Saved 16 stock records to database
+2025-06-19 12:45:38,423 [INFO] Running scheduled stock scraper
+2025-06-19 12:45:38,430 [INFO] Starting stock scraper at 2025-06-19 12:45:38.430564
+2025-06-19 12:45:39,780 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 12:45:40,039 [INFO] Saved 16 stock records to database
+2025-06-19 12:48:40,052 [INFO] Running scheduled stock scraper
+2025-06-19 12:48:40,052 [INFO] Starting stock scraper at 2025-06-19 12:48:40.052225
+2025-06-19 12:48:41,422 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 12:48:41,692 [INFO] Saved 16 stock records to database
+2025-06-19 12:53:41,697 [INFO] Running scheduled stock scraper
+2025-06-19 12:53:41,702 [INFO] Starting stock scraper at 2025-06-19 12:53:41.702633
+2025-06-19 12:53:43,216 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 12:53:43,451 [INFO] Saved 16 stock records to database
+2025-06-19 12:58:43,472 [INFO] Running scheduled stock scraper
+2025-06-19 12:58:43,472 [INFO] Starting stock scraper at 2025-06-19 12:58:43.472735
+2025-06-19 12:58:45,010 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 12:58:45,239 [INFO] Saved 16 stock records to database
+2025-06-19 13:00:45,246 [INFO] Running scheduled stock scraper
+2025-06-19 13:00:45,246 [INFO] Starting stock scraper at 2025-06-19 13:00:45.246389
+2025-06-19 13:00:46,744 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 13:00:46,992 [INFO] Saved 16 stock records to database
+2025-06-19 13:03:47,004 [INFO] Running scheduled stock scraper
+2025-06-19 13:03:47,010 [INFO] Starting stock scraper at 2025-06-19 13:03:47.010614
+2025-06-19 13:03:48,399 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 13:03:48,809 [INFO] Saved 16 stock records to database
+2025-06-19 13:08:48,821 [INFO] Running scheduled stock scraper
+2025-06-19 13:08:48,825 [INFO] Starting stock scraper at 2025-06-19 13:08:48.825153
+2025-06-19 13:08:50,231 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 13:08:50,484 [INFO] Saved 16 stock records to database
+2025-06-19 13:13:50,495 [INFO] Running scheduled stock scraper
+2025-06-19 13:13:50,497 [INFO] Starting stock scraper at 2025-06-19 13:13:50.497623
+2025-06-19 13:13:52,041 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 13:13:52,298 [INFO] Saved 16 stock records to database
+2025-06-19 13:15:52,310 [INFO] Running scheduled stock scraper
+2025-06-19 13:15:52,311 [INFO] Starting stock scraper at 2025-06-19 13:15:52.311771
+2025-06-19 13:15:53,908 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 13:15:54,117 [INFO] Saved 16 stock records to database
+2025-06-19 13:18:54,128 [INFO] Running scheduled stock scraper
+2025-06-19 13:18:54,131 [INFO] Starting stock scraper at 2025-06-19 13:18:54.131967
+2025-06-19 13:18:55,537 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 13:18:55,791 [INFO] Saved 16 stock records to database
+2025-06-19 13:23:55,803 [INFO] Running scheduled stock scraper
+2025-06-19 13:23:55,808 [INFO] Starting stock scraper at 2025-06-19 13:23:55.808644
+2025-06-19 13:23:57,249 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 13:23:57,439 [INFO] Saved 16 stock records to database
+2025-06-19 13:28:57,451 [INFO] Running scheduled stock scraper
+2025-06-19 13:28:57,456 [INFO] Starting stock scraper at 2025-06-19 13:28:57.456654
+2025-06-19 13:28:58,911 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 13:28:59,156 [INFO] Saved 16 stock records to database
+2025-06-19 13:30:59,166 [INFO] Running scheduled stock scraper
+2025-06-19 13:30:59,167 [INFO] Starting stock scraper at 2025-06-19 13:30:59.167098
+2025-06-19 13:31:00,747 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 13:31:01,002 [INFO] Saved 16 stock records to database
+2025-06-19 13:34:01,012 [INFO] Running scheduled stock scraper
+2025-06-19 13:34:01,015 [INFO] Starting stock scraper at 2025-06-19 13:34:01.015749
+2025-06-19 13:34:02,569 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 13:34:02,744 [INFO] Saved 16 stock records to database
+2025-06-19 13:39:02,753 [INFO] Running scheduled stock scraper
+2025-06-19 13:39:02,760 [INFO] Starting stock scraper at 2025-06-19 13:39:02.760394
+2025-06-19 13:39:05,397 [INFO] Successfully extracted data for 16 stocks
+2025-06-19 13:39:05,650 [INFO] Saved 16 stock records to database

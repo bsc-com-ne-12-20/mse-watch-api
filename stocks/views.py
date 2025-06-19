@@ -3,6 +3,9 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.db.models import Max
 from django.shortcuts import get_object_or_404
+from django.http import HttpResponse, Http404
+from django.conf import settings
+import os
 from .models import StockPrice, Company, HistoricalPrice, Subscriber
 from .serializers import StockPriceSerializer, CompanySerializer, SubscriberSerializer
 from datetime import datetime, timedelta
@@ -11,6 +14,110 @@ import logging
 from .services.historical_service import MSEHistoricalService
 
 logger = logging.getLogger(__name__)
+
+@api_view(['GET'])
+def stock_icons_list(request):
+    """
+    List all available stock icons - Public endpoint (no authentication required)
+    
+    Returns a list of all available stock symbol icons with their URLs.
+    
+    Response:
+    - JSON object with available icons and their metadata
+    """
+    try:
+        # Get images directory
+        images_dir = os.path.join(settings.BASE_DIR, 'staticfiles', 'images')
+        
+        if not os.path.exists(images_dir):
+            return Response({
+                'error': 'Images directory not found',
+                'available_icons': []
+            }, status=404)
+        
+        # Get all image files
+        available_icons = []
+        supported_extensions = ['.png', '.jpeg', '.jpg']
+        
+        for filename in os.listdir(images_dir):
+            file_path = os.path.join(images_dir, filename)
+            if os.path.isfile(file_path):
+                name, ext = os.path.splitext(filename)
+                if ext.lower() in supported_extensions:
+                    # Get file size
+                    file_size = os.path.getsize(file_path)
+                    
+                    icon_info = {
+                        'symbol': name.upper(),
+                        'filename': filename,
+                        'format': ext.lower().replace('.', ''),
+                        'size_bytes': file_size,
+                        'url': f"/api/stock-icon/{name.upper()}/"
+                    }
+                    available_icons.append(icon_info)
+        
+        # Sort by symbol
+        available_icons.sort(key=lambda x: x['symbol'])
+        
+        return Response({
+            'total_icons': len(available_icons),
+            'available_icons': available_icons,
+            'supported_formats': ['png', 'jpeg', 'jpg'],
+            'usage': 'GET /api/stock-icon/{symbol}/ to get individual icons'
+        })
+        
+    except Exception as e:
+        logger.error(f"Error listing stock icons: {str(e)}")
+        return Response({
+            'error': 'Error listing available icons',
+            'message': str(e)
+        }, status=500)
+
+@api_view(['GET'])
+def stock_icon(request, symbol):
+    """
+    Get stock symbol icon/image - Public endpoint (no authentication required)
+    
+    Returns the image file for the given stock symbol.
+    Supports PNG, JPEG, and JPG formats.
+    
+    Parameters:
+    - symbol: Stock symbol (e.g., TNM, AIRTEL, etc.)
+    
+    Response:
+    - Image file with appropriate content type
+    - 404 if image not found
+    """
+    symbol = symbol.upper()
+    
+    # Define possible image extensions
+    extensions = ['.png', '.jpeg', '.jpg']
+    
+    # Look for the image file in staticfiles/images
+    images_dir = os.path.join(settings.BASE_DIR, 'staticfiles', 'images')
+    
+    for ext in extensions:
+        image_path = os.path.join(images_dir, f"{symbol}{ext}")
+        if os.path.exists(image_path):
+            try:
+                # Determine content type based on extension
+                content_type = 'image/png' if ext == '.png' else 'image/jpeg'
+                
+                # Read and return the image
+                with open(image_path, 'rb') as f:
+                    image_data = f.read()
+                
+                response = HttpResponse(image_data, content_type=content_type)
+                response['Cache-Control'] = 'public, max-age=86400'  # Cache for 24 hours
+                response['Access-Control-Allow-Origin'] = '*'  # Allow CORS for public endpoint
+                return response
+                
+            except Exception as e:
+                logger.error(f"Error serving image for {symbol}: {str(e)}")
+                raise Http404(f"Error loading image for symbol {symbol}")
+    
+    # If no image found, return 404
+    raise Http404(f"Image not found for symbol {symbol}")
 
 class StockPriceViewSet(viewsets.ReadOnlyModelViewSet):
     """

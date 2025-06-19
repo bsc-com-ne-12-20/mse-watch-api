@@ -13,6 +13,8 @@ urlpatterns = [
     path('by-datetime/', views.prices_by_datetime, name='prices-by-datetime'),
     path('company/<str:symbol>/', views.company_detail, name='company-detail'),  # Changed from 'companies/' to 'company/'
     path('historical/<str:symbol>/', views.historical_prices, name='historical-prices'),
+    path('stock-icons/', views.stock_icons_list, name='stock-icons-list'),  # Public endpoint to list all icons
+    path('stock-icon/<str:symbol>/', views.stock_icon, name='stock-icon'),  # Public endpoint for stock icons
     path('subscribe/', views.subscribe, name='subscribe'),
     path('unsubscribe/<str:token>/', views.unsubscribe, name='unsubscribe'),
 ]
