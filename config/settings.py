@@ -83,8 +83,8 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'accounts.middleware.APIKeyMiddleware',  # Move before AuthenticationMiddleware
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'accounts.middleware.APIKeyMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -169,7 +169,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 20
+    'PAGE_SIZE': 20,
+    'DEFAULT_AUTHENTICATION_CLASSES': [],  # Disable DRF authentication
+    'DEFAULT_PERMISSION_CLASSES': [],      # Disable DRF permissions
 }
 
 # Email Configuration

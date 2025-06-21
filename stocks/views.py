@@ -1,6 +1,7 @@
 from rest_framework import viewsets, filters, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework.permissions import AllowAny
 from django.db.models import Max
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponse, Http404
@@ -125,6 +126,7 @@ class StockPriceViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = StockPrice.objects.all()
     serializer_class = StockPriceSerializer
+    permission_classes = [AllowAny]  # Use custom middleware for authentication
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = ['symbol']
     ordering_fields = ['date', 'time', 'price', 'change']
@@ -269,6 +271,7 @@ class CompanyViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
+    permission_classes = [AllowAny]  # Use custom middleware for authentication
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = ['symbol', 'name', 'sector', 'industry']
     ordering_fields = ['symbol', 'name', 'sector', 'listed_date']

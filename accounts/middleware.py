@@ -15,7 +15,9 @@ class APIKeyMiddleware(MiddlewareMixin):
     def process_request(self, request):
         # Only apply to API endpoints
         if not request.path.startswith('/api/'):
-            return None        # Skip authentication for some endpoints (like market status which might be public)
+            return None
+            
+        # Skip authentication for specific public endpoints
         public_endpoints = [
             '/api/docs/', 
             '/api/schema/',
