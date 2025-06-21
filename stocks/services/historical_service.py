@@ -3,234 +3,261 @@ from bs4 import BeautifulSoup
 import re
 import json
 import logging
-from datetime import datetime
+from datetime import datetime, date, timedelta
 from stocks.models import Company, HistoricalPrice
 from django.db import transaction
-import pickle
-import os
-from pathlib import Path
+from django.core.cache import cache
+import time
 
 logger = logging.getLogger(__name__)
 
 class MSEHistoricalService:
-    """Service to fetch historical stock data from MSE API"""
+    """Service to fetch historical stock data from MSE website"""
     
-    BASE_URL = "https://www.mse.mn/en/company/"
-    VALID_RANGES = [
-        '1month', '3months', '6months', '1year', 
-        'ytd', '2years', '3years', '5years'
-    ]
+    BASE_URL = "https://mse.co.mw/company/"
+    
+    # Time period mapping: API parameter -> months
+    TIME_PERIOD_MAP = {
+        '1month': 1,
+        '3months': 3, 
+        '6months': 6,
+        '1year': 12,
+        '2years': 24,
+        '5years': 60
+    }
     
     def __init__(self):
         self.session = requests.Session()
-        self.authenticated = False
+        # Set headers to mimic a real browser
+        self.session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+            'Accept': 'text/html, */*; q=0.01',
+            'Accept-Language': 'en-US,en;q=0.9',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'DNT': '1',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1',        })
         
-        # Try to load cookies on initialization
-        self.load_cookies()
+    def get_company_id_from_symbol(self, symbol):
+        """
+        Map stock symbol to MSE company ID.
+        These are the actual company IDs from the MSE website.
+        """
+        # Complete mappings for all MSE-listed companies
+        symbol_to_id = {
+            'AIRTEL': 'MWAIRT001156',
+            'BHL': 'MWBHL0010029',
+            'FDHB': 'MWFDHB001166',
+            'FMBCH': 'MWFMB0010138',
+            'ICON': 'MWICON001146',
+            'ILLOVO': 'MWILLV010032',
+            'MPICO': 'MWMPI0010116',
+            'NBM': 'MWNBM0010074',
+            'NBS': 'MWNBS0010105',
+            'NICO': 'MWNICO010014',
+            'NITL': 'MWNITL010091',
+            'OMU': 'ZAE000255360',
+            'PCL': 'MWPCL0010053',
+            'STANDARD': 'MWSTD0010041',
+            'SUNBIRD': 'MWSTL0010085',
+            'TNM': 'MWTNM0010126',
+        }
         
-    def load_cookies(self):
-        """Load saved cookies from file"""
-        cookie_file = os.path.join(Path.home(), '.mse_cookies')
-        
-        try:
-            if os.path.exists(cookie_file):
-                with open(cookie_file, 'rb') as f:
-                    self.session.cookies.update(pickle.load(f))
-                    
-                logger.info(f"Loaded cookies from {cookie_file}")
-                self.authenticated = True
-                return True
-            else:
-                logger.warning(f"No cookie file found at {cookie_file}")
-                return False
-        except Exception as e:
-            logger.error(f"Error loading cookies: {str(e)}")
-            return False
-
-    def set_manual_cookies(self, cookie_string):
-        """Set cookies manually from a browser session"""
-        try:
-            # Clear existing cookies
-            self.session.cookies.clear()
-            
-            # Split the cookie string into individual cookies
-            cookies = cookie_string.split(';')
-            
-            # Iterate through the cookies and set them in the session
-            for cookie in cookies:
-                cookie = cookie.strip()
-                if cookie:
-                    name, value = cookie.split('=', 1)
-                    self.session.cookies.set(name.strip(), value.strip())
-            
-            # Test the cookies by making a request to a protected page
-            response = self.session.get(self.BASE_URL + 'TNM')  # Replace 'TNM' with a valid symbol
-            if response.status_code == 200:
-                self.authenticated = True
-                logger.info("Successfully set manual cookies.")
-                return True
-            else:
-                logger.error(f"Failed to authenticate with provided cookies. Status code: {response.status_code}")
-                return False
-        except Exception as e:
-            logger.error(f"Error setting manual cookies: {e}")
-            return False
+        return symbol_to_id.get(symbol.upper())
     
     def get_historical_data(self, symbol, time_range):
         """
-        Fetches historical stock data from the MSE website.
+        Fetch historical stock data from MSE website
         
         Args:
-            symbol (str): The stock symbol.
-            time_range (str): The time range for the data (e.g., '1month', '3months').
-        
+            symbol (str): Stock symbol
+            time_range (str): Time range (1month, 3months, 6months, 1year, 2years, 5years)
+            
         Returns:
-            dict: A dictionary containing company information and stock prices, or None if an error occurs.
+            dict: Historical data or None if error
         """
-        url = f"{self.BASE_URL}{symbol}?stock_history={time_range}"
+        # Check cache first
+        cache_key = f"historical_{symbol}_{time_range}_{date.today().isoformat()}"
+        cached_data = cache.get(cache_key)
+        if cached_data:
+            logger.info(f"Returning cached data for {symbol} {time_range}")
+            return cached_data
+            
+        # Get company ID
+        company_id = self.get_company_id_from_symbol(symbol)
+        if not company_id:
+            logger.error(f"No company ID mapping found for symbol: {symbol}")
+            return None
+            
+        # Get time period number
+        period_num = self.TIME_PERIOD_MAP.get(time_range)
+        if not period_num:
+            logger.error(f"Invalid time range: {time_range}")
+            return None
+            
+        # Build URL and make request
+        url = f"{self.BASE_URL}{company_id}/{period_num}"
         
         try:
-            response = self.session.get(url)
-            response.raise_for_status()  # Raise HTTPError for bad responses (4xx or 5xx)
-            soup = BeautifulSoup(response.content, 'html.parser')
-            
-            # Extract company information
-            company_info = self._extract_company_info(soup, symbol)
-            
-            # Extract stock prices
-            stock_prices = self._extract_stock_prices(soup)
-            
-            if not stock_prices:
-                logger.warning(f"No stock prices found for {symbol} in {time_range} range.")
-                return None
-            
-            # Prepare the result
-            result = {
-                'company': company_info,
-                'time_range': time_range,
-                'stock_prices': stock_prices,
-                'retrieved_at': datetime.now().isoformat()
+            # Set additional headers for this specific request
+            headers = {
+                'Referer': f"{self.BASE_URL}{company_id}",
+                'Origin': 'https://mse.co.mw',
+                'X-Requested-With': 'XMLHttpRequest',
             }
             
-            logger.info(f"Successfully fetched historical data for {symbol} in {time_range} range.")
+            logger.info(f"Fetching data from: {url}")
+            response = self.session.post(url, headers=headers, timeout=30)
+            response.raise_for_status()
+            
+            # Parse the response to extract chart data
+            chart_data = self._extract_chart_data(response.text, symbol)
+            
+            if not chart_data:
+                logger.warning(f"No chart data found for {symbol} in {time_range}")
+                return None
+                
+            # Prepare result
+            result = {
+                'company': {
+                    'symbol': symbol,
+                    'name': self._get_company_name(symbol),
+                },
+                'time_range': time_range,
+                'stock_prices': chart_data,
+                'retrieved_at': datetime.now().isoformat(),
+                'data_points': len(chart_data),
+                'source': 'mse.co.mw'
+            }
+            
+            # Cache the result for 6 hours for recent data, 24 hours for older data
+            cache_timeout = 21600 if time_range in ['1month', '3months'] else 86400
+            cache.set(cache_key, result, cache_timeout)
+            
+            logger.info(f"Successfully fetched {len(chart_data)} data points for {symbol} {time_range}")
             return result
-        
+            
         except requests.exceptions.RequestException as e:
-            logger.error(f"Request error for {symbol} in {time_range} range: {e}")
+            logger.error(f"Request failed for {symbol} {time_range}: {str(e)}")
             return None
         except Exception as e:
-            logger.error(f"Error fetching historical data for {symbol} in {time_range} range: {e}")
+            logger.error(f"Error fetching data for {symbol} {time_range}: {str(e)}")
             return None
     
-    def _extract_company_info(self, soup, symbol):
-        """Extracts company information from the BeautifulSoup object."""
+    def _extract_chart_data(self, html_content, symbol):
+        """
+        Extract chart data from the HTML response
+        """
+        try:
+            # Look for the JSON data in the JavaScript
+            # The data is in the format: var json = [{"label":"Price","data":[...]}]
+            pattern = r'var\s+json\s*=\s*(\[.*?\]);'
+            match = re.search(pattern, html_content, re.DOTALL)
+            
+            if not match:
+                # Try alternative pattern for the datasets
+                pattern = r'"datasets":\s*(\[.*?\])'
+                match = re.search(pattern, html_content, re.DOTALL)
+                
+            if not match:
+                logger.warning(f"Could not find chart data pattern in response for {symbol}")
+                return []
+                
+            # Parse the JSON data
+            json_str = match.group(1)
+            chart_datasets = json.loads(json_str)
+            
+            # Extract price data
+            price_data = []
+            
+            if isinstance(chart_datasets, list) and len(chart_datasets) > 0:
+                dataset = chart_datasets[0]
+                if 'data' in dataset:
+                    data_points = dataset['data']
+                    
+                    for point in data_points:
+                        if isinstance(point, dict) and 'x' in point and 'y' in point:
+                            try:
+                                # Parse date (format: "21-May-2025")
+                                date_str = point['x']
+                                price_date = datetime.strptime(date_str, "%d-%b-%Y").date()
+                                price_value = float(point['y'])
+                                
+                                price_data.append({
+                                    'date': price_date.isoformat(),
+                                    'price': price_value,
+                                    'close': price_value,  # Using price as close for now
+                                    'open': None,
+                                    'high': None,
+                                    'low': None,
+                                    'volume': None,
+                                    'turnover': None
+                                })
+                            except (ValueError, KeyError) as e:
+                                logger.warning(f"Error parsing data point {point}: {e}")
+                                continue
+                                
+            # Sort by date (oldest first)
+            price_data.sort(key=lambda x: x['date'])
+            
+            return price_data
+            
+        except json.JSONDecodeError as e:
+            logger.error(f"JSON decode error: {e}")
+            return []
+        except Exception as e:
+            logger.error(f"Error extracting chart data: {e}")
+            return []
+    
+    def _get_company_name(self, symbol):
+        """Get company name from database or return symbol"""
         try:
             company = Company.objects.get(symbol=symbol)
-            return {
-                'symbol': company.symbol,
-                'name': company.name,
-                'listing_date': company.listed_date.isoformat() if company.listed_date else None,
-                'listing_price': float(company.listing_price) if company.listing_price else None,
-                'shares_in_issue': company.shares_in_issue
-            }
+            return company.name
         except Company.DoesNotExist:
-            logger.warning(f"Company with symbol {symbol} not found in database.")
-            return {'symbol': symbol}
-        except Exception as e:
-            logger.error(f"Error extracting company info for {symbol}: {e}")
-            return {'symbol': symbol}
-    
-    def _extract_stock_prices(self, soup):
-        """Extracts stock prices from the BeautifulSoup object."""
-        stock_prices = []
-        try:
-            table = soup.find('table', {'id': 'stock-history'})
-            if not table:
-                logger.warning("Stock history table not found.")
-                return stock_prices
-            
-            rows = table.find_all('tr')
-            header = [th.text.strip() for th in rows[0].find_all('th')]
-            
-            for row in rows[1:]:
-                cols = row.find_all('td')
-                cols = [ele.text.strip() for ele in cols]
-                
-                # Extract data and handle potential errors
-                try:
-                    date_str = cols[0]
-                    date = datetime.strptime(date_str, '%Y-%m-%d').date()
-                    open_price = float(cols[1].replace(',', '')) if cols[1] else None
-                    high = float(cols[2].replace(',', '')) if cols[2] else None
-                    low = float(cols[3].replace(',', '')) if cols[3] else None
-                    close_price = float(cols[4].replace(',', '')) if cols[4] else None
-                    volume = int(cols[5].replace(',', '')) if cols[5] else 0
-                    turnover = float(cols[6].replace(',', '')) if cols[6] else None
-                    
-                    stock_prices.append({
-                        'date': date,
-                        'open': open_price,
-                        'high': high,
-                        'low': low,
-                        'close': close_price,
-                        'volume': volume,
-                        'turnover': turnover
-                    })
-                except ValueError as ve:
-                     logger.warning(f"ValueError processing row: {cols}. Error: {ve}")
-                except Exception as e:
-                    logger.error(f"Error processing row: {cols}. Error: {e}")
-        except Exception as e:
-            logger.error(f"Error extracting stock prices: {e}")
-        
-        return stock_prices
+            return symbol
     
     @transaction.atomic
     def save_to_database(self, symbol, historical_data):
-        """Saves historical data to the database."""
+        """Save historical data to database"""
         if not historical_data or 'stock_prices' not in historical_data:
-            logger.warning(f"No historical data to save for {symbol}.")
+            logger.warning(f"No historical data to save for {symbol}")
             return 0
-        
+            
+        # Get or create company
         try:
             company = Company.objects.get(symbol=symbol)
         except Company.DoesNotExist:
-            logger.warning(f"Company with symbol {symbol} not found in database.")
-            return 0
-        
+            logger.warning(f"Company {symbol} not found in database")
+            company = None
+            
         saved_count = 0
         for price_data in historical_data['stock_prices']:
             try:
-                # Check if the HistoricalPrice already exists
-                historical_price, created = HistoricalPrice.objects.get_or_create(
+                price_date = datetime.fromisoformat(price_data['date']).date()
+                
+                # Create or update historical price
+                historical_price, created = HistoricalPrice.objects.update_or_create(
                     symbol=symbol,
-                    date=price_data['date'],
+                    date=price_date,
                     defaults={
                         'company': company,
-                        'open_price': price_data['open'],
-                        'high': price_data['high'],
-                        'low': price_data['low'],
+                        'price': price_data['price'],
                         'close_price': price_data['close'],
-                        'volume': price_data['volume'],
-                        'turnover': price_data['turnover'] if 'turnover' in price_data else None,
+                        'open_price': price_data.get('open'),
+                        'high': price_data.get('high'),
+                        'low': price_data.get('low'),
+                        'volume': price_data.get('volume'),
+                        'turnover': price_data.get('turnover'),
                         'last_updated': datetime.now()
                     }
                 )
+                
                 if created:
                     saved_count += 1
-                else:
-                    # Update the existing HistoricalPrice
-                    historical_price.open_price = price_data['open']
-                    historical_price.high = price_data['high']
-                    historical_price.low = price_data['low']
-                    historical_price.close_price = price_data['close']
-                    historical_price.volume = price_data['volume']
-                    historical_price.turnover = price_data['turnover'] if 'turnover' in price_data else None,
-                    historical_price.last_updated = datetime.now()
-                    historical_price.save()
                     
             except Exception as e:
-                logger.error(f"Error saving historical price for {symbol} on {price_data['date']}: {e}")
-        
-        logger.info(f"Saved {saved_count} historical prices for {symbol}.")
+                logger.error(f"Error saving price data for {symbol} on {price_data.get('date')}: {e}")
+                
+        logger.info(f"Saved {saved_count} new historical prices for {symbol}")
         return saved_count

@@ -6,10 +6,11 @@ from django.db.models import Max
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponse, Http404
 from django.conf import settings
+from django.core.cache import cache
 import os
 from .models import StockPrice, Company, HistoricalPrice, Subscriber
 from .serializers import StockPriceSerializer, CompanySerializer, SubscriberSerializer
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 import logging
 
 from .services.historical_service import MSEHistoricalService
@@ -312,10 +313,10 @@ def company_detail(request, symbol):
 @api_view(['GET'])
 def historical_prices(request, symbol):
     """
-    Get historical price data for a stock
+    Get historical price data for a stock with smart caching
     
     Query parameters:
-    - range: Time range (1month, 3months, 6months, 1year, ytd, 2years, 3years, 5years)
+    - range: Time range (1month, 3months, 6months, 1year, 2years, 5years)
     - cache: Whether to use cached data (true/false, default: true)
     - refresh: Force refresh data from source (true/false, default: false)
     """
@@ -329,55 +330,48 @@ def historical_prices(request, symbol):
     
     logger.info(f"Fetching historical prices for {symbol} with range {time_range}, cache={use_cache}, refresh={refresh}")
     
-    # Normalize time range
-    valid_ranges = ['1month', '3months', '6months', '1year', 'ytd', '2years', '3years', '5years']
+    # Validate time range
+    valid_ranges = ['1month', '3months', '6months', '1year', '2years', '5years']
     if time_range not in valid_ranges:
         time_range = '1month'
-        logger.warning(f"Invalid time range {time_range}. Using default '1month'.")
-      # Check if we should use cached data
-    if use_cache and not refresh:
-        # Calculate the date threshold based on time range for cache freshness
-        cache_threshold = datetime.now()
-        if time_range == '1month':
-            cache_threshold -= timedelta(hours=6)  # Refresh every 6 hours for 1 month data
-        elif time_range in ['3months', '6months']:
-            cache_threshold -= timedelta(days=1)  # Refresh daily for 3/6 month data
-        else:
-            cache_threshold -= timedelta(days=7)  # Refresh weekly for longer timeframes
-        
-        # Check for cached data
-        recent_data = (
-            HistoricalPrice.objects
-            .filter(symbol=symbol)
-            .filter(last_updated__gt=cache_threshold)
-            .exists()
-        )
-        
-        if recent_data:
-            logger.info(f"Using cached data for {symbol} in {time_range} range.")
-            return get_cached_historical_data(symbol, time_range)
-        
-        # If no recent cached data but cache is requested, check for any cached data
-        any_cached_data = HistoricalPrice.objects.filter(symbol=symbol).exists()
-        if any_cached_data:
-            logger.info(f"Using older cached data for {symbol} in {time_range} range.")
-            return get_cached_historical_data(symbol, time_range)
+        logger.warning(f"Invalid time range. Using default '1month'.")
     
-    # If no cache or cache expired or refresh requested, fetch fresh data
+    # Generate cache key
+    cache_key = f"historical_{symbol}_{time_range}_{date.today().isoformat()}"
+    
+    # Check cache first (unless refresh is forced)
+    if use_cache and not refresh:
+        cached_data = cache.get(cache_key)
+        if cached_data:
+            logger.info(f"Returning cached data for {symbol} {time_range}")
+            cached_data['source'] = 'cache'
+            return Response(cached_data)
+        
+        # Check database cache for older data
+        db_data = get_cached_historical_data(symbol, time_range)
+        if db_data.status_code == 200:
+            logger.info(f"Returning database cached data for {symbol} {time_range}")
+            return db_data
+    
+    # Fetch fresh data from MSE website
     service = MSEHistoricalService()
     historical_data = service.get_historical_data(symbol, time_range)
     
     if not historical_data:
-        logger.warning(f"Could not retrieve historical data for {symbol} from service.")
+        logger.warning(f"Could not retrieve historical data for {symbol} from service")
         return Response({
-            "error": f"Could not retrieve historical data for {symbol}"
+            "error": f"Could not retrieve historical data for {symbol}",
+            "message": "Data may not be available for this symbol or time range"
         }, status=status.HTTP_404_NOT_FOUND)
     
-    # Save data to database for future caching
-    saved_count = service.save_to_database(symbol, historical_data)
-    logger.info(f"Saved {saved_count} data points to database for {symbol}.")
+    # Save to database for future caching
+    try:
+        saved_count = service.save_to_database(symbol, historical_data)
+        logger.info(f"Saved {saved_count} data points to database for {symbol}")
+    except Exception as e:
+        logger.error(f"Error saving to database: {e}")
     
-    # Return the data
+    # Return the fresh data
     return Response(historical_data)
 
 def get_cached_historical_data(symbol, time_range):

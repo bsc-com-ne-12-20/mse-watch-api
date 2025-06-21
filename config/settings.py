@@ -185,6 +185,18 @@ DEFAULT_FROM_EMAIL = 'MSE Market Watch <your-email@example.com>'
 
 CSRF_TRUSTED_ORIGINS = ['https://mse-watch.onrender.com','http://35.193.241.192','http://mse-watch.ddns.net']
 
+# Cache Configuration for Django database cache
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'cache_table',
+        'TIMEOUT': 86400,  # 24 hours default
+        'OPTIONS': {
+            'MAX_ENTRIES': 10000,
+        }
+    }
+}
+
 # Custom user model
 AUTH_USER_MODEL = 'accounts.User'
 

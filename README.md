@@ -84,12 +84,31 @@ Available ranges: `1month`, `3months`, `6months`, `1year`, `ytd`, `2years`, `3ye
 
 | Endpoint | Description |
 |----------|-------------|
-| `/stocks/prices/` | List all stock prices |
-| `/stocks/latest/` | Get the latest price for each stock |
-| `/stocks/by-datetime/` | Get stock prices at a specific date and time |
-| `/stocks/companies/` | List all companies |
-| `/stocks/company/<symbol>/` | Get details for a specific company |
-| `/stocks/historical/<symbol>/` | Get historical prices for a specific stock |
+| `/api/prices/` | List all stock prices |
+| `/api/latest/` | Get the latest price for each stock |
+| `/api/by-datetime/` | Get stock prices at a specific date and time |
+| `/api/companies/` | List all companies |
+| `/api/company/<symbol>/` | Get details for a specific company |
+| `/api/historical/<symbol>/` | **Get historical prices with smart caching** |
+
+### 📈 Historical Data API (Featured)
+
+Our newly rebuilt historical data endpoint provides:
+
+- **📊 Complete MSE Coverage**: All 16 listed companies supported
+- **⚡ Smart Caching**: 30-50ms response times for cached data
+- **🔄 Real-time Scraping**: Fresh data from mse.co.mw when needed
+- **📅 Multiple Time Ranges**: 1 month to 5 years of historical data
+- **🛡️ Reliable**: Automatic cache refresh and error handling
+
+**Quick Example:**
+```bash
+# Get 3 months of AIRTEL historical data
+curl -H "X-API-Key: your_api_key" \
+     "https://your-domain.com/api/historical/AIRTEL/?range=3months"
+```
+
+**📖 Complete Documentation**: See [`docs/HISTORICAL_DATA_GUIDE.md`](docs/HISTORICAL_DATA_GUIDE.md) for detailed examples, code samples, and integration guides.
 
 ### Query Parameters
 

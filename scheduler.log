@@ -3739,3 +3739,149 @@ accounts.models.User.MultipleObjectsReturned: get() returned more than one User 
 2025-06-21 19:09:26,936 [WARNING] Could not retrieve historical data for BHL from service.
 2025-06-21 19:09:26,938 [WARNING] Not Found: /api/historical/BHL/
 2025-06-21 19:14:16,545 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 19:19:16,551 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 19:24:16,558 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 19:29:16,564 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 19:34:16,569 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 19:39:16,575 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 19:44:16,581 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 19:49:16,585 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 19:51:32,367 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\config\settings.py changed, reloading.
+2025-06-21 19:51:35,646 [INFO] Starting scheduler service
+2025-06-21 19:51:35,657 [INFO] Scheduler started successfully
+2025-06-21 19:51:35,657 [INFO] Scheduler initialized in Django startup
+2025-06-21 19:51:35,718 [INFO] Watching for file changes with StatReloader
+2025-06-21 19:51:43,594 [INFO] Starting scheduler service
+2025-06-21 19:51:43,603 [INFO] Scheduler started successfully
+2025-06-21 19:51:43,603 [INFO] Scheduler initialized in Django startup
+2025-06-21 19:51:58,244 [INFO] Starting scheduler service
+2025-06-21 19:51:58,261 [INFO] Scheduler started successfully
+2025-06-21 19:51:58,263 [INFO] Scheduler initialized in Django startup
+2025-06-21 19:52:06,011 [INFO] Starting scheduler service
+2025-06-21 19:52:06,026 [INFO] Scheduler started successfully
+2025-06-21 19:52:06,027 [INFO] Scheduler initialized in Django startup
+2025-06-21 19:52:36,099 [INFO] Starting scheduler service
+2025-06-21 19:52:36,115 [INFO] Scheduler started successfully
+2025-06-21 19:52:36,116 [INFO] Scheduler initialized in Django startup
+2025-06-21 19:53:46,345 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\services\historical_service.py changed, reloading.
+2025-06-21 19:53:47,416 [INFO] Starting scheduler service
+2025-06-21 19:53:47,428 [INFO] Scheduler started successfully
+2025-06-21 19:53:47,428 [INFO] Scheduler initialized in Django startup
+2025-06-21 19:53:47,466 [INFO] Watching for file changes with StatReloader
+2025-06-21 19:54:12,898 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\views.py changed, reloading.
+2025-06-21 19:54:14,000 [INFO] Starting scheduler service
+2025-06-21 19:54:14,002 [INFO] Scheduler started successfully
+2025-06-21 19:54:14,002 [INFO] Scheduler initialized in Django startup
+2025-06-21 19:54:14,051 [INFO] Watching for file changes with StatReloader
+2025-06-21 19:54:22,632 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\views.py changed, reloading.
+2025-06-21 19:54:23,549 [INFO] Starting scheduler service
+2025-06-21 19:54:23,549 [INFO] Scheduler started successfully
+2025-06-21 19:54:23,549 [INFO] Scheduler initialized in Django startup
+2025-06-21 19:54:23,594 [INFO] Watching for file changes with StatReloader
+2025-06-21 19:55:22,651 [INFO] Starting scheduler service
+2025-06-21 19:55:22,666 [INFO] Scheduler started successfully
+2025-06-21 19:55:22,667 [INFO] Scheduler initialized in Django startup
+2025-06-21 19:55:23,417 [INFO] Fetching data from: https://mse.co.mw/company/MWAIRT001156/1
+2025-06-21 19:55:24,949 [INFO] Successfully fetched 22 data points for AIRTEL 1month
+2025-06-21 19:55:24,971 [INFO] Saved 22 new historical prices for AIRTEL
+2025-06-21 19:55:51,903 [INFO] Starting scheduler service
+2025-06-21 19:55:51,917 [INFO] Scheduler started successfully
+2025-06-21 19:55:51,917 [INFO] Scheduler initialized in Django startup
+2025-06-21 19:55:51,961 [INFO] Watching for file changes with StatReloader
+2025-06-21 19:56:27,705 [WARNING] Unauthorized: /api/historical/AIRTEL/
+2025-06-21 19:56:27,738 [WARNING] Unauthorized: /api/historical/AIRTEL/
+2025-06-21 19:56:27,753 [WARNING] Unauthorized: /api/historical/AIRTEL/
+2025-06-21 19:56:27,760 [WARNING] Unauthorized: /api/historical/AIRTEL/
+2025-06-21 19:57:15,324 [INFO] Starting scheduler service
+2025-06-21 19:57:15,338 [INFO] Scheduler started successfully
+2025-06-21 19:57:15,339 [INFO] Scheduler initialized in Django startup
+2025-06-21 19:59:33,403 [INFO] Starting scheduler service
+2025-06-21 19:59:33,409 [INFO] Scheduler started successfully
+2025-06-21 19:59:33,409 [INFO] Scheduler initialized in Django startup
+2025-06-21 20:00:51,921 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 20:01:14,010 [WARNING] Unauthorized: /api/historical/AIRTEL/
+2025-06-21 20:01:14,032 [WARNING] Unauthorized: /api/historical/AIRTEL/
+2025-06-21 20:01:14,050 [WARNING] Unauthorized: /api/historical/AIRTEL/
+2025-06-21 20:01:14,065 [WARNING] Unauthorized: /api/historical/AIRTEL/
+2025-06-21 20:01:25,552 [INFO] Starting scheduler service
+2025-06-21 20:01:25,561 [INFO] Scheduler started successfully
+2025-06-21 20:01:25,562 [INFO] Scheduler initialized in Django startup
+2025-06-21 20:01:43,119 [INFO] Fetching historical prices for AIRTEL with range 1month, cache=True, refresh=False
+2025-06-21 20:01:43,119 [INFO] Returning cached data for AIRTEL 1month
+2025-06-21 20:01:43,163 [INFO] Fetching historical prices for AIRTEL with range 3months, cache=True, refresh=False
+2025-06-21 20:01:43,173 [INFO] Returning database cached data for AIRTEL 3months
+2025-06-21 20:01:43,229 [INFO] Fetching historical prices for AIRTEL with range 1month, cache=True, refresh=False
+2025-06-21 20:01:43,229 [INFO] Returning cached data for AIRTEL 1month
+2025-06-21 20:01:43,268 [INFO] Fetching historical prices for AIRTEL with range 1month, cache=True, refresh=False
+2025-06-21 20:01:43,268 [INFO] Returning cached data for AIRTEL 1month
+2025-06-21 20:05:51,928 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 20:10:51,934 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 20:13:46,218 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\services\historical_service.py changed, reloading.
+2025-06-21 20:13:47,368 [INFO] Starting scheduler service
+2025-06-21 20:13:47,390 [INFO] Scheduler started successfully
+2025-06-21 20:13:47,390 [INFO] Scheduler initialized in Django startup
+2025-06-21 20:13:47,453 [INFO] Watching for file changes with StatReloader
+2025-06-21 20:18:47,393 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 20:23:47,400 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 20:28:47,405 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 20:33:47,409 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 20:38:47,414 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 20:43:47,420 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 20:48:47,424 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 20:49:46,090 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\services\historical_service.py changed, reloading.
+2025-06-21 20:49:47,250 [INFO] Starting scheduler service
+2025-06-21 20:49:47,272 [INFO] Scheduler started successfully
+2025-06-21 20:49:47,272 [INFO] Scheduler initialized in Django startup
+2025-06-21 20:49:47,319 [INFO] Watching for file changes with StatReloader
+2025-06-21 20:50:06,371 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\services\historical_service.py changed, reloading.
+2025-06-21 20:50:07,213 [INFO] Starting scheduler service
+2025-06-21 20:50:07,222 [INFO] Scheduler started successfully
+2025-06-21 20:50:07,222 [INFO] Scheduler initialized in Django startup
+2025-06-21 20:50:07,264 [INFO] Watching for file changes with StatReloader
+2025-06-21 20:51:41,509 [INFO] Starting scheduler service
+2025-06-21 20:51:41,521 [INFO] Scheduler started successfully
+2025-06-21 20:51:41,521 [INFO] Scheduler initialized in Django startup
+2025-06-21 20:51:42,326 [INFO] Fetching data from: https://mse.co.mw/company/MWTNM0010126/1
+2025-06-21 20:51:48,917 [INFO] Successfully fetched 22 data points for TNM 1month
+2025-06-21 20:51:48,937 [INFO] Saved 22 new historical prices for TNM
+2025-06-21 20:52:21,595 [INFO] Starting scheduler service
+2025-06-21 20:52:21,619 [INFO] Scheduler started successfully
+2025-06-21 20:52:21,620 [INFO] Scheduler initialized in Django startup
+2025-06-21 20:52:22,348 [INFO] Fetching data from: https://mse.co.mw/company/MWNBM0010074/1
+2025-06-21 20:52:23,253 [INFO] Successfully fetched 22 data points for NBM 1month
+2025-06-21 20:52:23,290 [INFO] Saved 22 new historical prices for NBM
+2025-06-21 20:53:11,474 [INFO] Fetching historical prices for AIRTEL with range 1month, cache=True, refresh=False
+2025-06-21 20:53:11,482 [INFO] Returning cached data for AIRTEL 1month
+2025-06-21 20:53:11,615 [INFO] Fetching historical prices for TNM with range 1month, cache=True, refresh=False
+2025-06-21 20:53:11,616 [INFO] Returning cached data for TNM 1month
+2025-06-21 20:53:11,787 [INFO] Fetching historical prices for NBM with range 1month, cache=True, refresh=False
+2025-06-21 20:53:11,787 [INFO] Returning cached data for NBM 1month
+2025-06-21 20:53:11,834 [INFO] Fetching historical prices for STANDARD with range 3months, cache=True, refresh=False
+2025-06-21 20:53:11,834 [WARNING] No historical data found in cache for STANDARD in 3months range.
+2025-06-21 20:53:11,834 [INFO] Fetching data from: https://mse.co.mw/company/MWSTD0010041/3
+2025-06-21 20:53:16,894 [INFO] Successfully fetched 60 data points for STANDARD 3months
+2025-06-21 20:53:16,944 [INFO] Saved 60 new historical prices for STANDARD
+2025-06-21 20:53:16,944 [INFO] Saved 60 data points to database for STANDARD
+2025-06-21 20:53:17,011 [INFO] Fetching historical prices for AIRTEL with range 1month, cache=True, refresh=False
+2025-06-21 20:53:17,012 [INFO] Returning cached data for AIRTEL 1month
+2025-06-21 20:53:17,045 [INFO] Fetching historical prices for AIRTEL with range 1month, cache=True, refresh=False
+2025-06-21 20:53:17,045 [INFO] Returning cached data for AIRTEL 1month
+2025-06-21 20:55:07,227 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 20:58:08,511 [INFO] Fetching historical prices for AIRTEL with range 1month, cache=True, refresh=False
+2025-06-21 20:58:08,513 [INFO] Returning cached data for AIRTEL 1month
+2025-06-21 20:58:08,559 [INFO] Fetching historical prices for TNM with range 1month, cache=True, refresh=False
+2025-06-21 20:58:08,559 [INFO] Returning cached data for TNM 1month
+2025-06-21 20:58:08,607 [INFO] Fetching historical prices for NBM with range 1month, cache=True, refresh=False
+2025-06-21 20:58:08,609 [INFO] Returning cached data for NBM 1month
+2025-06-21 20:58:08,659 [INFO] Fetching historical prices for STANDARD with range 3months, cache=True, refresh=False
+2025-06-21 20:58:08,659 [INFO] Returning cached data for STANDARD 3months
+2025-06-21 20:58:08,710 [INFO] Fetching historical prices for AIRTEL with range 1month, cache=True, refresh=False
+2025-06-21 20:58:08,710 [INFO] Returning cached data for AIRTEL 1month
+2025-06-21 20:58:08,753 [INFO] Fetching historical prices for AIRTEL with range 1month, cache=True, refresh=False
+2025-06-21 20:58:08,753 [INFO] Returning cached data for AIRTEL 1month
+2025-06-21 20:59:35,088 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\services\historical_service.py changed, reloading.
+2025-06-21 20:59:36,122 [INFO] Starting scheduler service
+2025-06-21 20:59:36,134 [INFO] Scheduler started successfully
+2025-06-21 20:59:36,134 [INFO] Scheduler initialized in Django startup
+2025-06-21 20:59:36,173 [INFO] Watching for file changes with StatReloader
+2025-06-21 21:04:36,138 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
