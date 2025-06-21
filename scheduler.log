@@ -3637,3 +3637,105 @@ accounts.models.User.MultipleObjectsReturned: get() returned more than one User 
 2025-06-21 10:56:48,420 [WARNING] Unauthorized: /api/market-status/
 2025-06-21 10:57:48,429 [WARNING] Unauthorized: /api/market-status/
 2025-06-21 10:58:48,436 [WARNING] Unauthorized: /api/market-status/
+2025-06-21 11:00:22,295 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 11:05:22,299 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 11:10:22,305 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 11:15:22,312 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 11:20:22,321 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 11:25:22,328 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 11:29:15,819 [INFO] Fetching historical prices for BHL with range 1day, cache=True, refresh=False
+2025-06-21 11:29:15,819 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-21 11:29:17,207 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-21 11:29:22,520 [ERROR] Request error for BHL in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/BHL?stock_history=1month
+2025-06-21 11:29:22,520 [WARNING] Could not retrieve historical data for BHL from service.
+2025-06-21 11:29:22,520 [WARNING] Not Found: /api/historical/BHL/
+2025-06-21 11:29:43,513 [INFO] Fetching historical prices for ILLOVO with range 1day, cache=True, refresh=False
+2025-06-21 11:29:43,513 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-21 11:29:43,518 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-21 11:29:44,810 [ERROR] Request error for ILLOVO in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/ILLOVO?stock_history=1month
+2025-06-21 11:29:44,810 [WARNING] Could not retrieve historical data for ILLOVO from service.
+2025-06-21 11:29:44,810 [WARNING] Not Found: /api/historical/ILLOVO/
+2025-06-21 11:30:22,362 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 11:35:22,367 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 11:40:22,373 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 11:45:22,381 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 11:46:36,861 [INFO] Fetching historical prices for AIRTEL with range 1day, cache=True, refresh=False
+2025-06-21 11:46:36,862 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-21 11:46:36,868 [INFO] Using older cached data for AIRTEL in 1month range.
+2025-06-21 11:46:46,973 [INFO] Fetching historical prices for AIRTEL with range 1week, cache=True, refresh=False
+2025-06-21 11:46:46,973 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-21 11:46:46,973 [INFO] Using older cached data for AIRTEL in 1month range.
+2025-06-21 11:46:49,381 [INFO] Fetching historical prices for AIRTEL with range 1year, cache=True, refresh=False
+2025-06-21 11:46:49,381 [INFO] Using older cached data for AIRTEL in 1year range.
+2025-06-21 11:50:22,386 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 11:55:22,392 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 12:00:22,397 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 12:05:22,402 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 12:10:22,409 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 12:15:22,416 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 12:20:22,421 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 12:25:22,426 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 12:30:22,431 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 12:35:22,438 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 12:40:22,444 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 12:45:22,449 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 12:50:22,455 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 12:55:22,465 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 13:00:22,470 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 13:05:22,476 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 13:10:22,481 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 13:15:22,486 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 13:20:22,491 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 13:25:22,496 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 13:30:22,502 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 13:35:22,507 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 13:40:22,516 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 13:45:22,521 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 13:50:22,527 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 13:55:22,534 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 14:00:22,542 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 14:05:22,558 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 14:10:22,678 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 14:15:22,775 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 14:20:22,791 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 14:25:22,797 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 14:30:22,803 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 14:35:23,153 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 16:01:09,722 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 16:06:09,779 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 16:11:09,839 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 16:16:09,947 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 16:21:09,955 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 16:26:10,065 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 16:31:10,071 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 16:36:10,078 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 16:41:10,084 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 16:46:10,090 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 16:51:10,097 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 16:56:10,103 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 17:01:10,175 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 17:06:10,288 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 17:11:10,425 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 17:16:10,430 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 17:21:10,435 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 17:26:10,664 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 17:31:10,720 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 17:36:10,781 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 17:41:10,884 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 18:54:16,411 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 18:59:16,424 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 19:04:16,535 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 19:07:17,315 [INFO] Fetching historical prices for NITL with range 1day, cache=True, refresh=False
+2025-06-21 19:07:17,315 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-21 19:07:18,030 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-21 19:07:21,279 [ERROR] Request error for NITL in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/NITL?stock_history=1month
+2025-06-21 19:07:21,279 [WARNING] Could not retrieve historical data for NITL from service.
+2025-06-21 19:07:21,294 [WARNING] Not Found: /api/historical/NITL/
+2025-06-21 19:09:16,540 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
+2025-06-21 19:09:25,336 [INFO] Fetching historical prices for BHL with range 1day, cache=True, refresh=False
+2025-06-21 19:09:25,336 [WARNING] Invalid time range 1month. Using default '1month'.
+2025-06-21 19:09:25,342 [INFO] Loaded cookies from C:\Users\innow\.mse_cookies
+2025-06-21 19:09:26,936 [ERROR] Request error for BHL in 1month range: 500 Server Error: Internal Server Error for url: https://www.mse.mn/en/company/BHL?stock_history=1month
+2025-06-21 19:09:26,936 [WARNING] Could not retrieve historical data for BHL from service.
+2025-06-21 19:09:26,938 [WARNING] Not Found: /api/historical/BHL/
+2025-06-21 19:14:16,545 [INFO] Market is closed on Saturday. Skipping scheduled scrape.
