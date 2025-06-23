@@ -374,6 +374,18 @@ def historical_prices(request, symbol):
     # Return the fresh data
     return Response(historical_data)
 
+def _get_expected_data_points(time_range):
+    """Get expected number of data points for a time range (assuming ~20 trading days per month)"""
+    expected_map = {
+        '1month': 22,
+        '3months': 60,
+        '6months': 120,
+        '1year': 240,
+        '2years': 480,
+        '5years': 1200
+    }
+    return expected_map.get(time_range, 22)
+
 def get_cached_historical_data(symbol, time_range):
     """Get historical data from database cache"""
     # Map time ranges to date ranges
@@ -441,15 +453,25 @@ def get_cached_historical_data(symbol, time_range):
             'volume': price.volume,
             'turnover': float(price.turnover) if price.turnover else None  # Make sure turnover is included
         })
+      # Check if we have sufficient data for the requested time range
+    expected_points = _get_expected_data_points(time_range)
+    actual_points = len(stock_prices)
     
-    return Response({
+    result = {
         'company': company_info,
         'time_range': time_range,
         'stock_prices': stock_prices,
         'retrieved_at': datetime.now().isoformat(),
         'data_points': len(stock_prices),
         'source': 'cache'
-    })
+    }
+    
+    # Add data limitation warning if applicable
+    if actual_points < expected_points * 0.7:  # Less than 70% of expected data
+        result['data_limitation'] = f"Limited data available: {actual_points} points (expected ~{expected_points})"
+        result['note'] = "Database contains limited historical data for this time range"
+    
+    return Response(result)
 
 @api_view(['POST'])
 def subscribe(request):

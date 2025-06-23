@@ -116,6 +116,15 @@ class MSEHistoricalService:
             if not chart_data:
                 logger.warning(f"No chart data found for {symbol} in {time_range}")
                 return None
+            
+            # Check if we have sufficient data for the requested time range
+            expected_points = self._get_expected_data_points(time_range)
+            actual_points = len(chart_data)
+            data_limitation = None
+            
+            if actual_points < expected_points * 0.7:  # Less than 70% of expected data
+                data_limitation = f"Limited data available: {actual_points} points (expected ~{expected_points})"
+                logger.warning(f"Limited data for {symbol} {time_range}: {actual_points}/{expected_points} points")
                 
             # Prepare result
             result = {
@@ -129,6 +138,11 @@ class MSEHistoricalService:
                 'data_points': len(chart_data),
                 'source': 'mse.co.mw'
             }
+            
+            # Add data limitation warning if applicable
+            if data_limitation:
+                result['data_limitation'] = data_limitation
+                result['note'] = "MSE website may not have complete historical data for this time range"
             
             # Cache the result for 6 hours for recent data, 24 hours for older data
             cache_timeout = 21600 if time_range in ['1month', '3months'] else 86400
@@ -261,3 +275,15 @@ class MSEHistoricalService:
                 
         logger.info(f"Saved {saved_count} new historical prices for {symbol}")
         return saved_count
+    
+    def _get_expected_data_points(self, time_range):
+        """Get expected number of data points for a time range (assuming ~20 trading days per month)"""
+        expected_map = {
+            '1month': 22,
+            '3months': 60,
+            '6months': 120,
+            '1year': 240,
+            '2years': 480,
+            '5years': 1200
+        }
+        return expected_map.get(time_range, 22)
