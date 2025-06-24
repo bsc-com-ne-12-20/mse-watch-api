@@ -329,15 +329,18 @@ def historical_prices(request, symbol):
     symbol = symbol.upper()
     
     logger.info(f"Fetching historical prices for {symbol} with range {time_range}, cache={use_cache}, refresh={refresh}")
-    
-    # Validate time range
-    valid_ranges = ['1month', '3months', '6months', '1year', '2years', '5years']
+      # Validate time range
+    valid_ranges = ['1day', '1month', '3months', '6months', '1year', '2years', '5years']
     if time_range not in valid_ranges:
         time_range = '1month'
         logger.warning(f"Invalid time range. Using default '1month'.")
-    
-    # Generate cache key
-    cache_key = f"historical_{symbol}_{time_range}_{date.today().isoformat()}"
+      # Generate cache key (different strategy for intraday)
+    if time_range == '1day':
+        # For intraday, cache by hour to get fresh data every hour
+        current_hour = datetime.now().hour
+        cache_key = f"intraday_{symbol}_{date.today().isoformat()}_{current_hour}"
+    else:
+        cache_key = f"historical_{symbol}_{time_range}_{date.today().isoformat()}"
     
     # Check cache first (unless refresh is forced)
     if use_cache and not refresh:
@@ -388,6 +391,12 @@ def _get_expected_data_points(time_range):
 
 def get_cached_historical_data(symbol, time_range):
     """Get historical data from database cache"""
+    # For intraday (1day), don't use database cache - always fetch fresh
+    if time_range == '1day':
+        return Response({
+            "error": "No cached intraday data available"
+        }, status=status.HTTP_404_NOT_FOUND)
+    
     # Map time ranges to date ranges
     today = datetime.now().date()
     

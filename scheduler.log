@@ -8822,3 +8822,97 @@ accounts.models.User.MultipleObjectsReturned: get() returned more than one User 
 2025-06-23 18:47:39,286 [INFO] Scheduler started successfully
 2025-06-23 18:47:39,286 [INFO] Scheduler initialized in Django startup
 2025-06-23 18:47:39,339 [INFO] Watching for file changes with StatReloader
+2025-06-24 07:58:04,908 [INFO] Starting scheduler service
+2025-06-24 07:58:04,920 [INFO] Scheduler started successfully
+2025-06-24 07:58:04,921 [INFO] Scheduler initialized in Django startup
+2025-06-24 07:58:04,978 [INFO] Watching for file changes with StatReloader
+2025-06-24 07:58:35,719 [WARNING] Unauthorized: /api/stocks/historical/AIRTEL/
+2025-06-24 07:58:37,764 [WARNING] Unauthorized: /api/stocks/historical/AIRTEL/
+2025-06-24 07:58:39,843 [WARNING] Unauthorized: /api/stocks/historical/AIRTEL/
+2025-06-24 07:59:41,840 [WARNING] Not Found: /api/stocks/historical/AIRTEL/
+2025-06-24 07:59:43,937 [WARNING] Not Found: /api/stocks/historical/AIRTEL/
+2025-06-24 07:59:46,037 [WARNING] Not Found: /api/stocks/historical/AIRTEL/
+2025-06-24 08:00:09,737 [INFO] Fetching historical prices for AIRTEL with range 1day, cache=True, refresh=False
+2025-06-24 08:00:09,747 [INFO] Returning database cached data for AIRTEL 1day
+2025-06-24 08:00:11,846 [INFO] Fetching historical prices for AIRTEL with range 1day, cache=True, refresh=False
+2025-06-24 08:00:11,857 [INFO] Returning database cached data for AIRTEL 1day
+2025-06-24 08:00:13,957 [INFO] Fetching historical prices for AIRTEL with range 1month, cache=True, refresh=False
+2025-06-24 08:00:13,957 [INFO] Returning database cached data for AIRTEL 1month
+2025-06-24 08:00:26,177 [INFO] Starting scheduler service
+2025-06-24 08:00:26,189 [INFO] Scheduler started successfully
+2025-06-24 08:00:26,191 [INFO] Scheduler initialized in Django startup
+2025-06-24 08:00:40,790 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\services\historical_service.py changed, reloading.
+2025-06-24 08:00:41,876 [INFO] Starting scheduler service
+2025-06-24 08:00:41,882 [INFO] Scheduler started successfully
+2025-06-24 08:00:41,883 [INFO] Scheduler initialized in Django startup
+2025-06-24 08:00:41,924 [INFO] Watching for file changes with StatReloader
+2025-06-24 08:00:49,344 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\services\historical_service.py changed, reloading.
+2025-06-24 08:00:50,411 [INFO] Starting scheduler service
+2025-06-24 08:00:50,421 [INFO] Scheduler started successfully
+2025-06-24 08:00:50,421 [INFO] Scheduler initialized in Django startup
+2025-06-24 08:00:50,481 [INFO] Watching for file changes with StatReloader
+2025-06-24 08:01:03,140 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\services\historical_service.py changed, reloading.
+2025-06-24 08:01:04,222 [INFO] Starting scheduler service
+2025-06-24 08:01:04,229 [INFO] Scheduler started successfully
+2025-06-24 08:01:04,230 [INFO] Scheduler initialized in Django startup
+2025-06-24 08:01:04,278 [INFO] Watching for file changes with StatReloader
+2025-06-24 08:01:21,430 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\services\historical_service.py changed, reloading.
+2025-06-24 08:01:22,422 [INFO] Starting scheduler service
+2025-06-24 08:01:22,431 [INFO] Scheduler started successfully
+2025-06-24 08:01:22,431 [INFO] Scheduler initialized in Django startup
+2025-06-24 08:01:22,487 [INFO] Watching for file changes with StatReloader
+2025-06-24 08:01:33,927 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\services\historical_service.py changed, reloading.
+2025-06-24 08:01:34,767 [INFO] Starting scheduler service
+2025-06-24 08:01:34,775 [INFO] Scheduler started successfully
+2025-06-24 08:01:34,776 [INFO] Scheduler initialized in Django startup
+2025-06-24 08:01:34,827 [INFO] Watching for file changes with StatReloader
+2025-06-24 08:01:45,180 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\services\historical_service.py changed, reloading.
+2025-06-24 08:01:46,071 [INFO] Starting scheduler service
+2025-06-24 08:01:46,084 [INFO] Scheduler started successfully
+2025-06-24 08:01:46,085 [INFO] Scheduler initialized in Django startup
+2025-06-24 08:01:46,134 [INFO] Watching for file changes with StatReloader
+2025-06-24 08:02:00,586 [INFO] Fetching historical prices for AIRTEL with range 1day, cache=True, refresh=False
+2025-06-24 08:02:00,598 [INFO] Returning database cached data for AIRTEL 1day
+2025-06-24 08:02:02,696 [INFO] Fetching historical prices for AIRTEL with range 1day, cache=True, refresh=False
+2025-06-24 08:02:02,701 [INFO] Returning database cached data for AIRTEL 1day
+2025-06-24 08:02:04,775 [INFO] Fetching historical prices for AIRTEL with range 1month, cache=True, refresh=False
+2025-06-24 08:02:04,777 [INFO] Returning database cached data for AIRTEL 1month
+2025-06-24 08:02:26,931 [INFO] Fetching historical prices for AIRTEL with range 1day, cache=True, refresh=False
+2025-06-24 08:02:26,937 [INFO] Returning database cached data for AIRTEL 1day
+2025-06-24 08:02:49,067 [INFO] Starting scheduler service
+2025-06-24 08:02:49,077 [INFO] Scheduler started successfully
+2025-06-24 08:02:49,077 [INFO] Scheduler initialized in Django startup
+2025-06-24 08:02:58,747 [INFO] Fetching historical prices for AIRTEL with range 1day, cache=True, refresh=False
+2025-06-24 08:02:58,756 [INFO] Returning database cached data for AIRTEL 1day
+2025-06-24 08:03:13,971 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\services\historical_service.py changed, reloading.
+2025-06-24 08:03:14,977 [INFO] Starting scheduler service
+2025-06-24 08:03:14,988 [INFO] Scheduler started successfully
+2025-06-24 08:03:14,989 [INFO] Scheduler initialized in Django startup
+2025-06-24 08:03:15,028 [INFO] Watching for file changes with StatReloader
+2025-06-24 08:03:50,122 [INFO] Starting scheduler service
+2025-06-24 08:03:50,129 [INFO] Scheduler started successfully
+2025-06-24 08:03:50,129 [INFO] Scheduler initialized in Django startup
+2025-06-24 08:03:50,677 [INFO] Fetching intraday data for AIRTEL
+2025-06-24 08:04:10,996 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\views.py changed, reloading.
+2025-06-24 08:04:11,766 [INFO] Starting scheduler service
+2025-06-24 08:04:11,773 [INFO] Scheduler started successfully
+2025-06-24 08:04:11,775 [INFO] Scheduler initialized in Django startup
+2025-06-24 08:04:11,807 [INFO] Watching for file changes with StatReloader
+2025-06-24 08:04:22,977 [INFO] Fetching historical prices for AIRTEL with range 1day, cache=True, refresh=False
+2025-06-24 08:04:22,977 [INFO] Fetching intraday data for AIRTEL
+2025-06-24 08:04:22,986 [WARNING] No historical data to save for AIRTEL
+2025-06-24 08:04:22,986 [INFO] Saved 0 data points to database for AIRTEL
+2025-06-24 08:04:53,100 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\views.py changed, reloading.
+2025-06-24 08:04:54,008 [INFO] Starting scheduler service
+2025-06-24 08:04:54,019 [INFO] Scheduler started successfully
+2025-06-24 08:04:54,019 [INFO] Scheduler initialized in Django startup
+2025-06-24 08:04:54,076 [INFO] Watching for file changes with StatReloader
+2025-06-24 08:07:31,969 [INFO] Fetching historical prices for AIRTEL with range 1day, cache=True, refresh=False
+2025-06-24 08:07:31,975 [INFO] Fetching intraday data for AIRTEL
+2025-06-24 08:07:31,977 [WARNING] No historical data to save for AIRTEL
+2025-06-24 08:07:31,977 [INFO] Saved 0 data points to database for AIRTEL
+2025-06-24 08:07:34,034 [WARNING] Unauthorized: /api/historical/AIRTEL/
+2025-06-24 08:07:36,137 [INFO] Fetching historical prices for INVALID with range 1day, cache=True, refresh=False
+2025-06-24 08:07:36,137 [INFO] Fetching intraday data for INVALID
+2025-06-24 08:07:36,144 [WARNING] Could not retrieve historical data for INVALID from service
+2025-06-24 08:07:36,145 [WARNING] Not Found: /api/historical/INVALID/

@@ -15,9 +15,9 @@ class MSEHistoricalService:
     """Service to fetch historical stock data from MSE website"""
     
     BASE_URL = "https://mse.co.mw/company/"
-    
-    # Time period mapping: API parameter -> months
+      # Time period mapping: API parameter -> months
     TIME_PERIOD_MAP = {
+        '1day': 0,  # Special case for intraday data
         '1month': 1,
         '3months': 3, 
         '6months': 6,
@@ -75,8 +75,12 @@ class MSEHistoricalService:
             
         Returns:
             dict: Historical data or None if error
-        """
-        # Check cache first
+        """        # Handle intraday (1day) data specially
+        if time_range == '1day':
+            logger.info(f"Fetching intraday data for {symbol}")
+            return self.get_intraday_data(symbol)
+            
+        # Check cache first for historical data
         cache_key = f"historical_{symbol}_{time_range}_{date.today().isoformat()}"
         cached_data = cache.get(cache_key)
         if cached_data:
@@ -88,10 +92,9 @@ class MSEHistoricalService:
         if not company_id:
             logger.error(f"No company ID mapping found for symbol: {symbol}")
             return None
-            
-        # Get time period number
+              # Get time period number
         period_num = self.TIME_PERIOD_MAP.get(time_range)
-        if not period_num:
+        if period_num is None:
             logger.error(f"Invalid time range: {time_range}")
             return None
             
@@ -284,6 +287,104 @@ class MSEHistoricalService:
             '6months': 120,
             '1year': 240,
             '2years': 480,
-            '5years': 1200
-        }
+            '5years': 1200        }
         return expected_map.get(time_range, 22)
+    
+    def get_intraday_data(self, symbol, target_date=None):
+        """
+        Get intraday data for a specific trading day from StockPrice model
+        
+        Args:
+            symbol (str): Stock symbol
+            target_date (date): Specific date to get data for (defaults to today)
+            
+        Returns:
+            dict: Intraday data for the specified day
+        """
+        from datetime import date
+        
+        if target_date is None:
+            target_date = date.today()
+        
+        # Get all prices for this symbol from the target date, ordered by time
+        from stocks.models import StockPrice
+        intraday_prices = StockPrice.objects.filter(
+            symbol=symbol.upper(),
+            date=target_date
+        ).order_by('time').values(
+            'price', 'time', 'change', 'direction', 'market_status'
+        )
+        
+        # If no data for today, try yesterday (most recent trading day)
+        if not intraday_prices and target_date == date.today():
+            recent_date = StockPrice.objects.filter(
+                symbol=symbol.upper()
+            ).values_list('date', flat=True).order_by('-date').first()
+            
+            if recent_date:
+                target_date = recent_date
+                intraday_prices = StockPrice.objects.filter(
+                    symbol=symbol.upper(),
+                    date=target_date
+                ).order_by('time').values(
+                    'price', 'time', 'change', 'direction', 'market_status'
+                )
+        
+        if not intraday_prices:
+            return None
+            return None
+            
+        # Convert to list and format times
+        price_data = []
+        for price in intraday_prices:
+            price_data.append({
+                'time': price['time'].strftime('%H:%M:%S'),
+                'price': float(price['price']),
+                'change': float(price['change']),
+                'direction': price['direction'],
+                'market_status': price['market_status']
+            })
+          # Calculate OHLC from intraday data
+        prices = [p['price'] for p in price_data]
+        if prices:
+            open_price = prices[0]
+            high_price = max(prices)
+            low_price = min(prices)
+            close_price = prices[-1]
+        else:
+            open_price = high_price = low_price = close_price = 0
+            
+        return {
+            'symbol': symbol.upper(),
+            'date': target_date.isoformat(),
+            'open': open_price,
+            'high': high_price,
+            'low': low_price,
+            'close': close_price,
+            'intraday_prices': price_data,
+            'data_points': len(price_data),
+            'market_sessions': self._identify_market_sessions(price_data)
+        }
+    
+    def _identify_market_sessions(self, price_data):
+        """Identify which market session each price belongs to"""
+        sessions = []
+        for price in price_data:
+            time_str = price['time']
+            hour, minute, _ = map(int, time_str.split(':'))
+            time_minutes = hour * 60 + minute
+            
+            if 540 <= time_minutes < 570:  # 09:00-09:30
+                session = 'Pre-Open'
+            elif 570 <= time_minutes < 870:  # 09:30-14:30
+                session = 'Open'
+            elif 870 <= time_minutes < 900:  # 14:30-15:00
+                session = 'Close'
+            elif 900 <= time_minutes < 1020:  # 15:00-17:00
+                session = 'Post-Close'
+            else:
+                session = 'After-Hours'
+                
+            sessions.append(session)
+            
+        return list(set(sessions))  # Return unique sessions

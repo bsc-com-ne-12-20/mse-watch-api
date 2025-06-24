@@ -68,12 +68,17 @@ Get historical stock price data for any MSE-listed company with intelligent cach
 | `refresh` | boolean | `false` | Force refresh from source |
 
 #### **Supported Time Ranges:**
+- `1day` - **🆕 Intraday data** (real-time price movements throughout the trading day)
 - `1month` - Last 30 days
 - `3months` - Last 90 days  
 - `6months` - Last 180 days
 - `1year` - Last 12 months
 - `2years` - Last 24 months
 - `5years` - Last 60 months
+
+> **📊 NEW: Intraday Data Available!**  
+> Use `range=1day` to get real-time intraday price movements with market session identification.  
+> **[📖 View Detailed Intraday API Documentation →](INTRADAY_API_GUIDE.md)**
 
 #### **Supported Companies (16 Total):**
 | Symbol | Company Name | ID |

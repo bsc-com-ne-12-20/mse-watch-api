@@ -5,6 +5,7 @@ A Django REST API for retrieving and managing Malawi Stock Exchange (MSE) data, 
 ## Features
 
 - **Real-time Stock Data**: Scrape and store current stock prices from the Malawi Stock Exchange
+- **🆕 Intraday Data**: Real-time price movements throughout trading day with market session identification
 - **Company Information**: Comprehensive company data for listed stocks
 - **Historical Price Data**: Access to historical stock price information with OHLC (Open, High, Low, Close) data
 - **REST API**: Clean, documented API endpoints for accessing all data
