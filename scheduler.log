@@ -8916,3 +8916,325 @@ accounts.models.User.MultipleObjectsReturned: get() returned more than one User 
 2025-06-24 08:07:36,137 [INFO] Fetching intraday data for INVALID
 2025-06-24 08:07:36,144 [WARNING] Could not retrieve historical data for INVALID from service
 2025-06-24 08:07:36,145 [WARNING] Not Found: /api/historical/INVALID/
+2025-06-24 08:09:54,025 [INFO] Market is outside operating hours (08:09). Skipping scheduled scrape.
+2025-06-24 08:14:54,030 [INFO] Market is outside operating hours (08:14). Skipping scheduled scrape.
+2025-06-24 08:19:54,036 [INFO] Market is outside operating hours (08:19). Skipping scheduled scrape.
+2025-06-24 08:24:54,041 [INFO] Market is outside operating hours (08:24). Skipping scheduled scrape.
+2025-06-24 08:29:54,048 [INFO] Market is outside operating hours (08:29). Skipping scheduled scrape.
+2025-06-24 08:34:54,054 [INFO] Market is outside operating hours (08:34). Skipping scheduled scrape.
+2025-06-24 08:39:54,062 [INFO] Market is outside operating hours (08:39). Skipping scheduled scrape.
+2025-06-24 08:44:54,069 [INFO] Market is outside operating hours (08:44). Skipping scheduled scrape.
+2025-06-24 08:49:54,075 [INFO] Market is outside operating hours (08:49). Skipping scheduled scrape.
+2025-06-24 08:54:54,081 [INFO] Market is outside operating hours (08:54). Skipping scheduled scrape.
+2025-06-24 08:59:54,086 [INFO] Market is outside operating hours (08:59). Skipping scheduled scrape.
+2025-06-24 09:00:54,089 [INFO] Running scheduled stock scraper
+2025-06-24 09:00:54,114 [INFO] Starting stock scraper at 2025-06-24 09:00:54.114151 (forced)
+2025-06-24 09:01:03,942 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:01:04,212 [INFO] Saved 16 stock records to database
+2025-06-24 09:05:04,228 [INFO] Running scheduled stock scraper
+2025-06-24 09:05:04,235 [INFO] Starting stock scraper at 2025-06-24 09:05:04.235838
+2025-06-24 09:05:05,765 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:05:06,198 [INFO] Saved 16 stock records to database
+2025-06-24 09:05:06,210 [INFO] Running scheduled stock scraper
+2025-06-24 09:05:06,210 [INFO] Starting stock scraper at 2025-06-24 09:05:06.210892
+2025-06-24 09:05:07,661 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:05:07,968 [INFO] Saved 16 stock records to database
+2025-06-24 09:10:07,985 [INFO] Running scheduled stock scraper
+2025-06-24 09:10:07,991 [INFO] Starting stock scraper at 2025-06-24 09:10:07.991149
+2025-06-24 09:10:09,603 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:10:10,032 [INFO] Saved 16 stock records to database
+2025-06-24 09:10:10,032 [INFO] Running scheduled stock scraper
+2025-06-24 09:10:10,032 [INFO] Starting stock scraper at 2025-06-24 09:10:10.032743
+2025-06-24 09:10:11,541 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:10:11,811 [INFO] Saved 16 stock records to database
+2025-06-24 09:15:11,825 [INFO] Running scheduled stock scraper
+2025-06-24 09:15:11,825 [INFO] Starting stock scraper at 2025-06-24 09:15:11.825448
+2025-06-24 09:15:13,426 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:15:13,814 [INFO] Saved 16 stock records to database
+2025-06-24 09:15:13,814 [INFO] Running scheduled stock scraper
+2025-06-24 09:15:13,830 [INFO] Starting stock scraper at 2025-06-24 09:15:13.830121
+2025-06-24 09:15:15,223 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:15:15,478 [INFO] Saved 16 stock records to database
+2025-06-24 09:20:15,485 [INFO] Running scheduled stock scraper
+2025-06-24 09:20:15,494 [INFO] Starting stock scraper at 2025-06-24 09:20:15.494795
+2025-06-24 09:20:16,893 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:20:17,167 [INFO] Saved 16 stock records to database
+2025-06-24 09:20:17,179 [INFO] Running scheduled stock scraper
+2025-06-24 09:20:17,179 [INFO] Starting stock scraper at 2025-06-24 09:20:17.179751
+2025-06-24 09:20:18,605 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:20:18,882 [INFO] Saved 16 stock records to database
+2025-06-24 09:25:18,892 [INFO] Running scheduled stock scraper
+2025-06-24 09:25:18,897 [INFO] Starting stock scraper at 2025-06-24 09:25:18.897313
+2025-06-24 09:25:20,441 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:25:20,585 [INFO] Saved 16 stock records to database
+2025-06-24 09:25:20,586 [INFO] Running scheduled stock scraper
+2025-06-24 09:25:20,590 [INFO] Starting stock scraper at 2025-06-24 09:25:20.590926
+2025-06-24 09:25:22,102 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:25:22,262 [INFO] Saved 16 stock records to database
+2025-06-24 09:30:22,272 [INFO] Running scheduled stock scraper
+2025-06-24 09:30:22,276 [INFO] Starting stock scraper at 2025-06-24 09:30:22.276939 (forced)
+2025-06-24 09:30:23,697 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:30:23,871 [INFO] Saved 16 stock records to database
+2025-06-24 09:30:23,871 [INFO] Running scheduled stock scraper
+2025-06-24 09:30:23,871 [INFO] Starting stock scraper at 2025-06-24 09:30:23.871185
+2025-06-24 09:30:25,308 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:30:25,450 [INFO] Saved 16 stock records to database
+2025-06-24 09:35:25,457 [INFO] Running scheduled stock scraper
+2025-06-24 09:35:25,461 [INFO] Starting stock scraper at 2025-06-24 09:35:25.461599
+2025-06-24 09:35:27,448 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:35:28,015 [INFO] Saved 16 stock records to database
+2025-06-24 09:40:28,021 [INFO] Running scheduled stock scraper
+2025-06-24 09:40:28,028 [INFO] Starting stock scraper at 2025-06-24 09:40:28.028333
+2025-06-24 09:40:30,170 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:40:30,424 [INFO] Saved 16 stock records to database
+2025-06-24 09:45:30,432 [INFO] Running scheduled stock scraper
+2025-06-24 09:45:30,436 [INFO] Starting stock scraper at 2025-06-24 09:45:30.436312
+2025-06-24 09:45:31,917 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:45:32,170 [INFO] Saved 16 stock records to database
+2025-06-24 09:45:32,170 [INFO] Running scheduled stock scraper
+2025-06-24 09:45:32,186 [INFO] Starting stock scraper at 2025-06-24 09:45:32.186105
+2025-06-24 09:45:33,682 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:45:33,940 [INFO] Saved 16 stock records to database
+2025-06-24 09:50:33,950 [INFO] Running scheduled stock scraper
+2025-06-24 09:50:33,956 [INFO] Starting stock scraper at 2025-06-24 09:50:33.956326
+2025-06-24 09:50:35,472 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:50:35,687 [INFO] Saved 16 stock records to database
+2025-06-24 09:55:35,693 [INFO] Running scheduled stock scraper
+2025-06-24 09:55:35,696 [INFO] Starting stock scraper at 2025-06-24 09:55:35.696655
+2025-06-24 09:55:37,395 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 09:55:37,626 [INFO] Saved 16 stock records to database
+2025-06-24 10:00:37,631 [INFO] Running scheduled stock scraper
+2025-06-24 10:00:37,631 [INFO] Starting stock scraper at 2025-06-24 10:00:37.631528
+2025-06-24 10:00:39,330 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 10:00:39,575 [INFO] Saved 16 stock records to database
+2025-06-24 10:00:39,576 [INFO] Running scheduled stock scraper
+2025-06-24 10:00:39,578 [INFO] Starting stock scraper at 2025-06-24 10:00:39.578017
+2025-06-24 10:00:41,103 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 10:00:41,441 [INFO] Saved 16 stock records to database
+2025-06-24 10:05:41,446 [INFO] Running scheduled stock scraper
+2025-06-24 10:05:41,448 [INFO] Starting stock scraper at 2025-06-24 10:05:41.448875
+2025-06-24 10:05:42,966 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 10:05:43,253 [INFO] Saved 16 stock records to database
+2025-06-24 10:10:43,259 [INFO] Running scheduled stock scraper
+2025-06-24 10:10:43,262 [INFO] Starting stock scraper at 2025-06-24 10:10:43.262774
+2025-06-24 10:10:44,901 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 10:10:45,203 [INFO] Saved 16 stock records to database
+2025-06-24 10:15:45,219 [INFO] Running scheduled stock scraper
+2025-06-24 10:15:45,221 [INFO] Starting stock scraper at 2025-06-24 10:15:45.221685
+2025-06-24 10:15:46,924 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 10:15:47,154 [INFO] Saved 16 stock records to database
+2025-06-24 10:15:47,154 [INFO] Running scheduled stock scraper
+2025-06-24 10:15:47,154 [INFO] Starting stock scraper at 2025-06-24 10:15:47.154551
+2025-06-24 10:15:50,149 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 10:15:50,301 [INFO] Saved 16 stock records to database
+2025-06-24 10:20:50,315 [INFO] Running scheduled stock scraper
+2025-06-24 10:20:50,315 [INFO] Starting stock scraper at 2025-06-24 10:20:50.315675
+2025-06-24 10:20:51,735 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 10:20:51,957 [INFO] Saved 16 stock records to database
+2025-06-24 10:25:51,987 [INFO] Running scheduled stock scraper
+2025-06-24 10:25:51,991 [INFO] Starting stock scraper at 2025-06-24 10:25:51.991860
+2025-06-24 10:26:01,039 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 10:26:01,207 [INFO] Saved 16 stock records to database
+2025-06-24 10:30:01,316 [INFO] Running scheduled stock scraper
+2025-06-24 10:30:01,327 [INFO] Starting stock scraper at 2025-06-24 10:30:01.327096
+2025-06-24 10:30:03,636 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 10:30:04,207 [INFO] Saved 16 stock records to database
+2025-06-24 10:31:04,308 [INFO] Running scheduled stock scraper
+2025-06-24 10:31:04,314 [INFO] Starting stock scraper at 2025-06-24 10:31:04.314819
+2025-06-24 10:31:06,290 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 10:31:06,516 [INFO] Saved 16 stock records to database
+2025-06-24 10:36:06,522 [INFO] Running scheduled stock scraper
+2025-06-24 10:36:06,738 [INFO] Starting stock scraper at 2025-06-24 10:36:06.738920
+2025-06-24 10:36:08,620 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 10:36:08,998 [INFO] Saved 16 stock records to database
+2025-06-24 10:41:09,004 [INFO] Running scheduled stock scraper
+2025-06-24 10:41:09,120 [INFO] Starting stock scraper at 2025-06-24 10:41:09.120830
+2025-06-24 10:41:10,897 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 10:41:11,287 [INFO] Saved 16 stock records to database
+2025-06-24 10:45:11,319 [INFO] Running scheduled stock scraper
+2025-06-24 10:45:11,351 [INFO] Starting stock scraper at 2025-06-24 10:45:11.351899
+2025-06-24 10:45:13,139 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 10:45:13,476 [INFO] Saved 16 stock records to database
+2025-06-24 10:46:13,484 [INFO] Running scheduled stock scraper
+2025-06-24 10:46:13,578 [INFO] Starting stock scraper at 2025-06-24 10:46:13.578368
+2025-06-24 10:46:15,225 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 10:46:15,541 [INFO] Saved 16 stock records to database
+2025-06-24 10:51:15,552 [INFO] Running scheduled stock scraper
+2025-06-24 10:51:15,552 [INFO] Starting stock scraper at 2025-06-24 10:51:15.552039
+2025-06-24 10:51:17,335 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 10:51:17,611 [INFO] Saved 16 stock records to database
+2025-06-24 10:56:17,719 [INFO] Running scheduled stock scraper
+2025-06-24 10:56:17,736 [INFO] Starting stock scraper at 2025-06-24 10:56:17.736947
+2025-06-24 10:56:20,796 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 10:56:21,068 [INFO] Saved 16 stock records to database
+2025-06-24 11:00:21,074 [INFO] Running scheduled stock scraper
+2025-06-24 11:00:21,074 [INFO] Starting stock scraper at 2025-06-24 11:00:21.074065
+2025-06-24 11:00:22,383 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 11:00:22,524 [INFO] Saved 16 stock records to database
+2025-06-24 11:01:22,534 [INFO] Running scheduled stock scraper
+2025-06-24 11:01:22,537 [INFO] Starting stock scraper at 2025-06-24 11:01:22.537927
+2025-06-24 11:01:24,020 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 11:01:24,240 [INFO] Saved 16 stock records to database
+2025-06-24 11:06:24,250 [INFO] Running scheduled stock scraper
+2025-06-24 11:06:24,258 [INFO] Starting stock scraper at 2025-06-24 11:06:24.258501
+2025-06-24 11:06:25,658 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 11:06:25,897 [INFO] Saved 16 stock records to database
+2025-06-24 11:11:25,919 [INFO] Running scheduled stock scraper
+2025-06-24 11:11:25,919 [INFO] Starting stock scraper at 2025-06-24 11:11:25.919245
+2025-06-24 11:11:27,693 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 11:11:28,723 [INFO] Saved 16 stock records to database
+2025-06-24 11:15:28,727 [INFO] Running scheduled stock scraper
+2025-06-24 11:15:28,754 [INFO] Starting stock scraper at 2025-06-24 11:15:28.754724
+2025-06-24 11:15:31,408 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 11:15:31,694 [INFO] Saved 16 stock records to database
+2025-06-24 11:16:31,696 [INFO] Running scheduled stock scraper
+2025-06-24 11:16:31,726 [INFO] Starting stock scraper at 2025-06-24 11:16:31.726749
+2025-06-24 11:16:33,128 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 11:16:33,397 [INFO] Saved 16 stock records to database
+2025-06-24 11:21:33,401 [INFO] Running scheduled stock scraper
+2025-06-24 11:21:33,446 [INFO] Starting stock scraper at 2025-06-24 11:21:33.446207
+2025-06-24 11:21:35,195 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 11:21:35,488 [INFO] Saved 16 stock records to database
+2025-06-24 11:26:35,494 [INFO] Running scheduled stock scraper
+2025-06-24 11:26:35,501 [INFO] Starting stock scraper at 2025-06-24 11:26:35.500398
+2025-06-24 11:26:37,490 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 11:26:37,761 [INFO] Saved 16 stock records to database
+2025-06-24 11:30:37,794 [INFO] Running scheduled stock scraper
+2025-06-24 11:30:37,897 [INFO] Starting stock scraper at 2025-06-24 11:30:37.897030
+2025-06-24 11:30:40,728 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 11:30:41,209 [INFO] Saved 16 stock records to database
+2025-06-24 11:31:41,223 [INFO] Running scheduled stock scraper
+2025-06-24 11:31:41,225 [INFO] Starting stock scraper at 2025-06-24 11:31:41.225192
+2025-06-24 11:31:45,313 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 11:31:45,702 [INFO] Saved 16 stock records to database
+2025-06-24 11:36:45,709 [INFO] Running scheduled stock scraper
+2025-06-24 11:36:45,714 [INFO] Starting stock scraper at 2025-06-24 11:36:45.714428
+2025-06-24 11:36:47,383 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 11:36:47,723 [INFO] Saved 16 stock records to database
+2025-06-24 11:41:47,730 [INFO] Running scheduled stock scraper
+2025-06-24 11:41:47,733 [INFO] Starting stock scraper at 2025-06-24 11:41:47.733976
+2025-06-24 11:41:49,409 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 11:41:49,709 [INFO] Saved 16 stock records to database
+2025-06-24 11:45:49,803 [INFO] Running scheduled stock scraper
+2025-06-24 11:45:49,929 [INFO] Starting stock scraper at 2025-06-24 11:45:49.929215
+2025-06-24 11:45:54,379 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 11:45:54,796 [INFO] Saved 16 stock records to database
+2025-06-24 11:46:54,999 [INFO] Running scheduled stock scraper
+2025-06-24 11:46:55,053 [INFO] Starting stock scraper at 2025-06-24 11:46:55.053047
+2025-06-24 11:46:57,318 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 11:47:00,555 [INFO] Saved 16 stock records to database
+2025-06-24 11:52:00,562 [INFO] Running scheduled stock scraper
+2025-06-24 11:52:00,588 [INFO] Starting stock scraper at 2025-06-24 11:52:00.588744
+2025-06-24 11:52:03,017 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 11:52:03,318 [INFO] Saved 16 stock records to database
+2025-06-24 11:57:03,329 [INFO] Running scheduled stock scraper
+2025-06-24 11:57:03,334 [INFO] Starting stock scraper at 2025-06-24 11:57:03.334058
+2025-06-24 11:57:05,670 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 11:57:06,021 [INFO] Saved 16 stock records to database
+2025-06-24 12:00:06,038 [INFO] Running scheduled stock scraper
+2025-06-24 12:00:06,041 [INFO] Starting stock scraper at 2025-06-24 12:00:06.038152
+2025-06-24 12:00:07,823 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 12:00:08,233 [INFO] Saved 16 stock records to database
+2025-06-24 12:02:08,337 [INFO] Running scheduled stock scraper
+2025-06-24 12:02:08,349 [INFO] Starting stock scraper at 2025-06-24 12:02:08.349807
+2025-06-24 12:02:10,370 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 12:02:10,693 [INFO] Saved 16 stock records to database
+2025-06-24 12:07:10,701 [INFO] Running scheduled stock scraper
+2025-06-24 12:07:10,701 [INFO] Starting stock scraper at 2025-06-24 12:07:10.701683
+2025-06-24 12:07:12,525 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 12:07:12,779 [INFO] Saved 16 stock records to database
+2025-06-24 12:12:12,787 [INFO] Running scheduled stock scraper
+2025-06-24 12:12:12,794 [INFO] Starting stock scraper at 2025-06-24 12:12:12.794409
+2025-06-24 12:12:15,365 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 12:12:15,619 [INFO] Saved 16 stock records to database
+2025-06-24 12:15:15,624 [INFO] Running scheduled stock scraper
+2025-06-24 12:15:15,630 [INFO] Starting stock scraper at 2025-06-24 12:15:15.630654
+2025-06-24 12:15:17,150 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 12:15:17,467 [INFO] Saved 16 stock records to database
+2025-06-24 12:17:17,482 [INFO] Running scheduled stock scraper
+2025-06-24 12:17:17,487 [INFO] Starting stock scraper at 2025-06-24 12:17:17.487266
+2025-06-24 12:17:19,011 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 12:17:19,363 [INFO] Saved 16 stock records to database
+2025-06-24 12:22:19,367 [INFO] Running scheduled stock scraper
+2025-06-24 12:22:19,373 [INFO] Starting stock scraper at 2025-06-24 12:22:19.373052
+2025-06-24 12:22:21,404 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 12:22:21,689 [INFO] Saved 16 stock records to database
+2025-06-24 12:27:21,694 [INFO] Running scheduled stock scraper
+2025-06-24 12:27:21,697 [INFO] Starting stock scraper at 2025-06-24 12:27:21.697736
+2025-06-24 12:27:23,953 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 12:27:24,209 [INFO] Saved 16 stock records to database
+2025-06-24 12:30:24,212 [INFO] Running scheduled stock scraper
+2025-06-24 12:30:24,216 [INFO] Starting stock scraper at 2025-06-24 12:30:24.216271
+2025-06-24 12:30:25,917 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 12:30:26,250 [INFO] Saved 16 stock records to database
+2025-06-24 12:32:26,255 [INFO] Running scheduled stock scraper
+2025-06-24 12:32:26,261 [INFO] Starting stock scraper at 2025-06-24 12:32:26.261741
+2025-06-24 12:32:27,906 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 12:32:28,140 [INFO] Saved 16 stock records to database
+2025-06-24 12:37:28,154 [INFO] Running scheduled stock scraper
+2025-06-24 12:37:28,159 [INFO] Starting stock scraper at 2025-06-24 12:37:28.159443
+2025-06-24 12:37:30,006 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 12:37:30,272 [INFO] Saved 16 stock records to database
+2025-06-24 12:42:30,277 [INFO] Running scheduled stock scraper
+2025-06-24 12:42:30,283 [INFO] Starting stock scraper at 2025-06-24 12:42:30.283620
+2025-06-24 12:42:32,128 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 12:42:32,429 [INFO] Saved 16 stock records to database
+2025-06-24 12:45:32,535 [INFO] Running scheduled stock scraper
+2025-06-24 12:45:32,540 [INFO] Starting stock scraper at 2025-06-24 12:45:32.540277
+2025-06-24 12:45:34,121 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 12:45:34,427 [INFO] Saved 16 stock records to database
+2025-06-24 12:47:35,449 [INFO] Running scheduled stock scraper
+2025-06-24 12:47:35,449 [INFO] Starting stock scraper at 2025-06-24 12:47:35.449192
+2025-06-24 12:47:38,463 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 12:47:38,702 [INFO] Saved 16 stock records to database
+2025-06-24 12:52:38,722 [INFO] Running scheduled stock scraper
+2025-06-24 12:52:38,728 [INFO] Starting stock scraper at 2025-06-24 12:52:38.728269
+2025-06-24 12:52:40,187 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 12:52:40,461 [INFO] Saved 16 stock records to database
+2025-06-24 12:57:40,474 [INFO] Running scheduled stock scraper
+2025-06-24 12:57:40,474 [INFO] Starting stock scraper at 2025-06-24 12:57:40.474216
+2025-06-24 12:57:42,019 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 12:57:42,295 [INFO] Saved 16 stock records to database
+2025-06-24 13:00:42,306 [INFO] Running scheduled stock scraper
+2025-06-24 13:00:42,307 [INFO] Starting stock scraper at 2025-06-24 13:00:42.307805
+2025-06-24 13:00:43,829 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 13:00:44,053 [INFO] Saved 16 stock records to database
+2025-06-24 13:02:44,061 [INFO] Running scheduled stock scraper
+2025-06-24 13:02:44,061 [INFO] Starting stock scraper at 2025-06-24 13:02:44.061546
+2025-06-24 13:02:45,605 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 13:02:45,808 [INFO] Saved 16 stock records to database
+2025-06-24 13:07:45,812 [INFO] Running scheduled stock scraper
+2025-06-24 13:07:45,813 [INFO] Starting stock scraper at 2025-06-24 13:07:45.813604
+2025-06-24 13:07:57,326 [ERROR] Failed to extract data
+2025-06-24 13:12:57,336 [INFO] Running scheduled stock scraper
+2025-06-24 13:12:57,339 [INFO] Starting stock scraper at 2025-06-24 13:12:57.339651
+2025-06-24 13:13:17,152 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 13:13:17,418 [INFO] Saved 16 stock records to database
+2025-06-24 13:15:17,428 [INFO] Running scheduled stock scraper
+2025-06-24 13:15:17,428 [INFO] Starting stock scraper at 2025-06-24 13:15:17.428576
+2025-06-24 13:15:19,088 [INFO] Successfully extracted data for 16 stocks
+2025-06-24 13:15:19,373 [INFO] Saved 16 stock records to database
+2025-06-24 14:15:26,126 [INFO] Running scheduled stock scraper
+2025-06-24 14:15:26,129 [INFO] Starting stock scraper at 2025-06-24 14:15:26.129304
+2025-06-24 14:15:29,889 [ERROR] Failed to extract data
+2025-06-24 14:15:29,902 [INFO] Running scheduled stock scraper
+2025-06-24 14:15:29,905 [INFO] Starting stock scraper at 2025-06-24 14:15:29.905229
+2025-06-24 14:15:30,399 [ERROR] Failed to extract data
+2025-06-24 14:15:30,399 [INFO] Running scheduled stock scraper
+2025-06-24 14:15:30,417 [INFO] Starting stock scraper at 2025-06-24 14:15:30.417067
+2025-06-24 14:15:30,430 [ERROR] Failed to extract data
+2025-06-24 14:15:30,432 [INFO] Running scheduled stock scraper
+2025-06-24 14:15:30,432 [INFO] Starting stock scraper at 2025-06-24 14:15:30.432654
+2025-06-24 14:15:30,446 [ERROR] Failed to extract data
+2025-06-24 14:15:30,446 [INFO] Running scheduled stock scraper
+2025-06-24 14:15:30,446 [INFO] Starting stock scraper at 2025-06-24 14:15:30.446096
+2025-06-24 14:15:30,446 [ERROR] Failed to extract data
+2025-06-24 20:40:48,183 [INFO] Starting scheduler service
+2025-06-24 20:40:48,199 [INFO] Scheduler started successfully
+2025-06-24 20:40:48,201 [INFO] Scheduler initialized in Django startup
+2025-06-24 20:40:48,382 [INFO] Watching for file changes with StatReloader
+2025-06-24 20:41:08,546 [INFO] Fetching historical prices for TNM with range 1month, cache=True, refresh=True
+2025-06-24 20:41:08,549 [INFO] Fetching data from: https://mse.co.mw/company/MWTNM0010126/1
+2025-06-24 20:41:10,969 [INFO] Successfully fetched 20 data points for TNM 1month
+2025-06-24 20:41:11,017 [INFO] Saved 1 new historical prices for TNM
+2025-06-24 20:41:11,065 [INFO] Saved 1 data points to database for TNM
