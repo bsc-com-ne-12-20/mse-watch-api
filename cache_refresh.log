@@ -1,0 +1,235 @@
+2025-06-24 22:02:46,409 [INFO] [START] Starting cache refresh for 1 symbols x 1 ranges = 1 requests
+2025-06-24 22:02:46,409 [INFO] [DRY-RUN] DRY RUN MODE - No actual requests will be made
+2025-06-24 22:02:58,594 [INFO] [START] Starting cache refresh for 1 symbols x 1 ranges = 1 requests
+2025-06-24 22:02:58,594 [INFO] [REFRESH] Refreshing TNM - 1day
+2025-06-24 22:02:58,683 [INFO] [SUCCESS] TNM 1day: 71 points (source: unknown)
+2025-06-24 22:03:24,809 [INFO] [START] Starting cache refresh for 1 symbols x 1 ranges = 1 requests
+2025-06-24 22:03:24,809 [INFO] [REFRESH] Refreshing AIRTEL - 1day
+2025-06-24 22:03:24,866 [INFO] [SUCCESS] AIRTEL 1day: 71 points (source: unknown)
+2025-06-24 22:07:42,742 [INFO] [START] Starting cache refresh for 16 symbols x 7 ranges = 112 requests
+2025-06-24 22:07:42,742 [INFO] [DRY-RUN] DRY RUN MODE - No actual requests will be made
+2025-06-24 22:08:15,050 [INFO] [START] Starting cache refresh for 16 symbols x 7 ranges = 112 requests
+2025-06-24 22:08:15,061 [INFO] [REFRESH] Refreshing AIRTEL - 1day
+2025-06-24 22:08:15,165 [INFO] [REFRESH] Refreshing AIRTEL - 1month
+2025-06-24 22:08:15,244 [INFO] [SUCCESS] AIRTEL 1day: 71 points (source: unknown)
+2025-06-24 22:08:15,266 [INFO] [REFRESH] Refreshing AIRTEL - 3months
+2025-06-24 22:08:15,481 [INFO] [SUCCESS] AIRTEL 1month: 20 points (source: mse.co.mw)
+2025-06-24 22:08:15,545 [INFO] [REFRESH] Refreshing AIRTEL - 6months
+2025-06-24 22:08:15,886 [INFO] [REFRESH] Refreshing AIRTEL - 1year
+2025-06-24 22:08:16,695 [INFO] [SUCCESS] AIRTEL 1year: 248 points (source: mse.co.mw)
+2025-06-24 22:08:17,166 [INFO] [SUCCESS] AIRTEL 6months: 119 points (source: mse.co.mw)
+2025-06-24 22:08:17,207 [INFO] [REFRESH] Refreshing AIRTEL - 2years
+2025-06-24 22:08:17,209 [INFO] [SUCCESS] AIRTEL 3months: 60 points (source: mse.co.mw)
+2025-06-24 22:08:17,768 [INFO] [REFRESH] Refreshing AIRTEL - 5years
+2025-06-24 22:08:17,913 [INFO] [REFRESH] Refreshing BHL - 1day
+2025-06-24 22:08:18,081 [INFO] [SUCCESS] BHL 1day: 71 points (source: unknown)
+2025-06-24 22:08:18,811 [INFO] [SUCCESS] AIRTEL 2years: 492 points (source: mse.co.mw)
+2025-06-24 22:08:18,882 [INFO] [REFRESH] Refreshing BHL - 1month
+2025-06-24 22:08:19,093 [INFO] [SUCCESS] BHL 1month: 20 points (source: mse.co.mw)
+2025-06-24 22:08:19,714 [INFO] [REFRESH] Refreshing BHL - 3months
+2025-06-24 22:08:20,094 [INFO] [REFRESH] Refreshing BHL - 6months
+2025-06-24 22:08:20,358 [INFO] [SUCCESS] AIRTEL 5years: 1238 points (source: mse.co.mw)
+2025-06-24 22:08:21,467 [INFO] [REFRESH] Refreshing BHL - 1year
+2025-06-24 22:08:21,512 [INFO] [SUCCESS] BHL 3months: 60 points (source: mse.co.mw)
+2025-06-24 22:08:21,884 [INFO] [SUCCESS] BHL 6months: 119 points (source: mse.co.mw)
+2025-06-24 22:08:22,713 [INFO] [REFRESH] Refreshing BHL - 2years
+2025-06-24 22:08:23,185 [INFO] [REFRESH] Refreshing BHL - 5years
+2025-06-24 22:08:23,373 [INFO] [SUCCESS] BHL 1year: 248 points (source: mse.co.mw)
+2025-06-24 22:08:24,776 [INFO] [REFRESH] Refreshing FDHB - 1day
+2025-06-24 22:08:24,990 [INFO] [SUCCESS] FDHB 1day: 71 points (source: unknown)
+2025-06-24 22:08:25,489 [INFO] [SUCCESS] BHL 2years: 492 points (source: mse.co.mw)
+2025-06-24 22:08:26,491 [INFO] [REFRESH] Refreshing FDHB - 1month
+2025-06-24 22:08:26,722 [INFO] [SUCCESS] BHL 5years: 1238 points (source: mse.co.mw)
+2025-06-24 22:08:26,942 [INFO] [SUCCESS] FDHB 1month: 20 points (source: mse.co.mw)
+2025-06-24 22:08:27,102 [INFO] [REFRESH] Refreshing FDHB - 3months
+2025-06-24 22:08:28,320 [INFO] [SUCCESS] FDHB 3months: 60 points (source: mse.co.mw)
+2025-06-24 22:08:28,428 [INFO] [REFRESH] Refreshing FDHB - 6months
+2025-06-24 22:08:28,743 [INFO] [REFRESH] Refreshing FDHB - 1year
+2025-06-24 22:08:29,180 [INFO] [SUCCESS] FDHB 1year: 248 points (source: mse.co.mw)
+2025-06-24 22:08:30,229 [INFO] [REFRESH] Refreshing FDHB - 2years
+2025-06-24 22:08:31,151 [INFO] [SUCCESS] FDHB 6months: 119 points (source: mse.co.mw)
+2025-06-24 22:08:31,181 [INFO] [REFRESH] Refreshing FDHB - 5years
+2025-06-24 22:08:32,331 [INFO] [SUCCESS] FDHB 2years: 492 points (source: mse.co.mw)
+2025-06-24 22:08:33,257 [INFO] [REFRESH] Refreshing FMBCH - 1day
+2025-06-24 22:08:33,742 [INFO] [SUCCESS] FDHB 5years: 1212 points (source: mse.co.mw)
+2025-06-24 22:08:34,030 [INFO] [SUCCESS] FMBCH 1day: 71 points (source: unknown)
+2025-06-24 22:08:34,534 [INFO] [REFRESH] Refreshing FMBCH - 1month
+2025-06-24 22:08:34,792 [INFO] [SUCCESS] FMBCH 1month: 20 points (source: mse.co.mw)
+2025-06-24 22:08:36,044 [INFO] [REFRESH] Refreshing FMBCH - 3months
+2025-06-24 22:08:36,432 [INFO] [REFRESH] Refreshing FMBCH - 6months
+2025-06-24 22:08:37,293 [INFO] [REFRESH] Refreshing FMBCH - 1year
+2025-06-24 22:08:38,144 [INFO] [SUCCESS] FMBCH 6months: 119 points (source: mse.co.mw)
+2025-06-24 22:08:38,373 [INFO] [SUCCESS] FMBCH 3months: 60 points (source: mse.co.mw)
+2025-06-24 22:08:38,692 [INFO] [SUCCESS] FMBCH 1year: 248 points (source: mse.co.mw)
+2025-06-24 22:08:40,752 [INFO] [REFRESH] Refreshing FMBCH - 2years
+2025-06-24 22:08:41,075 [INFO] [REFRESH] Refreshing FMBCH - 5years
+2025-06-24 22:08:41,503 [INFO] [REFRESH] Refreshing ICON - 1day
+2025-06-24 22:08:41,696 [INFO] [SUCCESS] ICON 1day: 71 points (source: unknown)
+2025-06-24 22:08:42,310 [INFO] [SUCCESS] FMBCH 2years: 492 points (source: mse.co.mw)
+2025-06-24 22:08:43,889 [INFO] [SUCCESS] FMBCH 5years: 1238 points (source: mse.co.mw)
+2025-06-24 22:08:44,597 [INFO] [REFRESH] Refreshing ICON - 1month
+2025-06-24 22:08:44,771 [INFO] [SUCCESS] ICON 1month: 20 points (source: mse.co.mw)
+2025-06-24 22:08:45,315 [INFO] [REFRESH] Refreshing ICON - 3months
+2025-06-24 22:08:46,262 [INFO] [SUCCESS] ICON 3months: 60 points (source: mse.co.mw)
+2025-06-24 22:08:47,004 [INFO] [REFRESH] Refreshing ICON - 6months
+2025-06-24 22:08:47,972 [INFO] [REFRESH] Refreshing ICON - 1year
+2025-06-24 22:08:48,026 [INFO] [SUCCESS] ICON 6months: 119 points (source: mse.co.mw)
+2025-06-24 22:08:49,564 [INFO] [REFRESH] Refreshing ICON - 2years
+2025-06-24 22:08:49,651 [INFO] [SUCCESS] ICON 1year: 248 points (source: mse.co.mw)
+2025-06-24 22:08:51,311 [INFO] [SUCCESS] ICON 2years: 492 points (source: mse.co.mw)
+2025-06-24 22:08:51,427 [INFO] [REFRESH] Refreshing ICON - 5years
+2025-06-24 22:08:53,153 [INFO] [REFRESH] Refreshing ILLOVO - 1day
+2025-06-24 22:08:53,665 [INFO] [SUCCESS] ICON 5years: 1238 points (source: mse.co.mw)
+2025-06-24 22:08:53,777 [INFO] [SUCCESS] ILLOVO 1day: 71 points (source: unknown)
+2025-06-24 22:08:54,913 [INFO] [REFRESH] Refreshing ILLOVO - 1month
+2025-06-24 22:08:55,110 [INFO] [SUCCESS] ILLOVO 1month: 20 points (source: mse.co.mw)
+2025-06-24 22:08:57,367 [INFO] [REFRESH] Refreshing ILLOVO - 3months
+2025-06-24 22:08:57,579 [INFO] [REFRESH] Refreshing ILLOVO - 6months
+2025-06-24 22:08:58,750 [INFO] [SUCCESS] ILLOVO 6months: 119 points (source: mse.co.mw)
+2025-06-24 22:08:58,871 [INFO] [SUCCESS] ILLOVO 3months: 60 points (source: mse.co.mw)
+2025-06-24 22:08:59,017 [INFO] [REFRESH] Refreshing ILLOVO - 1year
+2025-06-24 22:09:00,312 [INFO] [SUCCESS] ILLOVO 1year: 248 points (source: mse.co.mw)
+2025-06-24 22:09:02,751 [INFO] [REFRESH] Refreshing ILLOVO - 2years
+2025-06-24 22:09:02,973 [INFO] [REFRESH] Refreshing ILLOVO - 5years
+2025-06-24 22:09:04,239 [INFO] [SUCCESS] ILLOVO 2years: 492 points (source: mse.co.mw)
+2025-06-24 22:09:04,516 [INFO] [REFRESH] Refreshing MPICO - 1day
+2025-06-24 22:09:05,942 [INFO] [SUCCESS] ILLOVO 5years: 1238 points (source: mse.co.mw)
+2025-06-24 22:09:06,054 [INFO] [SUCCESS] MPICO 1day: 71 points (source: unknown)
+2025-06-24 22:09:08,541 [INFO] [REFRESH] Refreshing MPICO - 1month
+2025-06-24 22:09:08,636 [INFO] [SUCCESS] MPICO 1month: 20 points (source: mse.co.mw)
+2025-06-24 22:09:10,344 [INFO] [REFRESH] Refreshing MPICO - 3months
+2025-06-24 22:09:10,555 [INFO] [REFRESH] Refreshing MPICO - 6months
+2025-06-24 22:09:11,266 [INFO] [SUCCESS] MPICO 3months: 60 points (source: mse.co.mw)
+2025-06-24 22:09:11,670 [INFO] [SUCCESS] MPICO 6months: 119 points (source: mse.co.mw)
+2025-06-24 22:09:13,238 [INFO] [REFRESH] Refreshing MPICO - 1year
+2025-06-24 22:09:14,388 [INFO] [SUCCESS] MPICO 1year: 248 points (source: mse.co.mw)
+2025-06-24 22:09:15,967 [INFO] [REFRESH] Refreshing MPICO - 2years
+2025-06-24 22:09:16,471 [INFO] [REFRESH] Refreshing MPICO - 5years
+2025-06-24 22:09:17,512 [INFO] [SUCCESS] MPICO 2years: 492 points (source: mse.co.mw)
+2025-06-24 22:09:18,693 [INFO] [SUCCESS] MPICO 5years: 1238 points (source: mse.co.mw)
+2025-06-24 22:09:19,289 [INFO] [REFRESH] Refreshing NBM - 1day
+2025-06-24 22:09:19,341 [INFO] [SUCCESS] NBM 1day: 71 points (source: unknown)
+2025-06-24 22:09:22,518 [INFO] [REFRESH] Refreshing NBM - 1month
+2025-06-24 22:09:22,601 [INFO] [SUCCESS] NBM 1month: 20 points (source: mse.co.mw)
+2025-06-24 22:09:23,795 [INFO] [REFRESH] Refreshing NBM - 3months
+2025-06-24 22:09:24,542 [INFO] [REFRESH] Refreshing NBM - 6months
+2025-06-24 22:09:25,054 [INFO] [SUCCESS] NBM 3months: 60 points (source: mse.co.mw)
+2025-06-24 22:09:25,632 [INFO] [SUCCESS] NBM 6months: 119 points (source: mse.co.mw)
+2025-06-24 22:09:27,902 [INFO] [REFRESH] Refreshing NBM - 1year
+2025-06-24 22:09:28,164 [INFO] [SUCCESS] NBM 1year: 248 points (source: mse.co.mw)
+2025-06-24 22:09:30,455 [INFO] [REFRESH] Refreshing NBM - 2years
+2025-06-24 22:09:31,133 [INFO] [REFRESH] Refreshing NBM - 5years
+2025-06-24 22:09:32,137 [INFO] [SUCCESS] NBM 2years: 492 points (source: mse.co.mw)
+2025-06-24 22:09:33,335 [INFO] [SUCCESS] NBM 5years: 1238 points (source: mse.co.mw)
+2025-06-24 22:09:33,765 [INFO] [REFRESH] Refreshing NBS - 1day
+2025-06-24 22:09:33,819 [INFO] [SUCCESS] NBS 1day: 71 points (source: unknown)
+2025-06-24 22:09:37,839 [INFO] [REFRESH] Refreshing NBS - 1month
+2025-06-24 22:09:37,914 [INFO] [SUCCESS] NBS 1month: 20 points (source: mse.co.mw)
+2025-06-24 22:09:39,136 [INFO] [REFRESH] Refreshing NBS - 3months
+2025-06-24 22:09:39,720 [INFO] [REFRESH] Refreshing NBS - 6months
+2025-06-24 22:09:40,247 [INFO] [SUCCESS] NBS 3months: 60 points (source: mse.co.mw)
+2025-06-24 22:09:40,861 [INFO] [SUCCESS] NBS 6months: 119 points (source: mse.co.mw)
+2025-06-24 22:09:43,915 [INFO] [REFRESH] Refreshing NBS - 1year
+2025-06-24 22:09:45,131 [INFO] [SUCCESS] NBS 1year: 248 points (source: mse.co.mw)
+2025-06-24 22:09:46,349 [INFO] [REFRESH] Refreshing NBS - 2years
+2025-06-24 22:09:47,063 [INFO] [REFRESH] Refreshing NBS - 5years
+2025-06-24 22:09:47,706 [INFO] [SUCCESS] NBS 2years: 492 points (source: mse.co.mw)
+2025-06-24 22:09:49,360 [INFO] [SUCCESS] NBS 5years: 1238 points (source: mse.co.mw)
+2025-06-24 22:09:51,433 [INFO] [REFRESH] Refreshing NICO - 1day
+2025-06-24 22:09:51,492 [INFO] [SUCCESS] NICO 1day: 71 points (source: unknown)
+2025-06-24 22:09:54,108 [INFO] [REFRESH] Refreshing NICO - 1month
+2025-06-24 22:09:54,182 [INFO] [SUCCESS] NICO 1month: 20 points (source: mse.co.mw)
+2025-06-24 22:09:55,862 [INFO] [REFRESH] Refreshing NICO - 3months
+2025-06-24 22:09:56,877 [INFO] [SUCCESS] NICO 3months: 60 points (source: mse.co.mw)
+2025-06-24 22:09:58,093 [INFO] [REFRESH] Refreshing NICO - 6months
+2025-06-24 22:09:59,184 [INFO] [SUCCESS] NICO 6months: 119 points (source: mse.co.mw)
+2025-06-24 22:10:00,884 [INFO] [REFRESH] Refreshing NICO - 1year
+2025-06-24 22:10:01,159 [INFO] [SUCCESS] NICO 1year: 248 points (source: mse.co.mw)
+2025-06-24 22:10:03,678 [INFO] [REFRESH] Refreshing NICO - 2years
+2025-06-24 22:10:05,639 [INFO] [SUCCESS] NICO 2years: 492 points (source: mse.co.mw)
+2025-06-24 22:10:06,086 [INFO] [REFRESH] Refreshing NICO - 5years
+2025-06-24 22:10:08,160 [INFO] [REFRESH] Refreshing NITL - 1day
+2025-06-24 22:10:09,328 [INFO] [SUCCESS] NICO 5years: 1238 points (source: mse.co.mw)
+2025-06-24 22:10:09,423 [INFO] [SUCCESS] NITL 1day: 71 points (source: unknown)
+2025-06-24 22:10:12,741 [INFO] [REFRESH] Refreshing NITL - 1month
+2025-06-24 22:10:12,847 [INFO] [SUCCESS] NITL 1month: 20 points (source: mse.co.mw)
+2025-06-24 22:10:16,541 [INFO] [REFRESH] Refreshing NITL - 3months
+2025-06-24 22:10:16,727 [INFO] [REFRESH] Refreshing NITL - 6months
+2025-06-24 22:10:18,246 [INFO] [SUCCESS] NITL 3months: 60 points (source: mse.co.mw)
+2025-06-24 22:10:18,293 [INFO] [SUCCESS] NITL 6months: 119 points (source: mse.co.mw)
+2025-06-24 22:10:20,255 [INFO] [REFRESH] Refreshing NITL - 1year
+2025-06-24 22:10:21,752 [INFO] [SUCCESS] NITL 1year: 248 points (source: mse.co.mw)
+2025-06-24 22:10:25,757 [INFO] [REFRESH] Refreshing NITL - 2years
+2025-06-24 22:10:25,895 [INFO] [REFRESH] Refreshing NITL - 5years
+2025-06-24 22:10:29,471 [INFO] [REFRESH] Refreshing OMU - 1day
+2025-06-24 22:10:32,156 [INFO] [SUCCESS] NITL 5years: 1238 points (source: mse.co.mw)
+2025-06-24 22:10:32,270 [INFO] [SUCCESS] NITL 2years: 492 points (source: mse.co.mw)
+2025-06-24 22:10:32,347 [INFO] [SUCCESS] OMU 1day: 71 points (source: unknown)
+2025-06-24 22:10:39,961 [INFO] [REFRESH] Refreshing OMU - 1month
+2025-06-24 22:10:40,041 [INFO] [SUCCESS] OMU 1month: 20 points (source: mse.co.mw)
+2025-06-24 22:10:40,183 [INFO] [REFRESH] Refreshing OMU - 3months
+2025-06-24 22:10:40,359 [INFO] [REFRESH] Refreshing OMU - 6months
+2025-06-24 22:10:41,376 [INFO] [SUCCESS] OMU 3months: 60 points (source: mse.co.mw)
+2025-06-24 22:10:41,615 [INFO] [SUCCESS] OMU 6months: 119 points (source: mse.co.mw)
+2025-06-24 22:10:48,142 [INFO] [REFRESH] Refreshing OMU - 1year
+2025-06-24 22:10:49,189 [ERROR] [ERROR] OMU-1year: HTTP 404
+2025-06-24 22:10:49,578 [INFO] [REFRESH] Refreshing OMU - 2years
+2025-06-24 22:10:49,916 [INFO] [REFRESH] Refreshing OMU - 5years
+2025-06-24 22:10:50,448 [ERROR] [ERROR] OMU-2years: HTTP 404
+2025-06-24 22:10:50,770 [ERROR] [ERROR] OMU-5years: HTTP 404
+2025-06-24 22:10:57,593 [INFO] [REFRESH] Refreshing PCL - 1day
+2025-06-24 22:10:57,639 [INFO] [SUCCESS] PCL 1day: 71 points (source: unknown)
+2025-06-24 22:10:58,952 [INFO] [REFRESH] Refreshing PCL - 1month
+2025-06-24 22:10:59,020 [INFO] [SUCCESS] PCL 1month: 20 points (source: mse.co.mw)
+2025-06-24 22:10:59,374 [INFO] [REFRESH] Refreshing PCL - 3months
+2025-06-24 22:11:00,819 [ERROR] [ERROR] PCL-3months: HTTP 404
+2025-06-24 22:11:06,341 [INFO] [REFRESH] Refreshing PCL - 6months
+2025-06-24 22:11:07,215 [ERROR] [ERROR] PCL-6months: HTTP 404
+2025-06-24 22:11:07,822 [INFO] [REFRESH] Refreshing PCL - 1year
+2025-06-24 22:11:08,686 [ERROR] [ERROR] PCL-1year: HTTP 404
+2025-06-24 22:11:09,721 [INFO] [REFRESH] Refreshing PCL - 2years
+2025-06-24 22:11:10,596 [ERROR] [ERROR] PCL-2years: HTTP 404
+2025-06-24 22:11:16,221 [INFO] [REFRESH] Refreshing PCL - 5years
+2025-06-24 22:11:17,092 [ERROR] [ERROR] PCL-5years: HTTP 404
+2025-06-24 22:11:17,797 [INFO] [REFRESH] Refreshing STANDARD - 1day
+2025-06-24 22:11:17,858 [INFO] [SUCCESS] STANDARD 1day: 71 points (source: unknown)
+2025-06-24 22:11:19,811 [INFO] [REFRESH] Refreshing STANDARD - 1month
+2025-06-24 22:11:19,894 [INFO] [SUCCESS] STANDARD 1month: 20 points (source: mse.co.mw)
+2025-06-24 22:11:26,393 [INFO] [REFRESH] Refreshing STANDARD - 3months
+2025-06-24 22:11:27,259 [INFO] [REFRESH] Refreshing STANDARD - 6months
+2025-06-24 22:11:27,538 [ERROR] [ERROR] STANDARD-3months: HTTP 404
+2025-06-24 22:11:28,126 [ERROR] [ERROR] STANDARD-6months: HTTP 404
+2025-06-24 22:11:29,395 [INFO] [REFRESH] Refreshing STANDARD - 1year
+2025-06-24 22:11:29,650 [INFO] [SUCCESS] STANDARD 1year: 248 points (source: mse.co.mw)
+2025-06-24 22:11:37,143 [INFO] [REFRESH] Refreshing STANDARD - 2years
+2025-06-24 22:11:37,838 [INFO] [REFRESH] Refreshing STANDARD - 5years
+2025-06-24 22:11:38,031 [ERROR] [ERROR] STANDARD-2years: HTTP 404
+2025-06-24 22:11:38,683 [ERROR] [ERROR] STANDARD-5years: HTTP 404
+2025-06-24 22:11:39,452 [INFO] [REFRESH] Refreshing SUNBIRD - 1day
+2025-06-24 22:11:39,511 [INFO] [SUCCESS] SUNBIRD 1day: 71 points (source: unknown)
+2025-06-24 22:11:47,946 [INFO] [REFRESH] Refreshing SUNBIRD - 1month
+2025-06-24 22:11:48,034 [INFO] [SUCCESS] SUNBIRD 1month: 20 points (source: mse.co.mw)
+2025-06-24 22:11:48,692 [INFO] [REFRESH] Refreshing SUNBIRD - 3months
+2025-06-24 22:11:49,612 [INFO] [REFRESH] Refreshing SUNBIRD - 6months
+2025-06-24 22:11:49,620 [ERROR] [ERROR] SUNBIRD-3months: HTTP 404
+2025-06-24 22:11:50,539 [ERROR] [ERROR] SUNBIRD-6months: HTTP 404
+2025-06-24 22:11:58,235 [INFO] [REFRESH] Refreshing SUNBIRD - 1year
+2025-06-24 22:11:59,493 [INFO] [SUCCESS] SUNBIRD 1year: 248 points (source: mse.co.mw)
+2025-06-24 22:11:59,921 [INFO] [REFRESH] Refreshing SUNBIRD - 2years
+2025-06-24 22:12:00,944 [INFO] [REFRESH] Refreshing SUNBIRD - 5years
+2025-06-24 22:12:01,222 [ERROR] [ERROR] SUNBIRD-2years: HTTP 404
+2025-06-24 22:12:01,812 [ERROR] [ERROR] SUNBIRD-5years: HTTP 404
+2025-06-24 22:12:09,994 [INFO] [REFRESH] Refreshing TNM - 1day
+2025-06-24 22:12:10,070 [INFO] [SUCCESS] TNM 1day: 71 points (source: unknown)
+2025-06-24 22:12:11,829 [INFO] [REFRESH] Refreshing TNM - 1month
+2025-06-24 22:12:11,927 [INFO] [SUCCESS] TNM 1month: 20 points (source: mse.co.mw)
+2025-06-24 22:12:12,526 [INFO] [REFRESH] Refreshing TNM - 3months
+2025-06-24 22:12:13,434 [ERROR] [ERROR] TNM-3months: HTTP 404
+2025-06-24 22:12:20,876 [INFO] [REFRESH] Refreshing TNM - 6months
+2025-06-24 22:12:21,734 [ERROR] [ERROR] TNM-6months: HTTP 404
+2025-06-24 22:12:22,828 [INFO] [REFRESH] Refreshing TNM - 1year
+2025-06-24 22:12:23,141 [INFO] [SUCCESS] TNM 1year: 248 points (source: mse.co.mw)
+2025-06-24 22:12:24,436 [INFO] [REFRESH] Refreshing TNM - 2years
+2025-06-24 22:12:25,323 [ERROR] [ERROR] TNM-2years: HTTP 404
+2025-06-24 22:12:32,837 [INFO] [REFRESH] Refreshing TNM - 5years
+2025-06-24 22:12:33,737 [ERROR] [ERROR] TNM-5years: HTTP 404
