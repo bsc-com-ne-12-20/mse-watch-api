@@ -16557,3 +16557,210 @@ accounts.models.User.MultipleObjectsReturned: get() returned more than one User 
 2025-06-25 08:40:27,472 [WARNING] Not Found: /api/historical/TNM/
 2025-06-25 08:40:28,201 [INFO] Fetching historical prices for TNM with range 1year, cache=True, refresh=True
 2025-06-25 08:40:28,202 [INFO] Fetching data from: https://mse.co.mw/company/MWTNM0010126/12
+2025-06-25 08:40:29,201 [ERROR] Request failed for TNM 1year: 500 Server Error: Internal Server Error for url: https://mse.co.mw/company/MWTNM0010126/12
+2025-06-25 08:40:29,201 [WARNING] Could not retrieve historical data for TNM from service
+2025-06-25 08:40:29,201 [WARNING] Not Found: /api/historical/TNM/
+2025-06-25 08:40:34,069 [INFO] Fetching historical prices for TNM with range 2years, cache=True, refresh=True
+2025-06-25 08:40:34,069 [INFO] Fetching data from: https://mse.co.mw/company/MWTNM0010126/24
+2025-06-25 08:40:34,885 [ERROR] Request failed for TNM 2years: 500 Server Error: Internal Server Error for url: https://mse.co.mw/company/MWTNM0010126/24
+2025-06-25 08:40:34,885 [WARNING] Could not retrieve historical data for TNM from service
+2025-06-25 08:40:34,885 [WARNING] Not Found: /api/historical/TNM/
+2025-06-25 08:40:38,612 [INFO] Fetching historical prices for TNM with range 5years, cache=True, refresh=True
+2025-06-25 08:40:38,612 [INFO] Fetching data from: https://mse.co.mw/company/MWTNM0010126/60
+2025-06-25 08:40:39,476 [ERROR] Request failed for TNM 5years: 500 Server Error: Internal Server Error for url: https://mse.co.mw/company/MWTNM0010126/60
+2025-06-25 08:40:39,476 [WARNING] Could not retrieve historical data for TNM from service
+2025-06-25 08:40:39,476 [WARNING] Not Found: /api/historical/TNM/
+2025-06-25 08:45:09,402 [INFO] Market is outside operating hours (08:45). Skipping scheduled scrape.
+2025-06-25 08:50:09,407 [INFO] Market is outside operating hours (08:50). Skipping scheduled scrape.
+2025-06-25 08:50:28,367 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\scheduler.py changed, reloading.
+2025-06-25 08:50:31,362 [INFO] Starting scheduler service
+2025-06-25 08:50:31,371 [INFO] Scheduler started successfully
+2025-06-25 08:50:31,372 [INFO] Scheduler initialized in Django startup
+2025-06-25 08:50:31,462 [INFO] Watching for file changes with StatReloader
+2025-06-25 08:50:51,147 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\scheduler.py changed, reloading.
+2025-06-25 08:50:52,391 [INFO] Starting scheduler service
+2025-06-25 08:50:52,408 [INFO] Setting up cache warming schedule
+2025-06-25 08:50:52,411 [INFO] Scheduled intraday cache warming (1day range) every hour during market hours
+2025-06-25 08:50:52,411 [INFO] Scheduled priority cache warming at 8:30 AM and 5:30 PM
+2025-06-25 08:50:52,412 [INFO] Scheduled standard cache warming at 6:00 AM daily
+2025-06-25 08:50:52,412 [INFO] Scheduled weekend cache maintenance
+2025-06-25 08:50:52,414 [INFO] Scheduler started successfully
+2025-06-25 08:50:52,415 [INFO] Scheduler initialized in Django startup
+2025-06-25 08:50:52,442 [INFO] Watching for file changes with StatReloader
+2025-06-25 08:55:52,417 [INFO] Market is outside operating hours (08:55). Skipping scheduled scrape.
+2025-06-25 08:59:47,035 [INFO] Starting scheduler service
+2025-06-25 08:59:47,035 [INFO] Setting up cache warming schedule
+2025-06-25 08:59:47,044 [INFO] Scheduled intraday cache warming (1day range) every hour during market hours
+2025-06-25 08:59:47,044 [INFO] Scheduled priority cache warming at 8:30 AM and 5:30 PM
+2025-06-25 08:59:47,045 [INFO] Scheduled standard cache warming at 6:00 AM daily
+2025-06-25 08:59:47,046 [INFO] Scheduled weekend cache maintenance
+2025-06-25 08:59:47,049 [INFO] Scheduler started successfully
+2025-06-25 08:59:47,049 [INFO] Scheduler initialized in Django startup
+2025-06-25 09:00:01,471 [INFO] Starting scheduler service
+2025-06-25 09:00:01,477 [INFO] Setting up cache warming schedule
+2025-06-25 09:00:01,480 [INFO] Scheduled intraday cache warming (1day range) every hour during market hours
+2025-06-25 09:00:01,480 [INFO] Scheduled priority cache warming at 8:30 AM and 5:30 PM
+2025-06-25 09:00:01,481 [INFO] Scheduled standard cache warming at 6:00 AM daily
+2025-06-25 09:00:01,481 [INFO] Scheduled weekend cache maintenance
+2025-06-25 09:00:01,484 [INFO] Scheduler started successfully
+2025-06-25 09:00:01,484 [INFO] Scheduler initialized in Django startup
+2025-06-25 09:00:01,939 [INFO] Fetching historical prices for AIRTEL with range 1day, cache=True, refresh=True
+2025-06-25 09:00:01,939 [INFO] Fetching intraday data for AIRTEL
+2025-06-25 09:00:01,991 [WARNING] No historical data to save for AIRTEL
+2025-06-25 09:00:01,992 [INFO] Saved 0 data points to database for AIRTEL
+2025-06-25 09:00:02,295 [INFO] Fetching historical prices for TNM with range 1day, cache=True, refresh=True
+2025-06-25 09:00:02,295 [INFO] Fetching intraday data for TNM
+2025-06-25 09:00:02,306 [WARNING] No historical data to save for TNM
+2025-06-25 09:00:02,306 [INFO] Saved 0 data points to database for TNM
+2025-06-25 09:00:52,424 [INFO] Running scheduled stock scraper
+2025-06-25 09:00:52,429 [INFO] Starting stock scraper at 2025-06-25 09:00:52.429093 (forced)
+2025-06-25 09:00:57,519 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:00:57,677 [INFO] Saved 16 stock records to database
+2025-06-25 09:00:57,677 [INFO] Starting cache warming - strategy: intraday_only
+2025-06-25 09:00:57,705 [INFO] Fetching historical prices for AIRTEL with range 1day, cache=True, refresh=True
+2025-06-25 09:00:57,705 [INFO] Fetching intraday data for AIRTEL
+2025-06-25 09:00:57,708 [WARNING] No historical data to save for AIRTEL
+2025-06-25 09:00:57,708 [INFO] Saved 0 data points to database for AIRTEL
+2025-06-25 09:00:57,709 [INFO] Cache warmed: AIRTEL 1day (1 points)
+2025-06-25 09:00:57,948 [INFO] Fetching historical prices for BHL with range 1day, cache=True, refresh=True
+2025-06-25 09:00:57,948 [INFO] Fetching intraday data for BHL
+2025-06-25 09:00:57,952 [WARNING] No historical data to save for BHL
+2025-06-25 09:00:57,952 [INFO] Saved 0 data points to database for BHL
+2025-06-25 09:00:57,954 [INFO] Cache warmed: BHL 1day (1 points)
+2025-06-25 09:00:58,233 [INFO] Fetching historical prices for FDHB with range 1day, cache=True, refresh=True
+2025-06-25 09:00:58,233 [INFO] Fetching intraday data for FDHB
+2025-06-25 09:00:58,233 [WARNING] No historical data to save for FDHB
+2025-06-25 09:00:58,233 [INFO] Saved 0 data points to database for FDHB
+2025-06-25 09:00:58,233 [INFO] Cache warmed: FDHB 1day (1 points)
+2025-06-25 09:00:58,478 [INFO] Fetching historical prices for FMBCH with range 1day, cache=True, refresh=True
+2025-06-25 09:00:58,478 [INFO] Fetching intraday data for FMBCH
+2025-06-25 09:00:58,480 [WARNING] No historical data to save for FMBCH
+2025-06-25 09:00:58,480 [INFO] Saved 0 data points to database for FMBCH
+2025-06-25 09:00:58,484 [INFO] Cache warmed: FMBCH 1day (1 points)
+2025-06-25 09:00:58,728 [INFO] Fetching historical prices for ICON with range 1day, cache=True, refresh=True
+2025-06-25 09:00:58,728 [INFO] Fetching intraday data for ICON
+2025-06-25 09:00:58,728 [WARNING] No historical data to save for ICON
+2025-06-25 09:00:58,728 [INFO] Saved 0 data points to database for ICON
+2025-06-25 09:00:58,728 [INFO] Cache warmed: ICON 1day (1 points)
+2025-06-25 09:00:58,993 [INFO] Fetching historical prices for ILLOVO with range 1day, cache=True, refresh=True
+2025-06-25 09:00:58,994 [INFO] Fetching intraday data for ILLOVO
+2025-06-25 09:00:58,997 [WARNING] No historical data to save for ILLOVO
+2025-06-25 09:00:58,998 [INFO] Saved 0 data points to database for ILLOVO
+2025-06-25 09:00:58,999 [INFO] Cache warmed: ILLOVO 1day (1 points)
+2025-06-25 09:00:59,236 [INFO] Fetching historical prices for MPICO with range 1day, cache=True, refresh=True
+2025-06-25 09:00:59,236 [INFO] Fetching intraday data for MPICO
+2025-06-25 09:00:59,241 [WARNING] No historical data to save for MPICO
+2025-06-25 09:00:59,243 [INFO] Saved 0 data points to database for MPICO
+2025-06-25 09:00:59,244 [INFO] Cache warmed: MPICO 1day (1 points)
+2025-06-25 09:00:59,483 [INFO] Fetching historical prices for NBM with range 1day, cache=True, refresh=True
+2025-06-25 09:00:59,484 [INFO] Fetching intraday data for NBM
+2025-06-25 09:00:59,489 [WARNING] No historical data to save for NBM
+2025-06-25 09:00:59,489 [INFO] Saved 0 data points to database for NBM
+2025-06-25 09:00:59,491 [INFO] Cache warmed: NBM 1day (1 points)
+2025-06-25 09:00:59,746 [INFO] Fetching historical prices for NBS with range 1day, cache=True, refresh=True
+2025-06-25 09:00:59,747 [INFO] Fetching intraday data for NBS
+2025-06-25 09:00:59,751 [WARNING] No historical data to save for NBS
+2025-06-25 09:00:59,752 [INFO] Saved 0 data points to database for NBS
+2025-06-25 09:00:59,754 [INFO] Cache warmed: NBS 1day (1 points)
+2025-06-25 09:01:00,019 [INFO] Fetching historical prices for NICO with range 1day, cache=True, refresh=True
+2025-06-25 09:01:00,021 [INFO] Fetching intraday data for NICO
+2025-06-25 09:01:00,024 [WARNING] No historical data to save for NICO
+2025-06-25 09:01:00,025 [INFO] Saved 0 data points to database for NICO
+2025-06-25 09:01:00,026 [INFO] Cache warmed: NICO 1day (1 points)
+2025-06-25 09:01:00,274 [INFO] Fetching historical prices for NITL with range 1day, cache=True, refresh=True
+2025-06-25 09:01:00,274 [INFO] Fetching intraday data for NITL
+2025-06-25 09:01:00,274 [WARNING] No historical data to save for NITL
+2025-06-25 09:01:00,274 [INFO] Saved 0 data points to database for NITL
+2025-06-25 09:01:00,290 [INFO] Cache warmed: NITL 1day (1 points)
+2025-06-25 09:01:00,528 [INFO] Fetching historical prices for OMU with range 1day, cache=True, refresh=True
+2025-06-25 09:01:00,528 [INFO] Fetching intraday data for OMU
+2025-06-25 09:01:00,538 [WARNING] No historical data to save for OMU
+2025-06-25 09:01:00,538 [INFO] Saved 0 data points to database for OMU
+2025-06-25 09:01:00,538 [INFO] Cache warmed: OMU 1day (1 points)
+2025-06-25 09:01:00,790 [INFO] Fetching historical prices for PCL with range 1day, cache=True, refresh=True
+2025-06-25 09:01:00,806 [INFO] Fetching intraday data for PCL
+2025-06-25 09:01:00,806 [WARNING] No historical data to save for PCL
+2025-06-25 09:01:00,806 [INFO] Saved 0 data points to database for PCL
+2025-06-25 09:01:00,806 [INFO] Cache warmed: PCL 1day (1 points)
+2025-06-25 09:01:01,070 [INFO] Fetching historical prices for STANDARD with range 1day, cache=True, refresh=True
+2025-06-25 09:01:01,070 [INFO] Fetching intraday data for STANDARD
+2025-06-25 09:01:01,070 [WARNING] No historical data to save for STANDARD
+2025-06-25 09:01:01,070 [INFO] Saved 0 data points to database for STANDARD
+2025-06-25 09:01:01,070 [INFO] Cache warmed: STANDARD 1day (1 points)
+2025-06-25 09:01:01,339 [INFO] Fetching historical prices for SUNBIRD with range 1day, cache=True, refresh=True
+2025-06-25 09:01:01,339 [INFO] Fetching intraday data for SUNBIRD
+2025-06-25 09:01:01,339 [WARNING] No historical data to save for SUNBIRD
+2025-06-25 09:01:01,350 [INFO] Saved 0 data points to database for SUNBIRD
+2025-06-25 09:01:01,350 [INFO] Cache warmed: SUNBIRD 1day (1 points)
+2025-06-25 09:01:01,603 [INFO] Fetching historical prices for TNM with range 1day, cache=True, refresh=True
+2025-06-25 09:01:01,603 [INFO] Fetching intraday data for TNM
+2025-06-25 09:01:01,603 [WARNING] No historical data to save for TNM
+2025-06-25 09:01:01,603 [INFO] Saved 0 data points to database for TNM
+2025-06-25 09:01:01,603 [INFO] Cache warmed: TNM 1day (1 points)
+2025-06-25 09:01:01,815 [INFO] Cache warming completed: 16/16 (100.0%) in 0:00:04.137689
+2025-06-25 09:01:01,815 [INFO] Running scheduled stock scraper
+2025-06-25 09:01:01,815 [INFO] Starting stock scraper at 2025-06-25 09:01:01.815007
+2025-06-25 09:01:03,198 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:01:03,337 [INFO] Saved 16 stock records to database
+2025-06-25 09:05:03,350 [INFO] Running scheduled stock scraper
+2025-06-25 09:05:03,352 [INFO] Starting stock scraper at 2025-06-25 09:05:03.352566
+2025-06-25 09:05:04,775 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:05:05,078 [INFO] Saved 16 stock records to database
+2025-06-25 09:06:05,085 [INFO] Running scheduled stock scraper
+2025-06-25 09:06:05,085 [INFO] Starting stock scraper at 2025-06-25 09:06:05.085765
+2025-06-25 09:06:06,578 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:06:06,881 [INFO] Saved 16 stock records to database
+2025-06-25 09:10:06,888 [INFO] Running scheduled stock scraper
+2025-06-25 09:10:06,888 [INFO] Starting stock scraper at 2025-06-25 09:10:06.888485
+2025-06-25 09:10:08,381 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:10:08,643 [INFO] Saved 16 stock records to database
+2025-06-25 09:11:08,645 [INFO] Running scheduled stock scraper
+2025-06-25 09:11:08,650 [INFO] Starting stock scraper at 2025-06-25 09:11:08.650153
+2025-06-25 09:11:10,288 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:11:10,590 [INFO] Saved 16 stock records to database
+2025-06-25 09:13:34,989 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\scheduler.py changed, reloading.
+2025-06-25 09:13:36,529 [INFO] Starting scheduler service
+2025-06-25 09:13:36,534 [INFO] Setting up cache warming schedule
+2025-06-25 09:13:36,536 [INFO] Scheduled intraday cache warming (1day range) every hour during market hours
+2025-06-25 09:13:36,537 [INFO] Scheduled priority cache warming at 8:30 AM and 5:30 PM
+2025-06-25 09:13:36,538 [INFO] Scheduled standard cache warming at 6:00 AM daily
+2025-06-25 09:13:36,538 [INFO] Scheduled weekend cache maintenance
+2025-06-25 09:13:36,541 [INFO] Scheduler started successfully
+2025-06-25 09:13:36,542 [INFO] Scheduler initialized in Django startup
+2025-06-25 09:13:36,588 [INFO] Watching for file changes with StatReloader
+2025-06-25 09:15:36,541 [INFO] Running scheduled stock scraper
+2025-06-25 09:15:36,560 [INFO] Starting stock scraper at 2025-06-25 09:15:36.560286
+2025-06-25 09:15:40,348 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:15:40,638 [INFO] Saved 16 stock records to database
+2025-06-25 09:17:13,522 [INFO] Fetching historical prices for AIRTEL with range 1day, cache=True, refresh=False
+2025-06-25 09:17:13,525 [INFO] Fetching intraday data for AIRTEL
+2025-06-25 09:17:13,530 [WARNING] No historical data to save for AIRTEL
+2025-06-25 09:17:13,531 [INFO] Saved 0 data points to database for AIRTEL
+2025-06-25 09:18:40,643 [INFO] Running scheduled stock scraper
+2025-06-25 09:18:40,649 [INFO] Starting stock scraper at 2025-06-25 09:18:40.649419
+2025-06-25 09:18:42,106 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:18:42,267 [INFO] Saved 16 stock records to database
+2025-06-25 09:20:42,271 [INFO] Running scheduled stock scraper
+2025-06-25 09:20:42,272 [INFO] Starting stock scraper at 2025-06-25 09:20:42.272738
+2025-06-25 09:20:43,796 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:20:44,075 [INFO] Saved 16 stock records to database
+2025-06-25 09:23:44,080 [INFO] Running scheduled stock scraper
+2025-06-25 09:23:44,090 [INFO] Starting stock scraper at 2025-06-25 09:23:44.090545
+2025-06-25 09:23:45,536 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:23:45,761 [INFO] Saved 16 stock records to database
+2025-06-25 09:25:45,763 [INFO] Running scheduled stock scraper
+2025-06-25 09:25:45,773 [INFO] Starting stock scraper at 2025-06-25 09:25:45.773927
+2025-06-25 09:25:47,694 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:25:47,919 [INFO] Saved 16 stock records to database
+2025-06-25 09:28:47,930 [INFO] Running scheduled stock scraper
+2025-06-25 09:28:47,936 [INFO] Starting stock scraper at 2025-06-25 09:28:47.936966
+2025-06-25 09:28:49,440 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:28:49,708 [INFO] Saved 16 stock records to database
+2025-06-25 09:30:49,718 [INFO] Running scheduled stock scraper
+2025-06-25 09:30:49,724 [INFO] Starting stock scraper at 2025-06-25 09:30:49.724042 (forced)
+2025-06-25 09:30:50,987 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:30:51,131 [INFO] Saved 16 stock records to database
+2025-06-25 09:33:51,134 [INFO] Running scheduled stock scraper
+2025-06-25 09:33:51,139 [INFO] Starting stock scraper at 2025-06-25 09:33:51.139763
+2025-06-25 09:33:52,591 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:33:52,800 [INFO] Saved 16 stock records to database

@@ -57,26 +57,26 @@ def refresh_endpoint(symbol, time_range):
         if response.status_code == 200:
             data = response.json()
             points = data.get('data_points', 0)
-            logger.info(f"✅ {symbol} {time_range}: {points} data points refreshed")
+            logger.info(f"[SUCCESS] {symbol} {time_range}: {points} data points refreshed")
             return True
         else:
-            logger.error(f"❌ {symbol} {time_range}: HTTP {response.status_code}")
+            logger.error(f"[ERROR] {symbol} {time_range}: HTTP {response.status_code}")
             return False
             
     except Exception as e:
-        logger.error(f"❌ {symbol} {time_range}: {str(e)}")
+        logger.error(f"[ERROR] {symbol} {time_range}: {str(e)}")
         return False
 
 def daily_refresh():
     """Perform daily cache refresh"""
     start_time = datetime.now()
-    logger.info("🚀 Starting daily cache refresh")
+    logger.info("[START] Starting daily cache refresh")
     
     total_requests = 0
     successful = 0
     
     # Phase 1: Priority symbols with critical ranges
-    logger.info("📈 Phase 1: Priority symbols (most important data)")
+    logger.info("[PHASE-1] Priority symbols (most important data)")
     for symbol in PRIORITY_SYMBOLS:
         for time_range in DAILY_RANGES:
             if refresh_endpoint(symbol, time_range):
@@ -85,7 +85,7 @@ def daily_refresh():
             time.sleep(0.5)  # Small delay to avoid overwhelming server
     
     # Phase 2: Remaining symbols with reduced ranges
-    logger.info("📊 Phase 2: Remaining symbols (essential data)")
+    logger.info("[PHASE-2] Remaining symbols (essential data)")
     remaining_symbols = [s for s in ALL_SYMBOLS if s not in PRIORITY_SYMBOLS]
     essential_ranges = ['1day', '1month']  # Only most essential for remaining symbols
     
@@ -101,12 +101,12 @@ def daily_refresh():
     success_rate = (successful / total_requests * 100) if total_requests > 0 else 0
     
     logger.info("=" * 50)
-    logger.info("📊 DAILY REFRESH COMPLETE")
-    logger.info(f"⏱️  Duration: {duration}")
-    logger.info(f"📈 Total requests: {total_requests}")
-    logger.info(f"✅ Successful: {successful}")
-    logger.info(f"❌ Failed: {total_requests - successful}")
-    logger.info(f"📊 Success rate: {success_rate:.1f}%")
+    logger.info("[COMPLETE] DAILY REFRESH COMPLETE")
+    logger.info(f"Duration: {duration}")
+    logger.info(f"Total requests: {total_requests}")
+    logger.info(f"Successful: {successful}")
+    logger.info(f"Failed: {total_requests - successful}")
+    logger.info(f"Success rate: {success_rate:.1f}%")
     logger.info("=" * 50)
     
     return successful, total_requests
@@ -124,5 +124,5 @@ if __name__ == "__main__":
             exit(1)  # Too many failures
             
     except Exception as e:
-        logger.error(f"💥 Fatal error: {e}")
+        logger.error(f"[FATAL] Fatal error: {e}")
         exit(1)

@@ -9,6 +9,10 @@ import django
 from django.core import management
 from django.conf import settings
 from datetime import datetime
+import requests
+from django.core.cache import cache
+from django.db import models
+from typing import List, Dict
 
 # Set up logging
 logging.basicConfig(
@@ -21,6 +25,24 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger(__name__)
+
+# Cache warming configuration
+CACHE_WARM_CONFIG = {
+    'enabled': True,
+    'api_key': 'mse_5PFAyspVWQnz33boHidjCIiU2y6aNoEmzZteXzRV',
+    'base_url': 'http://127.0.0.1:8000/api/historical',
+    'priority_symbols': ['AIRTEL', 'TNM', 'NBM', 'STANDARD', 'NICO', 'FDHB'],
+    'all_symbols': [
+        'AIRTEL', 'BHL', 'FDHB', 'FMBCH', 'ICON', 'ILLOVO',
+        'MPICO', 'NBM', 'NBS', 'NICO', 'NITL', 'OMU',
+        'PCL', 'STANDARD', 'SUNBIRD', 'TNM'
+    ],
+    'ranges': {
+        'priority': ['1day', '1month', '1year'],  # Most important
+        'standard': ['1day', '1month', '3months', '6months', '1year'],  # Regular
+        'full': ['1day', '1month', '3months', '6months', '1year', '2years', '5years']  # Complete
+    }
+}
 
 def run_scraper(force=False):
     """Run the stock scraper management command
@@ -187,7 +209,12 @@ def start_scheduler():
     """Start the scheduler in a background thread"""
     print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] SCHEDULER: Starting MSE stock price scheduler service")
     logger.info("Starting scheduler service")
+    
+    # Set up stock scraping schedule
     schedule_scraper()
+    
+    # Set up cache warming schedule
+    schedule_cache_warming()
     
     # Run immediately when starting up (optional)
     if os.environ.get('RUN_SCRAPER_ON_STARTUP', 'false').lower() == 'true':
@@ -195,6 +222,11 @@ def start_scheduler():
         run_scraper()
     else:
         print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] SCHEDULER: Set RUN_SCRAPER_ON_STARTUP=true to run scraper immediately")
+    
+    # Optionally run initial cache warming
+    if os.environ.get('RUN_CACHE_WARM_ON_STARTUP', 'false').lower() == 'true':
+        print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] SCHEDULER: Running initial cache warming")
+        run_cache_warming('priority')
     
     def run_threaded():
         next_run = schedule.next_run()
@@ -217,6 +249,129 @@ def start_scheduler():
     thread.start()
     print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] SCHEDULER: Started successfully, running in background")
     logger.info("Scheduler started successfully")
+
+def warm_cache_for_symbol_range(symbol: str, time_range: str) -> bool:
+    """Warm cache for a specific symbol and time range"""
+    if not CACHE_WARM_CONFIG['enabled']:
+        return True
+        
+    try:
+        url = f"{CACHE_WARM_CONFIG['base_url']}/{symbol}/"
+        params = {'range': time_range, 'refresh': 'true'}
+        headers = {
+            'X-API-Key': CACHE_WARM_CONFIG['api_key'],
+            'Content-Type': 'application/json'
+        }
+        
+        response = requests.get(url, params=params, headers=headers, timeout=30)
+        
+        if response.status_code == 200:
+            data = response.json()
+            points = data.get('data_points', 0)
+            logger.info(f"Cache warmed: {symbol} {time_range} ({points} points)")
+            return True
+        else:
+            logger.warning(f"Cache warm failed: {symbol} {time_range} - HTTP {response.status_code}")
+            return False
+            
+    except Exception as e:
+        logger.error(f"Cache warm error: {symbol} {time_range} - {str(e)}")
+        return False
+
+def run_cache_warming(strategy: str = 'priority'):
+    """Run cache warming with different strategies
+    
+    Args:
+        strategy: 'priority', 'standard', 'full', or 'intraday_only'
+    """
+    if not CACHE_WARM_CONFIG['enabled']:
+        logger.info("Cache warming is disabled")
+        return
+    
+    start_time = datetime.now()
+    logger.info(f"Starting cache warming - strategy: {strategy}")
+    
+    successful = 0
+    total = 0
+    
+    try:
+        if strategy == 'intraday_only':
+            # Just warm the most time-sensitive data (1day for all symbols)
+            symbols = CACHE_WARM_CONFIG['all_symbols']
+            ranges = ['1day']
+        elif strategy == 'priority':
+            # Priority symbols with important ranges
+            symbols = CACHE_WARM_CONFIG['priority_symbols']
+            ranges = CACHE_WARM_CONFIG['ranges']['priority']
+        elif strategy == 'standard':
+            # All symbols with standard ranges
+            symbols = CACHE_WARM_CONFIG['all_symbols']
+            ranges = CACHE_WARM_CONFIG['ranges']['standard']
+        elif strategy == 'full':
+            # All symbols with all ranges
+            symbols = CACHE_WARM_CONFIG['all_symbols']
+            ranges = CACHE_WARM_CONFIG['ranges']['full']
+        else:
+            logger.error(f"Unknown cache warming strategy: {strategy}")
+            return
+        
+        # Warm cache with small delays to avoid overwhelming the server
+        for symbol in symbols:
+            for time_range in ranges:
+                if warm_cache_for_symbol_range(symbol, time_range):
+                    successful += 1
+                total += 1
+                
+                # Small delay to be nice to the server
+                time.sleep(0.2)
+        
+        duration = datetime.now() - start_time
+        success_rate = (successful / total * 100) if total > 0 else 0
+        
+        logger.info(f"Cache warming completed: {successful}/{total} ({success_rate:.1f}%) in {duration}")
+        
+    except Exception as e:
+        logger.error(f"Cache warming failed: {str(e)}")
+
+def schedule_cache_warming():
+    """Schedule cache warming at optimal times"""
+    logger.info("Setting up cache warming schedule")
+    
+    # Strategy 1: Intraday cache warming every hour during market hours
+    # This keeps the most time-sensitive data fresh
+    weekdays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
+    market_hours = [9, 10, 11, 12, 13, 14, 15, 16]  # 9 AM to 4 PM
+    
+    for day in weekdays:
+        for hour in market_hours:
+            time_str = f"{hour:02d}:00"
+            getattr(schedule.every(), day).at(time_str).do(run_cache_warming, 'intraday_only')
+    
+    logger.info("Scheduled intraday cache warming (1day range) every hour during market hours")
+    
+    # Strategy 2: Priority cache warming twice daily
+    # Morning: Before market opens
+    for day in weekdays:
+        getattr(schedule.every(), day).at("08:30").do(run_cache_warming, 'priority')
+    
+    # Evening: After market closes
+    for day in weekdays:
+        getattr(schedule.every(), day).at("17:30").do(run_cache_warming, 'priority')
+    
+    logger.info("Scheduled priority cache warming at 8:30 AM and 5:30 PM")
+    
+    # Strategy 3: Full cache warming once daily (early morning)
+    # This ensures all data is fresh for the day
+    for day in weekdays:
+        getattr(schedule.every(), day).at("06:00").do(run_cache_warming, 'standard')
+    
+    logger.info("Scheduled standard cache warming at 6:00 AM daily")
+    
+    # Strategy 4: Weekend maintenance (light warming)
+    schedule.every().saturday.at("10:00").do(run_cache_warming, 'priority')
+    schedule.every().sunday.at("10:00").do(run_cache_warming, 'priority')
+    
+    logger.info("Scheduled weekend cache maintenance")
 
 if __name__ == "__main__":
     # Set up Django environment
