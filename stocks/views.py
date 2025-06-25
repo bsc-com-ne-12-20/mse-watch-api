@@ -563,3 +563,21 @@ def market_status(request):
         'is_weekend': current_weekday in [5, 6],
         'trading_day': current_weekday < 5
     })
+
+@api_view(['GET'])
+def background_status(request):
+    """Get the status of background tasks"""
+    try:
+        from .background_tasks import get_collector_status
+        status = get_collector_status()
+        
+        return Response({
+            'background_tasks': status,
+            'current_time': datetime.now().isoformat(),
+            'message': 'Background cache refresh running automatically' if status['running'] else 'Background tasks not running'
+        })
+    except Exception as e:
+        return Response({
+            'error': f'Error getting background status: {str(e)}',
+            'background_tasks': {'running': False}
+        }, status=500)

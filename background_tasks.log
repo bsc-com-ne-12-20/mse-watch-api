@@ -1,0 +1,265 @@
+2025-06-25 09:46:24,814 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 09:46:24,927 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 09:46:24,927 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 09:46:24,927 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 09:46:24,931 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 09:49:50,258 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 09:49:50,289 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 09:49:50,289 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 09:49:50,289 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 09:49:50,294 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 09:49:57,709 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 09:49:57,725 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 09:49:57,725 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 09:49:57,725 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 09:49:57,730 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 09:50:13,908 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 09:50:13,922 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 09:50:13,922 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 09:50:13,922 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 09:50:13,928 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 09:50:30,358 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 09:50:30,370 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 09:50:30,370 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 09:50:30,370 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 09:50:30,375 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 09:56:49,854 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 09:56:49,872 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 09:56:49,872 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 09:56:49,872 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 09:56:49,886 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 09:57:16,465 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 09:57:16,479 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 09:57:16,479 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 09:57:16,479 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 09:57:16,486 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 09:57:51,418 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 09:57:51,428 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 09:57:51,429 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 09:57:51,429 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 09:57:51,433 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 09:58:17,824 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 09:58:17,846 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 09:58:17,846 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 09:58:17,846 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 09:58:17,852 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 09:58:34,375 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 09:58:34,398 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 09:58:34,398 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 09:58:34,398 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 09:58:34,400 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 09:58:42,608 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 09:58:42,624 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 09:58:42,624 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 09:58:42,624 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 09:58:42,633 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 09:59:41,339 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 09:59:41,361 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 09:59:41,362 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 09:59:41,362 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 09:59:41,367 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:00:00,626 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:00:00,631 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:00:00,631 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:00:00,631 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 10:00:00,631 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:07:15,239 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:07:15,262 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:07:15,262 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:07:15,262 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 10:07:15,266 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:09:25,491 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:09:25,506 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:09:25,507 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:09:25,507 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 10:09:25,507 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:09:54,897 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:09:54,926 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:09:54,926 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:09:54,926 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 10:09:54,928 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:10:27,976 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:10:27,993 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:10:27,993 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:10:27,993 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 10:10:27,997 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:10:30,820 [INFO] stocks.background_tasks: [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:11:11,799 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:11:11,801 [INFO] stocks.background_tasks: [SUCCESS] Automatic data collection schedule configured
+2025-06-25 10:11:11,809 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:11:11,809 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:11:11,809 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 10:11:11,810 [INFO] stocks.background_tasks: [START] Background data collector started
+2025-06-25 10:11:11,811 [INFO] stocks.background_tasks: [TARGET] Background data collector started successfully
+2025-06-25 10:11:11,811 [INFO] stocks.background_tasks: [START] Background collector started from Django app
+2025-06-25 10:11:11,811 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:11:11,811 [INFO] stocks.background_tasks: [REFRESH] Starting automatic intraday data collection
+2025-06-25 10:11:14,424 [INFO] stocks.background_tasks: [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:12:04,864 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:12:04,864 [INFO] stocks.background_tasks: [SUCCESS] Automatic data collection schedule configured
+2025-06-25 10:12:04,880 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:12:04,880 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:12:04,880 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 10:12:04,881 [INFO] stocks.background_tasks: [START] Background data collector started
+2025-06-25 10:12:04,881 [INFO] stocks.background_tasks: [TARGET] Background data collector started successfully
+2025-06-25 10:12:04,882 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:12:04,882 [INFO] stocks.background_tasks: [REFRESH] Starting automatic intraday data collection
+2025-06-25 10:12:04,882 [INFO] stocks.background_tasks: [START] Background collector started from Django app
+2025-06-25 10:12:09,722 [INFO] stocks.background_tasks: [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:12:29,043 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:12:29,043 [INFO] stocks.background_tasks: [SUCCESS] Automatic data collection schedule configured
+2025-06-25 10:12:29,049 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:12:29,049 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:12:29,049 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 10:12:29,049 [INFO] stocks.background_tasks: [START] Background data collector started
+2025-06-25 10:12:29,049 [INFO] stocks.background_tasks: [TARGET] Background data collector started successfully
+2025-06-25 10:12:29,049 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:12:29,051 [INFO] stocks.background_tasks: [START] Background collector started from Django app
+2025-06-25 10:12:29,051 [INFO] stocks.background_tasks: [REFRESH] Starting automatic intraday data collection
+2025-06-25 10:12:29,141 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:12:29,143 [INFO] stocks.background_tasks: [SUCCESS] Automatic data collection schedule configured
+2025-06-25 10:12:29,146 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:12:29,146 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:12:29,146 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 10:12:29,146 [INFO] stocks.background_tasks: [START] Background data collector started
+2025-06-25 10:12:29,146 [INFO] stocks.background_tasks: [TARGET] Background data collector started successfully
+2025-06-25 10:12:29,146 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:12:29,146 [INFO] stocks.background_tasks: [START] Background collector started from Django app
+2025-06-25 10:12:29,146 [INFO] stocks.background_tasks: [REFRESH] Starting automatic intraday data collection
+2025-06-25 10:12:31,370 [INFO] stocks.background_tasks: [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:12:31,684 [INFO] stocks.background_tasks: [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:12:50,736 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:12:50,736 [INFO] stocks.background_tasks: [SUCCESS] Smart cache refresh scheduled every hour (24/7)
+2025-06-25 10:12:50,736 [INFO] stocks.background_tasks: [SUCCESS] Automatic data collection schedule configured
+2025-06-25 10:12:50,750 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:12:50,750 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:12:50,750 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 10:12:50,752 [INFO] stocks.background_tasks: [START] Background data collector started
+2025-06-25 10:12:50,752 [INFO] stocks.background_tasks: [TARGET] Background data collector started successfully
+2025-06-25 10:12:50,752 [INFO] stocks.background_tasks: [START] Background collector started from Django app
+2025-06-25 10:12:50,752 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:12:50,752 [INFO] stocks.background_tasks: [REFRESH] Starting automatic intraday data collection
+2025-06-25 10:12:50,962 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:12:50,964 [INFO] stocks.background_tasks: [SUCCESS] Smart cache refresh scheduled every hour (24/7)
+2025-06-25 10:12:50,964 [INFO] stocks.background_tasks: [SUCCESS] Automatic data collection schedule configured
+2025-06-25 10:12:50,973 [INFO] stocks.background_tasks:    • Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:12:50,974 [INFO] stocks.background_tasks:    • Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:12:50,974 [INFO] stocks.background_tasks:    • Maintenance: Daily at 2 AM
+2025-06-25 10:12:50,975 [INFO] stocks.background_tasks: [START] Background data collector started
+2025-06-25 10:12:50,975 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:12:50,975 [INFO] stocks.background_tasks: [REFRESH] Starting automatic intraday data collection
+2025-06-25 10:12:50,975 [INFO] stocks.background_tasks: [TARGET] Background data collector started successfully
+2025-06-25 10:12:50,975 [INFO] stocks.background_tasks: [START] Background collector started from Django app
+2025-06-25 10:12:53,237 [INFO] stocks.background_tasks: [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:12:53,543 [INFO] stocks.background_tasks: [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:13:01,186 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:13:01,191 [INFO] stocks.background_tasks: [SUCCESS] Smart cache refresh scheduled every hour (24/7)
+2025-06-25 10:13:01,191 [INFO] stocks.background_tasks: [SUCCESS] Automatic data collection schedule configured
+2025-06-25 10:13:01,191 [INFO] stocks.background_tasks: [SCHEDULE] Schedule summary:
+2025-06-25 10:13:01,191 [INFO] stocks.background_tasks:    - Smart cache refresh: Every hour (24/7)
+2025-06-25 10:13:01,191 [INFO] stocks.background_tasks:    - Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:13:01,191 [INFO] stocks.background_tasks:    - Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:13:01,191 [INFO] stocks.background_tasks:    - Maintenance: Daily at 2 AM
+2025-06-25 10:13:01,191 [INFO] stocks.background_tasks: [START] Background data collector started
+2025-06-25 10:13:01,191 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:13:01,191 [INFO] stocks.background_tasks: [REFRESH] Starting automatic intraday data collection
+2025-06-25 10:13:01,191 [INFO] stocks.background_tasks: [TARGET] Background data collector started successfully
+2025-06-25 10:13:01,191 [INFO] stocks.background_tasks: [START] Background collector started from Django app
+2025-06-25 10:13:01,445 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:13:01,454 [INFO] stocks.background_tasks: [SUCCESS] Smart cache refresh scheduled every hour (24/7)
+2025-06-25 10:13:01,454 [INFO] stocks.background_tasks: [SUCCESS] Automatic data collection schedule configured
+2025-06-25 10:13:01,454 [INFO] stocks.background_tasks: [SCHEDULE] Schedule summary:
+2025-06-25 10:13:01,454 [INFO] stocks.background_tasks:    - Smart cache refresh: Every hour (24/7)
+2025-06-25 10:13:01,454 [INFO] stocks.background_tasks:    - Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:13:01,454 [INFO] stocks.background_tasks:    - Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:13:01,454 [INFO] stocks.background_tasks:    - Maintenance: Daily at 2 AM
+2025-06-25 10:13:01,454 [INFO] stocks.background_tasks: [START] Background data collector started
+2025-06-25 10:13:01,454 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:13:01,454 [INFO] stocks.background_tasks: [REFRESH] Starting automatic intraday data collection
+2025-06-25 10:13:01,454 [INFO] stocks.background_tasks: [TARGET] Background data collector started successfully
+2025-06-25 10:13:01,454 [INFO] stocks.background_tasks: [START] Background collector started from Django app
+2025-06-25 10:13:03,800 [INFO] stocks.background_tasks: [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:13:03,955 [INFO] stocks.background_tasks: [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:13:19,123 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:13:19,141 [INFO] stocks.background_tasks: [SUCCESS] Smart cache refresh scheduled every hour (24/7)
+2025-06-25 10:13:19,141 [INFO] stocks.background_tasks: [SUCCESS] Automatic data collection schedule configured
+2025-06-25 10:13:19,141 [INFO] stocks.background_tasks: [SCHEDULE] Schedule summary:
+2025-06-25 10:13:19,141 [INFO] stocks.background_tasks:    - Smart cache refresh: Every hour (24/7)
+2025-06-25 10:13:19,141 [INFO] stocks.background_tasks:    - Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:13:19,141 [INFO] stocks.background_tasks:    - Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:13:19,141 [INFO] stocks.background_tasks:    - Maintenance: Daily at 2 AM
+2025-06-25 10:13:19,142 [INFO] stocks.background_tasks: [START] Background data collector started
+2025-06-25 10:13:19,142 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:13:19,142 [INFO] stocks.background_tasks: [REFRESH] Starting automatic intraday data collection
+2025-06-25 10:13:19,142 [INFO] stocks.background_tasks: [TARGET] Background data collector started successfully
+2025-06-25 10:13:19,143 [INFO] stocks.background_tasks: [START] Background collector started from Django app
+2025-06-25 10:13:20,057 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:13:20,057 [INFO] stocks.background_tasks: [SUCCESS] Smart cache refresh scheduled every hour (24/7)
+2025-06-25 10:13:20,057 [INFO] stocks.background_tasks: [SUCCESS] Automatic data collection schedule configured
+2025-06-25 10:13:20,057 [INFO] stocks.background_tasks: [SCHEDULE] Schedule summary:
+2025-06-25 10:13:20,057 [INFO] stocks.background_tasks:    - Smart cache refresh: Every hour (24/7)
+2025-06-25 10:13:20,057 [INFO] stocks.background_tasks:    - Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:13:20,057 [INFO] stocks.background_tasks:    - Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:13:20,057 [INFO] stocks.background_tasks:    - Maintenance: Daily at 2 AM
+2025-06-25 10:13:20,073 [INFO] stocks.background_tasks: [START] Background data collector started
+2025-06-25 10:13:20,073 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:13:20,073 [INFO] stocks.background_tasks: [TARGET] Background data collector started successfully
+2025-06-25 10:13:20,073 [INFO] stocks.background_tasks: [REFRESH] Starting automatic intraday data collection
+2025-06-25 10:13:20,073 [INFO] stocks.background_tasks: [START] Background collector started from Django app
+2025-06-25 10:13:21,688 [INFO] stocks.background_tasks: [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:13:22,559 [INFO] stocks.background_tasks: [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:13:57,519 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:13:57,521 [INFO] stocks.background_tasks: [SUCCESS] Smart cache refresh scheduled every hour (24/7)
+2025-06-25 10:13:57,521 [INFO] stocks.background_tasks: [SUCCESS] Automatic data collection schedule configured
+2025-06-25 10:13:57,521 [INFO] stocks.background_tasks: [SCHEDULE] Schedule summary:
+2025-06-25 10:13:57,521 [INFO] stocks.background_tasks:    - Smart cache refresh: Every hour (24/7)
+2025-06-25 10:13:57,521 [INFO] stocks.background_tasks:    - Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:13:57,521 [INFO] stocks.background_tasks:    - Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:13:57,521 [INFO] stocks.background_tasks:    - Maintenance: Daily at 2 AM
+2025-06-25 10:13:57,521 [INFO] stocks.background_tasks: [START] Background data collector started
+2025-06-25 10:13:57,521 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:13:57,521 [INFO] stocks.background_tasks: [REFRESH] Starting automatic intraday data collection
+2025-06-25 10:13:57,521 [INFO] stocks.background_tasks: [TARGET] Background data collector started successfully
+2025-06-25 10:13:57,521 [INFO] stocks.background_tasks: [START] Background collector started from Django app
+2025-06-25 10:13:57,578 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:13:57,586 [INFO] stocks.background_tasks: [SUCCESS] Smart cache refresh scheduled every hour (24/7)
+2025-06-25 10:13:57,587 [INFO] stocks.background_tasks: [SUCCESS] Automatic data collection schedule configured
+2025-06-25 10:13:57,587 [INFO] stocks.background_tasks: [SCHEDULE] Schedule summary:
+2025-06-25 10:13:57,587 [INFO] stocks.background_tasks:    - Smart cache refresh: Every hour (24/7)
+2025-06-25 10:13:57,587 [INFO] stocks.background_tasks:    - Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:13:57,587 [INFO] stocks.background_tasks:    - Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:13:57,587 [INFO] stocks.background_tasks:    - Maintenance: Daily at 2 AM
+2025-06-25 10:13:57,588 [INFO] stocks.background_tasks: [START] Background data collector started
+2025-06-25 10:13:57,588 [INFO] stocks.background_tasks: [TARGET] Background data collector started successfully
+2025-06-25 10:13:57,588 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:13:57,588 [INFO] stocks.background_tasks: [REFRESH] Starting automatic intraday data collection
+2025-06-25 10:13:57,588 [INFO] stocks.background_tasks: [START] Background collector started from Django app
+2025-06-25 10:13:59,891 [INFO] stocks.background_tasks: [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:14:00,234 [INFO] stocks.background_tasks: [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:14:11,207 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:14:11,207 [INFO] stocks.background_tasks: [SUCCESS] Smart cache refresh scheduled every hour (24/7)
+2025-06-25 10:14:11,207 [INFO] stocks.background_tasks: [SUCCESS] Automatic data collection schedule configured
+2025-06-25 10:14:11,207 [INFO] stocks.background_tasks: [SCHEDULE] Schedule summary:
+2025-06-25 10:14:11,207 [INFO] stocks.background_tasks:    - Smart cache refresh: Every hour (24/7)
+2025-06-25 10:14:11,207 [INFO] stocks.background_tasks:    - Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:14:11,207 [INFO] stocks.background_tasks:    - Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:14:11,207 [INFO] stocks.background_tasks:    - Maintenance: Daily at 2 AM
+2025-06-25 10:14:11,207 [INFO] stocks.background_tasks: [START] Background data collector started
+2025-06-25 10:14:11,207 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:14:11,207 [INFO] stocks.background_tasks: [REFRESH] Starting automatic intraday data collection
+2025-06-25 10:14:11,207 [INFO] stocks.background_tasks: [TARGET] Background data collector started successfully
+2025-06-25 10:14:11,207 [INFO] stocks.background_tasks: [START] Background collector started from Django app
+2025-06-25 10:14:12,373 [INFO] stocks.background_tasks: Setting up automatic data collection schedule
+2025-06-25 10:14:12,373 [INFO] stocks.background_tasks: [SUCCESS] Smart cache refresh scheduled every hour (24/7)
+2025-06-25 10:14:12,373 [INFO] stocks.background_tasks: [SUCCESS] Automatic data collection schedule configured
+2025-06-25 10:14:12,373 [INFO] stocks.background_tasks: [SCHEDULE] Schedule summary:
+2025-06-25 10:14:12,373 [INFO] stocks.background_tasks:    - Smart cache refresh: Every hour (24/7)
+2025-06-25 10:14:12,373 [INFO] stocks.background_tasks:    - Intraday data: Every hour (9 AM - 5 PM) + every 30 min during active trading
+2025-06-25 10:14:12,373 [INFO] stocks.background_tasks:    - Historical data: Daily at 6 AM and 6 PM
+2025-06-25 10:14:12,373 [INFO] stocks.background_tasks:    - Maintenance: Daily at 2 AM
+2025-06-25 10:14:12,373 [INFO] stocks.background_tasks: [START] Background data collector started
+2025-06-25 10:14:12,373 [INFO] stocks.background_tasks: [TARGET] Background data collector started successfully
+2025-06-25 10:14:12,373 [INFO] stocks.background_tasks: [START] Background collector started from Django app
+2025-06-25 10:14:12,373 [INFO] stocks.background_tasks: Running initial intraday data collection
+2025-06-25 10:14:12,373 [INFO] stocks.background_tasks: [REFRESH] Starting automatic intraday data collection
+2025-06-25 10:14:13,598 [INFO] stocks.background_tasks: [SUCCESS] Intraday data collection completed via direct scraping

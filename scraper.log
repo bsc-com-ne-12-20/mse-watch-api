@@ -969,3 +969,177 @@ PermissionError: [WinError 32] The process cannot access the file because it is 
 2025-06-04 16:18:15,437 [INFO] Successfully extracted data for 16 stocks
 2025-06-04 16:18:15,669 [INFO] Saved 16 stock records to database
 2025-06-04 16:18:39,787 [INFO] C:\Users\innow\OneDrive\Desktop\MSE-Sim\MSE-DATA\mse-data\mse_api\config\settings.py changed, reloading.
+2025-06-25 09:46:24,948 [INFO] Starting stock scraper at 2025-06-25 09:46:24.948799
+2025-06-25 09:46:25,031 [INFO] Watching for file changes with StatReloader
+2025-06-25 09:46:28,302 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:46:28,465 [INFO] Saved 16 stock records to database
+2025-06-25 09:49:48,621 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\background_tasks.py changed, reloading.
+2025-06-25 09:49:50,326 [INFO] Starting stock scraper at 2025-06-25 09:49:50.326280
+2025-06-25 09:49:50,376 [INFO] Watching for file changes with StatReloader
+2025-06-25 09:49:52,645 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:49:52,864 [INFO] Saved 16 stock records to database
+2025-06-25 09:49:56,306 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\background_tasks.py changed, reloading.
+2025-06-25 09:49:57,751 [INFO] Starting stock scraper at 2025-06-25 09:49:57.751241
+2025-06-25 09:49:57,782 [INFO] Watching for file changes with StatReloader
+2025-06-25 09:49:59,976 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:50:00,294 [INFO] Saved 16 stock records to database
+2025-06-25 09:50:12,230 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\background_tasks.py changed, reloading.
+2025-06-25 09:50:13,953 [INFO] Starting stock scraper at 2025-06-25 09:50:13.953673
+2025-06-25 09:50:14,001 [INFO] Watching for file changes with StatReloader
+2025-06-25 09:50:16,498 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:50:16,672 [INFO] Saved 16 stock records to database
+2025-06-25 09:50:28,816 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\background_tasks.py changed, reloading.
+2025-06-25 09:50:30,394 [INFO] Starting stock scraper at 2025-06-25 09:50:30.394844
+2025-06-25 09:50:30,425 [INFO] Watching for file changes with StatReloader
+2025-06-25 09:50:32,730 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:50:32,912 [INFO] Saved 16 stock records to database
+2025-06-25 09:56:47,732 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\background_tasks.py changed, reloading.
+2025-06-25 09:56:49,917 [INFO] Starting stock scraper at 2025-06-25 09:56:49.917695
+2025-06-25 09:56:49,965 [INFO] Watching for file changes with StatReloader
+2025-06-25 09:56:53,465 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:56:53,671 [INFO] Saved 16 stock records to database
+2025-06-25 09:57:14,804 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\background_tasks.py changed, reloading.
+2025-06-25 09:57:16,512 [INFO] Starting stock scraper at 2025-06-25 09:57:16.512247
+2025-06-25 09:57:16,551 [INFO] Watching for file changes with StatReloader
+2025-06-25 09:57:18,924 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:57:19,112 [INFO] Saved 16 stock records to database
+2025-06-25 09:57:49,799 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\background_tasks.py changed, reloading.
+2025-06-25 09:57:51,471 [INFO] Starting stock scraper at 2025-06-25 09:57:51.471236
+2025-06-25 09:57:51,499 [INFO] Watching for file changes with StatReloader
+2025-06-25 09:57:53,993 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:57:54,188 [INFO] Saved 16 stock records to database
+2025-06-25 09:58:16,519 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\views.py changed, reloading.
+2025-06-25 09:58:17,889 [INFO] Starting stock scraper at 2025-06-25 09:58:17.889600
+2025-06-25 09:58:17,942 [INFO] Watching for file changes with StatReloader
+2025-06-25 09:58:20,471 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:58:20,622 [INFO] Saved 16 stock records to database
+2025-06-25 09:58:33,047 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\urls.py changed, reloading.
+2025-06-25 09:58:34,417 [INFO] Starting stock scraper at 2025-06-25 09:58:34.417576
+2025-06-25 09:58:34,448 [INFO] Watching for file changes with StatReloader
+2025-06-25 09:58:36,946 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:58:37,072 [INFO] Saved 16 stock records to database
+2025-06-25 09:58:41,274 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\urls.py changed, reloading.
+2025-06-25 09:58:42,649 [INFO] Starting stock scraper at 2025-06-25 09:58:42.649467
+2025-06-25 09:58:42,688 [INFO] Watching for file changes with StatReloader
+2025-06-25 09:58:44,975 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:58:45,155 [INFO] Saved 16 stock records to database
+2025-06-25 09:59:41,393 [INFO] Starting stock scraper at 2025-06-25 09:59:41.393405
+2025-06-25 09:59:59,452 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\urls.py changed, reloading.
+2025-06-25 10:00:00,647 [INFO] Starting stock scraper at 2025-06-25 10:00:00.647170
+2025-06-25 10:00:00,678 [INFO] Watching for file changes with StatReloader
+2025-06-25 10:00:02,987 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 10:00:03,183 [INFO] Saved 16 stock records to database
+2025-06-25 10:00:08,540 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\background_tasks.py changed, reloading.
+2025-06-25 10:07:15,298 [INFO] Starting stock scraper at 2025-06-25 10:07:15.298438
+2025-06-25 10:09:25,528 [INFO] Starting stock scraper at 2025-06-25 10:09:25.528193
+2025-06-25 10:09:25,559 [INFO] Watching for file changes with StatReloader
+2025-06-25 10:09:27,920 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 10:09:28,174 [INFO] Saved 16 stock records to database
+2025-06-25 10:09:54,950 [INFO] Starting stock scraper at 2025-06-25 10:09:54.950013
+2025-06-25 10:09:54,991 [INFO] Watching for file changes with StatReloader
+2025-06-25 10:09:57,468 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 10:09:57,621 [INFO] Saved 16 stock records to database
+2025-06-25 10:10:26,560 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\background_tasks.py changed, reloading.
+2025-06-25 10:10:28,012 [INFO] Starting stock scraper at 2025-06-25 10:10:28.012213
+2025-06-25 10:10:28,057 [INFO] Watching for file changes with StatReloader
+2025-06-25 10:10:30,660 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 10:10:30,820 [INFO] Saved 16 stock records to database
+2025-06-25 10:10:30,820 [INFO] [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:11:10,380 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\background_tasks.py changed, reloading.
+2025-06-25 10:11:11,824 [INFO] Starting stock scraper at 2025-06-25 10:11:11.824693
+2025-06-25 10:11:11,862 [INFO] Watching for file changes with StatReloader
+2025-06-25 10:11:14,260 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 10:11:14,424 [INFO] Saved 16 stock records to database
+2025-06-25 10:11:14,424 [INFO] [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:12:04,899 [INFO] Starting stock scraper at 2025-06-25 10:12:04.899243
+2025-06-25 10:12:04,938 [INFO] Watching for file changes with StatReloader
+2025-06-25 10:12:07,300 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 10:12:09,722 [INFO] Saved 16 stock records to database
+2025-06-25 10:12:09,722 [INFO] [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:12:27,267 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\background_tasks.py changed, reloading.
+2025-06-25 10:12:27,409 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\background_tasks.py changed, reloading.
+2025-06-25 10:12:29,065 [INFO] Starting stock scraper at 2025-06-25 10:12:29.065858
+2025-06-25 10:12:29,091 [INFO] Watching for file changes with StatReloader
+2025-06-25 10:12:29,162 [INFO] Starting stock scraper at 2025-06-25 10:12:29.162374
+2025-06-25 10:12:29,198 [INFO] Watching for file changes with StatReloader
+2025-06-25 10:12:31,354 [ERROR] Error running stock scraper: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+Traceback (most recent call last):
+  File "C:\Users\innow\OneDrive\Desktop\mse_api\stocks\management\commands\scrape_stocks.py", line 77, in handle
+    df = extract_mse_data_html(force_scrape=force_scrape)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\OneDrive\Desktop\mse_api\mse_scrapper_html.py", line 179, in extract_mse_data_html
+    os.remove(html_file)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+2025-06-25 10:12:31,370 [INFO] [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:12:31,548 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 10:12:31,684 [INFO] Saved 16 stock records to database
+2025-06-25 10:12:31,684 [INFO] [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:12:49,252 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\background_tasks.py changed, reloading.
+2025-06-25 10:12:49,500 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\background_tasks.py changed, reloading.
+2025-06-25 10:12:50,768 [INFO] Starting stock scraper at 2025-06-25 10:12:50.768785
+2025-06-25 10:12:50,804 [INFO] Watching for file changes with StatReloader
+2025-06-25 10:12:50,990 [INFO] Starting stock scraper at 2025-06-25 10:12:50.990640
+2025-06-25 10:12:51,029 [INFO] Watching for file changes with StatReloader
+2025-06-25 10:12:53,234 [ERROR] Error running stock scraper: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+Traceback (most recent call last):
+  File "C:\Users\innow\OneDrive\Desktop\mse_api\stocks\management\commands\scrape_stocks.py", line 77, in handle
+    df = extract_mse_data_html(force_scrape=force_scrape)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\OneDrive\Desktop\mse_api\mse_scrapper_html.py", line 179, in extract_mse_data_html
+    os.remove(html_file)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+2025-06-25 10:12:53,237 [INFO] [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:12:53,367 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 10:12:53,543 [INFO] Saved 16 stock records to database
+2025-06-25 10:12:53,543 [INFO] [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:12:59,750 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\background_tasks.py changed, reloading.
+2025-06-25 10:13:00,016 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\background_tasks.py changed, reloading.
+2025-06-25 10:13:01,208 [INFO] Starting stock scraper at 2025-06-25 10:13:01.208159
+2025-06-25 10:13:01,244 [INFO] Watching for file changes with StatReloader
+2025-06-25 10:13:01,475 [INFO] Starting stock scraper at 2025-06-25 10:13:01.475223
+2025-06-25 10:13:01,530 [INFO] Watching for file changes with StatReloader
+2025-06-25 10:13:03,612 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 10:13:03,799 [INFO] Saved 16 stock records to database
+2025-06-25 10:13:03,800 [INFO] [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:13:03,886 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 10:13:03,955 [INFO] Saved 16 stock records to database
+2025-06-25 10:13:03,955 [INFO] [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:13:17,763 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\apps.py changed, reloading.
+2025-06-25 10:13:18,678 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\apps.py changed, reloading.
+2025-06-25 10:13:19,157 [INFO] Starting stock scraper at 2025-06-25 10:13:19.157850
+2025-06-25 10:13:19,197 [INFO] Watching for file changes with StatReloader
+2025-06-25 10:13:20,073 [INFO] Starting stock scraper at 2025-06-25 10:13:20.073984
+2025-06-25 10:13:20,125 [INFO] Watching for file changes with StatReloader
+2025-06-25 10:13:21,501 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 10:13:21,687 [INFO] Saved 16 stock records to database
+2025-06-25 10:13:21,688 [INFO] [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:13:22,363 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 10:13:22,559 [INFO] Saved 16 stock records to database
+2025-06-25 10:13:22,559 [INFO] [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:13:56,180 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\apps.py changed, reloading.
+2025-06-25 10:13:56,260 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\apps.py changed, reloading.
+2025-06-25 10:13:57,543 [INFO] Starting stock scraper at 2025-06-25 10:13:57.543412
+2025-06-25 10:13:57,578 [INFO] Watching for file changes with StatReloader
+2025-06-25 10:13:57,597 [INFO] Starting stock scraper at 2025-06-25 10:13:57.597552
+2025-06-25 10:13:57,638 [INFO] Watching for file changes with StatReloader
+2025-06-25 10:13:59,885 [ERROR] Error running stock scraper: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+Traceback (most recent call last):
+  File "C:\Users\innow\OneDrive\Desktop\mse_api\stocks\management\commands\scrape_stocks.py", line 77, in handle
+    df = extract_mse_data_html(force_scrape=force_scrape)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\innow\OneDrive\Desktop\mse_api\mse_scrapper_html.py", line 179, in extract_mse_data_html
+    os.remove(html_file)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'temp_mse.html'
+2025-06-25 10:13:59,891 [INFO] [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:14:00,078 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 10:14:00,234 [INFO] Saved 16 stock records to database
+2025-06-25 10:14:00,234 [INFO] [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:14:11,224 [INFO] Starting stock scraper at 2025-06-25 10:14:11.224270
+2025-06-25 10:14:12,389 [INFO] Starting stock scraper at 2025-06-25 10:14:12.389618
+2025-06-25 10:14:12,441 [INFO] Watching for file changes with StatReloader
+2025-06-25 10:14:13,443 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 10:14:13,598 [INFO] Saved 16 stock records to database
+2025-06-25 10:14:13,598 [INFO] [SUCCESS] Intraday data collection completed via direct scraping
+2025-06-25 10:14:14,730 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 10:14:14,907 [INFO] Saved 16 stock records to database
+2025-06-25 10:14:14,907 [INFO] [SUCCESS] Intraday data collection completed via direct scraping

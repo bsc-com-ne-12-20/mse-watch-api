@@ -12,19 +12,26 @@ class StocksConfig(AppConfig):
 
     def ready(self):
         """
-        Start the scheduler when Django starts.
-        Note: This might run twice in development with auto-reloader.
+        Start the background data collector when Django starts.
+        This replaces the old manual cache refresh approach with automatic collection.
         """
-        # Only start the scheduler in the main process (not during Django auto-reload)
-        if not any('runserver' in arg for arg in sys.argv) or 'RUN_MAIN' in os.environ:
+        # Only start in the main process (avoid duplicates during development)
+        # Skip if we're in a migration, test, or other management command
+        if (os.environ.get('RUN_MAIN') == 'true' or 
+            not any(cmd in sys.argv for cmd in ['migrate', 'makemigrations', 'test', 'shell', 'collectstatic'])):
             try:
                 print(f"\n\n{'*'*80}")
-                print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] DJANGO: Starting MSE Stock Price Scheduler")
-                from .scheduler import start_scheduler
-                start_scheduler()
+                print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] DJANGO: Starting MSE Background Data Collector")
+                
+                # Import and start the new background collector
+                from .background_tasks import start_background_collector
+                start_background_collector()
+                
+                print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] DJANGO: [SUCCESS] Background data collector started successfully")
                 print(f"{'*'*80}\n")
-                logger.info("Scheduler initialized in Django startup")
+                logger.info("Background data collector initialized in Django startup")
+                
             except Exception as e:
-                print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] DJANGO ERROR: Failed to start scheduler: {str(e)}")
+                print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] DJANGO ERROR: Failed to start background collector: {str(e)}")
                 print(f"{'*'*80}\n")
-                logger.error(f"Failed to start scheduler: {str(e)}", exc_info=True)
+                logger.error(f"Failed to start background collector: {str(e)}", exc_info=True)

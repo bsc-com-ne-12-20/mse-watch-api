@@ -16764,3 +16764,16 @@ accounts.models.User.MultipleObjectsReturned: get() returned more than one User 
 2025-06-25 09:33:51,139 [INFO] Starting stock scraper at 2025-06-25 09:33:51.139763
 2025-06-25 09:33:52,591 [INFO] Successfully extracted data for 16 stocks
 2025-06-25 09:33:52,800 [INFO] Saved 16 stock records to database
+2025-06-25 09:38:52,807 [INFO] Running scheduled stock scraper
+2025-06-25 09:38:52,814 [INFO] Starting stock scraper at 2025-06-25 09:38:52.814876
+2025-06-25 09:38:54,289 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:38:54,501 [INFO] Saved 16 stock records to database
+2025-06-25 09:43:54,507 [INFO] Running scheduled stock scraper
+2025-06-25 09:43:54,515 [INFO] Starting stock scraper at 2025-06-25 09:43:54.515078
+2025-06-25 09:43:55,895 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:43:56,040 [INFO] Saved 16 stock records to database
+2025-06-25 09:45:56,045 [INFO] Running scheduled stock scraper
+2025-06-25 09:45:56,049 [INFO] Starting stock scraper at 2025-06-25 09:45:56.049611
+2025-06-25 09:45:57,417 [INFO] Successfully extracted data for 16 stocks
+2025-06-25 09:45:57,570 [INFO] Saved 16 stock records to database
+2025-06-25 09:46:22,854 [INFO] C:\Users\innow\OneDrive\Desktop\mse_api\stocks\apps.py changed, reloading.
